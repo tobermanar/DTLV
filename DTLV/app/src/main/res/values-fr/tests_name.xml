@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test1">DÉNOMINATION</string>
+    <string name="test2">RÉPÉTITION</string>
+    <string name="test3">FLUENCE VERBALE</string>
+    <string name="test4">ALPHA-SPAN</string>
+    <string name="test5">LECTURE</string>
+    <string name="test6">COMPRÉHENSION DES PHRASES</string>
+    <string name="test7">DICTÉE</string>
+    <string name="test8">ÉCRITURE SPONTANÉE</string>
+    <string name="test9">COMPRÉHENSION SÉMANTIQUE</string>
+    <string name="test10">LANGAGE SPONTANÉ</string>
+</resources>

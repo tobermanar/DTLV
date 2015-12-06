@@ -5,5 +5,5 @@ import android.app.Activity;
 /**
  * Created by Utilisateur on 2015-12-05.
  */
-public class Menu extends Activity {
+public class Test9 extends Activity {
 }
