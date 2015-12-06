@@ -29,8 +29,64 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Tutorial"
+            android:label="Tutorial" >
+        </activity>
+        <activity
             android:name=".Credits"
             android:label="Credits" >
+        </activity>
+        <activity
+            android:name=".Language"
+            android:label="Language" >
+        </activity>
+        <activity
+            android:name=".Config"
+            android:label="Config" >
+        </activity>
+        <activity
+            android:name=".Test1"
+            android:label="Test1" >
+        </activity>
+        <activity
+            android:name=".Test2"
+            android:label="Test2" >
+        </activity>
+        <activity
+            android:name=".Test3"
+            android:label="Test3" >
+        </activity>
+        <activity
+            android:name=".Test4"
+            android:label="Test4" >
+        </activity>
+        <activity
+            android:name=".Test5"
+            android:label="Test5" >
+        </activity>
+        <activity
+            android:name=".Test6"
+            android:label="Test6" >
+        </activity>
+        <activity
+            android:name=".Test7"
+            android:label="Test7" >
+        </activity>
+        <activity
+            android:name=".Test8"
+            android:label="Test8" >
+        </activity>
+        <activity
+            android:name=".Test9"
+            android:label="Test9" >
+        </activity>
+        <activity
+            android:name=".Test10"
+            android:label="Test10" >
+        </activity>
+        <activity
+            android:name=".Results"
+            android:label="Results" >
         </activity>
     </application>
 
