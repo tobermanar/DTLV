@@ -16,13 +16,13 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:configChanges="orientation"
-        android:screenOrientation="landscape">
+        android:theme="@style/AppTheme">
 
         <activity
             android:name=".Menu"
-            android:label="Menu" >
+            android:label="Menu"
+            android:configChanges="orientation"
+            android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -30,63 +30,78 @@
         </activity>
         <activity
             android:name=".Tutorial"
-            android:label="Tutorial" >
+            android:label="Tutorial"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Credits"
-            android:label="Credits" >
+            android:label="Credits"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Language"
-            android:label="Language" >
+            android:label="Language"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Config"
-            android:label="Config" >
+            android:label="Config"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test1"
-            android:label="Test1" >
+            android:label="Test1"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test2"
-            android:label="Test2" >
+            android:label="Test2"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test3"
-            android:label="Test3" >
+            android:label="Test3"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test4"
-            android:label="Test4" >
+            android:label="Test4"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test5"
-            android:label="Test5" >
+            android:label="Test5"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test6"
-            android:label="Test6" >
+            android:label="Test6"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test7"
-            android:label="Test7" >
+            android:label="Test7"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test8"
-            android:label="Test8" >
+            android:label="Test8"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test9"
-            android:label="Test9" >
+            android:label="Test9"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Test10"
-            android:label="Test10" >
+            android:label="Test10"
+            android:screenOrientation="sensorLandscape">
         </activity>
         <activity
             android:name=".Results"
-            android:label="Results" >
+            android:label="Results"
+            android:screenOrientation="sensorLandscape">
         </activity>
     </application>
 

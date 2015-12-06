@@ -6,8 +6,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import dtlv.com.dtlv_application.Credits;
 
 
 /**
@@ -30,7 +28,6 @@ public class Menu extends Activity{
         start = (Button) findViewById(R.id.b_start);
         language = (Button) findViewById(R.id.b_language);
         exit = (Button) findViewById(R.id.b_exit);
-
         tutorial.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
