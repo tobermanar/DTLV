@@ -1,11 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="274dp"
+        android:id="@+id/Logo"
+        android:layout_weight="0.47" />
 
     <Button
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:text="@string/tutorial"
+        android:id="@+id/b_tutorial"
+        android:padding="10.5dp"
+        android:layout_gravity="center_vertical" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credits"
+        android:id="@+id/b_credits"
+        android:padding="10.5dp"
+        android:layout_gravity="center_vertical" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:id="@+id/b_start"
+        android:padding="10.5dp"
+        android:layout_gravity="center_vertical" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/language"
+        android:id="@+id/b_language"
+        android:layout_marginLeft="10.5dp" />
+
+    <Button
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:id="@+id/b_exit" />
 
 </LinearLayout>

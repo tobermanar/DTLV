@@ -9,9 +9,9 @@
     <string name="test2_text2_part2">gobatu</string>
     <string name="test2_text2_part3">grolita</string>
     <string name="test2_text3_part0">PHRASES</string>
-    <string name="test2_text3_part1">Le brillant astonaute n'a pas encore lu le journal ce matin</string>
-    <string name="test2_text3_part2">L'interrupteur de la cuisine n'est plus en état de fonctionement</string>
-    <string name="test2_text3_part3">Son explication ridicule n'a convaincu personne dans l'auditoire</string>
+    <string name="test2_text3_part1">Le brillant astonaute n\'a pas encore lu le journal ce matin</string>
+    <string name="test2_text3_part2">L\'interrupteur de la cuisine n\'est plus en état de fonctionement</string>
+    <string name="test2_text3_part3">Son explication ridicule n\'a convaincu personne dans l\'auditoire</string>
     <string name="test3_text1">Compteur</string>
     <string name="test3_text2">Correction de la cotation</string>
     <string name="test4_text_ex1">Exemple 1 :</string>
@@ -28,7 +28,7 @@
     <string name="test5_text2_part1">dourbi</string>
     <string name="test5_text2_part2">ardel</string>
     <string name="test5_text2_part3">porti</string>
-    <string name="test6_text1">C'est le garçon que la fille porte</string>
+    <string name="test6_text1">C\'est le garçon que la fille porte</string>
     <string name="test6_text2">La fille est portée</string>
     <string name="test6_text3">Le garçon est porté par la fille</string>
     <string name="test7_text1_part0">MOTS</string>
@@ -46,7 +46,7 @@
     <string name="test9_text3">saumon</string>
     <string name="test9_text4">louche</string>
     <string name="test9_text5">horloge</string>
-    <string name="test10_text1">De troubles de l'articulation</string>
+    <string name="test10_text1">De troubles de l\'articulation</string>
     <string name="test10_text2">De troubles de la syntaxe</string>
-    <string name="test10_text3">D'anomie</string>
+    <string name="test10_text3">D\'anomie</string>
 </resources>
