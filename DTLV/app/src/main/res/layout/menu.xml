@@ -2,39 +2,96 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/blueBackground">
+    style="@style/blueBackground"
+    android:weightSum="1">
 
-    <ImageView
-        android:layout_width="450dp"
-        android:layout_height="350dp"
-        android:paddingLeft="100dp"
-        android:paddingTop="100dp"
-        android:id="@+id/Logo"
-        android:src="@drawable/logo_dtlv"
-        android:visibility="visible"/>
-    <Button
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tutorial"
-        android:id="@+id/b_tutorial"/>
-    <Button
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.09"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="100dp"
+            android:paddingTop="100dp"
+            android:id="@+id/Logo"
+            android:src="@drawable/logo_dtlv"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"></LinearLayout>
+
+        <Button
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tutorial"
+            android:id="@+id/b_tutorial"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:layout_width="238dp"
+            android:layout_height="wrap_content"
+            android:text="@string/credits"
+            android:id="@+id/b_credits"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/credits"
-        android:id="@+id/b_credits"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:id="@+id/b_start"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/language"
-        android:id="@+id/b_language"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/exit"
-        android:id="@+id/b_exit" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.21"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.70"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.52"></LinearLayout>
+
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="@string/start"
+                android:id="@+id/b_start"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.22" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            android:id="@+id/b_language"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03" />
+
+        <Button
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/exit"
+            android:id="@+id/b_exit"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.02" />
+
+    </LinearLayout>
+
 </LinearLayout>
