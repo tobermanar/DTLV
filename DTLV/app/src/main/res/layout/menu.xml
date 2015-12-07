@@ -6,7 +6,7 @@
 
     <ImageView
         android:layout_width="500dp"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:scaleType="fitXY"
         android:paddingLeft="100dp"
         android:paddingTop="100dp"

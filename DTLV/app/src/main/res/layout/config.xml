@@ -2,7 +2,188 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/blueBackground">
+    style="@style/blueBackground"
+    android:weightSum="1">
 
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.14">
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="280dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView6"
+            android:background="#ffffff"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:weightSum="1"
+        android:layout_weight="0.81">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.08"></FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="443dp"
+                android:layout_height="38dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Pré - Réglages"
+                android:id="@+id/titrePreReglages"
+                android:background="#ffffff" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.55"></FrameLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/helpPreReglage"
+                android:layout_weight="0.31" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.11">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.09"
+            android:background="#ffffff"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.37"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Luminosité : "
+                    android:id="@+id/textLumino"
+                    android:layout_weight="0.05" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:text="Exemple d&apos;image"
+                    android:id="@+id/buttonExImage"
+                    android:layout_weight="0.83" />
+            </LinearLayout>
+
+            <SeekBar
+                android:layout_width="525dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/barreProgLumino"
+                android:layout_gravity="center"
+                android:indeterminate="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.10"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.16"
+            android:background="#ffffff"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:weightSum="1"
+                android:layout_weight="0.78">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Volume sonore : "
+                    android:id="@+id/textVolSono"
+                    android:layout_weight="0.05" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:text="Exemple sonore"
+                    android:id="@+id/buttonExSono"
+                    android:layout_weight="0.83" />
+            </LinearLayout>
+
+            <SeekBar
+                android:layout_width="525dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/barProgVolume"
+                android:indeterminate="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.20"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.20"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.91"></FrameLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton"
+                android:layout_weight="0.07" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
