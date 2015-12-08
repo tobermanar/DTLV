@@ -55,10 +55,18 @@ public class Controleur {
         gestionPoint.setPoint(testNumber,pts);
     }
 
+    /**
+     * Get the results detailed ( value: int[i] for the test i+1 )
+     * @return int[] Tab of results detailed
+     */
     public int[] getResultsDetailed() {
         return gestionPoint.getPointParTest();
     }
 
+    /**
+     * Get the result of the test
+     * @return int The result
+     */
     public int getResultsGlobal() {
         return  gestionPoint.getPointTot();
     }

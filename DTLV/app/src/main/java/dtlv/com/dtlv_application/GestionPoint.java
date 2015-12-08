@@ -25,6 +25,10 @@ public class GestionPoint {
 
     public Controleur controleur;
 
+    /**
+     * Constructor
+     * @param contro Link with other classes
+     */
     public GestionPoint(Controleur contro) {
         controleur = contro;
     }

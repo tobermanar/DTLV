@@ -9,6 +9,10 @@ import android.os.Bundle;
 public class Language extends Activity{
     private Controleur controleur;
 
+    /**
+     * Constructor
+     * @param controleur Link with other classes
+     */
     public Language(Controleur controleur) {
         this.controleur = controleur;
     }

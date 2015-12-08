@@ -13,6 +13,10 @@ public class Results extends Activity{
 
     private Controleur controleur;
 
+    /**
+     * Constructor
+     * @param controleur Link with other classes
+     */
     public Results(Controleur controleur) {
         this.controleur = controleur;
     }
@@ -23,6 +27,9 @@ public class Results extends Activity{
         setContentView(R.layout.results);
     }
 
+    /**
+     * Get and set locally results of the test ( Global and test by test )
+     */
     public void getResults(){
         resTestDetail = controleur.getResultsDetailed();
         resTestGlobal = controleur.getResultsGlobal();
