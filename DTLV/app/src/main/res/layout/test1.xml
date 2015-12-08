@@ -7,12 +7,15 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:scaleType="fitXY"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="150dp"
         android:id="@+id/test1_image1"
         android:src="@drawable/test1_image1"/>
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="215dp"
         android:id="@+id/validate1"
         android:src="@drawable/validate"
         android:background="@null"/>
@@ -20,6 +23,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="215dp"
         android:id="@+id/refuse1"
         android:src="@drawable/refuse"
         android:background="@null"/>
@@ -27,12 +31,14 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="150dp"
         android:id="@+id/test1_image2"
         android:src="@drawable/test1_image2"/>
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="215dp"
         android:id="@+id/validate2"
         android:src="@drawable/validate"
         android:background="@null"/>
@@ -40,6 +46,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="215dp"
         android:id="@+id/refuse2"
         android:src="@drawable/refuse"
         android:background="@null"/>
@@ -47,12 +54,14 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="150dp"
         android:id="@+id/test1_image3"
         android:src="@drawable/test1_image3"/>
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="215dp"
         android:id="@+id/validate3"
         android:src="@drawable/validate"
         android:background="@null"/>
@@ -60,6 +69,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="215dp"
         android:id="@+id/refuse3"
         android:src="@drawable/refuse"
         android:background="@null"/>
@@ -67,9 +77,10 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:scaleType="fitXY"
+
+        android:layout_gravity="bottom"
         android:id="@+id/test1_image4"
-        android:src="@drawable/test1_image4"
-        android:layout_below="@id/test1_image1"/>
+        android:src="@drawable/test1_image4"/>
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="60dp"
