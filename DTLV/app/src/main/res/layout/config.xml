@@ -3,7 +3,8 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/blueBackground"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:baselineAligned="false">
 
 
     <LinearLayout
@@ -53,29 +54,30 @@
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.55"></FrameLayout>
+                android:layout_weight="0.34"></FrameLayout>
 
             <ImageButton
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="63dp"
                 android:id="@+id/helpPreReglage"
-                android:layout_weight="0.31" />
+                android:layout_weight="0.52"
+                android:background="@drawable/help_3"
+                android:src="@drawable/help3" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.11">
+            android:layout_weight="0.24">
 
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.09"
             android:background="#ffffff"
             android:weightSum="1">
 
@@ -120,7 +122,7 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="533dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.16"
@@ -162,7 +164,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.20"></LinearLayout>
+            android:layout_weight="0.26"></LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -173,15 +175,19 @@
             android:weightSum="1">
 
             <FrameLayout
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.91"></FrameLayout>
+                android:layout_weight="0.97"></FrameLayout>
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
                 android:id="@+id/imageButton"
-                android:layout_weight="0.07" />
+                android:background="@drawable/back_arrow"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:clickable="true" />
+
         </LinearLayout>
 
     </LinearLayout>
