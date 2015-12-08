@@ -9,6 +9,13 @@ import android.view.View;
  * Created by Utilisateur on 2015-12-06.
  */
 public class Config extends Activity{
+
+    private Controleur controleur;
+
+    public Config(Controleur controleur) {
+        this.controleur = controleur;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
