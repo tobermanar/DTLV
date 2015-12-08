@@ -14,6 +14,12 @@ import android.widget.Button;
 
 public class Menu extends Activity{
 
+    private Controleur controleur;
+
+    public Menu(Controleur controleur) {
+        this.controleur = controleur;
+    }
+
     private Button tutorial = null;
     private Button credits = null;
     private Button start = null;

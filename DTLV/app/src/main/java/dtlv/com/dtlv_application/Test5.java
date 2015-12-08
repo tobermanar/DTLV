@@ -7,6 +7,13 @@ import android.os.Bundle;
  * Created by Utilisateur on 2015-12-06.
  */
 public class Test5 extends Activity{
+
+    private Controleur controleur;
+
+    public Test5(Controleur controleur) {
+        this.controleur = controleur;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
