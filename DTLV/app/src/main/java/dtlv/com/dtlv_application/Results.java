@@ -8,6 +8,8 @@ import android.os.Bundle;
  */
 public class Results extends Activity{
 
+    private int[] resTestDetail;
+    private int resTestGlobal;
 
     private Controleur controleur;
 
@@ -20,4 +22,11 @@ public class Results extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results);
     }
+
+    public void getResults(){
+        resTestDetail = controleur.getResultsDetailed();
+        resTestGlobal = controleur.getResultsGlobal();
+    }
+
+
 }
