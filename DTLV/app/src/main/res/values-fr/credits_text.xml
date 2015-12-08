@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="credits_student">Merci à gnagnagna à faire</string>
+    <string name="credits_student">Cette application a été développé dans le cadre du projet de session automne 2015 du cours GLO-4000 Interface Homme Machine. Elle a été développé par les membres suivants : Thomas Bernard, Oneka Jauregi, Timothée Picard, Emmanuel Recolin, Dominic Savard et Antoine Nourry.
+            Le responsable de projet est Mr Joël Macoir.</string>
 </resources>
