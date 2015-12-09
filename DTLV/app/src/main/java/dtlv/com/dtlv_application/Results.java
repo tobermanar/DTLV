@@ -8,16 +8,39 @@ import android.os.Bundle;
  */
 public class Results extends Activity{
 
+    private int[] resTestDetail;
+    private int resTestGlobal;
+    private GestionPoint gestPts;
 
-    private Controleur controleur;
-
-    public Results(Controleur controleur) {
-        this.controleur = controleur;
+    public Results(){
+        gestPts = Menu.gestPts;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results);
+
+        //Recuperation des resultats
+        getResults();
+
     }
+
+    /**
+     * Obtain the point manager
+     * @param gestPtsF
+     */
+    public void giveGestPts(GestionPoint gestPtsF){
+        this.gestPts = gestPtsF;
+    }
+
+    /**
+     * Get and set locally results of the test ( Global and test by test )
+     */
+    public void getResults(){
+        resTestDetail = gestPts.getPointParTest();
+        resTestGlobal = gestPts.getPointTot();
+    }
+
+
 }
