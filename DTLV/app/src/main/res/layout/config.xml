@@ -116,7 +116,7 @@
                 <SeekBar
                     android:layout_width="525dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/barreProgLumino"
+                    android:id="@+id/brightness"
                     android:layout_gravity="center"
                     android:indeterminate="false"
                     android:progress="50" />
@@ -164,7 +164,7 @@
                 <SeekBar
                     android:layout_width="525dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/barProgVolume"
+                    android:id="@+id/volume"
                     android:indeterminate="false"
                     android:progress="50" />
             </LinearLayout>
@@ -192,8 +192,8 @@
                 <ImageButton
                     android:layout_width="68dp"
                     android:layout_height="68dp"
-                    android:id="@+id/imageButton"
-                    android:background="@drawable/back_arrow"
+                    android:id="@+id/config_next"
+                    android:background="@drawable/next"
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
                     android:clickable="true" />
