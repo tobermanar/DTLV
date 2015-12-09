@@ -51,7 +51,7 @@
                     android:layout_width="443dp"
                     android:layout_height="38dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Pré - Réglages"
+                    android:text="@string/config_name"
                     android:id="@+id/titrePreReglages"
                     android:background="#ffffff" />
 
@@ -118,8 +118,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/brightness"
                     android:layout_gravity="center"
-                    android:indeterminate="false"
-                    android:progress="50" />
+
+                    android:progress="50"
+                    android:max="100"/>
             </LinearLayout>
 
             <LinearLayout
@@ -166,7 +167,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/volume"
                     android:indeterminate="false"
-                    android:progress="50" />
+                    android:progress="50"
+                    android:max="100"/>
             </LinearLayout>
 
             <LinearLayout

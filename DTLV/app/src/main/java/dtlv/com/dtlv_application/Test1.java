@@ -20,6 +20,7 @@ public class Test1 extends Activity{
     private ImageButton btest1_validate1 = null;
     private ImageButton btest1_refuse1 = null;
     private ImageButton btest1_image2 = null;
+    private ImageButton btest1_image1_back = null;
     private boolean quotation_image2 = false;
     private ImageButton btest1_validate2 = null;
     private ImageButton btest1_refuse2 = null;
@@ -41,6 +42,7 @@ public class Test1 extends Activity{
     private ImageButton btest1_refuse6 = null;
     private ImageButton btest1_next = null;
 
+
     private int ptsT1 = 0;
 
     public Test1(){
@@ -54,6 +56,7 @@ public class Test1 extends Activity{
         setContentView(R.layout.test1);
         btest1_image1 = (ImageButton) findViewById(R.id.test1_image1);
         btest1_validate1 = (ImageButton) findViewById(R.id.test1_validate1);
+        btest1_image1_back = (ImageButton) findViewById(R.id.test1_image1_back);
         btest1_validate1.setEnabled(false);
         btest1_validate1.setClickable(false);
         btest1_validate1.setImageResource(R.drawable.validate_grey);
@@ -62,6 +65,8 @@ public class Test1 extends Activity{
         btest1_refuse1.setClickable(false);
         btest1_refuse1.setImageResource(R.drawable.refuse_grey);
         btest1_image2 = (ImageButton) findViewById(R.id.test1_image2);
+        btest1_image2.setEnabled(false);
+        btest1_image2.setClickable(false);
         btest1_validate2 = (ImageButton) findViewById(R.id.test1_validate2);
         btest1_validate2.setEnabled(false);
         btest1_validate2.setClickable(false);
@@ -71,6 +76,8 @@ public class Test1 extends Activity{
         btest1_refuse2.setClickable(false);
         btest1_refuse2.setImageResource(R.drawable.refuse_grey);
         btest1_image3 = (ImageButton) findViewById(R.id.test1_image3);
+        btest1_image3.setEnabled(false);
+        btest1_image3.setClickable(false);
         btest1_validate3 = (ImageButton) findViewById(R.id.test1_validate3);
         btest1_validate3.setEnabled(false);
         btest1_validate3.setClickable(false);
@@ -80,6 +87,8 @@ public class Test1 extends Activity{
         btest1_refuse3.setClickable(false);
         btest1_refuse3.setImageResource(R.drawable.refuse_grey);
         btest1_image4 = (ImageButton) findViewById(R.id.test1_image4);
+        btest1_image4.setEnabled(false);
+        btest1_image4.setClickable(false);
         btest1_validate4 = (ImageButton) findViewById(R.id.test1_validate4);
         btest1_validate4.setEnabled(false);
         btest1_validate4.setClickable(false);
@@ -89,6 +98,8 @@ public class Test1 extends Activity{
         btest1_refuse4.setClickable(false);
         btest1_refuse4.setImageResource(R.drawable.refuse_grey);
         btest1_image5 = (ImageButton) findViewById(R.id.test1_image5);
+        btest1_image5.setEnabled(false);
+        btest1_image5.setClickable(false);
         btest1_validate5 = (ImageButton) findViewById(R.id.test1_validate5);
         btest1_validate5.setEnabled(false);
         btest1_validate5.setClickable(false);
@@ -98,6 +109,8 @@ public class Test1 extends Activity{
         btest1_refuse5.setClickable(false);
         btest1_refuse5.setImageResource(R.drawable.refuse_grey);
         btest1_image6 = (ImageButton) findViewById(R.id.test1_image6);
+        btest1_image6.setEnabled(false);
+        btest1_image6.setClickable(false);
         btest1_validate6 = (ImageButton) findViewById(R.id.test1_validate6);
         btest1_validate6.setEnabled(false);
         btest1_validate6.setClickable(false);
@@ -122,8 +135,18 @@ public class Test1 extends Activity{
                 btest1_refuse1.setEnabled(true);
                 btest1_refuse1.setClickable(true);
                 btest1_refuse1.setImageResource(R.drawable.refuse);
+                btest1_image2.setEnabled(true);
+                btest1_image2.setClickable(true);
+               // setContentView(R.layout.test1_image1);
             }
         });
+        /* TODO A DEBUG QUAND ON OUVRE L'APPLICATION PLANTE
+        btest1_image1_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.test1);
+            }
+        });*/
         btest1_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,6 +155,14 @@ public class Test1 extends Activity{
                 quotation_image1 = true;
                 //On incremente les points
                 ptsT1++;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
         btest1_refuse1.setOnClickListener(new View.OnClickListener() {
@@ -140,6 +171,14 @@ public class Test1 extends Activity{
                 // TODO Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image1.setImageResource(R.drawable.refuse);
                 quotation_image1 = true;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
 
@@ -154,6 +193,8 @@ public class Test1 extends Activity{
                 btest1_refuse2.setEnabled(true);
                 btest1_refuse2.setClickable(true);
                 btest1_refuse2.setImageResource(R.drawable.refuse);
+                btest1_image3.setEnabled(true);
+                btest1_image3.setClickable(true);
             }
         });
         btest1_validate2.setOnClickListener(new View.OnClickListener() {
@@ -164,6 +205,14 @@ public class Test1 extends Activity{
                 quotation_image2 = true;
                 //On incremente les points
                 ptsT1++;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
         btest1_refuse2.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +221,14 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image2.setImageResource(R.drawable.refuse);
                 quotation_image2 = true;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
 
@@ -186,6 +243,8 @@ public class Test1 extends Activity{
                 btest1_refuse3.setEnabled(true);
                 btest1_refuse3.setClickable(true);
                 btest1_refuse3.setImageResource(R.drawable.refuse);
+                btest1_image4.setEnabled(true);
+                btest1_image4.setClickable(true);
             }
         });
         btest1_validate3.setOnClickListener(new View.OnClickListener() {
@@ -196,6 +255,14 @@ public class Test1 extends Activity{
                 quotation_image3 = true;
                 //On incremente les points
                 ptsT1++;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
         btest1_refuse3.setOnClickListener(new View.OnClickListener() {
@@ -204,6 +271,14 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image3.setImageResource(R.drawable.refuse);
                 quotation_image3 = true;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
 
@@ -218,6 +293,8 @@ public class Test1 extends Activity{
                 btest1_refuse4.setEnabled(true);
                 btest1_refuse4.setClickable(true);
                 btest1_refuse4.setImageResource(R.drawable.refuse);
+                btest1_image5.setEnabled(true);
+                btest1_image5.setClickable(true);
             }
         });
         btest1_validate4.setOnClickListener(new View.OnClickListener() {
@@ -228,6 +305,14 @@ public class Test1 extends Activity{
                 quotation_image4 = true;
                 //On incremente les points
                 ptsT1++;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
         btest1_refuse4.setOnClickListener(new View.OnClickListener() {
@@ -236,6 +321,14 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image4.setImageResource(R.drawable.refuse);
                 quotation_image4 = true;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
 
@@ -250,6 +343,8 @@ public class Test1 extends Activity{
                 btest1_refuse5.setEnabled(true);
                 btest1_refuse5.setClickable(true);
                 btest1_refuse5.setImageResource(R.drawable.refuse);
+                btest1_image6.setEnabled(true);
+                btest1_image6.setClickable(true);
             }
         });
         btest1_validate5.setOnClickListener(new View.OnClickListener() {
@@ -260,6 +355,14 @@ public class Test1 extends Activity{
                 quotation_image5 = true;
                 //On incremente les points
                 ptsT1++;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
         btest1_refuse5.setOnClickListener(new View.OnClickListener() {
@@ -268,6 +371,14 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image5.setImageResource(R.drawable.refuse);
                 quotation_image5 = true;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
 
@@ -292,6 +403,14 @@ public class Test1 extends Activity{
                 quotation_image6 = true;
                 //On incremente les points
                 ptsT1++;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
         btest1_refuse6.setOnClickListener(new View.OnClickListener() {
@@ -300,17 +419,17 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image6.setImageResource(R.drawable.refuse);
                 quotation_image6 = true;
+                //Check if all pictures are cote to unluck the button to the next test
+                if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
+                        quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
+                {
+                    btest1_next.setEnabled(true);
+                    btest1_next.setClickable(true);
+                    btest1_next.setImageResource(R.drawable.next);
+                }
             }
         });
 
-        //Check if all pictures are cote to go through the next test
-        if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true && quotation_image4 == true && quotation_image5 == true &&
-                quotation_image6 == true)
-        {
-            btest1_next.setEnabled(true);
-            btest1_next.setClickable(true);
-            btest1_next.setImageResource(R.drawable.next);
-        }
         btest1_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

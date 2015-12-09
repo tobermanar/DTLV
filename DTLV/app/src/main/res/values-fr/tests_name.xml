@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="config_name">PRÉ-RÉGLAGES</string>
     <string name="test1_name">DÉNOMINATION</string>
     <string name="test2_name">RÉPÉTITION</string>
     <string name="test3_name">FLUENCE VERBALE</string>
