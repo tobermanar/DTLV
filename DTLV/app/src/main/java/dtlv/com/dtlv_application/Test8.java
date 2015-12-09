@@ -10,6 +10,10 @@ public class Test8 extends Activity{
 
     private Controleur controleur;
 
+    /**
+     * Constructor
+     * @param controleur Link with other classes
+     */
     public Test8(Controleur controleur) {
         this.controleur = controleur;
     }

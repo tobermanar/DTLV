@@ -40,12 +40,12 @@ public class Controleur {
         t9 = new Test9(this);
         t10 = new Test10(this);
         tuto = new Tutorial(this);
-        gestionPoint = new GestionPoint();
+        gestionPoint = new GestionPoint(this);
 
     }
 
 
-
+// Interface GestionPoint
     /**
      * Set points for each sub-test
      * @param testNumber    Number of the test
@@ -53,5 +53,21 @@ public class Controleur {
      */
     public void setPoint(int testNumber, int pts){
         gestionPoint.setPoint(testNumber,pts);
+    }
+
+    /**
+     * Get the results detailed ( value: int[i] for the test i+1 )
+     * @return int[] Tab of results detailed
+     */
+    public int[] getResultsDetailed() {
+        return gestionPoint.getPointParTest();
+    }
+
+    /**
+     * Get the result of the test
+     * @return int The result
+     */
+    public int getResultsGlobal() {
+        return  gestionPoint.getPointTot();
     }
 }

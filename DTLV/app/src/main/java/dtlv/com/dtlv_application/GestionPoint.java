@@ -18,18 +18,26 @@ public class GestionPoint {
     private int t8;
     private int t9;
     private int t10;
+
     //Tab grouping all points
     int[] pointParTest = {t1,t2,t3,t4,t5,t6,t7,t8,t9,t10};
 
 
     public Controleur controleur;
 
-
+    /**
+     * Constructor
+     * @param contro Link with other classes
+     */
     public GestionPoint(Controleur contro) {
         controleur = contro;
     }
 
     //Getters Setter
+    public int[] getPointParTest() {
+        return pointParTest;
+    }
+
     public int getT1() {
         return t1;
     }
