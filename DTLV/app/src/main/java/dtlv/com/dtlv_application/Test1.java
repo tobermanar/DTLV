@@ -29,13 +29,18 @@ public class Test1 extends Activity{
     private Button btest1_validate6 = null;
     private Button btest1_refuse6 = null;
 
+    private GestionPoint gestPts;
+
+    public Test1(){
+        gestPts = Menu.gestPts;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test1);
         btest1_image1 = (Button) findViewById(R.id.test1_image1);
-        btest1_validate1 = (Button) findViewById(R.id.test1_validate1);
+       /* btest1_validate1 = (Button) findViewById(R.id.test1_validate1);
         btest1_refuse1 = (Button) findViewById(R.id.test1_refuse1);
         btest1_image2 = (Button) findViewById(R.id.test1_image2);
         btest1_validate2 = (Button) findViewById(R.id.test1_validate2);
@@ -51,7 +56,7 @@ public class Test1 extends Activity{
         btest1_refuse5 = (Button) findViewById(R.id.test1_refuse5);
         btest1_image6 = (Button) findViewById(R.id.test1_image6);
         btest1_validate6 = (Button) findViewById(R.id.test1_validate6);
-        btest1_refuse6 = (Button) findViewById(R.id.test1_refuse6);
+        btest1_refuse6 = (Button) findViewById(R.id.test1_refuse6);*/
 
         btest1_validate1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -66,6 +71,14 @@ public class Test1 extends Activity{
             }
         });
 
+    }
+
+    /**
+     * Obtain the point manager
+     * @param gestPtsF
+     */
+    public void giveGestPts(GestionPoint gestPtsF){
+        this.gestPts = gestPtsF;
     }
 
 

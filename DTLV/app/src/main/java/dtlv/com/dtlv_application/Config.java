@@ -10,11 +10,6 @@ import android.view.View;
  */
 public class Config extends Activity{
 
-    private Controleur controleur;
-
-    public Config(Controleur controleur) {
-        this.controleur = controleur;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

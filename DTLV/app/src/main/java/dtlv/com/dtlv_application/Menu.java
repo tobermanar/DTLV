@@ -14,25 +14,23 @@ import android.widget.Button;
 
 public class Menu extends Activity{
 
-    private Controleur controleur;
-
-    /**
-     * Constructor
-     * @param controleur Link with other classes
-     */
-    public Menu(Controleur controleur) {
-        this.controleur = controleur;
-    }
 
     private Button tutorial = null;
     private Button credits = null;
     private Button start = null;
     private Button language = null;
     private Button exit = null;
+
+    public static GestionPoint gestPts;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
+
+        //Creation de la gestion de point
+        gestPts = new GestionPoint();
+
         tutorial = (Button) findViewById(R.id.b_tutorial);
         credits = (Button) findViewById(R.id.b_credits);
         start = (Button) findViewById(R.id.b_start);
