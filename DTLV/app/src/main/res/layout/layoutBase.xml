@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:layout_weight="0.66"
-        android:id="@+id/layoutBarreProg">
+        android:id="@+id/layout_barre_prog">
 
         <FrameLayout
             android:layout_width="8dp"
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:id="@+id/espaceBarreProg"
+        android:id="@+id/espace_barre_prog"
         android:layout_weight="0.17"></FrameLayout>
 
     <LinearLayout
@@ -37,7 +37,7 @@
         android:layout_width="483dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:id="@+id/layoutTest"
+        android:id="@+id/layout_test"
         android:weightSum="1">
 
         <LinearLayout
@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="1"
-            android:id="@+id/layoutPrincipale">
+            android:id="@+id/layout_principale">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.05"
-                android:id="@+id/layoutNomConsHelp"
+                android:id="@+id/layout_nom_cons_help"
                 android:weightSum="1">
 
                 <LinearLayout
@@ -61,21 +61,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.90"
-                    android:id="@+id/layoutNomCons"
+                    android:id="@+id/layout_nom_cons"
                     android:weightSum="1">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.31"
-                        android:id="@+id/layoutEspaceHautNom"></FrameLayout>
+                        android:id="@+id/layout_espace_haut_nom"></FrameLayout>
 
                     <TextView
                         android:layout_width="377dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Nom de la tache"
-                        android:id="@+id/testx_textNomTache"
+                        android:id="@+id/testx_text_nom_tache"
                         android:background="#ffffff" />
 
                     <FrameLayout
@@ -96,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.05"
-                    android:id="@+id/layoutHelp">
+                    android:id="@+id/layout_help">
 
                     <ImageButton
                         android:layout_width="67dp"
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.92"
-                android:id="@+id/layoutTachePrincipale">
+                android:id="@+id/layout_tache_principale">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -127,7 +127,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="0.98"
-                        android:id="@+id/layoutTache"></FrameLayout>
+                        android:id="@+id/layout_tache"></FrameLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
