@@ -29,6 +29,7 @@ public class Controleur {
         cred = new Credits(this);
         lang = new Language(this);
         menu = new Menu(this);
+        //TODO Modifier les constructeur
         //t1 = new Test1(this);
         //t2 = new Test2(this);
         t3 = new Test3(this);
@@ -47,7 +48,7 @@ public class Controleur {
 
 // Interface GestionPoint
     /**
-     * Set points for each sub-test
+     * Set points for each sub-test (Callable by the sub-test)
      * @param testNumber    Number of the test
      * @param pts           Points for this test
      */
