@@ -25,6 +25,10 @@ public class Results extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results);
+
+        //Recuperation des resultats
+        getResults();
+
     }
 
     /**
