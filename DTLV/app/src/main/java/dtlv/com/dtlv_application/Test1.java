@@ -44,6 +44,7 @@ public class Test1 extends Activity{
     private int ptsT1 = 0;
 
     public Test1(){
+        //Recuperation du systeme de gestion des points
         gestPts = Menu.gestPts;
     }
 
