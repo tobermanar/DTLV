@@ -41,7 +41,10 @@ public class Test1 extends Activity{
     private ImageButton btest1_refuse6 = null;
     private ImageButton btest1_next = null;
 
+    private int ptsT1 = 0;
+
     public Test1(){
+        //Recuperation du systeme de gestion des points
         gestPts = Menu.gestPts;
     }
 
@@ -108,7 +111,7 @@ public class Test1 extends Activity{
         btest1_next.setClickable(false);
         btest1_next.setImageResource(R.drawable.next_grey);
 
-
+    //Image 1
         btest1_image1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,21 +127,23 @@ public class Test1 extends Activity{
         btest1_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
+                // TODO Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image1.setImageResource(R.drawable.validate);
                 quotation_image1 = true;
+                //On incremente les points
+                ptsT1++;
             }
         });
         btest1_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
+                // TODO Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image1.setImageResource(R.drawable.refuse);
                 quotation_image1 = true;
             }
         });
 
-
+    //Image 2
         btest1_image2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,6 +162,8 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image2.setImageResource(R.drawable.validate);
                 quotation_image2 = true;
+                //On incremente les points
+                ptsT1++;
             }
         });
         btest1_refuse2.setOnClickListener(new View.OnClickListener() {
@@ -168,7 +175,7 @@ public class Test1 extends Activity{
             }
         });
 
-
+    //Image 3
         btest1_image3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -187,6 +194,8 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image3.setImageResource(R.drawable.validate);
                 quotation_image3 = true;
+                //On incremente les points
+                ptsT1++;
             }
         });
         btest1_refuse3.setOnClickListener(new View.OnClickListener() {
@@ -198,7 +207,7 @@ public class Test1 extends Activity{
             }
         });
 
-
+    //Image 4
         btest1_image4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -217,6 +226,8 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image4.setImageResource(R.drawable.validate);
                 quotation_image4 = true;
+                //On incremente les points
+                ptsT1++;
             }
         });
         btest1_refuse4.setOnClickListener(new View.OnClickListener() {
@@ -228,7 +239,7 @@ public class Test1 extends Activity{
             }
         });
 
-
+    //Image 5
         btest1_image5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -247,6 +258,8 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image5.setImageResource(R.drawable.validate);
                 quotation_image5 = true;
+                //On incremente les points
+                ptsT1++;
             }
         });
         btest1_refuse5.setOnClickListener(new View.OnClickListener() {
@@ -258,7 +271,7 @@ public class Test1 extends Activity{
             }
         });
 
-
+    //Image 6
         btest1_image6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -277,6 +290,8 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image6.setImageResource(R.drawable.validate);
                 quotation_image6 = true;
+                //On incremente les points
+                ptsT1++;
             }
         });
         btest1_refuse6.setOnClickListener(new View.OnClickListener() {
@@ -287,6 +302,8 @@ public class Test1 extends Activity{
                 quotation_image6 = true;
             }
         });
+
+        //Check if all pictures are cote to go through the next test
         if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true && quotation_image4 == true && quotation_image5 == true &&
                 quotation_image6 == true)
         {
@@ -297,7 +314,8 @@ public class Test1 extends Activity{
         btest1_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Au click sur le bouton, on passe au test suivant
+                // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
+                gestPts.setT1(ptsT1);
                 Intent itest2 = new Intent(Test1.this, Test2.class);
                 startActivity(itest2);
             }

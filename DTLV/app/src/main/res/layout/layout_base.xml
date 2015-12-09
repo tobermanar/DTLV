@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_weight="0.66"
+        android:layout_weight="0.03"
         android:id="@+id/layout_barre_prog">
 
         <FrameLayout
@@ -30,7 +30,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:id="@+id/espace_barre_prog"
-        android:layout_weight="0.17"></FrameLayout>
+        android:layout_weight="0.04"></FrameLayout>
 
     <LinearLayout
         android:orientation="vertical"
@@ -38,7 +38,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:id="@+id/layout_test"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_weight="0.87">
 
         <LinearLayout
             android:orientation="vertical"
@@ -60,7 +61,7 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.90"
+                    android:layout_weight="0.98"
                     android:id="@+id/layout_nom_cons"
                     android:weightSum="1">
 
@@ -71,25 +72,27 @@
                         android:id="@+id/layout_espace_haut_nom"></FrameLayout>
 
                     <TextView
-                        android:layout_width="377dp"
+                        android:layout_width="767dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Nom de la tache"
                         android:id="@+id/testx_text_nom_tache"
-                        android:background="#ffffff" />
+                        android:background="#ffffff"
+                        android:layout_weight="0.19" />
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_weight="0.31"></FrameLayout>
+                        android:layout_weight="0.15"></FrameLayout>
 
                     <TextView
-                        android:layout_width="383dp"
+                        android:layout_width="770dp"
                         android:layout_height="wrap_content"
                         android:text="Consigne"
                         android:id="@+id/testx_consigne"
-                        android:background="#ffffff" />
+                        android:background="#ffffff"
+                        android:layout_weight="0.19" />
                 </LinearLayout>
 
                 <FrameLayout
@@ -99,8 +102,8 @@
                     android:id="@+id/layout_help">
 
                     <ImageButton
-                        android:layout_width="67dp"
-                        android:layout_height="61dp"
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
                         android:id="@+id/image_button2"
                         android:layout_gravity="center"
                         android:background="@drawable/help_3"
@@ -143,12 +146,14 @@
 
                         <ImageButton
                             android:layout_width="59dp"
-                            android:layout_height="54dp"
+                            android:layout_height="80dp"
                             android:id="@+id/image_button3"
-                            android:background="@drawable/back_arrow" />
+                            android:background="@drawable/back_arrow"
+                            android:layout_weight="0.03" />
                     </LinearLayout>
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/blueBackground"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.09"
+        android:id="@+id/layout_barre_prog">
+
+        <FrameLayout
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"></FrameLayout>
+
+        <TextView
+            android:layout_width="43dp"
+            android:layout_height="match_parent"
+            android:id="@+id/barre_prog"
+            android:layout_gravity="center"
+            android:background="#ffffff" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/espace_barre_prog"
+        android:layout_weight="0.06"></FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="483dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/layout_test"
+        android:weightSum="1"
+        android:layout_weight="0.81">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:id="@+id/layout_principale">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.11"
+                android:id="@+id/layout_nom_cons_help"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="102dp"
+                    android:layout_weight="0.90"
+                    android:id="@+id/layout_nom_cons"
+                    android:weightSum="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.31"
+                        android:id="@+id/layout_espace_haut_nom"></FrameLayout>
+
+                    <TextView
+                        android:layout_width="801dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Resultats"
+                        android:id="@+id/resultats_details_titre"
+                        android:background="#ffffff"
+                        android:layout_weight="0.57"
+                        android:textSize="22dp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.17"></FrameLayout>
+
+                    <TextView
+                        android:layout_width="805dp"
+                        android:layout_height="32dp"
+                        android:text="Details"
+                        android:id="@+id/resultats_details_cons"
+                        android:background="#ffffff"
+                        android:textSize="22dp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05"
+                    android:id="@+id/layout_help">
+
+                    <ImageButton
+                        android:layout_width="85dp"
+                        android:layout_height="77dp"
+                        android:id="@+id/image_button2"
+                        android:layout_gravity="center"
+                        android:background="@drawable/help_3"
+                        android:clickable="true" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.92"
+                android:id="@+id/layout_tache_principale">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|top"
+                    android:weightSum="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.98"
+                        android:id="@+id/layout_tache">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="457dp"
+                            android:layout_gravity="center"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:weightSum="1">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_horizontal"></FrameLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="475dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.11">
+
+                                    <TextView
+                                        android:layout_width="209dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Denomination"
+                                        android:id="@+id/resultats_details_denominationtxt"
+                                        android:textSize="30dp"
+                                        android:autoText="true" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test1_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/6    "
+                                            android:id="@+id/results_details_test1_sur"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test1"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="6"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.11"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="209dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Repetition"
+                                        android:id="@+id/textView7"
+                                        android:textSize="30dp"
+                                        android:autoText="true" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test2_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/9    "
+                                            android:id="@+id/textView9"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test2"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="9"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.24"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="293dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Fluence Verbale"
+                                        android:id="@+id/textView10"
+                                        android:textSize="30dp" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test3_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/6    "
+                                            android:id="@+id/textView12"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test3"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="6"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.11"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="209dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Alpha-Span"
+                                        android:id="@+id/textView13"
+                                        android:textSize="30dp" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test4_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/1    "
+                                            android:id="@+id/textView15"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test4"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="1"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.11"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <TextView
+                                        android:layout_width="209dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Lecture"
+                                        android:id="@+id/textView16"
+                                        android:textSize="30dp" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test5_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/6    "
+                                            android:id="@+id/textView18"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test5"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="6"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:weightSum="1" >
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_horizontal" />
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="475dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.11" >
+
+                                    <TextView
+                                        android:layout_width="465dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Comprehension des phrases"
+                                        android:id="@+id/textView19"
+                                        android:textSize="30dp" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test6_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/3    "
+                                            android:id="@+id/textView21"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test6"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="3"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.11"
+                                    android:layout_gravity="center_horizontal" >
+
+                                    <TextView
+                                        android:layout_width="209dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Dictee"
+                                        android:id="@+id/textView22"
+                                        android:textSize="30dp" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test7_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/6    "
+                                            android:id="@+id/textView24"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test7"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="9"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.20"
+                                    android:layout_gravity="center_horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="293dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Ecriture Spontanee"
+                                        android:id="@+id/textView25"
+                                        android:textSize="30dp"
+                                        android:autoText="true" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test8_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/1    "
+                                            android:id="@+id/textView27"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test8"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="1"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.11"
+                                    android:layout_gravity="center_horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="445dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Comprehension Semantique"
+                                        android:id="@+id/textView28"
+                                        android:textSize="30dp"
+                                        android:autoText="true" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test9_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/4    "
+                                            android:id="@+id/textView30"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test9"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="4"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.11"
+                                    android:layout_gravity="center_horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="310dp"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:text="Language Spontane"
+                                        android:id="@+id/textView31"
+                                        android:textSize="30dp" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="463dp"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="1" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="x"
+                                            android:id="@+id/results_details_test10_pts"
+                                            android:textSize="22dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:text="/3    "
+                                            android:id="@+id/textView33"
+                                            android:textSize="22dp" />
+
+                                        <ProgressBar
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/progress_bar_test10"
+                                            android:progress="1"
+                                            android:indeterminate="false"
+                                            android:max="3"
+                                            android:layout_gravity="center_horizontal" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:weightSum="1">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.94"></FrameLayout>
+
+                        <ImageButton
+                            android:layout_width="59dp"
+                            android:layout_height="98dp"
+                            android:id="@+id/image_button3"
+                            android:background="@drawable/back_arrow"
+                            android:layout_weight="0.04" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
