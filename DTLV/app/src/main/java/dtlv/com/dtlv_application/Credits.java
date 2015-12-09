@@ -9,11 +9,7 @@ import android.widget.TextView;
  */
 public class Credits extends Activity {
 
-    public Credits(Controleur controleur) {
-        this.controleur = controleur;
-    }
 
-    private Controleur controleur;
     private TextView credits = null;
     @Override
     public void onCreate(Bundle savedInstanceState) {

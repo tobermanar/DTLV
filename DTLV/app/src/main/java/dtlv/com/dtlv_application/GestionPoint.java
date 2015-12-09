@@ -23,20 +23,8 @@ public class GestionPoint {
     int[] pointParTest = {t1,t2,t3,t4,t5,t6,t7,t8,t9,t10};
 
 
-    public Controleur controleur;
-
-    /**
-     * Constructor
-     * @param contro Link with other classes
-     */
-    public GestionPoint(Controleur contro) {
-        controleur = contro;
-    }
-
     //Getters Setter
-    public int[] getPointParTest() {
-        return pointParTest;
-    }
+
 
     public int getT1() {
         return t1;
@@ -45,20 +33,6 @@ public class GestionPoint {
     public void setT1(int t1) {
         this.t1 = t1;
     }
-
-    /**
-     * Make the sum of all points for each sub-test
-     * @return Total of points of the test
-     */
-    public int getPointTot() {
-        //Update pointTot
-        pointTot = 0;
-        for (int i = 0; i < pointParTest.length; i++ ){
-            pointTot += pointParTest[i];
-        }
-        return pointTot;
-    }
-
 
     public int getT2() {
         return t2;
@@ -132,6 +106,23 @@ public class GestionPoint {
         this.t10 = t10;
     }
 
+
+    public int[] getPointParTest() {
+        return pointParTest;
+    }
+
+    /**
+     * Make the sum of all points for each sub-test
+     * @return Total of points of the test
+     */
+    public int getPointTot() {
+        //Update pointTot
+        pointTot = 0;
+        for (int i = 0; i < pointParTest.length; i++ ){
+            pointTot += pointParTest[i];
+        }
+        return pointTot;
+    }
 
     /**
      * Set points of each test

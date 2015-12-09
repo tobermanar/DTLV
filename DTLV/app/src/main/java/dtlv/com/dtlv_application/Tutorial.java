@@ -10,11 +10,6 @@ import android.widget.RadioButton;
  */
 public class Tutorial extends Activity{
 
-    private Controleur controleur;
-
-    public Tutorial(Controleur controleur) {
-        this.controleur = controleur;
-    }
 
     private RadioButton r1 = null;
     @Override

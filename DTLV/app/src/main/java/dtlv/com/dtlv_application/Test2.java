@@ -8,6 +8,13 @@ import android.os.Bundle;
  * Created by Utilisateur on 2015-12-05.
  */
 public class Test2 extends Activity {
+
+    private GestionPoint gestPts;
+
+    public Test2(){
+        gestPts = Menu.gestPts;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +27,13 @@ public class Test2 extends Activity {
     void setDataSource(String path);
     void prepare();
       // juste un test à suppr ou à utiliser si besoin */
+
+    /**
+     * Obtain the point manager
+     * @param gestPtsF
+     */
+    public void giveGestPts(GestionPoint gestPtsF){
+        this.gestPts = gestPtsF;
+    }
 
 }

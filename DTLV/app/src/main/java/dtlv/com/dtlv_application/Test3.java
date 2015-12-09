@@ -8,19 +8,23 @@ import android.os.Bundle;
  */
 public class Test3 extends Activity{
 
-    private Controleur controleur;
+    private GestionPoint gestPts;
 
-    /**
-     * Constructor
-     * @param controleur Link with other classes
-     */
-    public Test3(Controleur controleur) {
-        this.controleur = controleur;
+    public Test3(){
+        gestPts = Menu.gestPts;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test3);
+    }
+
+    /**
+     * Obtain the point manager
+     * @param gestPtsF
+     */
+    public void giveGestPts(GestionPoint gestPtsF){
+        this.gestPts = gestPtsF;
     }
 }

@@ -12,6 +12,9 @@ import android.widget.ImageButton;
  * Created by Utilisateur on 2015-12-06.
  */
 public class Test1 extends Activity{
+
+    private GestionPoint gestPts;
+
     private ImageButton btest1_image1 = null;
     private boolean quotation_image1 = false;
     private ImageButton btest1_validate1 = null;
@@ -37,6 +40,10 @@ public class Test1 extends Activity{
     private ImageButton btest1_validate6 = null;
     private ImageButton btest1_refuse6 = null;
     private ImageButton btest1_next = null;
+
+    public Test1(){
+        gestPts = Menu.gestPts;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -298,4 +305,12 @@ public class Test1 extends Activity{
 
 
     } // Fin d'instance
+
+    /**
+     * Obtain the point manager
+     * @param gestPtsF
+     */
+    public void giveGestPts(GestionPoint gestPtsF){
+        this.gestPts = gestPtsF;
+    }
 }

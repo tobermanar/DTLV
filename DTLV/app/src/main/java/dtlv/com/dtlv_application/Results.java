@@ -10,15 +10,10 @@ public class Results extends Activity{
 
     private int[] resTestDetail;
     private int resTestGlobal;
+    private GestionPoint gestPts;
 
-    private Controleur controleur;
-
-    /**
-     * Constructor
-     * @param controleur Link with other classes
-     */
-    public Results(Controleur controleur) {
-        this.controleur = controleur;
+    public Results(){
+        gestPts = Menu.gestPts;
     }
 
     @Override
@@ -32,11 +27,19 @@ public class Results extends Activity{
     }
 
     /**
+     * Obtain the point manager
+     * @param gestPtsF
+     */
+    public void giveGestPts(GestionPoint gestPtsF){
+        this.gestPts = gestPtsF;
+    }
+
+    /**
      * Get and set locally results of the test ( Global and test by test )
      */
     public void getResults(){
-        resTestDetail = controleur.getResultsDetailed();
-        resTestGlobal = controleur.getResultsGlobal();
+        resTestDetail = gestPts.getPointParTest();
+        resTestGlobal = gestPts.getPointTot();
     }
 
 
