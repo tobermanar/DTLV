@@ -1,28 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/blueBackground">
-    <LinearLayout
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    style="@style/blueBackground" >
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <TextView
+        android:id="@+id/credit_title"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:text="@string/credit_title1"/>
 
-    </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:padding="10dp"
-            android:text="@string/credits_student" />
+    <TextView
+        android:id="@+id/white1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_below="@id/credit_title"/>
 
-    </LinearLayout>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/credit_intro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/credit_intro"
+        android:layout_below="@id/white1"/>
+
+    <TextView
+        android:id="@+id/credit_version"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:text="Version : 1.0"
+        android:layout_below="@id/credit_intro"/>
+
+    <TextView
+        android:id="@+id/white2"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:gravity="center"
+        android:layout_below="@id/credit_version"/>
+    <TextView
+        android:id="@+id/credit_title2"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:text="@string/credit_title2"
+        android:layout_below="@id/white2"/>
+
+    <TextView
+        android:id="@+id/credit_student"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="\nAntoine Nourry\n
+Dominic Savard\n
+Emmanuel Recolin\n
+Oneka Jauregi Miquelarena\n
+Thomas Bernard\n
+Timothée Picard\n\n
+"
+        android:layout_below="@id/credit_title2"/>
+
+    <TextView
+        android:id="@+id/credit_title3"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:text="@string/credit_title3"
+        android:layout_below="@id/credit_student"/>
+
+    <TextView
+        android:id="@+id/credit_research_team"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/credit_research_team"
+        android:layout_below="@id/credit_title3"/>
+
+    <TextView
+        android:id="@+id/credit_title4"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:text="@string/credit_title4"
+        android:layout_below="@id/credit_research_team"/>
+
+    <TextView
+        android:id="@+id/credit_site"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="\nicone-png :\n
+        http://www.icone-png.com/\n"
+        android:layout_below="@id/credit_title4"/>
+
+    <TextView
+        android:id="@+id/credit_copyright"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:text="CopyRight ....."
+        android:layout_alignParentBottom="true" />  //>
+
+</RelativeLayout>
