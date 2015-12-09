@@ -163,7 +163,7 @@
                                             android:layout_width="200dp"
                                             android:layout_height="200dp"
                                             android:scaleType="fitXY"
-                                            android:id="@+id/imageButton5"
+                                            android:id="@+id/test1_image1"
                                             android:src="@drawable/test1_image1" />
 
                                         <LinearLayout
@@ -182,7 +182,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton6"
+                                                android:id="@+id/test1_validate1"
                                                 android:src="@drawable/validate"
                                                 android:background="@null"
                                                 android:layout_gravity="center" />
@@ -196,7 +196,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton7"
+                                                android:id="@+id/test1_refuse1"
                                                 android:src="@drawable/refuse"
                                                 android:background="@null"
                                                 android:layout_gravity="center" />
@@ -219,7 +219,7 @@
                                             android:layout_width="200dp"
                                             android:layout_height="200dp"
                                             android:scaleType="fitXY"
-                                            android:id="@+id/imageButton8"
+                                            android:id="@+id/test1_image2"
                                             android:src="@drawable/test1_image2" />
 
                                         <LinearLayout
@@ -238,7 +238,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton14"
+                                                android:id="@+id/test1_validate2"
                                                 android:src="@drawable/validate"
                                                 android:background="@null" />
 
@@ -251,7 +251,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton9"
+                                                android:id="@+id/test1_refuse2"
                                                 android:src="@drawable/refuse"
                                                 android:background="@null" />
 
@@ -273,7 +273,7 @@
                                             android:layout_width="200dp"
                                             android:layout_height="200dp"
                                             android:scaleType="fitXY"
-                                            android:id="@+id/imageButton10"
+                                            android:id="@+id/test1_image3"
                                             android:src="@drawable/test1_image3" />
 
                                         <LinearLayout
@@ -292,7 +292,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton11"
+                                                android:id="@+id/test1_validate3"
                                                 android:src="@drawable/validate"
                                                 android:background="@null" />
 
@@ -305,7 +305,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton12"
+                                                android:id="@+id/test1_refuse3"
                                                 android:src="@drawable/refuse"
                                                 android:background="@null" />
 
@@ -348,7 +348,7 @@
                                                 android:layout_height="200dp"
                                                 android:scaleType="fitXY"
                                                 android:layout_gravity="bottom"
-                                                android:id="@+id/imageButton23"
+                                                android:id="@+id/test1_image4"
                                                 android:src="@drawable/test1_image4" />
 
                                             <LinearLayout
@@ -367,7 +367,7 @@
                                                     android:layout_width="60dp"
                                                     android:layout_height="60dp"
                                                     android:scaleType="fitXY"
-                                                    android:id="@+id/imageButton13"
+                                                    android:id="@+id/test1_validate4"
                                                     android:src="@drawable/validate"
                                                     android:background="@null" />
 
@@ -380,7 +380,7 @@
                                                     android:layout_width="60dp"
                                                     android:layout_height="60dp"
                                                     android:scaleType="fitXY"
-                                                    android:id="@+id/imageButton15"
+                                                    android:id="@+id/test1_refuse4"
                                                     android:src="@drawable/refuse"
                                                     android:background="@null" />
 
@@ -402,7 +402,7 @@
                                                 android:layout_height="200dp"
                                                 android:scaleType="fitXY"
                                                 android:layout_gravity="bottom"
-                                                android:id="@+id/imageButton16"
+                                                android:id="@+id/test1_image5"
                                                 android:src="@drawable/test1_image5" />
 
                                             <LinearLayout
@@ -421,7 +421,7 @@
                                                     android:layout_width="60dp"
                                                     android:layout_height="60dp"
                                                     android:scaleType="fitXY"
-                                                    android:id="@+id/imageButton18"
+                                                    android:id="@+id/test1_validate5"
                                                     android:src="@drawable/validate"
                                                     android:background="@null" />
 
@@ -434,7 +434,7 @@
                                                     android:layout_width="60dp"
                                                     android:layout_height="60dp"
                                                     android:scaleType="fitXY"
-                                                    android:id="@+id/imageButton24"
+                                                    android:id="@+id/test1_refuse5"
                                                     android:src="@drawable/refuse"
                                                     android:background="@null" />
 
@@ -457,7 +457,7 @@
                                                 android:layout_height="200dp"
                                                 android:scaleType="fitXY"
                                                 android:layout_gravity="bottom"
-                                                android:id="@+id/imageButton17"
+                                                android:id="@+id/test1_image6"
                                                 android:src="@drawable/test1_image6" />
 
                                             <LinearLayout
@@ -476,7 +476,7 @@
                                                     android:layout_width="60dp"
                                                     android:layout_height="60dp"
                                                     android:scaleType="fitXY"
-                                                    android:id="@+id/imageButton19"
+                                                    android:id="@+id/test1_validate6"
                                                     android:src="@drawable/validate"
                                                     android:background="@null" />
 
@@ -489,7 +489,7 @@
                                                     android:layout_width="60dp"
                                                     android:layout_height="60dp"
                                                     android:scaleType="fitXY"
-                                                    android:id="@+id/imageButton20"
+                                                    android:id="@+id/test1_refuse6"
                                                     android:src="@drawable/refuse"
                                                     android:background="@null" />
 
@@ -515,7 +515,7 @@
                             <ImageButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:id="@+id/imageButton21"
+                                android:id="@+id/test1_next"
                                 android:src="@drawable/next"
                                 android:layout_gravity="bottom"
                                 android:layout_alignParentRight="true"
