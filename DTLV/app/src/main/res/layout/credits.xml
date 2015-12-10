@@ -54,6 +54,18 @@
         android:layout_below="@id/white2"/>
 
     <TextView
+        android:id="@+id/num_version0"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:text="@string/num_version"
+        android:gravity="center"
+        android:layout_below="@id/white2"
+        android:layout_alignRight="@id/credit_title2"
+        android:layout_marginRight="560dp" />
+
+
+    <TextView
         android:id="@+id/credit_student"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -71,10 +83,23 @@ Timothée Picard\n\n
         android:id="@+id/credit_title3"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:background="#ffffff"
         android:text="@string/credit_title3"
         android:layout_below="@id/credit_student"/>
+
+    <TextView
+        android:id="@+id/num_version1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:text="@string/num_version"
+        android:gravity="center"
+        android:layout_below="@id/credit_student"
+        android:layout_alignRight="@id/credit_title3"
+        android:layout_marginRight="560dp" />
+
 
     <TextView
         android:id="@+id/credit_research_team"
@@ -94,6 +119,17 @@ Timothée Picard\n\n
         android:layout_below="@id/credit_research_team"/>
 
     <TextView
+        android:id="@+id/num_version2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:text="@string/num_version"
+        android:gravity="center"
+        android:layout_below="@id/credit_research_team"
+        android:layout_alignRight="@id/credit_title4"
+        android:layout_marginRight="600dp" />
+
+    <TextView
         android:id="@+id/credit_site"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -102,13 +138,15 @@ Timothée Picard\n\n
         http://www.icone-png.com/\n"
         android:layout_below="@id/credit_title4"/>
 
+
+
     <TextView
         android:id="@+id/credit_copyright"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:gravity="center"
         android:background="#ffffff"
-        android:text="CopyRight ....."
+        android:text="Copyright © 2015, Macoir Joël"
         android:layout_alignParentBottom="true" />  //>
 
 </RelativeLayout>

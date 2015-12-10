@@ -4,5 +4,122 @@
     android:layout_height="match_parent"
     style="@style/blueBackground">
 
+    <LinearLayout
+        style="@style/blueBackground"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1" >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.03"
+            android:id="@+id/frameLayout7" >
 
+            <FrameLayout
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical" />
+
+            <TextView
+                android:layout_width="43dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView14"
+                android:layout_gravity="center"
+                android:background="#ffffff" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/frameLayout8"
+            android:layout_weight="0.04" />
+        <!-- ATTENTION FRAMELAYOUT FERME-->
+        <!--ok-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="483dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/linearLayout8"
+            android:weightSum="1"
+            android:layout_weight="0.87" >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:id="@+id/linearLayout7" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.05"
+                    android:id="@+id/linearLayout6"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="135dp"
+                        android:layout_weight="0.98"
+                        android:id="@+id/linearLayout5"
+                        android:weightSum="1" >
+                        <!--NOM DE LA TACHE-->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.31"
+                            android:id="@+id/frameLayout9" />
+                        <TextView
+                            android:layout_width="767dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Nom de la tache"
+                            android:id="@+id/textView17"
+                            android:background="#ffffff"
+                            android:layout_weight="0.19" />
+                        <!--CONSIGNE-->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="0.15" />
+                        <TextView
+                            android:layout_width="770dp"
+                            android:layout_height="wrap_content"
+                            android:text="Consigne"
+                            android:id="@+id/textView20"
+                            android:background="#ffffff"
+                            android:layout_weight="0.19" />
+                    </LinearLayout>
+                    <!--BOUTON HELP-->
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:id="@+id/frameLayout10" >
+
+                        <ImageButton
+                            android:layout_width="110dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/imageButton3"
+                            android:layout_gravity="center"
+                            android:background="@drawable/help_3"
+                            android:clickable="true" />
+                    </FrameLayout>
+                    <!--ok-->
+                </LinearLayout>
+                <!--OK-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

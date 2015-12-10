@@ -38,7 +38,8 @@
             android:layout_gravity="center_vertical"
             android:id="@+id/frameLayout8"
             android:layout_weight="0.04" />
-
+        <!--TEST-->
+        <!--ok-->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="483dp"
@@ -71,13 +72,12 @@
                         android:layout_weight="0.98"
                         android:id="@+id/linearLayout5"
                         android:weightSum="1" >
-
+                        <!--NOM DE LA TACHE-->
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.31"
                             android:id="@+id/frameLayout9" />
-
                         <TextView
                             android:layout_width="767dp"
                             android:layout_height="wrap_content"
@@ -86,13 +86,12 @@
                             android:id="@+id/textView17"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
-
+                        <!--CONSIGNE-->
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="0.15" />
-
                         <TextView
                             android:layout_width="770dp"
                             android:layout_height="wrap_content"
@@ -101,7 +100,7 @@
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
                     </LinearLayout>
-
+                    <!--BOUTON HELP-->
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -116,8 +115,9 @@
                             android:background="@drawable/help_3"
                             android:clickable="true" />
                     </FrameLayout>
+                    <!--ok-->
                 </LinearLayout>
-
+                <!--OK-->
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -499,7 +499,7 @@
                                 </LinearLayout>
                             </LinearLayout>
                         </FrameLayout>
-
+                        <!--BOUTON SUIVANT-->
                         <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
