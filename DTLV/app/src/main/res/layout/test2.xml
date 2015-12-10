@@ -98,7 +98,7 @@
                             android:layout_width="770dp"
                             android:layout_height="wrap_content"
                             android:text="Le patient doit repeter les mots, les non-mots et les phrases des enregistrements audio"
-                            android:id="@+id/textView29"
+                            android:id="@+id/test2_consigne"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
                     </LinearLayout>
