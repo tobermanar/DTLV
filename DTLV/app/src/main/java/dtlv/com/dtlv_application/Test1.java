@@ -419,7 +419,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image6.setImageResource(R.drawable.refuse);
                 quotation_image6 = true;
-                //Check if all pictures are cote to unluck the button to the next test
+                //Check if all pictures are cote to unlock the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
                 {
