@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
-
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -41,7 +41,6 @@ public class Test1 extends Activity{
     private ImageButton btest1_validate6 = null;
     private ImageButton btest1_refuse6 = null;
     private ImageButton btest1_next = null;
-
 
     private int ptsT1 = 0;
 
@@ -137,11 +136,11 @@ public class Test1 extends Activity{
                 btest1_refuse1.setImageResource(R.drawable.refuse);
                 btest1_image2.setEnabled(true);
                 btest1_image2.setClickable(true);
-               // setContentView(R.layout.test1_image1);
+                //setContentView(R.layout.test1_image1);
             }
         });
-        /* TODO A DEBUG QUAND ON OUVRE L'APPLICATION PLANTE
-        btest1_image1_back.setOnClickListener(new View.OnClickListener() {
+        // TODO A DEBUG QUAND ON OUVRE L'APPLICATION PLANTE
+        /*btest1_image1_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.test1);

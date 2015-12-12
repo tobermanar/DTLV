@@ -1,7 +1,10 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -10,6 +13,7 @@ public class Results extends Activity{
 
     private int[] resTestDetail;
     private int resTestGlobal;
+    private ImageButton bresult_next = null;
     private GestionPoint gestPts;
 
     public Results(){
@@ -20,10 +24,17 @@ public class Results extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results);
+        bresult_next = (ImageButton) findViewById(R.id.result_bnext);
 
-        //Recuperation des resultats
-        getResults();
-
+        bresult_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
+                Intent iresult = new Intent(Results.this, Menu.class);
+                startActivity(iresult);
+            }
+        });
+    getResults();
     }
 
     /**

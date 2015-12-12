@@ -16,7 +16,8 @@ public class Config extends Activity {
 
         private ImageButton bconfig_next = null;
         private SeekBar sbrightness = null;
-        float brightnessSetting = 0;
+        private float brightnessSetting = 0;
+        private int bright;
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -46,6 +47,7 @@ public class Config extends Activity {
                         // Au click sur le bouton, on passe au test suivant
                         Intent itest1 = new Intent(Config.this, Test1.class);
                         startActivity(itest1);
+                        brightnessSetting = (float)R.integer.brightness_global;
                     }
                 });
 

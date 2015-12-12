@@ -20,7 +20,7 @@
 
         <activity
             android:name=".Menu"
-            android:label="Menu"
+            android:label="DTLV"
             android:configChanges="orientation"
             android:screenOrientation="sensorLandscape">
             <intent-filter>

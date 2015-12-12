@@ -11,4 +11,5 @@
     <string name="test8_name">ÉCRITURE SPONTANÉE</string>
     <string name="test9_name">COMPRÉHENSION SÉMANTIQUE</string>
     <string name="test10_name">LANGAGE SPONTANÉ</string>
+    <string name="result_name">RÉSULTATS</string>
 </resources>
