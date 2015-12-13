@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.03"
-            android:id="@+id/frameLayout13" >
+            android:id="@+id/frameLayout28" >
 
             <FrameLayout
                 android:layout_width="8dp"
@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="43dp"
                 android:layout_height="match_parent"
-                android:id="@+id/textView23"
+                android:id="@+id/textView39"
                 android:layout_gravity="center"
                 android:background="#ffffff" />
         </FrameLayout>
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:id="@+id/frameLayout14"
+            android:id="@+id/frameLayout33"
             android:layout_weight="0.04" />
 
         <LinearLayout
@@ -45,7 +45,7 @@
             android:layout_width="483dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:id="@+id/linearLayout12"
+            android:id="@+id/linearLayout24"
             android:weightSum="1"
             android:layout_weight="0.87" >
 
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:weightSum="1"
-                android:id="@+id/linearLayout11" >
+                android:id="@+id/linearLayout23" >
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="0.05"
-                    android:id="@+id/linearLayout10"
+                    android:id="@+id/linearLayout22"
                     android:weightSum="1" >
 
                     <LinearLayout
@@ -70,21 +70,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.98"
-                        android:id="@+id/linearLayout9"
+                        android:id="@+id/linearLayout21"
                         android:weightSum="1" >
 
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.31"
-                            android:id="@+id/frameLayout15" />
+                            android:id="@+id/frameLayout34" />
 
                         <TextView
                             android:layout_width="767dp"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/test7_name"
-                            android:id="@+id/test7_nom"
+                            android:text="Tache 7: Dictée"
+                            android:id="@+id/textView40"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
 
@@ -95,10 +95,10 @@
                             android:layout_weight="0.15" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="770dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/test7_instruction"
-                            android:id="@+id/test7_consigne"
+                            android:text="Le patient doit écrire les mots et non-mots entendus"
+                            android:id="@+id/textView41"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
                     </LinearLayout>
@@ -107,12 +107,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.05"
-                        android:id="@+id/frameLayout16" >
+                        android:id="@+id/frameLayout35" >
 
                         <ImageButton
                             android:layout_width="110dp"
                             android:layout_height="100dp"
-                            android:id="@+id/test7_bhelp"
+                            android:id="@+id/imageButton6"
                             android:layout_gravity="center"
                             android:background="@drawable/help_3"
                             android:clickable="true" />
@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="0.92"
-                    android:id="@+id/frameLayout18" >
+                    android:id="@+id/frameLayout37" >
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -138,14 +138,330 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="0.98"
-                            android:id="@+id/frameLayout17" >
+                            android:id="@+id/frameLayout36" >
 
                             <LinearLayout
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:weightSum="1">
+                                android:weightSum="1" >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:weightSum="1"
+                                    android:layout_weight="0.58">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:text="@string/test7_text1_part0"
+                                        android:id="@+id/test7_mots"
+                                        android:background="#404a4444" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:weightSum="1"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_gravity="top" >
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="382dp"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:layout_width="159dp"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                                android:text="@string/test7_text1_part1"
+                                                android:id="@+id/test7_text1_part1"
+                                                android:layout_gravity="center_vertical"
+                                                android:textSize="25dp" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton8"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/play_blue" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton9"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:background="@drawable/validate" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton10"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:background="@drawable/refuse" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="40dp" >
+
+                                            <TextView
+                                                android:layout_width="135dp"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                                android:text="@string/test7_text1_part2"
+                                                android:id="@+id/test7_text1_part2"
+                                                android:layout_gravity="center_vertical"
+                                                android:textSize="25dp" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton11"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/play_blue"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton12"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton13"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.22"
+                                            android:layout_marginLeft="40dp"
+                                            android:weightSum="1">
+
+                                            <TextView
+                                                android:layout_width="92dp"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                                android:text="@string/test7_text1_part3"
+                                                android:id="@+id/test7_text1_part3"
+                                                android:layout_gravity="center_vertical"
+                                                android:textSize="25dp"
+                                                android:layout_weight="1.06" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton14"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/play_blue"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton15"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton16"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:weightSum="1"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="0.58">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:text="@string/test7_text2_part0"
+                                        android:id="@+id/test7_nonmots"
+                                        android:background="#404a4444" />
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:weightSum="1"
+                                        android:layout_marginTop="10dp" >
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.21" >
+
+                                            <TextView
+                                                android:layout_width="122dp"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                                android:text="@string/test7_text2_part1"
+                                                android:id="@+id/test7_text2_part1"
+                                                android:layout_gravity="center_vertical"
+                                                android:textSize="25dp" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton17"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/play_blue"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton18"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton19"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.23"
+                                            android:layout_marginLeft="40dp" >
+
+                                            <TextView
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                                android:text="@string/test7_text2_part2"
+                                                android:id="@+id/test7_text2_part2"
+                                                android:layout_gravity="center_vertical"
+                                                android:textSize="25dp" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton20"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/play_blue"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton21"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton22"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.22"
+                                            android:layout_marginLeft="40dp"
+                                            android:weightSum="1">
+
+                                            <TextView
+                                                android:layout_width="97dp"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                                android:text="@string/test7_text2_part3"
+                                                android:id="@+id/test7_text2_part3"
+                                                android:layout_gravity="center_vertical"
+                                                android:textSize="25dp"
+                                                android:layout_weight="0.49" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton23"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/play_blue"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton24"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/imageButton25"
+                                                android:layout_marginLeft="10dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
 
                             </LinearLayout>
                         </FrameLayout>
@@ -165,7 +481,7 @@
                             <ImageButton
                                 android:layout_width="59dp"
                                 android:layout_height="80dp"
-                                android:id="@+id/test7_bnext"
+                                android:id="@+id/imageButton7"
                                 android:background="@drawable/next"
                                 android:layout_weight="0.03" />
                         </LinearLayout>
