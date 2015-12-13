@@ -5,4 +5,283 @@
     style="@style/blueBackground">
 
 
+    <LinearLayout
+        style="@style/blueBackground"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:layout_weight="0.33"
+                android:weightSum="1">
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reg"
+                    android:id="@+id/tuto_bprereg"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:id="@+id/tuto_btache1"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:id="@+id/button7"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:id="@+id/button8"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:id="@+id/button9"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:id="@+id/button10"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:id="@+id/button11"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:id="@+id/button12"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:id="@+id/button13"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:id="@+id/button14"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/button15"
+                    android:layout_weight="0.08" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Res"
+                    android:id="@+id/button16"
+                    android:layout_weight="0.08" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/frameLayout26" >
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="483dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/linearLayout20"
+            android:weightSum="1"
+            android:layout_weight="0.87" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:id="@+id/linearLayout19" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.05"
+                    android:id="@+id/linearLayout18"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="128dp"
+                        android:layout_weight="0.98"
+                        android:id="@+id/linearLayout17"
+                        android:weightSum="1" >
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.31"
+                            android:id="@+id/frameLayout29" />
+
+                        <TextView
+                            android:layout_width="767dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Tutorial"
+                            android:id="@+id/tuto_nom"
+                            android:background="#ffffff"
+                            android:layout_weight="0.19" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="0.15" />
+
+                        <TextView
+                            android:layout_width="770dp"
+                            android:layout_height="wrap_content"
+                            android:text="&lt;- Touchez un bouton pour selectionner un exercice"
+                            android:id="@+id/tuto_consigne"
+                            android:background="#ffffff"
+                            android:layout_weight="0.19" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:id="@+id/frameLayout30" >
+
+                        <ImageButton
+                            android:layout_width="89dp"
+                            android:layout_height="81dp"
+                            android:id="@+id/imageButton4"
+                            android:layout_gravity="center"
+                            android:background="@drawable/help_3"
+                            android:clickable="true" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.92"
+                    android:id="@+id/frameLayout32" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|top"
+                        android:weightSum="1" >
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="0.98"
+                            android:id="@+id/frameLayout31" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_gravity="left|center_vertical">
+
+                                <ScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tuto_scroll"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fillViewport="false" >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/tuto_scroll_image" />
+                                </ScrollView>
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:weightSum="1" >
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.94" />
+
+                            <ImageButton
+                                android:layout_width="59dp"
+                                android:layout_height="80dp"
+                                android:id="@+id/imageButton5"
+                                android:background="@drawable/back_arrow"
+                                android:layout_weight="0.03" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 </LinearLayout>
