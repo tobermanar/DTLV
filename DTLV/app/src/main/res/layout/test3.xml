@@ -84,7 +84,7 @@
                             android:layout_width="767dp"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="Tache 3 : Fluence Verbale"
+                            android:text="@string/test3_name"
                             android:id="@+id/test3_nom"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
@@ -98,7 +98,7 @@
                         <TextView
                             android:layout_width="770dp"
                             android:layout_height="wrap_content"
-                            android:text="Le patient doit dire le plus de mots possible commencant par la lettre ci dessous en 60 secondes"
+                            android:text="@string/test3_instruction"
                             android:id="@+id/test3_consigne"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
@@ -152,7 +152,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="213dp"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:text="     D"
+                                    android:text="@string/test3_text0"
                                     android:id="@+id/test3_lettre"
                                     android:layout_gravity="center_vertical"
                                     android:layout_weight="0.31"
@@ -179,7 +179,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="Lancer le chronometre"
+                                        android:text="@string/test3_lancement"
                                         android:id="@+id/test3_txtlancement"
                                         android:layout_gravity="center_horizontal"
                                         android:textAlignment="center"
@@ -195,17 +195,24 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:weightSum="1"
-                            android:layout_weight="0.14">
+                            android:weightSum="1" >
 
                             <FrameLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.94" />
 
+                            <ImageButton
+                                android:layout_width="59dp"
+                                android:layout_height="80dp"
+                                android:id="@+id/test3_bnext"
+                                android:background="@drawable/next"
+                                android:layout_weight="0.03" />
+
                         </LinearLayout>
                     </LinearLayout>
                 </FrameLayout>
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

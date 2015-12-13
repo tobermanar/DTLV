@@ -12,6 +12,8 @@
     <string name="test2_text3_part1">Le brillant astonaute n\'a pas encore lu le journal ce matin</string>
     <string name="test2_text3_part2">L\'interrupteur de la cuisine n\'est plus en état de fonctionement</string>
     <string name="test2_text3_part3">Son explication ridicule n\'a convaincu personne dans l\'auditoire</string>
+    <string name="test3_text0">D</string>
+    <string name="test3_lancement">Lancer le chronomètre</string>
     <string name="test3_text1">Compteur</string>
     <string name="test3_text2">Correction de la cotation</string>
     <string name="test4_text_ex1">Exemple 1 :</string>

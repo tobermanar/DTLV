@@ -4,10 +4,11 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.content.Intent;
+
+import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
 
@@ -98,33 +99,48 @@ public class Test2 extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test2);
+        btest2_next = (ImageButton) findViewById(R.id.test2_bnext);
+        //btest2_next.setEnabled(false);
+        //btest2_next.setClickable(false);
+        //btest2_next.setImageResource(R.drawable.next_grey);
+
+        btest2_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
+                gestPts.setT1(ptsT2);
+                Intent itest2 = new Intent(Test2.this, Test3.class);
+                startActivity(itest2);
+            }
+        });
+
 
         final MediaPlayer mp11,mp12,mp13,mp21,mp22,mp23,mp31,mp32,mp33;
 
-        btest2_play11 = (ImageButton) findViewById(R.id.test2_mot1_bplay);
+        btest2_play11 = (ImageButton) findViewById(R.id.test2_word1_bplay);
         btest2_play11.setImageResource(R.drawable.play_blue);
         btest2_play11.setEnabled(true);
         btest2_play11.setClickable(true);
-        btest2_validate11 = (ImageButton) findViewById(R.id.test2_mot1_bvalid);
+        btest2_validate11 = (ImageButton) findViewById(R.id.test2_word1_bvalid);
         btest2_validate11.setEnabled(false);
         btest2_validate11.setClickable(false);
         btest2_validate11.setImageResource(R.drawable.validate_grey);
-        btest2_refuse11 = (ImageButton) findViewById(R.id.test2_mot1_brefuse);
+        btest2_refuse11 = (ImageButton) findViewById(R.id.test2_word1_brefuse);
         btest2_refuse11.setEnabled(false);
         btest2_refuse11.setClickable(false);
         btest2_refuse11.setImageResource(R.drawable.refuse_grey);
-        test2_layout11 = (LinearLayout) findViewById(R.id.layout11);
+        test2_layout11 = (LinearLayout) findViewById(R.id.test2_layout11);
 
 
-        btest2_play12 = (ImageButton) findViewById(R.id.test2_mot2_bplay);
+        btest2_play12 = (ImageButton) findViewById(R.id.test2_word2_bplay);
         btest2_play12.setImageResource(R.drawable.play_green);
         btest2_play12.setEnabled(false);
         btest2_play12.setClickable(false);
-        btest2_validate12 = (ImageButton) findViewById(R.id.test2_image2_bvalid);
+        btest2_validate12 = (ImageButton) findViewById(R.id.test2_word2_bvalid);
         btest2_validate12.setEnabled(false);
         btest2_validate12.setClickable(false);
         btest2_validate12.setImageResource(R.drawable.validate_grey);
-        btest2_refuse12 = (ImageButton) findViewById(R.id.test2_mot2_brefuse);
+        btest2_refuse12 = (ImageButton) findViewById(R.id.test2_word2_brefuse);
         btest2_refuse12.setEnabled(false);
         btest2_refuse12.setClickable(false);
         btest2_refuse12.setImageResource(R.drawable.refuse_grey);

@@ -10,5 +10,5 @@
     <string name="test8_instruction">Tendre au sujet une feuille de papier et un crayon, en disant: "J\'aimerais maintenant que vous écriviez sur cette feuille une phrase complète comprenant un sujet, un verbe et un complément.</string>
     <string name="test9_instruction">Dans cette tâche, vous allez voir 3 mots écrits sur l\'écran de la tablette, tel que ceux-ci". Faire apparaître les 3 mots du 1er exemple et dire: "Vous voyez, ce mot est écrit en haut de l\'écran et les deux autres mots sont écrits en dessous. Je vous demande de me montrer lequel des deux mots écrits en dessous est le plus lié à celui du haut sur le plan du sens". Si le sujet commet une erreur, lui donner le feedback suivant: "Ce n\'est pas la bonne réponse. Les \'lunettes\' sont plus liées au mot \'œil\' car elles permettent d\'améliorer la vision. Nous allons poursuivre avec 4 autres séries de mots écrits. Êtes-vous prêt(e)?</string>
     <string name="test10_instruction">En se basant sur l\'interview dirigée et les échanges conversationnels avec le sujet, l\'examinateur évalue la présence ou l\'absence de troubles de la syntaxe (agrammatisme, phrase mal formée), de l\'accès lexical (anomie) et de l\'articulation.</string>
-
+    <string name="result_instruction">Attention: les resultats ne sont pas sauvegardes.</string>
 </resources>

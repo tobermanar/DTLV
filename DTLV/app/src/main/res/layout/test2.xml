@@ -83,7 +83,7 @@
                             android:layout_width="767dp"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="Tache 2 : Repetition"
+                            android:text="@string/test2_name"
                             android:id="@+id/test2_nom"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
@@ -97,7 +97,7 @@
                         <TextView
                             android:layout_width="770dp"
                             android:layout_height="wrap_content"
-                            android:text="Le patient doit repeter les mots, les non-mots et les phrases des enregistrements audio"
+                            android:text="@string/test2_instruction"
                             android:id="@+id/test2_consigne"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
@@ -158,7 +158,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:text="MOTS"
+                                        android:text="@string/test2_text1_part0"
                                         android:id="@+id/textView26"
                                         android:background="#404a4444" />
 
@@ -174,21 +174,22 @@
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_weight="0.21">
+                                            android:layout_weight="0.21"
+                                            android:id="@+id/test2_layout11">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                                android:text="pharmacie "
-                                                android:id="@+id/test2_mot1_txt"
+                                                android:text="@string/test2_text1_part1"
+                                                android:id="@+id/test2_word1_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
                                             <ImageButton
                                                 android:layout_width="70dp"
                                                 android:layout_height="match_parent"
-                                                android:id="@+id/test2_mot1_bplay"
+                                                android:id="@+id/test2_word1_bplay"
                                                 android:layout_gravity="center_vertical"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
@@ -196,7 +197,7 @@
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="61dp"
-                                                android:id="@+id/test2_mot1_bvalid"
+                                                android:id="@+id/test2_word1_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
                                                 android:background="@drawable/validate" />
@@ -204,7 +205,7 @@
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/test2_mot1_brefuse"
+                                                android:id="@+id/test2_word1_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
                                                 android:background="@drawable/refuse" />
@@ -215,35 +216,36 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_weight="0.23"
-                                            android:layout_marginLeft="40dp">
+                                            android:layout_marginLeft="40dp"
+                                            android:id="@+id/test2_layout12">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                                android:text="projectile"
-                                                android:id="@+id/test2_mot2_txt"
+                                                android:text="@string/test2_text1_part2"
+                                                android:id="@+id/test2_word2_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
                                             <ImageButton
                                                 android:layout_width="70dp"
                                                 android:layout_height="match_parent"
-                                                android:id="@+id/test2_mot2_bplay"
+                                                android:id="@+id/test2_word2_bplay"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="61dp"
-                                                android:id="@+id/test2_image2_bvalid"
+                                                android:id="@+id/test2_word2_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/test2_mot2_brefuse"
+                                                android:id="@+id/test2_word2_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -254,35 +256,36 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_weight="0.22"
-                                            android:layout_marginLeft="40dp">
+                                            android:layout_marginLeft="40dp"
+                                            android:id="@+id/test2_layout13">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                                android:text="industrie"
-                                                android:id="@+id/test2_mot3_txt"
+                                                android:text="@string/test2_text1_part3"
+                                                android:id="@+id/test2_word3_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
                                             <ImageButton
                                                 android:layout_width="70dp"
                                                 android:layout_height="match_parent"
-                                                android:id="@+id/test2_mot3_bplay"
+                                                android:id="@+id/test2_word3_bplay"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="61dp"
-                                                android:id="@+id/test2_image3_bvalid"
+                                                android:id="@+id/test2_word3_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/test2_mot3_brefuse"
+                                                android:id="@+id/test2_word3_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -302,7 +305,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:text="NON-MOTS"
+                                        android:text="@string/test2_text2_part0"
                                         android:id="@+id/textView32"
                                         android:background="#404a4444" />
 
@@ -317,35 +320,36 @@
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_weight="0.21" >
+                                            android:layout_weight="0.21"
+                                            android:id="@+id/test2_layout21">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                                android:text="dipola"
-                                                android:id="@+id/test2_nonmot1_txt"
+                                                android:text="@string/test2_text2_part1"
+                                                android:id="@+id/test2_nonword1_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
                                             <ImageButton
                                                 android:layout_width="70dp"
                                                 android:layout_height="match_parent"
-                                                android:id="@+id/test2_nonmot1_bplay"
+                                                android:id="@+id/test2_nonword1_bplay"
                                                 android:layout_marginLeft="60dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="61dp"
-                                                android:id="@+id/test2_nonmot1_bvalid"
+                                                android:id="@+id/test2_nonword1_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/test2_nonmot1_brefuse"
+                                                android:id="@+id/test2_nonword1_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -356,13 +360,14 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_weight="0.23"
-                                            android:layout_marginLeft="40dp" >
+                                            android:layout_marginLeft="40dp"
+                                            android:id="@+id/test2_layout22">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                                android:text="gobatu"
+                                                android:text="@string/test2_text2_part2"
                                                 android:id="@+id/textView35"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
@@ -370,21 +375,21 @@
                                             <ImageButton
                                                 android:layout_width="70dp"
                                                 android:layout_height="match_parent"
-                                                android:id="@+id/test2_nonmot2_bplay"
+                                                android:id="@+id/test2_nonword2_bplay"
                                                 android:layout_marginLeft="25dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="61dp"
-                                                android:id="@+id/test2_nonmot2_bvalid"
+                                                android:id="@+id/test2_nonword2_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/test2_nonmot2_brefuse"
+                                                android:id="@+id/test2_nonword2_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -395,35 +400,36 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_weight="0.22"
-                                            android:layout_marginLeft="40dp" >
+                                            android:layout_marginLeft="40dp"
+                                            android:id="@+id/test2_layout23">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                                android:text="grolita"
-                                                android:id="@+id/test2_nonmot3_txt"
+                                                android:text="@string/test2_text2_part3"
+                                                android:id="@+id/test2_nonword3_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
                                             <ImageButton
                                                 android:layout_width="70dp"
                                                 android:layout_height="match_parent"
-                                                android:id="@+id/test2_nonmot3_bplay"
+                                                android:id="@+id/test2_nonword3_bplay"
                                                 android:layout_marginLeft="35dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="61dp"
-                                                android:id="@+id/test2_nonmot3_bvalid"
+                                                android:id="@+id/test2_nonword3_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
                                                 android:layout_width="65dp"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/test2_nonmot3_brefuse"
+                                                android:id="@+id/test2_nonword3_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -444,7 +450,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:text="PHRASES"
+                                        android:text="@string/test2_text3_part0"
                                         android:id="@+id/textView34"
                                         android:background="#404a4444" />
 
@@ -455,13 +461,14 @@
                                         android:layout_gravity="center_horizontal"
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
-                                        android:layout_marginTop="10dp">
+                                        android:layout_marginTop="10dp"
+                                        android:id="@+id/test2_layout31">
 
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceLarge"
-                                            android:text="Le brillant astronaute n&apos;a pas encore lu le journal ce matin"
+                                            android:text="@string/test2_text3_part1"
                                             android:id="@+id/test2_phrase1_txt"
                                             android:layout_gravity="center_vertical" />
 
@@ -487,8 +494,8 @@
                                                 android:layout_weight="0.40">
 
                                                 <ImageButton
-                                                    android:layout_width="70dp"
-                                                    android:layout_height="match_parent"
+                                                    android:layout_width="65dp"
+                                                    android:layout_height="65dp"
                                                     android:id="@+id/test2_phrase1_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
@@ -496,7 +503,7 @@
 
                                                 <ImageButton
                                                     android:layout_width="65dp"
-                                                    android:layout_height="match_parent"
+                                                    android:layout_height="65dp"
                                                     android:id="@+id/test2_phrase1_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />
@@ -520,13 +527,14 @@
                                         android:layout_height="wrap_content"
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
-                                        android:layout_marginTop="10dp">
+                                        android:layout_marginTop="10dp"
+                                        android:id="@+id/test2_layout32">
 
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceLarge"
-                                            android:text="L&apos;interrupteur de la cuisine n&apos;est plus en etat de fonctionnement"
+                                            android:text="@string/test2_text3_part2"
                                             android:id="@+id/test2_phrase2_txt"
                                             android:layout_gravity="center_vertical" />
 
@@ -551,8 +559,8 @@
                                                 android:layout_gravity="right" >
 
                                                 <ImageButton
-                                                    android:layout_width="70dp"
-                                                    android:layout_height="match_parent"
+                                                    android:layout_width="65dp"
+                                                    android:layout_height="65dp"
                                                     android:id="@+id/test2_phrase2_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
@@ -560,7 +568,7 @@
 
                                                 <ImageButton
                                                     android:layout_width="65dp"
-                                                    android:layout_height="match_parent"
+                                                    android:layout_height="65dp"
                                                     android:id="@+id/test2_phrase2_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />
@@ -584,13 +592,14 @@
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="10dp">
+                                        android:layout_marginTop="10dp"
+                                        android:id="@+id/test2_layout33">
 
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceLarge"
-                                            android:text="Son explication ridicule n&apos;a convaincu personne dans l&apos;auditoire"
+                                            android:text="@string/test2_text3_part3"
                                             android:id="@+id/test2_phrase3_txt"
                                             android:layout_gravity="center_vertical" />
 
@@ -615,8 +624,8 @@
                                                 android:layout_gravity="right" >
 
                                                 <ImageButton
-                                                    android:layout_width="70dp"
-                                                    android:layout_height="match_parent"
+                                                    android:layout_width="65dp"
+                                                    android:layout_height="65dp"
                                                     android:id="@+id/test2_phrase3_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
@@ -624,7 +633,7 @@
 
                                                 <ImageButton
                                                     android:layout_width="65dp"
-                                                    android:layout_height="match_parent"
+                                                    android:layout_height="65dp"
                                                     android:id="@+id/test2_phrase3_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />

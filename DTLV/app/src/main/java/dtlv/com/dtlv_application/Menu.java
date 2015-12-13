@@ -20,6 +20,7 @@ public class Menu extends Activity{
     private Button start = null;
     private Button language = null;
     private Button exit = null;
+    private float brightnessSetting = 0;
 
     public static GestionPoint gestPts;
 

@@ -83,7 +83,7 @@
                             android:layout_width="767dp"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="Resultats"
+                            android:text="@string/result_name"
                             android:id="@+id/textView8"
                             android:background="#ffffff"
                             android:layout_weight="0.15" />
@@ -97,7 +97,7 @@
                         <TextView
                             android:layout_width="770dp"
                             android:layout_height="wrap_content"
-                            android:text="Attention: les resultats ne sont pas sauvegardes."
+                            android:text="@string/result_instruction"
                             android:id="@+id/textView11"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
@@ -112,7 +112,7 @@
                         <ImageButton
                             android:layout_width="110dp"
                             android:layout_height="100dp"
-                            android:id="@+id/imageButton"
+                            android:id="@+id/result_bhelp"
                             android:layout_gravity="center"
                             android:background="@drawable/help_3"
                             android:clickable="true" />
@@ -155,10 +155,10 @@
                             <ImageButton
                                 android:layout_width="59dp"
                                 android:layout_height="80dp"
-                                android:id="@+id/imageButton2"
-                                android:background="@drawable/back_arrow"
-                                android:layout_weight="0.03"
-                                android:src="@drawable/next" />
+                                android:id="@+id/result_bnext"
+                                android:background="@drawable/next"
+                                android:layout_weight="0.03" />
+
                         </LinearLayout>
                     </LinearLayout>
                 </FrameLayout>

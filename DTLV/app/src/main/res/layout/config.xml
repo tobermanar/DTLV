@@ -118,7 +118,6 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/brightness"
                     android:layout_gravity="center"
-
                     android:progress="50"
                     android:max="100"/>
             </LinearLayout>
