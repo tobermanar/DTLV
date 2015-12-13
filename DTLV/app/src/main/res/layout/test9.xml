@@ -147,6 +147,227 @@
                                 android:layout_gravity="center"
                                 android:weightSum="1">
 
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.29"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.25"
+                                        android:weightSum="1"
+                                        android:background="#71767171">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/test9_text_example_text"
+                                            android:id="@+id/test9_text_example_text"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="0.95"
+                                            android:textIsSelectable="true" />
+
+                                        <Button
+                                            android:layout_width="155dp"
+                                            android:layout_height="fill_parent"
+                                            android:text="@string/test9_boutton_example"
+                                            android:id="@+id/test9_boutton_example"
+                                            android:layout_gravity="center_vertical|right" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.30"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.39"
+                                        android:weightSum="1">
+
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="fill_parent"
+                                            android:text="@string/test9_mot1_boutton"
+                                            android:id="@+id/test9_mot1_boutton"
+                                            android:layout_weight="0.46" />
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.13"
+                                            android:layout_marginLeft="20dp"
+                                            android:weightSum="1">
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/test9_mot1_validate"
+                                                android:layout_marginLeft="50dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/test9_mot1_refuse"
+                                                android:layout_marginLeft="20dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.31"
+                                        android:weightSum="1" >
+
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="fill_parent"
+                                            android:text="@string/test9_mot2_boutton"
+                                            android:id="@+id/test9_mot2_boutton"
+                                            android:layout_weight="0.46" />
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.13"
+                                            android:layout_marginLeft="20dp"
+                                            android:weightSum="1" >
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/test9_mot2_validate"
+                                                android:layout_marginLeft="50dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/test9_mot2_refuse"
+                                                android:layout_marginLeft="20dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.29"
+                                    android:weightSum="1"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.39"
+                                        android:weightSum="1" >
+
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="fill_parent"
+                                            android:text="@string/test9_mot3_boutton"
+                                            android:id="@+id/test9_mot3_boutton"
+                                            android:layout_weight="0.46" />
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.13"
+                                            android:layout_marginLeft="20dp"
+                                            android:weightSum="1" >
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/test9_mot3_validate"
+                                                android:layout_marginLeft="50dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/test9_mot3_refuse"
+                                                android:layout_marginLeft="20dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.31"
+                                        android:weightSum="1" >
+
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="fill_parent"
+                                            android:text="@string/test9_mot4_boutton"
+                                            android:id="@+id/test9_mot4_boutton"
+                                            android:layout_weight="0.46" />
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.13"
+                                            android:layout_marginLeft="20dp"
+                                            android:weightSum="1" >
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/test9_mot4_validate"
+                                                android:layout_marginLeft="50dp"
+                                                android:background="@drawable/validate"
+                                                android:layout_gravity="center_vertical" />
+
+                                            <ImageButton
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
+                                                android:id="@+id/test9_mot4_refuse"
+                                                android:layout_marginLeft="20dp"
+                                                android:background="@drawable/refuse"
+                                                android:layout_gravity="center_vertical" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
                             </LinearLayout>
                         </FrameLayout>
 
