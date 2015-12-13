@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-        android:layout_weight="0.09"
+        android:layout_weight="0.48"
         android:weightSum="1">
 
         <ImageView
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_weight="0.21"
+        android:layout_weight="0.28"
         android:weightSum="1">
 
         <LinearLayout

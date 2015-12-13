@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Test2 -->
     <string name="test2_text1_part0">MOTS</string>
     <string name="test2_text1_part1">pharmacie</string>
     <string name="test2_text1_part2">projectile</string>
@@ -12,13 +13,16 @@
     <string name="test2_text3_part1">Le brillant astonaute n\'a pas encore lu le journal ce matin</string>
     <string name="test2_text3_part2">L\'interrupteur de la cuisine n\'est plus en état de fonctionement</string>
     <string name="test2_text3_part3">Son explication ridicule n\'a convaincu personne dans l\'auditoire</string>
+    <!-- Test3 -->
     <string name="test3_text0">D</string>
     <string name="test3_lancement">Lancer le chronomètre</string>
     <string name="test3_text1">Compteur</string>
+    <!-- Test4 -->
     <string name="test3_text2">Correction de la cotation</string>
     <string name="test4_text_ex1">Exemple 1 : VACHE / COFFRE </string>
     <string name="test4_text_ex2">Exemple 2 : POMME / BOL </string>
     <string name="test4_text_ex">Exercice : MARCHE / VOILE / FEMME </string>
+    <!-- Test4 -->
     <string name="test5_text1_part0">MOTS</string>
     <string name="test5_text1_part1">jaguar</string>
     <string name="test5_text1_part2">outil</string>
@@ -27,9 +31,11 @@
     <string name="test5_text2_part1">dourbi</string>
     <string name="test5_text2_part2">ardel</string>
     <string name="test5_text2_part3">porti</string>
+    <!-- Test5 -->
     <string name="test6_text1">C\'est le garçon que la fille porte</string>
     <string name="test6_text2">La fille est portée</string>
     <string name="test6_text3">Le garçon est porté par la fille</string>
+    <!-- Test7 -->
     <string name="test7_text1_part0">MOTS</string>
     <string name="test7_text1_part1">escompte</string>
     <string name="test7_text1_part2">archange</string>
@@ -38,13 +44,16 @@
     <string name="test7_text2_part1">audre</string>
     <string name="test7_text2_part2">bable</string>
     <string name="test7_text2_part3">fuche</string>
+    <!-- Test8 -->
     <string name="test8_text1">La phrase est correcte</string>
+    <!-- Test9 -->
     <string name="test9_text0">Exemple</string>
     <string name="test9_text1">lunettes</string>
     <string name="test9_text2">tulipe</string>
     <string name="test9_text3">saumon</string>
     <string name="test9_text4">louche</string>
     <string name="test9_text5">horloge</string>
+    <!-- Test10 -->
     <string name="test10_text1">De troubles de l\'articulation</string>
     <string name="test10_text2">De troubles de la syntaxe</string>
     <string name="test10_text3">D\'anomie</string>
