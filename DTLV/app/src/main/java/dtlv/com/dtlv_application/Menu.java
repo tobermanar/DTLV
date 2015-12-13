@@ -65,7 +65,7 @@ public class Menu extends Activity{
 
             public void onClick(View v) {
                 // Au click sur le bouton, une nouvelle activité est lancé.
-                Intent ilanguage = new Intent(Menu.this, Test4.class);
+                Intent ilanguage = new Intent(Menu.this, Test5.class);
                 startActivity(ilanguage);
             }
         });
