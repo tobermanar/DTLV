@@ -20,18 +20,15 @@ public class Test4 extends Activity{
     private boolean quotation_01 = false;
     private ImageButton btest4_validate01 = null;
     private ImageButton btest4_refuse01 = null;
-    private LinearLayout test4_layout01 = null;
 
     private ImageButton btest4_play02 = null;
     private boolean quotation_02 = false;
     private ImageButton btest4_validate02 = null;
     private ImageButton btest4_refuse02 = null;
-    private LinearLayout test4_layout02 = null;
 
     private ImageButton btest4_play11 = null;
     private ImageButton btest4_validate11 = null;
     private ImageButton btest4_refuse11 = null;
-    private LinearLayout test4_layout11 = null;
 
     private ImageButton btest4_next = null;
 
