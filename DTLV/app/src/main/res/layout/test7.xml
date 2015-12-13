@@ -97,8 +97,8 @@
                         <TextView
                             android:layout_width="770dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/test7_consigne"
-                            android:id="@+id/test7_consigne"
+                            android:text="@string/test7_instruction"
+                            android:id="@+id/test7_instruction"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
                     </LinearLayout>
@@ -112,7 +112,7 @@
                         <ImageButton
                             android:layout_width="110dp"
                             android:layout_height="100dp"
-                            android:id="@+id/imageButton6"
+                            android:id="@+id/test7_bhelp"
                             android:layout_gravity="center"
                             android:background="@drawable/help_3"
                             android:clickable="true" />
@@ -160,7 +160,7 @@
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:text="@string/test7_text1_part0"
-                                        android:id="@+id/test7_mots"
+                                        android:id="@+id/test7_text1_part0"
                                         android:background="#404a4444" />
 
                                     <LinearLayout
@@ -189,7 +189,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton8"
+                                                android:id="@+id/test7_bplay1"
                                                 android:layout_gravity="center_vertical"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
@@ -198,7 +198,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton9"
+                                                android:id="@+id/test7_validate1"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
                                                 android:background="@drawable/validate" />
@@ -207,7 +207,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton10"
+                                                android:id="@+id/test7_refuse1"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
                                                 android:background="@drawable/refuse" />
@@ -232,7 +232,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton11"
+                                                android:id="@+id/test7_bplay2"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue"
                                                 android:layout_gravity="center_vertical" />
@@ -241,7 +241,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton12"
+                                                android:id="@+id/test7_validate2"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate"
                                                 android:layout_gravity="center_vertical" />
@@ -250,7 +250,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton13"
+                                                android:id="@+id/test7_refuse2"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse"
                                                 android:layout_gravity="center_vertical" />
@@ -278,7 +278,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton14"
+                                                android:id="@+id/test7_bplay3"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue"
                                                 android:layout_gravity="center_vertical" />
@@ -287,7 +287,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton15"
+                                                android:id="@+id/test7_validate3"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate"
                                                 android:layout_gravity="center_vertical" />
@@ -296,7 +296,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton16"
+                                                android:id="@+id/test7_refuse3"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse"
                                                 android:layout_gravity="center_vertical" />
@@ -318,7 +318,7 @@
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:text="@string/test7_text2_part0"
-                                        android:id="@+id/test7_nonmots"
+                                        android:id="@+id/test7_tex2_part0"
                                         android:background="#404a4444" />
 
                                     <LinearLayout
@@ -347,7 +347,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton17"
+                                                android:id="@+id/test7_bplay4"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue"
                                                 android:layout_gravity="center_vertical" />
@@ -356,7 +356,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton18"
+                                                android:id="@+id/test7_validate4"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate"
                                                 android:layout_gravity="center_vertical" />
@@ -365,7 +365,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton19"
+                                                android:id="@+id/test7_refuse4"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse"
                                                 android:layout_gravity="center_vertical" />
@@ -391,7 +391,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton20"
+                                                android:id="@+id/test7_bplay5"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue"
                                                 android:layout_gravity="center_vertical" />
@@ -400,7 +400,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton21"
+                                                android:id="@+id/test7_validate5"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate"
                                                 android:layout_gravity="center_vertical" />
@@ -409,7 +409,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton22"
+                                                android:id="@+id/test7_refuse5"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse"
                                                 android:layout_gravity="center_vertical" />
@@ -437,7 +437,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton23"
+                                                android:id="@+id/test7_bplay6"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue"
                                                 android:layout_gravity="center_vertical" />
@@ -446,7 +446,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton24"
+                                                android:id="@+id/test7_validate6"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate"
                                                 android:layout_gravity="center_vertical" />
@@ -455,7 +455,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/imageButton25"
+                                                android:id="@+id/test7_refuse6"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse"
                                                 android:layout_gravity="center_vertical" />
@@ -481,7 +481,7 @@
                             <ImageButton
                                 android:layout_width="59dp"
                                 android:layout_height="80dp"
-                                android:id="@+id/imageButton7"
+                                android:id="@+id/test7_bnext"
                                 android:background="@drawable/next"
                                 android:layout_weight="0.03" />
                         </LinearLayout>

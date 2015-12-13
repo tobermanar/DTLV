@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Config -->
+    <string name="config_brightness_title">Luminosité : </string>
+    <string name="config_brightness">Exemple d\'image</string>
+    <string name="config_sound_title">Volume : </string>
+    <string name="config_sound">Exemple sonore</string>
     <!-- Test2 -->
     <string name="test2_text1_part0">MOTS</string>
     <string name="test2_text1_part1">pharmacie</string>

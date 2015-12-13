@@ -150,7 +150,7 @@
                                     android:layout_width="159dp"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="@string/test8_text"
+                                    android:text="@string/test8_text1"
                                     android:id="@+id/test8_text"
                                     android:layout_gravity="center_vertical"
                                     android:textSize="25dp" />
