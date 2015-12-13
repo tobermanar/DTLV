@@ -86,6 +86,7 @@ public class Test2 extends Activity {
     private int count31=0;
     private int count32=0;
     private int count33=0;
+
     public Test2(){
         gestPts = Menu.gestPts;
     }
@@ -99,6 +100,8 @@ public class Test2 extends Activity {
         final MediaPlayer mp11,mp12,mp13,mp21,mp22,mp23,mp31,mp32,mp33;
 
         btest2_play11 = (ImageButton) findViewById(R.id.test2_mot1_bplay);
+
+        btest2_play11.setImageResource(R.drawable.play_blue);
         btest2_play11.setEnabled(true);
         btest2_play11.setClickable(true);
         btest2_validate11 = (ImageButton) findViewById(R.id.test2_mot1_bvalid);
@@ -110,9 +113,11 @@ public class Test2 extends Activity {
         btest2_refuse11.setClickable(false);
         btest2_refuse11.setImageResource(R.drawable.refuse_grey);
 
+        //test2_layout11 = (LinearLayout) findViewById(R.id.layout11);
+
 
         btest2_play12 = (ImageButton) findViewById(R.id.test2_mot2_bplay);
-        btest2_play12.setImageResource(R.drawable.play_grey);
+        btest2_play12.setImageResource(R.drawable.play_green);
         btest2_play12.setEnabled(false);
         btest2_play12.setClickable(false);
         btest2_validate12 = (ImageButton) findViewById(R.id.test2_image2_bvalid);
@@ -128,27 +133,26 @@ public class Test2 extends Activity {
         btest2_play13 = (ImageButton) findViewById(R.id.test2_play13);
         btest2_play13.setEnabled(false);
         btest2_play13.setClickable(false);
-        btest2_play13.setImageResource(R.drawable.play_grey);
         btest2_validate13 = (ImageButton) findViewById(R.id.test2_validate13);
         btest2_validate13.setEnabled(false);
         btest2_validate13.setClickable(false);
         btest2_refuse13 = (ImageButton) findViewById(R.id.test2_refuse13);
         btest2_refuse13.setEnabled(false);
         btest2_refuse13.setClickable(false);
+
         btest2_play21 = (ImageButton) findViewById(R.id.test2_play21);
         btest2_play21.setEnabled(false);
         btest2_play21.setClickable(false);
-        btest2_play21.setImageResource(R.drawable.play_grey);
         btest2_validate21 = (ImageButton) findViewById(R.id.test2_validate21);
         btest2_validate21.setEnabled(false);
         btest2_validate21.setClickable(false);
         btest2_refuse21 = (ImageButton) findViewById(R.id.test2_refuse21);
         btest2_refuse21.setEnabled(false);
         btest2_refuse21.setClickable(false);
+
         btest2_play22 = (ImageButton) findViewById(R.id.test2_play22);
         btest2_play22.setEnabled(false);
         btest2_play22.setClickable(false);
-        btest2_play22.setImageResource(R.drawable.play_grey);
         btest2_validate22 = (ImageButton) findViewById(R.id.test2_validate22);
         btest2_validate22.setEnabled(false);
         btest2_validate22.setClickable(false);
@@ -156,37 +160,36 @@ public class Test2 extends Activity {
         btest2_refuse22.setEnabled(false);
         btest2_refuse22.setClickable(false);
         btest2_play23 = (ImageButton) findViewById(R.id.test2_play23);
-        btest2_play23.setEnabled(false);
-        btest2_play23.setClickable(false);
-        btest2_play23.setImageResource(R.drawable.play_grey);
+        btest2_play22.setEnabled(false);
+        btest2_play22.setClickable(false);
         btest2_validate23 = (ImageButton) findViewById(R.id.test2_validate23);
         btest2_validate23.setEnabled(false);
         btest2_validate23.setClickable(false);
         btest2_refuse23 = (ImageButton) findViewById(R.id.test2_refuse23);
-        btest2_refuse23.setEnabled(false);
-        btest2_refuse23.setClickable(false);
+        btest2_refuse22.setEnabled(false);
+        btest2_refuse22.setClickable(false);
+
         btest2_play31 = (ImageButton) findViewById(R.id.test2_play31);
         btest2_play31.setEnabled(false);
         btest2_play31.setClickable(false);
-        btest2_play31.setImageResource(R.drawable.play_grey);
         btest2_validate31 = (ImageButton) findViewById(R.id.test2_validate31);
         btest2_validate31.setEnabled(false);
         btest2_validate31.setClickable(false);
         btest2_refuse31 = (ImageButton) findViewById(R.id.test2_refuse31);
         btest2_refuse31.setEnabled(false);
         btest2_refuse31.setClickable(false);
+
         btest2_play32 = (ImageButton) findViewById(R.id.test2_play32);
         btest2_play32.setEnabled(false);
         btest2_play32.setClickable(false);
-        btest2_play32.setImageResource(R.drawable.play_grey);
         btest2_validate32 = (ImageButton) findViewById(R.id.test2_validate32);
         btest2_refuse32 = (ImageButton) findViewById(R.id.test2_refuse32);
         btest2_refuse32.setEnabled(false);
         btest2_refuse32.setClickable(false);
+
         btest2_play33 = (ImageButton) findViewById(R.id.test2_play33);
         btest2_play33.setEnabled(false);
         btest2_play33.setClickable(false);
-        btest2_play33.setImageResource(R.drawable.play_grey);
         btest2_validate33 = (ImageButton) findViewById(R.id.test2_validate33);
         btest2_validate33.setEnabled(false);
         btest2_validate33.setClickable(false);
@@ -312,9 +315,11 @@ public class Test2 extends Activity {
                                     btest2_validate12.setEnabled(true);
                                     btest2_validate12.setClickable(true);
                                     btest2_validate12.setImageResource(R.drawable.validate);
+
                                     btest2_refuse12.setEnabled(true);
                                     btest2_refuse12.setClickable(true);
                                     btest2_refuse12.setImageResource(R.drawable.refuse);
+
                                     // Activate next play button
                                     //btest2_play13.setEnabled(true);
                                     //btest2_play13.setClickable(true);
@@ -326,12 +331,16 @@ public class Test2 extends Activity {
                                     btest2_play12.setClickable(false);
                                 }
                                 count12++;
+
                             }
                         });
+
                         mp12.start();
+
                     }
                 }
             });
+
             btest2_validate12.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
