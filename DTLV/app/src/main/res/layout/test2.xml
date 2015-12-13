@@ -98,7 +98,7 @@
                             android:layout_weight="0.15" />
 
                         <TextView
-                            android:layout_width="770dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Consigne"
                             android:id="@+id/textView20"
@@ -190,24 +190,27 @@
                                                 android:textSize="25dp" />
 
                                             <ImageButton
-                                                android:layout_width="70dp"
-                                                android:layout_height="match_parent"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_mot1_bplay"
                                                 android:layout_gravity="center_vertical"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="61dp"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_mot1_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="wrap_content"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_mot1_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
@@ -231,22 +234,25 @@
                                                 android:textSize="25dp" />
 
                                             <ImageButton
-                                                android:layout_width="70dp"
-                                                android:layout_height="match_parent"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_mot2_bplay"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="61dp"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_image2_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="wrap_content"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_mot2_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -270,22 +276,25 @@
                                                 android:textSize="25dp" />
 
                                             <ImageButton
-                                                android:layout_width="70dp"
-                                                android:layout_height="match_parent"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_mot3_bplay"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="61dp"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_image3_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="wrap_content"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_mot3_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -333,22 +342,25 @@
                                                 android:textSize="25dp" />
 
                                             <ImageButton
-                                                android:layout_width="70dp"
-                                                android:layout_height="match_parent"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot1_bplay"
                                                 android:layout_marginLeft="60dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="61dp"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot1_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="wrap_content"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot1_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -372,22 +384,25 @@
                                                 android:textSize="25dp" />
 
                                             <ImageButton
-                                                android:layout_width="70dp"
-                                                android:layout_height="match_parent"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot2_bplay"
                                                 android:layout_marginLeft="25dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="61dp"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot2_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="wrap_content"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot2_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -411,22 +426,25 @@
                                                 android:textSize="25dp" />
 
                                             <ImageButton
-                                                android:layout_width="70dp"
-                                                android:layout_height="match_parent"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot3_bplay"
                                                 android:layout_marginLeft="35dp"
                                                 android:background="@drawable/play_blue" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="61dp"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot3_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
                                             <ImageButton
-                                                android:layout_width="65dp"
-                                                android:layout_height="wrap_content"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:scaleType="fitXY"
                                                 android:id="@+id/test2_nonmot3_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -491,23 +509,26 @@
                                                 android:layout_weight="0.40">
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="65dp"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase1_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
                                                     android:layout_weight="0.05" />
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="65dp"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase1_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="wrap_content"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase1_brefuse"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/refuse"
@@ -555,23 +576,26 @@
                                                 android:layout_gravity="right" >
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="65dp"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase2_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
                                                     android:layout_weight="0.05" />
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="65dp"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase2_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="wrap_content"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase2_brefuse"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/refuse"
@@ -619,23 +643,26 @@
                                                 android:layout_gravity="right" >
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="65dp"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase3_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
                                                     android:layout_weight="0.05" />
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="65dp"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase3_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />
 
                                                 <ImageButton
-                                                    android:layout_width="65dp"
-                                                    android:layout_height="wrap_content"
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="60dp"
+                                                    android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase3_brefuse"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/refuse"
