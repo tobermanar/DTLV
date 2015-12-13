@@ -42,7 +42,13 @@ public class Test5 extends Activity{
     private ImageButton btest5_refuse6 = null;
     private ImageButton btest5_next = null;
 
-    private int ptsT5 = 0;
+    //Variables de quotation
+    private int q1 = 0;
+    private int q2 = 0;
+    private int q3 = 0;
+    private int q4 = 0;
+    private int q5 = 0;
+    private int q6 = 0;
 
     public Test5(){
         //Recuperation du systeme de gestion des points
@@ -152,8 +158,8 @@ public class Test5 extends Activity{
                 btest5_validate1.setImageResource(R.drawable.validate);
                 btest5_refuse1.setImageResource(R.drawable.refuse_grey);
                 quotation_text1 = true;
-                //On incremente les points
-                ptsT5++;
+                //On cote q1 comme juste
+                q1=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -169,6 +175,7 @@ public class Test5 extends Activity{
                 btest5_validate1.setImageResource(R.drawable.validate_grey);
                 btest5_refuse1.setImageResource(R.drawable.refuse);
                 quotation_text1 = true;
+                q1=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -200,8 +207,7 @@ public class Test5 extends Activity{
                 btest5_validate2.setImageResource(R.drawable.validate);
                 btest5_refuse2.setImageResource(R.drawable.refuse_grey);
                 quotation_text2 = true;
-                //On incremente les points
-                ptsT5++;
+                q2=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -217,6 +223,7 @@ public class Test5 extends Activity{
                 btest5_validate2.setImageResource(R.drawable.validate_grey);
                 btest5_refuse2.setImageResource(R.drawable.refuse);
                 quotation_text2 = true;
+                q2=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -248,8 +255,7 @@ public class Test5 extends Activity{
                 btest5_validate3.setImageResource(R.drawable.validate);
                 btest5_refuse3.setImageResource(R.drawable.refuse_grey);
                 quotation_text3 = true;
-                //On incremente les points
-                ptsT5++;
+                q3=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -265,6 +271,7 @@ public class Test5 extends Activity{
                 btest5_validate3.setImageResource(R.drawable.validate_grey);
                 btest5_refuse3.setImageResource(R.drawable.refuse);
                 quotation_text3 = true;
+                q3=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -296,8 +303,7 @@ public class Test5 extends Activity{
                 btest5_validate4.setImageResource(R.drawable.validate);
                 btest5_refuse4.setImageResource(R.drawable.refuse_grey);
                 quotation_text4 = true;
-                //On incremente les points
-                ptsT5++;
+                q4=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -313,6 +319,7 @@ public class Test5 extends Activity{
                 btest5_validate4.setImageResource(R.drawable.validate_grey);
                 btest5_refuse4.setImageResource(R.drawable.refuse);
                 quotation_text4 = true;
+                q4=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -344,8 +351,7 @@ public class Test5 extends Activity{
                 btest5_validate5.setImageResource(R.drawable.validate);
                 btest5_refuse5.setImageResource(R.drawable.refuse_grey);
                 quotation_text5 = true;
-                //On incremente les points
-                ptsT5++;
+                q5=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -361,6 +367,7 @@ public class Test5 extends Activity{
                 btest5_validate5.setImageResource(R.drawable.validate_grey);
                 btest5_refuse5.setImageResource(R.drawable.refuse);
                 quotation_text5 = true;
+                q5=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -390,8 +397,7 @@ public class Test5 extends Activity{
                 btest5_validate6.setImageResource(R.drawable.validate);
                 btest5_refuse6.setImageResource(R.drawable.refuse_grey);
                 quotation_text6 = true;
-                //On incremente les points
-                ptsT5++;
+                q6=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -407,6 +413,7 @@ public class Test5 extends Activity{
                 btest5_validate6.setImageResource(R.drawable.validate_grey);
                 btest5_refuse6.setImageResource(R.drawable.refuse);
                 quotation_text6 = true;
+                q6=0;
                 //Check if all pictures are cote to unlock the button to the next test
                 if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
                         quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
@@ -421,7 +428,7 @@ public class Test5 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT5(ptsT5);
+                gestPts.setT5(q1+q2+q3+q4+q5+q6);
                 Intent itest5 = new Intent(Test5.this, Test6.class);
                 startActivity(itest5);
             }

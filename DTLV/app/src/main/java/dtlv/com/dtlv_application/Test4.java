@@ -36,7 +36,9 @@ public class Test4 extends Activity{
     private int count02=0;
     private int count11=0;
 
-    private int ptsT4 = 0;
+    //Variables de quotation
+    private int q1 = 0;
+
     private GestionPoint gestPts;
 
     public Test4(){
@@ -198,16 +200,6 @@ public class Test4 extends Activity{
             }
         });// Fin play11
 
-        btest4_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT1(ptsT4);
-                Intent itest4 = new Intent(Test4.this, Test5.class);
-                startActivity(itest4);
-            }
-        });
-
         //Gestion des notations
         btest4_validate01.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -215,8 +207,7 @@ public class Test4 extends Activity{
                 btest4_refuse01.setImageResource(R.drawable.refuse_grey);
                 btest4_validate01.setImageResource(R.drawable.validate);
                 quotation_01 = false;
-                //On incremente les points
-                ptsT4++;
+                //Pas de quotation pour les exemples
             }
         });
         btest4_refuse01.setOnClickListener(new View.OnClickListener() {
@@ -239,8 +230,6 @@ public class Test4 extends Activity{
                 btest4_refuse02.setImageResource(R.drawable.refuse_grey);
                 btest4_validate02.setImageResource(R.drawable.validate);
                 quotation_02 = false;
-                //On incremente les points
-                ptsT4++;
             }
         });
         btest4_refuse02.setOnClickListener(new View.OnClickListener() {
@@ -262,8 +251,7 @@ public class Test4 extends Activity{
             public void onClick(View v) {
                 btest4_refuse11.setImageResource(R.drawable.refuse_grey);
                 btest4_validate11.setImageResource(R.drawable.validate);
-                //On incremente les points
-                ptsT4++;
+                q1=1;
                 btest4_next.setEnabled(true);
                 btest4_next.setClickable(true);
                 btest4_next.setImageResource(R.drawable.next);
@@ -273,11 +261,22 @@ public class Test4 extends Activity{
             @Override
             public void onClick(View v) {
                 btest4_validate11.setImageResource(R.drawable.validate_grey);
+                q1=0;
                 btest4_refuse11.setImageResource(R.drawable.refuse);
                     btest4_next.setEnabled(true);
                     btest4_next.setClickable(true);
                     btest4_next.setImageResource(R.drawable.next);
                 }
+        });
+
+        btest4_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
+                gestPts.setT1(q1);
+                Intent itest4 = new Intent(Test4.this, Test5.class);
+                startActivity(itest4);
+            }
         });
     }
 

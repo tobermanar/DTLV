@@ -26,7 +26,11 @@ public class Test10 extends Activity{
 
     private ImageButton btest10_next = null;
 
-    private int ptsT10 = 0;
+    //Variables de quotation
+    private int q1 = 0;
+    private int q2 = 0;
+    private int q3 = 0;
+
     private GestionPoint gestPts;
 
     public Test10(){
@@ -56,8 +60,7 @@ public class Test10 extends Activity{
                 btest10_refuse1.setImageResource(R.drawable.refuse_grey);
                 btest10_validate1.setImageResource(R.drawable.validate);
                 quotation_1 = true;
-                //On incremente les points
-                ptsT10++;
+                q1=1;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
                     btest10_next.setEnabled(true);
                     btest10_next.setClickable(true);
@@ -71,6 +74,7 @@ public class Test10 extends Activity{
                 btest10_validate1.setImageResource(R.drawable.validate_grey);
                 btest10_refuse1.setImageResource(R.drawable.refuse);
                 quotation_1 = true;
+                q1=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
                     btest10_next.setEnabled(true);
                     btest10_next.setClickable(true);
@@ -84,8 +88,7 @@ public class Test10 extends Activity{
                 btest10_refuse2.setImageResource(R.drawable.refuse_grey);
                 btest10_validate2.setImageResource(R.drawable.validate);
                 quotation_2 = true;
-                //On incremente les points
-                ptsT10++;
+                q2=1;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
                     btest10_next.setEnabled(true);
                     btest10_next.setClickable(true);
@@ -99,6 +102,7 @@ public class Test10 extends Activity{
                 btest10_validate2.setImageResource(R.drawable.validate_grey);
                 btest10_refuse2.setImageResource(R.drawable.refuse);
                 quotation_2 = true;
+                q2=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
                     btest10_next.setEnabled(true);
                     btest10_next.setClickable(true);
@@ -111,8 +115,7 @@ public class Test10 extends Activity{
             public void onClick(View v) {
                 btest10_refuse3.setImageResource(R.drawable.refuse_grey);
                 btest10_validate3.setImageResource(R.drawable.validate);
-                //On incremente les points
-                ptsT10++;
+                q3=1;
                 quotation_3 = true;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
                     btest10_next.setEnabled(true);
@@ -127,6 +130,7 @@ public class Test10 extends Activity{
                 btest10_validate3.setImageResource(R.drawable.validate_grey);
                 btest10_refuse3.setImageResource(R.drawable.refuse);
                 quotation_3 = true;
+                q3=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
                     btest10_next.setEnabled(true);
                     btest10_next.setClickable(true);
@@ -139,7 +143,7 @@ public class Test10 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT10(ptsT10);
+                gestPts.setT10(q1=q2+q3);
                 Intent itest10 = new Intent(Test10.this, Results.class);
                 startActivity(itest10);
             }

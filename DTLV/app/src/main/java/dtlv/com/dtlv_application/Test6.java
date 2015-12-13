@@ -36,7 +36,11 @@ public class Test6 extends Activity{
     private int count2 =0;
     private int count3 =0;
 
-    private int ptsT6 = 0;
+    //Variables de quotation
+    private int q1 = 0;
+    private int q2 = 0;
+    private int q3 = 0;
+
     private GestionPoint gestPts;
 
     public Test6(){
@@ -201,16 +205,6 @@ public class Test6 extends Activity{
             }
         });// Fin play11
 
-        btest6_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT1(ptsT6);
-                Intent itest6 = new Intent(Test6.this, Test7.class);
-                startActivity(itest6);
-            }
-        });
-
         //Gestion des notations
         btest6_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -218,8 +212,7 @@ public class Test6 extends Activity{
                 btest6_refuse1.setImageResource(R.drawable.refuse_grey);
                 btest6_validate1.setImageResource(R.drawable.validate);
                 quotation_1 = false;
-                //On incremente les points
-                ptsT6++;
+                q1=1;
             }
         });
         btest6_refuse1.setOnClickListener(new View.OnClickListener() {
@@ -228,6 +221,7 @@ public class Test6 extends Activity{
                 btest6_validate1.setImageResource(R.drawable.validate_grey);
                 btest6_refuse1.setImageResource(R.drawable.refuse);
                 quotation_1 = true;
+                q2=0;
                 if (quotation_1 == true && quotation_2 == true) {
                     btest6_next.setEnabled(true);
                     btest6_next.setClickable(true);
@@ -241,8 +235,7 @@ public class Test6 extends Activity{
                 btest6_refuse2.setImageResource(R.drawable.refuse_grey);
                 btest6_validate2.setImageResource(R.drawable.validate);
                 quotation_2 = false;
-                //On incremente les points
-                ptsT6++;
+                q2=1;
             }
         });
         btest6_refuse2.setOnClickListener(new View.OnClickListener() {
@@ -251,6 +244,7 @@ public class Test6 extends Activity{
                 btest6_validate2.setImageResource(R.drawable.validate_grey);
                 btest6_refuse2.setImageResource(R.drawable.refuse);
                 quotation_2 = true;
+                q2=0;
                 if (quotation_1 == true && quotation_2 == true) {
                     btest6_next.setEnabled(true);
                     btest6_next.setClickable(true);
@@ -263,8 +257,7 @@ public class Test6 extends Activity{
             public void onClick(View v) {
                 btest6_refuse3.setImageResource(R.drawable.refuse_grey);
                 btest6_validate3.setImageResource(R.drawable.validate);
-                //On incremente les points
-                ptsT6++;
+                q3=1;
                 btest6_next.setEnabled(true);
                 btest6_next.setClickable(true);
                 btest6_next.setImageResource(R.drawable.next);
@@ -275,9 +268,20 @@ public class Test6 extends Activity{
             public void onClick(View v) {
                 btest6_validate3.setImageResource(R.drawable.validate_grey);
                 btest6_refuse3.setImageResource(R.drawable.refuse);
+                q3=0;
                 btest6_next.setEnabled(true);
                 btest6_next.setClickable(true);
                 btest6_next.setImageResource(R.drawable.next);
+            }
+        });
+
+        btest6_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
+                gestPts.setT1(q1+q2+q3);
+                Intent itest6 = new Intent(Test6.this, Test7.class);
+                startActivity(itest6);
             }
         });
     }
