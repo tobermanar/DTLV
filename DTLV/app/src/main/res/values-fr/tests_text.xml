@@ -20,7 +20,7 @@
     <string name="test2_text3_part3">Son explication ridicule n\'a convaincu personne dans l\'auditoire</string>
     <!-- Test3 -->
     <string name="test3_text0">D</string>
-    <string name="test3_lancement">Lancer le chronomètre</string>
+    <string name="test3_launch">Lancer le chronomètre</string>
     <string name="test3_text1">Compteur</string>
     <!-- Test4 -->
     <string name="test3_text2">Correction de la cotation</string>

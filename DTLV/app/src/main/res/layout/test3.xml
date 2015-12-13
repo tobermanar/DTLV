@@ -160,6 +160,7 @@
                                     android:textStyle="bold"
                                     android:textAlignment="center" />
 
+
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="wrap_content"
@@ -174,13 +175,18 @@
                                         android:id="@+id/test3_blancementchrono"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="35dp" />
-
+                                    <Chronometer
+                                        android:id="@+id/chronometer"
+                                        android:format="%s"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="40sp"/>
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="@string/test3_lancement"
-                                        android:id="@+id/test3_txtlancement"
+                                        android:text="@string/test3_launch"
+                                        android:id="@+id/test3_launch"
                                         android:layout_gravity="center_horizontal"
                                         android:textAlignment="center"
                                         android:textSize="25dp"
