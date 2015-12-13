@@ -41,8 +41,13 @@ public class Test1 extends Activity{
     private ImageButton btest1_validate6 = null;
     private ImageButton btest1_refuse6 = null;
     private ImageButton btest1_next = null;
-
-    private int ptsT1 = 0;
+    //Variables de quotation
+    private int q1 = 0;
+    private int q2 = 0;
+    private int q3 = 0;
+    private int q4 = 0;
+    private int q5 = 0;
+    private int q6 = 0;
 
     public Test1(){
         //Recuperation du systeme de gestion des points
@@ -152,8 +157,8 @@ public class Test1 extends Activity{
                 // TODO Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image1.setImageResource(R.drawable.validate);
                 quotation_image1 = true;
-                //On incremente les points
-                ptsT1++;
+                //cote la question 1 comme juste
+                q1=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -170,6 +175,8 @@ public class Test1 extends Activity{
                 // TODO Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image1.setImageResource(R.drawable.refuse);
                 quotation_image1 = true;
+                //cote la question 1 comme fausse
+                q1=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -202,8 +209,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image2.setImageResource(R.drawable.validate);
                 quotation_image2 = true;
-                //On incremente les points
-                ptsT1++;
+                q2=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -220,6 +226,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image2.setImageResource(R.drawable.refuse);
                 quotation_image2 = true;
+                q2=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -252,8 +259,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image3.setImageResource(R.drawable.validate);
                 quotation_image3 = true;
-                //On incremente les points
-                ptsT1++;
+                q3=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -270,6 +276,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image3.setImageResource(R.drawable.refuse);
                 quotation_image3 = true;
+                q3=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -302,8 +309,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image4.setImageResource(R.drawable.validate);
                 quotation_image4 = true;
-                //On incremente les points
-                ptsT1++;
+                q4=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -320,6 +326,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image4.setImageResource(R.drawable.refuse);
                 quotation_image4 = true;
+                q4=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -352,8 +359,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image5.setImageResource(R.drawable.validate);
                 quotation_image5 = true;
-                //On incremente les points
-                ptsT1++;
+                q5=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -370,6 +376,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image5.setImageResource(R.drawable.refuse);
                 quotation_image5 = true;
+                q5=0;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -400,8 +407,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 btest1_image6.setImageResource(R.drawable.validate);
                 quotation_image6 = true;
-                //On incremente les points
-                ptsT1++;
+                q6=1;
                 //Check if all pictures are cote to unluck the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -418,6 +424,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 btest1_image6.setImageResource(R.drawable.refuse);
                 quotation_image6 = true;
+                q6=0;
                 //Check if all pictures are cote to unlock the button to the next test
                 if(quotation_image1 == true && quotation_image2 == true && quotation_image3 == true &&
                         quotation_image4 == true && quotation_image5 == true && quotation_image6 == true)
@@ -433,7 +440,8 @@ public class Test1 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT1(ptsT1);
+
+                gestPts.setT1(q1+q2+q3+q4+q5+q6);
                 Intent itest2 = new Intent(Test1.this, Test2.class);
                 startActivity(itest2);
             }
