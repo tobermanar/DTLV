@@ -3,13 +3,11 @@ package dtlv.com.dtlv_application;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
-import android.os.SystemClock;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.TextView;
+
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -17,9 +15,12 @@ import android.widget.TextView;
 
 public class Test3 extends Activity{
 
-    private Chronometer chronometer;
     private TextView btest3_launch = null;
+    private ImageButton btest3_plus = null;
+    private ImageButton btest3_minus = null;
     private ImageButton btest3_next = null;
+    private TextView test3_score = null;
+    private TextView test3_countdown = null;
 
     private int ptsT3 = 0;
     private GestionPoint gestPts;
@@ -28,33 +29,62 @@ public class Test3 extends Activity{
         gestPts = Menu.gestPts;
     }
 
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test3);
-        chronometer = (Chronometer) findViewById(R.id.chronometer);
         btest3_launch = (TextView) findViewById(R.id.test3_launch);
         btest3_launch.setEnabled(true);
         btest3_launch.setClickable(true);
-
+        test3_score = (TextView) findViewById(R.id.test3_score);
+        btest3_plus = (ImageButton) findViewById(R.id.test3_plus);
+        btest3_minus = (ImageButton) findViewById(R.id.test3_minus);
         btest3_next = (ImageButton) findViewById(R.id.test3_bnext);
-        //btest3_next.setEnabled(false);
-        //btest3_next.setClickable(false);
-        //btest3_next.setImageResource(R.drawable.next_grey);
+        test3_countdown = (TextView) findViewById(R.id.test3_countdown);
+        btest3_next.setEnabled(false);
+        btest3_next.setClickable(false);
+        btest3_next.setImageResource(R.drawable.next_grey);
 
+        //mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        //mTextView = (TextView) findViewById(R.id.text);
         btest3_launch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                chronometer.setBase(SystemClock.elapsedRealtime());
-                chronometer.start();
-                //TODO Gérer le temps d'arret
-                /*if(temps=60)
-                {
-                    chronometer.stop();
-                }*/
+                new CountDownTimer(60000, 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+                        test3_countdown.setText(" " + millisUntilFinished / 1000);
+                    }
+
+                    public void onFinish() {
+                        test3_countdown.setText("Temps écoulé");
+                        btest3_next.setEnabled(true);
+                        btest3_next.setClickable(true);
+                        btest3_next.setImageResource(R.drawable.next);
+                    }
+                }.start();
             }
         });
+        btest3_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            ptsT3++;
+            test3_score.setText(String.valueOf(ptsT3));
+
+            }
+        });
+        btest3_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(ptsT3>0) {
+                    ptsT3--;
+                }
+              test3_score.setText(String.valueOf(ptsT3));
+            }
+        });
+
 
         btest3_next.setOnClickListener(new View.OnClickListener() {
             @Override
