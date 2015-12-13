@@ -1,14 +1,14 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
-import android.content.Intent;
 
+import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 
@@ -17,11 +17,8 @@ import android.widget.LinearLayout;
  */
 public class Test2 extends Activity {
 
-    private GestionPoint gestPts;
-
-
-
     private int ptsT2 = 0;
+    private GestionPoint gestPts;
 
     private ImageButton btest2_play11 = null;
     private boolean quotation_11 = false;
@@ -89,8 +86,7 @@ public class Test2 extends Activity {
     private int count31=0;
     private int count32=0;
     private int count33=0;
-
-
+    
     public Test2(){
         gestPts = Menu.gestPts;
     }

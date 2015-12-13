@@ -16,4 +16,19 @@
         <item name="android:background">@color/white</item>
 
     </style>
+    <style name="redCalque">
+
+        <item name="android:background">@color/red</item>
+
+    </style>
+    <style name="yellowCalque">
+
+        <item name="android:background">@color/yellow</item>
+
+    </style>
+    <style name="greenCalque">
+
+        <item name="android:background">@color/green</item>
+
+    </style>
 </resources>
