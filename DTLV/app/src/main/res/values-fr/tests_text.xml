@@ -16,12 +16,9 @@
     <string name="test3_lancement">Lancer le chronomètre</string>
     <string name="test3_text1">Compteur</string>
     <string name="test3_text2">Correction de la cotation</string>
-    <string name="test4_text_ex1">Exemple 1 :</string>
-    <string name="test4_text1">VACHE / COFFRE</string>
-    <string name="test4_text_ex2">Exemple 2 :</string>
-    <string name="test4_text2">POMME / BOL</string>
-    <string name="test4_text_ex">Exercice :</string>
-    <string name="test4_text3">MARCHE / VOILE / FEMME</string>
+    <string name="test4_text_ex1">Exemple 1 : VACHE / COFFRE </string>
+    <string name="test4_text_ex2">Exemple 2 : POMME / BOL </string>
+    <string name="test4_text_ex">Exercice : MARCHE / VOILE / FEMME </string>
     <string name="test5_text1_part0">MOTS</string>
     <string name="test5_text1_part1">jaguar</string>
     <string name="test5_text1_part2">outil</string>
