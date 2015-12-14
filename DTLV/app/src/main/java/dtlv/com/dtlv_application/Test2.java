@@ -86,7 +86,11 @@ public class Test2 extends Activity {
     private int count31=0;
     private int count32=0;
     private int count33=0;
-    
+<<<<<<< Temporary merge branch 1
+
+
+=======
+>>>>>>> Temporary merge branch 2
     public Test2(){
         gestPts = Menu.gestPts;
     }
@@ -97,11 +101,12 @@ public class Test2 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test2);
 
-
         final MediaPlayer mp11,mp12,mp13,mp21,mp22,mp23,mp31,mp32,mp33;
 
         btest2_play11 = (ImageButton) findViewById(R.id.test2_word1_bplay);
         btest2_play11.setImageResource(R.drawable.play_blue);
+=======
+>>>>>>> Temporary merge branch 2
         btest2_play11.setEnabled(true);
         btest2_play11.setClickable(true);
         btest2_validate11 = (ImageButton) findViewById(R.id.test2_word1_bvalid);
@@ -173,8 +178,8 @@ public class Test2 extends Activity {
 
         btest2_play23 = (ImageButton) findViewById(R.id.test2_nonword3_bplay);
         btest2_play23.setImageResource(R.drawable.play_grey);
-        btest2_play22.setEnabled(false);
-        btest2_play22.setClickable(false);
+        btest2_play23.setEnabled(false);
+        btest2_play23.setClickable(false);
         btest2_validate23 = (ImageButton) findViewById(R.id.test2_nonword3_bvalid);
         btest2_validate23.setImageResource(R.drawable.validate_grey);
         btest2_validate23.setEnabled(false);
@@ -226,6 +231,7 @@ public class Test2 extends Activity {
         btest2_refuse33.setEnabled(false);
         btest2_refuse33.setClickable(false);
         test2_layout33 = (LinearLayout) findViewById(R.id.test2_layout33);
+
 
         btest2_next = (ImageButton) findViewById(R.id.test2_bnext);
         btest2_next.setEnabled(false);

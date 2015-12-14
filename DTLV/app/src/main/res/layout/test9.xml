@@ -95,7 +95,7 @@
                             android:layout_weight="0.15" />
 
                         <TextView
-                            android:layout_width="770dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/test9_instruction"
                             android:id="@+id/test9_consigne"
@@ -147,6 +147,229 @@
                                 android:layout_gravity="center"
                                 android:weightSum="1">
 
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="0.95"
+                                android:weightSum="1"
+                                android:layout_marginTop="10dp">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="0.98"
+                                    android:id="@+id/frameLayout19" >
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.21">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/test9_text0"
+                                            android:id="@+id/test9_text0"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginRight="30dp"
+                                            android:textSize="25dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/test9_text1"
+                                            android:id="@+id/test9_text1"
+                                            android:layout_gravity="center_vertical"
+                                            android:textSize="25dp" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text1_bfolder"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="5dp"
+                                            android:background="@drawable/folder" />
+                                    </LinearLayout>
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="0.98"
+                                    android:id="@+id/frameLayout20" >
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.21">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/test9_text2"
+                                            android:id="@+id/test9_text2"
+                                            android:layout_gravity="center_vertical"
+                                            android:textSize="25dp" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text2_bfolder"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="5dp"
+                                            android:background="@drawable/folder" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text2_bvalid"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@drawable/validate" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text2_brefuse"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="20dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@drawable/refuse" />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/test9_text3"
+                                            android:id="@+id/test9_text3"
+                                            android:layout_gravity="center_vertical"
+                                            android:textSize="25dp" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text3_bfolder"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="5dp"
+                                            android:background="@drawable/folder" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text3_bvalid"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@drawable/validate" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text3_brefuse"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@drawable/refuse" />
+                                    </LinearLayout>
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="0.98"
+                                    android:id="@+id/frameLayout21" >
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.21">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/test9_text4"
+                                            android:id="@+id/test9_text4"
+                                            android:layout_gravity="center_vertical"
+                                            android:textSize="25dp" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text4_bfolder"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="5dp"
+                                            android:background="@drawable/folder" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text4_bvalid"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@drawable/validate" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text4_brefuse"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="20dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@drawable/refuse" />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/test9_text5"
+                                            android:id="@+id/test9_text5"
+                                            android:layout_gravity="center_vertical"
+                                            android:textSize="25dp" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text5_bfolder"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="5dp"
+                                            android:background="@drawable/folder" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text5_bvalid"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@drawable/validate" />
+
+                                        <ImageButton
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:scaleType="fitXY"
+                                            android:id="@+id/test9_text5_brefuse"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:background="@drawable/refuse" />
+
+                                    </LinearLayout>
+                                </FrameLayout>
                             </LinearLayout>
                         </FrameLayout>
 

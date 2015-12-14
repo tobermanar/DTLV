@@ -96,7 +96,7 @@
                             android:layout_weight="0.15" />
 
                         <TextView
-                            android:layout_width="770dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/test3_instruction"
                             android:id="@+id/test3_consigne"
@@ -160,6 +160,7 @@
                                     android:textStyle="bold"
                                     android:textAlignment="center" />
 
+
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="wrap_content"
@@ -168,25 +169,55 @@
                                     android:layout_weight="0.58"
                                     android:weightSum="1">
 
-                                    <ImageButton
-                                        android:layout_width="300dp"
-                                        android:layout_height="300dp"
-                                        android:id="@+id/test3_blancementchrono"
-                                        android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="35dp" />
+                                    <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="60"
+                                    android:id="@+id/test3_countdown"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="0.31"
+                                    android:textSize="90dp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"/>
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="@string/test3_lancement"
-                                        android:id="@+id/test3_txtlancement"
+                                        android:text="@string/test3_launch"
+                                        android:id="@+id/test3_launch"
                                         android:layout_gravity="center_horizontal"
                                         android:textAlignment="center"
                                         android:textSize="25dp"
                                         android:background="#5bab9e9e" />
-                                </LinearLayout>
 
+                                    <ImageButton
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:scaleType="fitXY"
+                                        android:id="@+id/test3_plus"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/plus" />
+
+                                    <ImageButton
+                                        android:layout_width="70dp"
+                                        android:layout_height="70dp"
+                                        android:id="@+id/test3_minus"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/minus"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:text="0"
+                                        android:id="@+id/test3_score"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="0.31"
+                                        android:textSize="40dp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"/>
+
+                                </LinearLayout>
                             </LinearLayout>
                         </FrameLayout>
 
@@ -196,7 +227,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:weightSum="1" >
-
                             <FrameLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
