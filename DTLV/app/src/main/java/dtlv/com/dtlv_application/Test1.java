@@ -124,8 +124,8 @@ public class Test1 extends Activity{
         btest1_refuse6.setClickable(false);
         btest1_refuse6.setImageResource(R.drawable.refuse_grey);
         btest1_next = (ImageButton) findViewById(R.id.test1_next);
-        btest1_next.setEnabled(false);
-        btest1_next.setClickable(false);
+        btest1_next.setEnabled(true);
+        btest1_next.setClickable(true);
         btest1_next.setImageResource(R.drawable.next_grey);
 
     //Image 1
