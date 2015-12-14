@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Config -->
+    <string name="config_brightness_title">Luminosité : </string>
+    <string name="config_brightness">Exemple d\'image</string>
+    <string name="config_sound_title">Volume : </string>
+    <string name="config_sound">Exemple sonore</string>
     <!-- Test2 -->
     <string name="test2_text1_part0">MOTS</string>
     <string name="test2_text1_part1">pharmacie</string>
@@ -15,7 +20,7 @@
     <string name="test2_text3_part3">Son explication ridicule n\'a convaincu personne dans l\'auditoire</string>
     <!-- Test3 -->
     <string name="test3_text0">D</string>
-    <string name="test3_lancement">Lancer le chronomètre</string>
+    <string name="test3_launch">Lancer le chronomètre</string>
     <string name="test3_text1">Compteur</string>
     <!-- Test4 -->
     <string name="test3_text2">Correction de la cotation</string>
@@ -49,12 +54,24 @@
     <!-- Test9 -->
     <string name="test9_text0">Exemple</string>
     <string name="test9_text1">lunettes</string>
+    <string name="test9_text1_part1">oreille</string>
+    <string name="test9_text1_part2">oeil</string>
     <string name="test9_text2">tulipe</string>
+    <string name="test9_text2_part1">fougère</string>
+    <string name="test9_text2_part2">jonquille</string>
     <string name="test9_text3">saumon</string>
+    <string name="test9_text3_part1">pêcheur</string>
+    <string name="test9_text3_part2">chasseur</string>
     <string name="test9_text4">louche</string>
+    <string name="test9_text4_part1">potage</string>
+    <string name="test9_text4_part2">tarte</string>
     <string name="test9_text5">horloge</string>
+    <string name="test9_text5_part1">pendule</string>
+    <string name="test9_text5_part2">balance</string>
     <!-- Test10 -->
     <string name="test10_text1">De troubles de l\'articulation</string>
     <string name="test10_text2">De troubles de la syntaxe</string>
     <string name="test10_text3">D\'anomie</string>
+    <string name="test10_yes">OUI</string>
+    <string name="test10_no">NON</string>
 </resources>

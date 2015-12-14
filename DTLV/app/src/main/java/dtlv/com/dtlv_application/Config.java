@@ -45,8 +45,8 @@ public class Config extends Activity {
                     public void onClick(View v) {
 
                         // Au click sur le bouton, on passe au test suivant
-                        Intent itest1 = new Intent(Config.this, Test1.class);
-                        startActivity(itest1);
+                        Intent iconfig = new Intent(Config.this, Test1.class);
+                        startActivity(iconfig);
                         brightnessSetting = (float)R.integer.brightness_global;
                     }
                 });

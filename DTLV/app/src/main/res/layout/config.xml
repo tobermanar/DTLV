@@ -63,7 +63,7 @@
                     android:layout_height="38dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/config_name"
-                    android:id="@+id/textView29"
+                    android:id="@+id/config_name"
                     android:background="#ffffff" />
 
                 <FrameLayout
@@ -74,7 +74,7 @@
                 <ImageButton
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:id="@+id/imageButton"
+                    android:id="@+id/config_bhelp"
                     android:background="@drawable/help_3"
                     android:clickable="true" />
             </LinearLayout>
@@ -111,22 +111,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Luminosité : "
-                        android:id="@+id/textView37"
+                        android:text="@string/config_brightness_title"
+                        android:id="@+id/config_brightness_title"
                         android:layout_weight="0.05" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Exemple d&apos;image"
-                        android:id="@+id/config_image_lumino"
+                        android:text="@string/config_brightness"
+                        android:id="@+id/config_brightness"
                         android:layout_weight="0.76" />
                 </LinearLayout>
 
                 <SeekBar
                     android:layout_width="525dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/seekBar"
+                    android:id="@+id/brightness"
                     android:layout_gravity="center"
                     android:progress="50"
                     android:max="100" />
@@ -159,22 +159,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Volume sonore : "
-                        android:id="@+id/textView38"
+                        android:text="@string/config_sound_title"
+                        android:id="@+id/config_sound_title"
                         android:layout_weight="0.07" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Exemple sonore"
-                        android:id="@+id/config_son_volume"
+                        android:text="@string/config_sound"
+                        android:id="@+id/config_sound"
                         android:layout_weight="0.83" />
                 </LinearLayout>
 
                 <SeekBar
                     android:layout_width="525dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/seekBar2"
+                    android:id="@+id/sound"
                     android:indeterminate="false"
                     android:progress="50"
                     android:max="100"
@@ -204,7 +204,7 @@
                 <ImageButton
                     android:layout_width="68dp"
                     android:layout_height="68dp"
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/config_next"
                     android:background="@drawable/next"
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
