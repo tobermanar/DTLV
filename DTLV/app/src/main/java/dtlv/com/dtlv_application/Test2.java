@@ -89,6 +89,17 @@ public class Test2 extends Activity {
     private int count32 = 0;
     private int count33 = 0;
 
+    //Variables de quotation
+    private int q11 = 0;
+    private int q12 = 0;
+    private int q13 = 0;
+    private int q21 = 0;
+    private int q22 = 0;
+    private int q23 = 0;
+    private int q31 = 0;
+    private int q32 = 0;
+    private int q33 = 0;
+
     public Test2() {
         gestPts = Menu.gestPts;
     }
@@ -289,8 +300,7 @@ public class Test2 extends Activity {
                 //TODO choisir une couleur precise et la mettre dans color.xml
                 test2_layout11.setBackgroundColor(Color.GREEN);//si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_11 = true;
-                //On incremente les points
-                ptsT2++;
+                q11 = 1;
                 activateNext();
             }
         });
@@ -301,6 +311,7 @@ public class Test2 extends Activity {
                 //TODO choisir une couleur precise et la mettre dans color.xml
                 test2_layout11.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_11 = true;
+                q11 = 0;
                 activateNext();
             }
         });
@@ -358,7 +369,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout12.setBackgroundColor(Color.GREEN);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_12 = true;
-                ptsT2++;
+                q12 = 1;
                 activateNext();
             }
         });
@@ -367,6 +378,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout12.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_12 = true;
+                q12 = 0;
                 activateNext();
             }
         });
@@ -428,7 +440,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout13.setBackgroundColor(Color.GREEN);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_13 = true;
-                ptsT2++;
+                q13 = 1;
                 activateNext();
             }
         });
@@ -437,6 +449,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout13.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_13 = true;
+                q13 = 0;
                 activateNext();
             }
         });
@@ -496,7 +509,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout21.setBackgroundColor(Color.GREEN);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_21 = true;
-                ptsT2++;
+                q21 = 1;
                 activateNext();
             }
         });
@@ -505,6 +518,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout21.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_21 = true;
+                q21 = 0;
                 activateNext();
             }
         });
@@ -564,7 +578,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout22.setBackgroundColor(Color.GREEN);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_22 = true;
-                ptsT2++;
+                q22 = 1;
                 activateNext();
             }
         });
@@ -573,6 +587,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout22.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_22 = true;
+                q22 = 0;
                 activateNext();
             }
         });
@@ -636,7 +651,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout23.setBackgroundColor(Color.GREEN);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_23 = true;
-                ptsT2++;
+                q23 = 1;
                 activateNext();
             }
         });
@@ -645,6 +660,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout23.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_23 = true;
+                q23 = 0;
                 activateNext();
             }
         });
@@ -706,7 +722,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout31.setBackgroundColor(Color.GREEN);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_31 = true;
-                ptsT2++;
+                q31 = 1;
                 activateNext();
             }
         });
@@ -715,6 +731,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout31.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_31 = true;
+                q31 = 0;
                 activateNext();
             }
         });
@@ -777,7 +794,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout32.setBackgroundColor(Color.GREEN);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_32 = true;
-                ptsT2++;
+                q32 = 1;
                 activateNext();
             }
         });
@@ -786,6 +803,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout32.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_32 = true;
+                q32 = 0;
                 activateNext();
             }
         });
@@ -842,7 +860,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout33.setBackgroundColor(Color.GREEN);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_33 = true;
-                ptsT2++;
+                q33 = 1;
                 activateNext();
             }
         });
@@ -851,6 +869,7 @@ public class Test2 extends Activity {
             public void onClick(View v) {
                 test2_layout33.setBackgroundColor(Color.RED);// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_33 = true;
+                q33 = 0;
                 activateNext();
             }
         });
@@ -862,7 +881,7 @@ public class Test2 extends Activity {
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT2(ptsT2);
+                gestPts.setT2(q11+q12+q13+q21+q22+q23+q31+q32+q33);
                 Intent itest2 = new Intent(Test2.this, Test3.class);
                 startActivity(itest2);
             }

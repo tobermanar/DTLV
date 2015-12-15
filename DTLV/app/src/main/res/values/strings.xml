@@ -2,6 +2,7 @@
     <string name="app_name">DTLV_Application</string>
     <string name="Menu">DTLV</string>
     <integer name="brightness_global">100</integer>
+    <string name="title_activity_test1_image1">Test1_image1</string>
 
     <!-- Langues -->
 
