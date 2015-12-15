@@ -90,7 +90,7 @@ public class Test3 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT1(ptsT3);
+                gestPts.setT3(ptsT3);
                 Intent itest3 = new Intent(Test3.this, Test4.class);
                 startActivity(itest3);
             }

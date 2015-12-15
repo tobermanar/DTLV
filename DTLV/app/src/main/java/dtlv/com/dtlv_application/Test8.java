@@ -63,7 +63,7 @@ public class Test8 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT1(q1);
+                gestPts.setT8(q1);
                 Intent itest8 = new Intent(Test8.this, Test9.class);
                 startActivity(itest8);
             }
