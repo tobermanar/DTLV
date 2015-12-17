@@ -182,7 +182,7 @@
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
+                                        android:layout_height="60dp"
                                         android:textAppearance="?android:attr/textAppearanceSmall"
                                         android:text="@string/test3_launch"
                                         android:id="@+id/test3_launch"
@@ -190,7 +190,6 @@
                                         android:textAlignment="center"
                                         android:textSize="25dp"
                                         android:background="#5bab9e9e" />
-
                                     <ImageButton
                                         android:layout_width="150dp"
                                         android:layout_height="150dp"

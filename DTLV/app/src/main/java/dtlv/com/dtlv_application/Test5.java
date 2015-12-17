@@ -54,7 +54,9 @@ public class Test5 extends Activity{
         //Recuperation du systeme de gestion des points
         gestPts = Menu.gestPts;
     }
-
+    @Override
+    public void onBackPressed() {
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

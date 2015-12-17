@@ -11,6 +11,9 @@ public class Test1_image1 extends Activity {
     private ImageButton btest1_image1_back = null;
     private ImageView image = null;
     @Override
+    public void onBackPressed() {
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test1_image);

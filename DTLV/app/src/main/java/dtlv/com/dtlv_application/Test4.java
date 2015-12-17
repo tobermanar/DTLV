@@ -20,15 +20,18 @@ public class Test4 extends Activity{
     private boolean quotation_01 = false;
     private ImageButton btest4_validate01 = null;
     private ImageButton btest4_refuse01 = null;
+    private LinearLayout test4_layout1 = null;
 
     private ImageButton btest4_play02 = null;
     private boolean quotation_02 = false;
     private ImageButton btest4_validate02 = null;
     private ImageButton btest4_refuse02 = null;
+    private LinearLayout test4_layout2 = null;
 
     private ImageButton btest4_play11 = null;
     private ImageButton btest4_validate11 = null;
     private ImageButton btest4_refuse11 = null;
+    private LinearLayout test4_layout3 = null;
 
     private ImageButton btest4_next = null;
 
@@ -44,7 +47,9 @@ public class Test4 extends Activity{
     public Test4(){
         gestPts = Menu.gestPts;
     }
-
+    @Override
+    public void onBackPressed() {
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +72,8 @@ public class Test4 extends Activity{
         btest4_refuse01.setEnabled(false);
         btest4_refuse01.setClickable(false);
         btest4_refuse01.setImageResource(R.drawable.refuse_grey);
+        test4_layout1 = (LinearLayout) findViewById(R.id.test4_layout1);
+        test4_layout1.setBackgroundColor(Color.YELLOW);
 
         btest4_play02 = (ImageButton) findViewById(R.id.test4_ex2_bplay);
         btest4_play02.setEnabled(false);
@@ -80,6 +87,7 @@ public class Test4 extends Activity{
         btest4_refuse02.setEnabled(false);
         btest4_refuse02.setClickable(false);
         btest4_refuse02.setImageResource(R.drawable.refuse_grey);
+        test4_layout2 = (LinearLayout) findViewById(R.id.test4_layout2);
 
         btest4_play11 = (ImageButton) findViewById(R.id.test4_ex_bplay);
         btest4_play11.setEnabled(false);
@@ -93,6 +101,7 @@ public class Test4 extends Activity{
         btest4_refuse11.setEnabled(false);
         btest4_refuse11.setClickable(false);
         btest4_refuse11.setImageResource(R.drawable.refuse_grey);
+        test4_layout3 = (LinearLayout) findViewById(R.id.test4_layout3);
 
         // Exemple Word 1
         mp01 = MediaPlayer.create(this, R.raw.test4_sound1_ex1);
@@ -115,7 +124,8 @@ public class Test4 extends Activity{
                             btest4_play02.setEnabled(true);
                             btest4_play02.setClickable(true);
                             btest4_play02.setImageResource(R.drawable.play_blue);
-
+                            test4_layout1.setBackgroundColor(Color.TRANSPARENT);
+                            test4_layout2.setBackgroundColor(Color.YELLOW);
                         }
                         if (count01 == 1) {
                             btest4_play01.setEnabled(false);
@@ -150,7 +160,8 @@ public class Test4 extends Activity{
                                 btest4_play11.setEnabled(true);
                                 btest4_play11.setClickable(true);
                                 btest4_play11.setImageResource(R.drawable.play_blue);
-
+                                test4_layout2.setBackgroundColor(Color.TRANSPARENT);
+                                test4_layout3.setBackgroundColor(Color.YELLOW);
                             }
                             if (count02 == 1) {
                                 btest4_play02.setEnabled(false);
@@ -204,8 +215,13 @@ public class Test4 extends Activity{
         btest4_validate01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest4_refuse01.setImageResource(R.drawable.refuse_grey);
-                btest4_validate01.setImageResource(R.drawable.validate);
+                test4_layout1.setBackgroundColor(Color.GREEN);
+                test4_layout2.setBackgroundColor(Color.TRANSPARENT);
+                test4_layout3.setBackgroundColor(Color.YELLOW);
+                btest4_play02.setImageResource(R.drawable.play_grey);
+                btest4_play11.setEnabled(true);
+                btest4_play11.setClickable(true);
+                btest4_play11.setImageResource(R.drawable.play_blue);
                 quotation_01 = false;
                 //Pas de quotation pour les exemples
             }
@@ -213,9 +229,14 @@ public class Test4 extends Activity{
         btest4_refuse01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest4_validate01.setImageResource(R.drawable.validate_grey);
-                btest4_refuse01.setImageResource(R.drawable.refuse);
                 quotation_01 = true;
+                test4_layout1.setBackgroundColor(Color.RED);
+                test4_layout3.setBackgroundColor(Color.TRANSPARENT);
+                test4_layout2.setBackgroundColor(Color.YELLOW);
+                btest4_play02.setImageResource(R.drawable.play_blue);
+                btest4_play11.setEnabled(false);
+                btest4_play11.setClickable(false);
+                btest4_play11.setImageResource(R.drawable.play_grey);
                 if(quotation_01 == true && quotation_02 == true)
                 {
                     btest4_next.setEnabled(true);
@@ -227,16 +248,22 @@ public class Test4 extends Activity{
         btest4_validate02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest4_refuse02.setImageResource(R.drawable.refuse_grey);
-                btest4_validate02.setImageResource(R.drawable.validate);
+                test4_layout2.setBackgroundColor(Color.GREEN);
+                test4_layout3.setBackgroundColor(Color.YELLOW);
+                btest4_play11.setEnabled(true);
+                btest4_play11.setClickable(true);
+                btest4_play11.setImageResource(R.drawable.play_blue);
                 quotation_02 = false;
             }
         });
         btest4_refuse02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest4_validate02.setImageResource(R.drawable.validate_grey);
-                btest4_refuse02.setImageResource(R.drawable.refuse);
+                test4_layout2.setBackgroundColor(Color.RED);
+                test4_layout3.setBackgroundColor(Color.RED);
+                btest4_play11.setEnabled(false);
+                btest4_play11.setClickable(false);
+                btest4_play11.setImageResource(R.drawable.play_grey);
                 quotation_02 = true;
                 if(quotation_01 == true && quotation_02 == true)
                 {
@@ -249,8 +276,7 @@ public class Test4 extends Activity{
         btest4_validate11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest4_refuse11.setImageResource(R.drawable.refuse_grey);
-                btest4_validate11.setImageResource(R.drawable.validate);
+                test4_layout3.setBackgroundColor(Color.GREEN);
                 q1=1;
                 btest4_next.setEnabled(true);
                 btest4_next.setClickable(true);
@@ -260,12 +286,11 @@ public class Test4 extends Activity{
         btest4_refuse11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest4_validate11.setImageResource(R.drawable.validate_grey);
+                test4_layout3.setBackgroundColor(Color.RED);
                 q1=0;
-                btest4_refuse11.setImageResource(R.drawable.refuse);
-                    btest4_next.setEnabled(true);
-                    btest4_next.setClickable(true);
-                    btest4_next.setImageResource(R.drawable.next);
+                btest4_next.setEnabled(true);
+                btest4_next.setClickable(true);
+                btest4_next.setImageResource(R.drawable.next);
                 }
         });
 

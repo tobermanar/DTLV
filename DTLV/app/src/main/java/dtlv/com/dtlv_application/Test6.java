@@ -46,7 +46,9 @@ public class Test6 extends Activity{
     public Test6(){
         gestPts = Menu.gestPts;
     }
-
+    @Override
+    public void onBackPressed() {
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

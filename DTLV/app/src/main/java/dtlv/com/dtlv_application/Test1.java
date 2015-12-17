@@ -62,7 +62,9 @@ public class Test1 extends Activity{
         //Recuperation du systeme de gestion des points
         gestPts = Menu.gestPts;
     }
-
+    @Override
+    public void onBackPressed() {
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,6 +140,7 @@ public class Test1 extends Activity{
         btest1_next.setImageResource(R.drawable.next_grey);
 
         test1_layout1 = (LinearLayout) findViewById(R.id.test1_layout1);
+        test1_layout1.setBackgroundColor(Color.YELLOW);
         test1_layout2 = (LinearLayout) findViewById(R.id.test1_layout2);
         test1_layout3 = (LinearLayout) findViewById(R.id.test1_layout3);
         test1_layout4 = (LinearLayout) findViewById(R.id.test1_layout4);
@@ -160,8 +163,10 @@ public class Test1 extends Activity{
                 btest1_refuse1.setEnabled(true);
                 btest1_refuse1.setClickable(true);
                 btest1_refuse1.setImageResource(R.drawable.refuse);
+                test1_layout1.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image2.setEnabled(true);
                 btest1_image2.setClickable(true);
+                test1_layout2.setBackgroundColor(Color.YELLOW);
 
             }
         });
@@ -175,8 +180,6 @@ public class Test1 extends Activity{
         btest1_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
-                //btest1_image1.setImageResource(R.drawable.validate);
                 test1_layout1.setBackgroundColor(Color.GREEN);
                 quotation_image1 = true;
                 //cote la question 1 comme juste
@@ -187,7 +190,6 @@ public class Test1 extends Activity{
         btest1_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 test1_layout1.setBackgroundColor(Color.RED);
                 quotation_image1 = true;
                 //cote la question 1 comme fausse
@@ -211,8 +213,10 @@ public class Test1 extends Activity{
                 btest1_refuse2.setEnabled(true);
                 btest1_refuse2.setClickable(true);
                 btest1_refuse2.setImageResource(R.drawable.refuse);
+                test1_layout2.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image3.setEnabled(true);
                 btest1_image3.setClickable(true);
+                test1_layout3.setBackgroundColor(Color.YELLOW);
             }
         });
         btest1_validate2.setOnClickListener(new View.OnClickListener() {
@@ -251,8 +255,10 @@ public class Test1 extends Activity{
                 btest1_refuse3.setEnabled(true);
                 btest1_refuse3.setClickable(true);
                 btest1_refuse3.setImageResource(R.drawable.refuse);
+                test1_layout3.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image4.setEnabled(true);
                 btest1_image4.setClickable(true);
+                test1_layout4.setBackgroundColor(Color.YELLOW);
             }
         });
         btest1_validate3.setOnClickListener(new View.OnClickListener() {
@@ -291,8 +297,10 @@ public class Test1 extends Activity{
                 btest1_refuse4.setEnabled(true);
                 btest1_refuse4.setClickable(true);
                 btest1_refuse4.setImageResource(R.drawable.refuse);
+                test1_layout4.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image5.setEnabled(true);
                 btest1_image5.setClickable(true);
+                test1_layout5.setBackgroundColor(Color.YELLOW);
             }
         });
         btest1_validate4.setOnClickListener(new View.OnClickListener() {
@@ -331,8 +339,10 @@ public class Test1 extends Activity{
                 btest1_refuse5.setEnabled(true);
                 btest1_refuse5.setClickable(true);
                 btest1_refuse5.setImageResource(R.drawable.refuse);
+                test1_layout5.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image6.setEnabled(true);
                 btest1_image6.setClickable(true);
+                test1_layout6.setBackgroundColor(Color.YELLOW);
             }
         });
         btest1_validate5.setOnClickListener(new View.OnClickListener() {
@@ -371,13 +381,14 @@ public class Test1 extends Activity{
                 btest1_refuse6.setEnabled(true);
                 btest1_refuse6.setClickable(true);
                 btest1_refuse6.setImageResource(R.drawable.refuse);
+                test1_layout6.setBackgroundColor(Color.TRANSPARENT);
             }
         });
         btest1_validate6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
-                test1_layout6.setBackgroundColor(Color.RED);
+                test1_layout6.setBackgroundColor(Color.GREEN);
                 quotation_image6 = true;
                 q6=1;
                 activateNext();
@@ -387,7 +398,7 @@ public class Test1 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
-                btest1_image6.setImageResource(R.drawable.refuse);
+                test1_layout6.setBackgroundColor(Color.RED);
                 quotation_image6 = true;
                 q6=0;
                 activateNext();
@@ -399,7 +410,7 @@ public class Test1 extends Activity{
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoie le score a la gestion des points
 
-                gestPts.setT1(q1+q2+q3+q4+q5+q6);
+                gestPts.setT1(q1 + q2 + q3 + q4 + q5 + q6);
                 Intent itest2 = new Intent(Test1.this, Test2.class);
                 startActivity(itest2);
             }

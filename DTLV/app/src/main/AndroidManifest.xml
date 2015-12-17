@@ -53,6 +53,16 @@
             android:label="Test1"
             android:screenOrientation="sensorLandscape"></activity>
         <activity
+            android:name=".Test1_image1"
+            android:label="@string/title_activity_test1_image1"
+            android:parentActivityName=".Test1"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dtlv.com.dtlv_application.Test1" />
+        </activity>
+        <activity
             android:name=".Test2"
             android:label="Test2"
             android:screenOrientation="sensorLandscape"></activity>
@@ -92,15 +102,6 @@
             android:name=".Results"
             android:label="Results"
             android:screenOrientation="sensorLandscape"></activity>
-        <activity
-            android:name=".Test1_image1"
-            android:label="@string/title_activity_test1_image1"
-            android:parentActivityName=".Test1"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="dtlv.com.dtlv_application.Test1" />
-        </activity>
     </application>
 
 </manifest>

@@ -259,18 +259,17 @@
 
                                         </LinearLayout>
                                     </LinearLayout>
-
-                                    <FrameLayout
-                                        android:layout_width="48dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical" />
-
                                     <LinearLayout
                                         android:orientation="horizontal"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_gravity="center_vertical"
                                         android:id="@+id/test1_layout3">
+
+                                        <FrameLayout
+                                            android:layout_width="46dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical" />
 
                                         <ImageButton
                                             android:layout_width="200dp"
@@ -313,7 +312,6 @@
                                                 android:background="@null" />
 
                                         </LinearLayout>
-
                                     </LinearLayout>
                                 </LinearLayout>
 

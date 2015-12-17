@@ -105,7 +105,9 @@ public class Test2 extends Activity {
     }
 
     MediaPlayer mp = null;
-
+    @Override
+    public void onBackPressed() {
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -245,6 +247,7 @@ public class Test2 extends Activity {
         btest2_next.setEnabled(true);
         btest2_next.setClickable(true);
         btest2_next.setImageResource(R.drawable.next_grey);
+        test2_layout11.setBackgroundColor(Color.YELLOW);
 
 
         /*************  Word 1  **************/
@@ -260,7 +263,6 @@ public class Test2 extends Activity {
                             btest2_validate11.setEnabled(true);
                             btest2_validate11.setClickable(true);
                             btest2_validate11.setImageResource(R.drawable.validate);
-
                             btest2_refuse11.setEnabled(true);
                             btest2_refuse11.setClickable(true);
                             btest2_refuse11.setImageResource(R.drawable.refuse);
@@ -271,6 +273,8 @@ public class Test2 extends Activity {
                             btest2_play12.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count11++;
+                            test2_layout11.setBackgroundColor(Color.TRANSPARENT);
+                            test2_layout12.setBackgroundColor(Color.YELLOW);
                         }
                     });
 
@@ -341,6 +345,8 @@ public class Test2 extends Activity {
                             btest2_play13.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count12++;
+                            test2_layout12.setBackgroundColor(Color.TRANSPARENT);
+                            test2_layout13.setBackgroundColor(Color.YELLOW);
 
                         }
                     });
@@ -412,7 +418,8 @@ public class Test2 extends Activity {
 
 
                             count13++;
-
+                            test2_layout13.setBackgroundColor(Color.TRANSPARENT);
+                            test2_layout21.setBackgroundColor(Color.YELLOW);
                         }
                     });
                     mp131.start();
@@ -424,9 +431,7 @@ public class Test2 extends Activity {
                             btest2_play13.setEnabled(false);
                             btest2_play13.setClickable(false);
                             mp.release();
-
                             count13++;
-
                         }
                     });
                     mp132.start();
@@ -477,11 +482,10 @@ public class Test2 extends Activity {
                             btest2_play22.setEnabled(true);
                             btest2_play22.setClickable(true);
                             btest2_play22.setImageResource(R.drawable.play_blue);
-
                             mp.release();
-
-
                             count21++;
+                            test2_layout21.setBackgroundColor(Color.TRANSPARENT);
+                            test2_layout22.setBackgroundColor(Color.YELLOW);
 
                         }
                     });
@@ -495,9 +499,7 @@ public class Test2 extends Activity {
                             btest2_play21.setEnabled(false);
                             btest2_play21.setClickable(false);
                             mp.release();
-
                             count21++;
-
                         }
                     });
                     mp212.start();
@@ -546,10 +548,9 @@ public class Test2 extends Activity {
                             btest2_play23.setClickable(true);
                             btest2_play23.setImageResource(R.drawable.play_blue);
                             mp.release();
-
-
                             count22++;
-
+                            test2_layout22.setBackgroundColor(Color.TRANSPARENT);
+                            test2_layout23.setBackgroundColor(Color.YELLOW);
                         }
                     });
                     mp221.start();
@@ -561,9 +562,7 @@ public class Test2 extends Activity {
                             btest2_play22.setEnabled(false);
                             btest2_play22.setClickable(false);
                             mp.release();
-
                             count22++;
-
                         }
                     });
                     mp222.start();
@@ -616,12 +615,10 @@ public class Test2 extends Activity {
                             btest2_play31.setEnabled(true);
                             btest2_play31.setClickable(true);
                             btest2_play31.setImageResource(R.drawable.play_blue);
-
                             mp.release();
-
-
                             count23++;
-
+                            test2_layout23.setBackgroundColor(Color.TRANSPARENT);
+                            test2_layout31.setBackgroundColor(Color.YELLOW);
                         }
                     });
                     mp231.start();
@@ -633,14 +630,10 @@ public class Test2 extends Activity {
                             btest2_play23.setEnabled(false);
                             btest2_play23.setClickable(false);
                             mp.release();
-
-
                             count23++;
-
                         }
                     });
                     mp232.start();
-
                 }
             }
         });
@@ -688,12 +681,10 @@ public class Test2 extends Activity {
                             btest2_play32.setEnabled(true);
                             btest2_play32.setClickable(true);
                             btest2_play32.setImageResource(R.drawable.play_blue);
-
                             mp.release();
-
-
                             count31++;
-
+                            test2_layout31.setBackgroundColor(Color.TRANSPARENT);
+                            test2_layout32.setBackgroundColor(Color.YELLOW);
                         }
                     });
                     mp311.start();
@@ -705,10 +696,7 @@ public class Test2 extends Activity {
                             btest2_play31.setEnabled(false);
                             btest2_play31.setClickable(false);
                             mp.release();
-
-
                             count31++;
-
                         }
                     });
                     mp312.start();
@@ -760,12 +748,10 @@ public class Test2 extends Activity {
                             btest2_play33.setEnabled(true);
                             btest2_play33.setClickable(true);
                             btest2_play33.setImageResource(R.drawable.play_blue);
-
                             mp.release();
-
-
                             count32++;
-
+                            test2_layout32.setBackgroundColor(Color.TRANSPARENT);
+                            test2_layout33.setBackgroundColor(Color.YELLOW);
                         }
                     });
                     mp321.start();
@@ -777,10 +763,7 @@ public class Test2 extends Activity {
                             btest2_play32.setEnabled(false);
                             btest2_play32.setClickable(false);
                             mp.release();
-
-
                             count32++;
-
                         }
                     });
                     mp322.start();
@@ -826,11 +809,9 @@ public class Test2 extends Activity {
                             btest2_refuse33.setEnabled(true);
                             btest2_refuse33.setClickable(true);
                             btest2_refuse33.setImageResource(R.drawable.refuse);
-
                             mp.release();
-
                             count33++;
-
+                            test2_layout33.setBackgroundColor(Color.TRANSPARENT);
                         }
                     });
                     mp331.start();
@@ -843,9 +824,7 @@ public class Test2 extends Activity {
                             btest2_play33.setEnabled(false);
                             btest2_play33.setClickable(false);
                             mp.release();
-
                             count33++;
-
                         }
                     });
                     mp332.start();
@@ -853,7 +832,6 @@ public class Test2 extends Activity {
                 }
             }
         });
-
 
         btest2_validate33.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -28,8 +28,9 @@ public class Test3 extends Activity{
     public Test3(){
         gestPts = Menu.gestPts;
     }
-
-    
+    @Override
+    public void onBackPressed() {
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +53,12 @@ public class Test3 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
+                test3_countdown.setText("59");
                 new CountDownTimer(60000, 1000) {
 
                     public void onTick(long millisUntilFinished) {
-                        test3_countdown.setText(" " + millisUntilFinished / 1000);
+                        test3_countdown.setText((millisUntilFinished / 1000)+" ");
+                        btest3_launch.setClickable(false);
                     }
 
                     public void onFinish() {
