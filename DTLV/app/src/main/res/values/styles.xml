@@ -6,29 +6,43 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="blueBackground">
 
         <item name="android:background">@color/background</item>
 
     </style>
+
     <style name="whiteBackground">
 
         <item name="android:background">@color/white</item>
 
     </style>
+
     <style name="redCalque">
 
         <item name="android:background">@color/red</item>
 
     </style>
+
     <style name="yellowCalque">
 
         <item name="android:background">@color/yellow</item>
 
     </style>
+
     <style name="greenCalque">
 
         <item name="android:background">@color/green</item>
 
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

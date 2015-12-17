@@ -178,14 +178,15 @@
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_weight="0.21">
+                                            android:layout_weight="0.21"
+                                            android:id="@+id/test2_layout11">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                                 android:text="@string/test2_text1_part1"
-                                                android:id="@+id/test2_mot1_txt"
+                                                android:id="@+id/test2_word1_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
@@ -193,7 +194,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_mot1_bplay"
+                                                android:id="@+id/test2_word1_bplay"
                                                 android:layout_gravity="center_vertical"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
@@ -202,7 +203,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_mot1_bvalid"
+                                                android:id="@+id/test2_word1_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
                                                 android:background="@drawable/validate" />
@@ -211,7 +212,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_mot1_brefuse"
+                                                android:id="@+id/test2_word1_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
                                                 android:background="@drawable/refuse" />
@@ -222,14 +223,15 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_weight="0.23"
-                                            android:layout_marginLeft="40dp">
+                                            android:layout_marginLeft="40dp"
+                                            android:id="@+id/test2_layout12">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                                 android:text="@string/test2_text1_part2"
-                                                android:id="@+id/test2_mot2_txt"
+                                                android:id="@+id/test2_word2_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
@@ -237,7 +239,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_mot2_bplay"
+                                                android:id="@+id/test2_word2_bplay"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
 
@@ -245,7 +247,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_image2_bvalid"
+                                                android:id="@+id/test2_word2_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
@@ -253,7 +255,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_mot2_brefuse"
+                                                android:id="@+id/test2_word2_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -264,14 +266,15 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_weight="0.22"
-                                            android:layout_marginLeft="40dp">
+                                            android:layout_marginLeft="40dp"
+                                            android:id="@+id/test2_layout13">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                                 android:text="@string/test2_text1_part3"
-                                                android:id="@+id/test2_mot3_txt"
+                                                android:id="@+id/test2_word3_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
@@ -279,7 +282,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_mot3_bplay"
+                                                android:id="@+id/test2_word3_bplay"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
 
@@ -287,7 +290,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_image3_bvalid"
+                                                android:id="@+id/test2_word3_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
@@ -295,7 +298,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_mot3_brefuse"
+                                                android:id="@+id/test2_word3_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -330,14 +333,15 @@
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_weight="0.21" >
+                                            android:layout_weight="0.21"
+                                            android:id="@+id/test2_layout21">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                                 android:text="@string/test2_text2_part1"
-                                                android:id="@+id/test2_nonmot1_txt"
+                                                android:id="@+id/test2_nonword1_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
@@ -345,7 +349,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot1_bplay"
+                                                android:id="@+id/test2_nonword1_bplay"
                                                 android:layout_marginLeft="60dp"
                                                 android:background="@drawable/play_blue" />
 
@@ -353,7 +357,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot1_bvalid"
+                                                android:id="@+id/test2_nonword1_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
@@ -361,7 +365,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot1_brefuse"
+                                                android:id="@+id/test2_nonword1_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -372,7 +376,8 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_weight="0.23"
-                                            android:layout_marginLeft="40dp" >
+                                            android:layout_marginLeft="40dp"
+                                            android:id="@+id/test2_layout22">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
@@ -387,7 +392,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot2_bplay"
+                                                android:id="@+id/test2_nonword2_bplay"
                                                 android:layout_marginLeft="25dp"
                                                 android:background="@drawable/play_blue" />
 
@@ -395,7 +400,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot2_bvalid"
+                                                android:id="@+id/test2_nonword2_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
@@ -403,7 +408,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot2_brefuse"
+                                                android:id="@+id/test2_nonword2_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -414,14 +419,15 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_weight="0.22"
-                                            android:layout_marginLeft="40dp" >
+                                            android:layout_marginLeft="40dp"
+                                            android:id="@+id/test2_layout23">
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                                 android:text="@string/test2_text2_part3"
-                                                android:id="@+id/test2_nonmot3_txt"
+                                                android:id="@+id/test2_nonword3_txt"
                                                 android:layout_gravity="center_vertical"
                                                 android:textSize="25dp" />
 
@@ -429,7 +435,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot3_bplay"
+                                                android:id="@+id/test2_nonword3_bplay"
                                                 android:layout_marginLeft="35dp"
                                                 android:background="@drawable/play_blue" />
 
@@ -437,7 +443,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot3_bvalid"
+                                                android:id="@+id/test2_nonword3_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
 
@@ -445,7 +451,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:scaleType="fitXY"
-                                                android:id="@+id/test2_nonmot3_brefuse"
+                                                android:id="@+id/test2_nonword3_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
 
@@ -477,7 +483,8 @@
                                         android:layout_gravity="center_horizontal"
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
-                                        android:layout_marginTop="10dp">
+                                        android:layout_marginTop="10dp"
+                                        android:id="@+id/test2_layout31">
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -545,7 +552,8 @@
                                         android:layout_height="wrap_content"
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
-                                        android:layout_marginTop="10dp">
+                                        android:layout_marginTop="10dp"
+                                        android:id="@+id/test2_layout32">
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -612,7 +620,8 @@
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="10dp">
+                                        android:layout_marginTop="10dp"
+                                        android:id="@+id/test2_layout33">
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -699,7 +708,6 @@
                     </LinearLayout>
                 </FrameLayout>
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

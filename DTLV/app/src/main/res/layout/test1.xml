@@ -157,7 +157,8 @@
                                         android:orientation="horizontal"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical">
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/test1_layout1">
 
                                         <ImageButton
                                             android:layout_width="200dp"
@@ -209,7 +210,8 @@
                                         android:orientation="horizontal"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical" >
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/test1_layout2">
 
                                         <FrameLayout
                                             android:layout_width="62dp"
@@ -267,7 +269,8 @@
                                         android:orientation="horizontal"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical" >
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/test1_layout3">
 
                                         <ImageButton
                                             android:layout_width="200dp"
@@ -341,7 +344,8 @@
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_gravity="center_vertical" >
+                                            android:layout_gravity="center_vertical"
+                                            android:id="@+id/test1_layout4">
 
                                             <ImageButton
                                                 android:layout_width="200dp"
@@ -391,7 +395,8 @@
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_gravity="center_vertical" >
+                                            android:layout_gravity="center_vertical"
+                                            android:id="@+id/test1_layout5">
 
                                             <FrameLayout
                                                 android:layout_width="63dp"
@@ -445,7 +450,8 @@
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_gravity="center_vertical" >
+                                            android:layout_gravity="center_vertical"
+                                            android:id="@+id/test1_layout6">
 
                                             <FrameLayout
                                                 android:layout_width="46dp"
