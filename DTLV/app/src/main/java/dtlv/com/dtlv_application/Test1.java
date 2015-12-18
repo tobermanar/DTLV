@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -135,8 +133,8 @@ public class Test1 extends Activity{
         btest1_refuse6.setClickable(false);
         btest1_refuse6.setImageResource(R.drawable.refuse_grey);
         btest1_next = (ImageButton) findViewById(R.id.test1_next);
-        btest1_next.setEnabled(false);//TODO laisser false
-        btest1_next.setClickable(false);//TODO laisser false
+        btest1_next.setEnabled(false);
+        btest1_next.setClickable(false);
         btest1_next.setImageResource(R.drawable.next_grey);
 
         test1_layout1 = (LinearLayout) findViewById(R.id.test1_layout1);
@@ -152,7 +150,7 @@ public class Test1 extends Activity{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Test1.this, Test1_image1.class);
+                Intent intent = new Intent(Test1.this, Test1_image.class);
                 intent.putExtra("key", 1);
                 startActivity(intent);
 
@@ -167,16 +165,9 @@ public class Test1 extends Activity{
                 btest1_image2.setEnabled(true);
                 btest1_image2.setClickable(true);
                 test1_layout2.setBackgroundColor(Color.YELLOW);
-
             }
         });
-        // TODO A DEBUG QUAND ON OUVRE L'APPLICATION PLANTE
-        /*btest1_image1_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setContentView(R.layout.test1);
-            }
-        });*/
+
         btest1_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -202,7 +193,7 @@ public class Test1 extends Activity{
         btest1_image2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Test1.this, Test1_image1.class);
+                Intent intent = new Intent(Test1.this, Test1_image.class);
                 intent.putExtra("key", 2);
                 startActivity(intent);
 
@@ -244,7 +235,7 @@ public class Test1 extends Activity{
         btest1_image3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Test1.this, Test1_image1.class);
+                Intent intent = new Intent(Test1.this, Test1_image.class);
                 intent.putExtra("key", 3);
                 startActivity(intent);
 
@@ -286,7 +277,7 @@ public class Test1 extends Activity{
         btest1_image4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Test1.this, Test1_image1.class);
+                Intent intent = new Intent(Test1.this, Test1_image.class);
                 intent.putExtra("key", 4);
                 startActivity(intent);
 
@@ -328,7 +319,7 @@ public class Test1 extends Activity{
         btest1_image5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Test1.this, Test1_image1.class);
+                Intent intent = new Intent(Test1.this, Test1_image.class);
                 intent.putExtra("key", 5);
                 startActivity(intent);
 
@@ -370,7 +361,7 @@ public class Test1 extends Activity{
         btest1_image6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Test1.this, Test1_image1.class);
+                Intent intent = new Intent(Test1.this, Test1_image.class);
                 intent.putExtra("key", 6);
                 startActivity(intent);
 

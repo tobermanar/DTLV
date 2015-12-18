@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/whiteBackground"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="1156dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.34">
+
+        <FrameLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.21"
+                android:id="@+id/test6_layout1">
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></FrameLayout>
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:layout_margin="60dp"
+                android:id="@+id/test6_sound1_bplay"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/play_blue" />
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:layout_margin="60dp"
+                android:id="@+id/test6_sound2_bplay"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/play_blue" />
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:layout_margin="60dp"
+                android:id="@+id/test6_sound3_bplay"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/play_blue" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+        <ImageView
+            android:layout_width="450dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/test6_image1_full"
+            android:layout_gravity="center"
+            android:src="@drawable/test6_image1"
+            android:foregroundGravity="center" />
+
+    </LinearLayout>
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:scaleType="fitXY"
+        android:id="@+id/test6_image1_back"
+        android:src="@drawable/back_arrow"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"/>
+
+</LinearLayout>

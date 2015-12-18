@@ -19,7 +19,9 @@ public class Results extends Activity{
     public Results(){
         gestPts = Menu.gestPts;
     }
-
+    @Override
+    public void onBackPressed() {
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

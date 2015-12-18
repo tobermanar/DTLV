@@ -2,12 +2,14 @@ package dtlv.com.dtlv_application;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -20,15 +22,18 @@ public class Test6 extends Activity{
     private boolean quotation_1 = false;
     private ImageButton btest6_validate1 = null;
     private ImageButton btest6_refuse1 = null;
+    private LinearLayout test6_layout1 = null;
 
     private ImageButton btest6_play2 = null;
     private boolean quotation_2 = false;
     private ImageButton btest6_validate2 = null;
     private ImageButton btest6_refuse2 = null;
+    private LinearLayout test6_layout2 = null;
 
     private ImageButton btest6_play3 = null;
     private ImageButton btest6_validate3 = null;
     private ImageButton btest6_refuse3 = null;
+    private LinearLayout test6_layout3 = null;
 
     private ImageButton btest6_next = null;
 
@@ -74,6 +79,8 @@ public class Test6 extends Activity{
         btest6_refuse1.setEnabled(false);
         btest6_refuse1.setClickable(false);
         btest6_refuse1.setImageResource(R.drawable.refuse_grey);
+        test6_layout1 = (LinearLayout) findViewById(R.id.test6_layout1);
+        test6_layout1.setBackgroundColor(Color.YELLOW);
 
         btest6_play2 = (ImageButton) findViewById(R.id.test6_text2_bplay);
         btest6_play2.setEnabled(false);
@@ -87,6 +94,7 @@ public class Test6 extends Activity{
         btest6_refuse2.setEnabled(false);
         btest6_refuse2.setClickable(false);
         btest6_refuse2.setImageResource(R.drawable.refuse_grey);
+        test6_layout2 = (LinearLayout) findViewById(R.id.test6_layout2);
 
         btest6_play3 = (ImageButton) findViewById(R.id.test6_text3_bplay);
         btest6_play3.setEnabled(false);
@@ -100,6 +108,7 @@ public class Test6 extends Activity{
         btest6_refuse3.setEnabled(false);
         btest6_refuse3.setClickable(false);
         btest6_refuse3.setImageResource(R.drawable.refuse_grey);
+        test6_layout3 = (LinearLayout) findViewById(R.id.test6_layout3);
 
         // Sentence 1
         mp1 = MediaPlayer.create(this, R.raw.test6_sound1);
@@ -122,6 +131,8 @@ public class Test6 extends Activity{
                             btest6_play2.setEnabled(true);
                             btest6_play2.setClickable(true);
                             btest6_play2.setImageResource(R.drawable.play_blue);
+                            test6_layout1.setBackgroundColor(Color.TRANSPARENT);
+                            test6_layout2.setBackgroundColor(Color.YELLOW);
 
                         }
                         if (count1 == 1) {
@@ -157,6 +168,8 @@ public class Test6 extends Activity{
                             btest6_play3.setEnabled(true);
                             btest6_play3.setClickable(true);
                             btest6_play3.setImageResource(R.drawable.play_blue);
+                            test6_layout2.setBackgroundColor(Color.TRANSPARENT);
+                            test6_layout3.setBackgroundColor(Color.YELLOW);
 
                         }
                         if (count2 == 1) {
@@ -190,6 +203,7 @@ public class Test6 extends Activity{
                             btest6_refuse3.setEnabled(true);
                             btest6_refuse3.setClickable(true);
                             btest6_refuse3.setImageResource(R.drawable.refuse);
+                            test6_layout3.setBackgroundColor(Color.TRANSPARENT);
 
                         }
                         if (count3 == 1) {
@@ -205,14 +219,21 @@ public class Test6 extends Activity{
                 });
                 mp3.start();
             }
-        });// Fin play11
+        });// Fin sentence 3
 
+        //Image 1
+        btest6_image1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Test6.this, Test6_image.class);
+                startActivity(intent);
+            }
+        });
         //Gestion des notations
         btest6_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest6_refuse1.setImageResource(R.drawable.refuse_grey);
-                btest6_validate1.setImageResource(R.drawable.validate);
+                test6_layout1.setBackgroundColor(Color.GREEN);
                 quotation_1 = false;
                 q1=1;
             }
@@ -220,8 +241,7 @@ public class Test6 extends Activity{
         btest6_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest6_validate1.setImageResource(R.drawable.validate_grey);
-                btest6_refuse1.setImageResource(R.drawable.refuse);
+                test6_layout1.setBackgroundColor(Color.RED);
                 quotation_1 = true;
                 q2=0;
                 if (quotation_1 == true && quotation_2 == true) {
@@ -234,8 +254,7 @@ public class Test6 extends Activity{
         btest6_validate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest6_refuse2.setImageResource(R.drawable.refuse_grey);
-                btest6_validate2.setImageResource(R.drawable.validate);
+                test6_layout2.setBackgroundColor(Color.GREEN);
                 quotation_2 = false;
                 q2=1;
             }
@@ -243,8 +262,7 @@ public class Test6 extends Activity{
         btest6_refuse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest6_validate2.setImageResource(R.drawable.validate_grey);
-                btest6_refuse2.setImageResource(R.drawable.refuse);
+                test6_layout2.setBackgroundColor(Color.RED);
                 quotation_2 = true;
                 q2=0;
                 if (quotation_1 == true && quotation_2 == true) {
@@ -257,8 +275,7 @@ public class Test6 extends Activity{
         btest6_validate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest6_refuse3.setImageResource(R.drawable.refuse_grey);
-                btest6_validate3.setImageResource(R.drawable.validate);
+                test6_layout3.setBackgroundColor(Color.GREEN);
                 q3=1;
                 btest6_next.setEnabled(true);
                 btest6_next.setClickable(true);
@@ -268,8 +285,7 @@ public class Test6 extends Activity{
         btest6_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest6_validate3.setImageResource(R.drawable.validate_grey);
-                btest6_refuse3.setImageResource(R.drawable.refuse);
+                test6_layout3.setBackgroundColor(Color.GREEN);
                 q3=0;
                 btest6_next.setEnabled(true);
                 btest6_next.setClickable(true);

@@ -189,7 +189,8 @@
                                         android:layout_gravity="center_horizontal"
                                         android:textAlignment="center"
                                         android:textSize="25dp"
-                                        android:background="#5bab9e9e" />
+                                        android:background="#5bab9e9e"
+                                        android:foregroundGravity="center"/>
                                     <ImageButton
                                         android:layout_width="150dp"
                                         android:layout_height="150dp"

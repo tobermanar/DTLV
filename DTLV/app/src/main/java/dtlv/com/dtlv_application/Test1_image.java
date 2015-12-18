@@ -6,13 +6,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class Test1_image1 extends Activity {
+public class Test1_image extends Activity {
 
     private ImageButton btest1_image1_back = null;
     private ImageView image = null;
-    @Override
-    public void onBackPressed() {
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

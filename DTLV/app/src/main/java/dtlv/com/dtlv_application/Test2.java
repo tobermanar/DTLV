@@ -244,8 +244,8 @@ public class Test2 extends Activity {
 
 
         btest2_next = (ImageButton) findViewById(R.id.test2_bnext);
-        btest2_next.setEnabled(true);
-        btest2_next.setClickable(true);
+        btest2_next.setEnabled(false);
+        btest2_next.setClickable(false);
         btest2_next.setImageResource(R.drawable.next_grey);
         test2_layout11.setBackgroundColor(Color.YELLOW);
 
