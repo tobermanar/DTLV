@@ -133,12 +133,12 @@ public class Test1 extends Activity{
         btest1_refuse6.setClickable(false);
         btest1_refuse6.setImageResource(R.drawable.refuse_grey);
         btest1_next = (ImageButton) findViewById(R.id.test1_next);
-        btest1_next.setEnabled(false);
-        btest1_next.setClickable(false);
+        btest1_next.setEnabled(true);
+        btest1_next.setClickable(true);
         btest1_next.setImageResource(R.drawable.next_grey);
 
         test1_layout1 = (LinearLayout) findViewById(R.id.test1_layout1);
-        test1_layout1.setBackgroundColor(Color.YELLOW);
+        test1_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
         test1_layout2 = (LinearLayout) findViewById(R.id.test1_layout2);
         test1_layout3 = (LinearLayout) findViewById(R.id.test1_layout3);
         test1_layout4 = (LinearLayout) findViewById(R.id.test1_layout4);
@@ -164,14 +164,14 @@ public class Test1 extends Activity{
                 test1_layout1.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image2.setEnabled(true);
                 btest1_image2.setClickable(true);
-                test1_layout2.setBackgroundColor(Color.YELLOW);
+                test1_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
 
         btest1_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test1_layout1.setBackgroundColor(Color.GREEN);
+                test1_layout1.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_image1 = true;
                 //cote la question 1 comme juste
                 q1=1;
@@ -181,7 +181,7 @@ public class Test1 extends Activity{
         btest1_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test1_layout1.setBackgroundColor(Color.RED);
+                test1_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_image1 = true;
                 //cote la question 1 comme fausse
                 q1=0;
@@ -207,14 +207,14 @@ public class Test1 extends Activity{
                 test1_layout2.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image3.setEnabled(true);
                 btest1_image3.setClickable(true);
-                test1_layout3.setBackgroundColor(Color.YELLOW);
+                test1_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest1_validate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
-                test1_layout2.setBackgroundColor(Color.GREEN);
+                // Au click sur le bouton, on affiche un calque vert sur l'image
+                test1_layout2.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_image2 = true;
                 q2=1;
                 activateNext();
@@ -223,8 +223,8 @@ public class Test1 extends Activity{
         btest1_refuse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
-                test1_layout2.setBackgroundColor(Color.RED);
+                // Au click sur le bouton, on affiche un calque rouge sur l'image
+                test1_layout2.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_image2 = true;
                 q2=0;
                 activateNext();
@@ -249,14 +249,14 @@ public class Test1 extends Activity{
                 test1_layout3.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image4.setEnabled(true);
                 btest1_image4.setClickable(true);
-                test1_layout4.setBackgroundColor(Color.YELLOW);
+                test1_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest1_validate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
-                test1_layout3.setBackgroundColor(Color.GREEN);
+                // Au click sur le bouton, on affiche un calque vert sur l'image
+                test1_layout3.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_image3 = true;
                 q3=1;
                 activateNext();
@@ -265,8 +265,8 @@ public class Test1 extends Activity{
         btest1_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
-                test1_layout3.setBackgroundColor(Color.RED);
+                // Au click sur le bouton, on affiche un calque rouge sur l'image
+                test1_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_image3 = true;
                 q3=0;
                 activateNext();
@@ -291,14 +291,14 @@ public class Test1 extends Activity{
                 test1_layout4.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image5.setEnabled(true);
                 btest1_image5.setClickable(true);
-                test1_layout5.setBackgroundColor(Color.YELLOW);
+                test1_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest1_validate4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
-                test1_layout4.setBackgroundColor(Color.GREEN);
+                test1_layout4.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_image4 = true;
                 q4=1;
                 activateNext();
@@ -308,7 +308,7 @@ public class Test1 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
-                test1_layout4.setBackgroundColor(Color.RED);
+                test1_layout4.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_image4 = true;
                 q4=0;
                 activateNext();
@@ -333,14 +333,14 @@ public class Test1 extends Activity{
                 test1_layout5.setBackgroundColor(Color.TRANSPARENT);
                 btest1_image6.setEnabled(true);
                 btest1_image6.setClickable(true);
-                test1_layout6.setBackgroundColor(Color.YELLOW);
+                test1_layout6.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest1_validate5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
-                test1_layout5.setBackgroundColor(Color.GREEN);
+                test1_layout5.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_image5 = true;
                 q5=1;
                 activateNext();
@@ -350,7 +350,7 @@ public class Test1 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
-                test1_layout5.setBackgroundColor(Color.RED);
+                test1_layout5.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_image5 = true;
                 q5=0;
                 activateNext();
@@ -379,7 +379,7 @@ public class Test1 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
-                test1_layout6.setBackgroundColor(Color.GREEN);
+                test1_layout6.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_image6 = true;
                 q6=1;
                 activateNext();
@@ -389,7 +389,7 @@ public class Test1 extends Activity{
             @Override
             public void onClick(View v) {
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
-                test1_layout6.setBackgroundColor(Color.RED);
+                test1_layout6.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_image6 = true;
                 q6=0;
                 activateNext();

@@ -43,8 +43,8 @@ public class Test3 extends Activity{
         btest3_minus = (ImageButton) findViewById(R.id.test3_minus);
         btest3_next = (ImageButton) findViewById(R.id.test3_bnext);
         test3_countdown = (TextView) findViewById(R.id.test3_countdown);
-        btest3_next.setEnabled(false);
-        btest3_next.setClickable(false);
+        btest3_next.setEnabled(true);
+        btest3_next.setClickable(true);
         btest3_next.setImageResource(R.drawable.next_grey);
 
         //mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));

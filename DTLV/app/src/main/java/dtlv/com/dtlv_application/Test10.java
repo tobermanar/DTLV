@@ -68,7 +68,7 @@ public class Test10 extends Activity{
         btest10_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout1.setBackgroundColor(Color.GREEN);
+                test10_layout1.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_1 = true;
                 q1=1;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -81,7 +81,7 @@ public class Test10 extends Activity{
         btest10_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout1.setBackgroundColor(Color.RED);
+                test10_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_1 = true;
                 q1=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -94,7 +94,7 @@ public class Test10 extends Activity{
         btest10_validate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout2.setBackgroundColor(Color.GREEN);
+                test10_layout2.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_2 = true;
                 q2=1;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -107,7 +107,7 @@ public class Test10 extends Activity{
         btest10_refuse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout1.setBackgroundColor(Color.RED);
+                test10_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_2 = true;
                 q2=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -120,7 +120,7 @@ public class Test10 extends Activity{
         btest10_validate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout3.setBackgroundColor(Color.GREEN);
+                test10_layout3.setBackgroundColor(getResources().getColor(R.color.green));
                 q3=1;
                 quotation_3 = true;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -133,7 +133,7 @@ public class Test10 extends Activity{
         btest10_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout3.setBackgroundColor(Color.RED);
+                test10_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_3 = true;
                 q3=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {

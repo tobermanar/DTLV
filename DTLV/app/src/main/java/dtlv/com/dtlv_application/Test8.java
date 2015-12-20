@@ -35,7 +35,7 @@ public class Test8 extends Activity{
         btest8_validate1 = (ImageButton) findViewById(R.id.test8_validate1);
         btest8_refuse1 = (ImageButton) findViewById(R.id.test8_refuse1);
         test8_layout1 = (LinearLayout) findViewById(R.id.test8_layout1);
-        test8_layout1.setBackgroundColor(Color.YELLOW);
+        test8_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         btest8_next = (ImageButton) findViewById(R.id.test8_bnext);
         btest8_next.setEnabled(false);
@@ -45,7 +45,7 @@ public class Test8 extends Activity{
         btest8_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test8_layout1.setBackgroundColor(Color.GREEN);
+                test8_layout1.setBackgroundColor(getResources().getColor(R.color.green));
                 q1=1;
                 btest8_next.setEnabled(true);
                 btest8_next.setClickable(true);
@@ -55,7 +55,7 @@ public class Test8 extends Activity{
         btest8_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test8_layout1.setBackgroundColor(Color.RED);
+                test8_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 q1=0;
                 btest8_next.setEnabled(true);
                 btest8_next.setClickable(true);

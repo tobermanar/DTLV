@@ -7,8 +7,8 @@
     <color name="black">#000000</color>
     <color name="translucide">#00000000</color>
     <color name="white">#FDFEFE</color>
-    <color name="red">#FF0000</color>
-    <color name="green">#009900</color>
-    <color name="yellow">#FFFF00</color>
+    <color name="red">#ff4545</color>
+    <color name="green">#008100</color>
+    <color name="yellow">#fcfc6e</color>
 </resources>
 

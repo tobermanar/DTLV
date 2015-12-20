@@ -85,7 +85,7 @@ public class Test5 extends Activity{
         btest5_refuse1.setClickable(false);
         btest5_refuse1.setImageResource(R.drawable.refuse_grey);
         test5_layout1 = (LinearLayout) findViewById(R.id.test5_layout1);
-        test5_layout1.setBackgroundColor(Color.YELLOW);
+        test5_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
         btest5_text2 = (TextView) findViewById(R.id.test5_text2);
         btest5_text2.setEnabled(false);
         btest5_text2.setClickable(false);
@@ -147,8 +147,8 @@ public class Test5 extends Activity{
         btest5_refuse6.setImageResource(R.drawable.refuse_grey);
         test5_layout6 = (LinearLayout) findViewById(R.id.test5_layout6);
         btest5_next = (ImageButton) findViewById(R.id.test5_bnext);
-        btest5_next.setEnabled(false);
-        btest5_next.setClickable(false);
+        btest5_next.setEnabled(true);
+        btest5_next.setClickable(true);
         btest5_next.setImageResource(R.drawable.next_grey);
 
         //Text 1
@@ -168,14 +168,14 @@ public class Test5 extends Activity{
                 btest5_text2.setEnabled(true);
                 btest5_text2.setClickable(true);
                 test5_layout1.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout2.setBackgroundColor(Color.YELLOW);
+                test5_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
 
         btest5_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout1.setBackgroundColor(Color.GREEN);
+                test5_layout1.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text1 = true;
                 //On cote q1 comme juste
                 q1=1;
@@ -191,7 +191,7 @@ public class Test5 extends Activity{
         btest5_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout1.setBackgroundColor(Color.RED);
+                test5_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text1 = true;
                 q1=0;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -221,13 +221,13 @@ public class Test5 extends Activity{
                 btest5_text3.setEnabled(true);
                 btest5_text3.setClickable(true);
                 test5_layout2.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout3.setBackgroundColor(Color.YELLOW);
+                test5_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest5_validate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout2.setBackgroundColor(Color.GREEN);
+                test5_layout2.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text2 = true;
                 q2=1;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -242,7 +242,7 @@ public class Test5 extends Activity{
         btest5_refuse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout2.setBackgroundColor(Color.RED);
+                test5_layout2.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text2 = true;
                 q2=0;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -272,13 +272,13 @@ public class Test5 extends Activity{
                 btest5_text4.setEnabled(true);
                 btest5_text4.setClickable(true);
                 test5_layout3.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout4.setBackgroundColor(Color.YELLOW);
+                test5_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest5_validate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout3.setBackgroundColor(Color.GREEN);
+                test5_layout3.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text3 = true;
                 q3=1;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -293,7 +293,7 @@ public class Test5 extends Activity{
         btest5_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout3.setBackgroundColor(Color.RED);
+                test5_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text3 = true;
                 q3=0;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -323,13 +323,13 @@ public class Test5 extends Activity{
                 btest5_text5.setEnabled(true);
                 btest5_text5.setClickable(true);
                 test5_layout4.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout5.setBackgroundColor(Color.YELLOW);
+                test5_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest5_validate4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout4.setBackgroundColor(Color.GREEN);
+                test5_layout4.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text4 = true;
                 q4=1;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -344,7 +344,7 @@ public class Test5 extends Activity{
         btest5_refuse4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout4.setBackgroundColor(Color.RED);
+                test5_layout4.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text4 = true;
                 q4=0;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -374,13 +374,13 @@ public class Test5 extends Activity{
                 btest5_text6.setEnabled(true);
                 btest5_text6.setClickable(true);
                 test5_layout5.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout6.setBackgroundColor(Color.YELLOW);
+                test5_layout6.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest5_validate5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout5.setBackgroundColor(Color.GREEN);
+                test5_layout5.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text5 = true;
                 q5=1;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -395,7 +395,7 @@ public class Test5 extends Activity{
         btest5_refuse5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout5.setBackgroundColor(Color.RED);
+                test5_layout5.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text5 = true;
                 q5=0;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -428,7 +428,7 @@ public class Test5 extends Activity{
         btest5_validate6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout6.setBackgroundColor(Color.GREEN);
+                test5_layout6.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text6 = true;
                 q6=1;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -443,7 +443,7 @@ public class Test5 extends Activity{
         btest5_refuse6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test5_layout6.setBackgroundColor(Color.RED);
+                test5_layout6.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text6 = true;
                 q6=0;
                 //Check if all pictures are cote to unlock the button to the next test
