@@ -115,6 +115,16 @@
             android:label="Test9"
             android:screenOrientation="sensorLandscape"></activity>
         <activity
+            android:name=".Test9_text"
+            android:label="@string/title_activity_test9_text"
+            android:parentActivityName=".Test9"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dtlv.com.dtlv_application.Test9" />
+        </activity>
+        <activity
             android:name=".Test10"
             android:label="Test10"
             android:screenOrientation="sensorLandscape"></activity>

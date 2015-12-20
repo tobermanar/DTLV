@@ -144,7 +144,8 @@
                                 android:orientation="horizontal"
                                 android:layout_width="552dp"
                                 android:layout_height="239dp"
-                                android:layout_gravity="center">
+                                android:layout_gravity="center"
+                                android:id="@+id/test8_layout1">
 
                                 <TextView
                                     android:layout_width="159dp"

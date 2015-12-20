@@ -2,10 +2,12 @@ package dtlv.com.dtlv_application;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -23,6 +25,10 @@ public class Test10 extends Activity{
     private boolean quotation_3 = false;
     private ImageButton btest10_validate3 = null;
     private ImageButton btest10_refuse3 = null;
+
+    private LinearLayout test10_layout1 = null;
+    private LinearLayout test10_layout2 = null;
+    private LinearLayout test10_layout3 = null;
 
     private ImageButton btest10_next = null;
 
@@ -54,13 +60,15 @@ public class Test10 extends Activity{
         btest10_refuse2 = (ImageButton) findViewById(R.id.test10_text2_brefuse);
         btest10_validate3 = (ImageButton) findViewById(R.id.test10_text3_bvalid);
         btest10_refuse3 = (ImageButton) findViewById(R.id.test10_text3_brefuse);
+        test10_layout1 = (LinearLayout) findViewById(R.id.test10_layout1);
+        test10_layout2 = (LinearLayout) findViewById(R.id.test10_layout2);
+        test10_layout3 = (LinearLayout) findViewById(R.id.test10_layout3);
 
         //Gestion des notations
         btest10_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest10_refuse1.setImageResource(R.drawable.refuse_grey);
-                btest10_validate1.setImageResource(R.drawable.validate);
+                test10_layout1.setBackgroundColor(Color.GREEN);
                 quotation_1 = true;
                 q1=1;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -73,8 +81,7 @@ public class Test10 extends Activity{
         btest10_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest10_validate1.setImageResource(R.drawable.validate_grey);
-                btest10_refuse1.setImageResource(R.drawable.refuse);
+                test10_layout1.setBackgroundColor(Color.RED);
                 quotation_1 = true;
                 q1=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -87,8 +94,7 @@ public class Test10 extends Activity{
         btest10_validate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest10_refuse2.setImageResource(R.drawable.refuse_grey);
-                btest10_validate2.setImageResource(R.drawable.validate);
+                test10_layout2.setBackgroundColor(Color.GREEN);
                 quotation_2 = true;
                 q2=1;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -101,8 +107,7 @@ public class Test10 extends Activity{
         btest10_refuse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest10_validate2.setImageResource(R.drawable.validate_grey);
-                btest10_refuse2.setImageResource(R.drawable.refuse);
+                test10_layout1.setBackgroundColor(Color.RED);
                 quotation_2 = true;
                 q2=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -115,8 +120,7 @@ public class Test10 extends Activity{
         btest10_validate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest10_refuse3.setImageResource(R.drawable.refuse_grey);
-                btest10_validate3.setImageResource(R.drawable.validate);
+                test10_layout3.setBackgroundColor(Color.GREEN);
                 q3=1;
                 quotation_3 = true;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {
@@ -129,8 +133,7 @@ public class Test10 extends Activity{
         btest10_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest10_validate3.setImageResource(R.drawable.validate_grey);
-                btest10_refuse3.setImageResource(R.drawable.refuse);
+                test10_layout3.setBackgroundColor(Color.RED);
                 quotation_3 = true;
                 q3=0;
                 if (quotation_1 == true && quotation_2 == true && quotation_3 == true) {

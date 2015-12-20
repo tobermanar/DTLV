@@ -2,9 +2,11 @@ package dtlv.com.dtlv_application;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -14,7 +16,7 @@ public class Test8 extends Activity{
     private ImageButton btest8_next = null;
     private ImageButton btest8_validate1 = null;
     private ImageButton btest8_refuse1 = null;
-
+    private LinearLayout test8_layout1 = null;
     //Variables de quotation
     private int q1 = 0;
 
@@ -32,6 +34,9 @@ public class Test8 extends Activity{
         setContentView(R.layout.test8);
         btest8_validate1 = (ImageButton) findViewById(R.id.test8_validate1);
         btest8_refuse1 = (ImageButton) findViewById(R.id.test8_refuse1);
+        test8_layout1 = (LinearLayout) findViewById(R.id.test8_layout1);
+        test8_layout1.setBackgroundColor(Color.YELLOW);
+
         btest8_next = (ImageButton) findViewById(R.id.test8_bnext);
         btest8_next.setEnabled(false);
         btest8_next.setClickable(false);
@@ -40,8 +45,7 @@ public class Test8 extends Activity{
         btest8_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest8_refuse1.setImageResource(R.drawable.refuse_grey);
-                btest8_validate1.setImageResource(R.drawable.validate);
+                test8_layout1.setBackgroundColor(Color.GREEN);
                 q1=1;
                 btest8_next.setEnabled(true);
                 btest8_next.setClickable(true);
@@ -51,8 +55,7 @@ public class Test8 extends Activity{
         btest8_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest8_validate1.setImageResource(R.drawable.validate_grey);
-                btest8_refuse1.setImageResource(R.drawable.refuse);
+                test8_layout1.setBackgroundColor(Color.RED);
                 q1=0;
                 btest8_next.setEnabled(true);
                 btest8_next.setClickable(true);

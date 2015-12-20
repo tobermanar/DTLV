@@ -32,7 +32,7 @@ public class Test5_text extends Activity {
         if (value == 6)
         { text.setText("@string/test5_text2_part3");}
 
-        btest5_text1_back = (ImageButton) findViewById(R.id.test5_text1_back);
+        btest5_text1_back = (ImageButton) findViewById(R.id.test5_text_back);
         btest5_text1_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

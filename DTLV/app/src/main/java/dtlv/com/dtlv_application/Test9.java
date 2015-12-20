@@ -2,9 +2,11 @@ package dtlv.com.dtlv_application;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -29,6 +31,13 @@ public class Test9 extends Activity{
     private ImageButton btest9_validate5 = null;
     private ImageButton btest9_refuse5 = null;
     private ImageButton btest9_next = null;
+
+    private LinearLayout test9_layout1 = null;
+    private LinearLayout test9_layout2 = null;
+    private LinearLayout test9_layout3 = null;
+    private LinearLayout test9_layout4 = null;
+    private LinearLayout test9_layout5 = null;
+
 
     //Variables de quotation
     //private int q1 = 0; on ne cote pas q1 c'est un exemple
@@ -102,15 +111,27 @@ public class Test9 extends Activity{
         btest9_next.setClickable(false);
         btest9_next.setImageResource(R.drawable.next_grey);
 
+        test9_layout1 = (LinearLayout) findViewById(R.id.test9_layout1);
+        test9_layout1.setBackgroundColor(Color.YELLOW);
+        test9_layout2 = (LinearLayout) findViewById(R.id.test9_layout2);
+        test9_layout3 = (LinearLayout) findViewById(R.id.test9_layout3);
+        test9_layout4 = (LinearLayout) findViewById(R.id.test9_layout4);
+        test9_layout5 = (LinearLayout) findViewById(R.id.test9_layout5);
+
 
         //Text 1
         btest9_folder1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Test9.this, Test9_text.class);
+                intent.putExtra("key", 1);
+                startActivity(intent);
                 // Au click sur le bouton, on débloque les le test suivant
                 btest9_folder2.setEnabled(true);
                 btest9_folder2.setClickable(true);
                 btest9_folder2.setImageResource(R.drawable.folder);
+                test9_layout1.setBackgroundColor(Color.TRANSPARENT);
+                test9_layout2.setBackgroundColor(Color.YELLOW);
             }
         });
 
@@ -118,6 +139,9 @@ public class Test9 extends Activity{
         btest9_folder2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Test9.this, Test9_text.class);
+                intent.putExtra("key",2);
+                startActivity(intent);
                 // Au click sur le bouton, on débloque les boutons valider et refuser
                 btest9_validate2.setEnabled(true);
                 btest9_validate2.setClickable(true);
@@ -128,13 +152,14 @@ public class Test9 extends Activity{
                 btest9_folder3.setEnabled(true);
                 btest9_folder3.setClickable(true);
                 btest9_folder3.setImageResource(R.drawable.folder);
+                test9_layout2.setBackgroundColor(Color.TRANSPARENT);
+                test9_layout3.setBackgroundColor(Color.YELLOW);
             }
         });
         btest9_validate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest9_validate2.setImageResource(R.drawable.validate);
-                btest9_refuse2.setImageResource(R.drawable.refuse_grey);
+                test9_layout2.setBackgroundColor(Color.GREEN);
                 quotation_text2 = true;
                 q2=1;
                 //Check if all pictures are cote to unlock the button to the next test
@@ -149,8 +174,7 @@ public class Test9 extends Activity{
         btest9_refuse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest9_validate2.setImageResource(R.drawable.validate_grey);
-                btest9_refuse2.setImageResource(R.drawable.refuse);
+                test9_layout2.setBackgroundColor(Color.RED);
                 quotation_text2 = true;
                 q2=0;
                 //Check if all pictures are cote to unlock the button to the next test
@@ -168,6 +192,9 @@ public class Test9 extends Activity{
         btest9_folder3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Test9.this, Test9_text.class);
+                intent.putExtra("key", 3);
+                startActivity(intent);
                 // Au click sur le bouton, on débloque les boutons valider et refuser
                 btest9_validate3.setEnabled(true);
                 btest9_validate3.setClickable(true);
@@ -178,13 +205,14 @@ public class Test9 extends Activity{
                 btest9_folder4.setEnabled(true);
                 btest9_folder4.setClickable(true);
                 btest9_folder4.setImageResource(R.drawable.folder);
+                test9_layout3.setBackgroundColor(Color.TRANSPARENT);
+                test9_layout4.setBackgroundColor(Color.YELLOW);
             }
         });
         btest9_validate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest9_validate3.setImageResource(R.drawable.validate);
-                btest9_refuse3.setImageResource(R.drawable.refuse_grey);
+                test9_layout3.setBackgroundColor(Color.GREEN);
                 quotation_text3 = true;
                 q3=1;
                 //Check if all pictures are cote to unlock the button to the next test
@@ -200,8 +228,7 @@ public class Test9 extends Activity{
         btest9_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest9_validate3.setImageResource(R.drawable.validate_grey);
-                btest9_refuse3.setImageResource(R.drawable.refuse);
+                test9_layout3.setBackgroundColor(Color.RED);
                 quotation_text3 = true;
                 q3=0;
                 //Check if all pictures are cote to unlock the button to the next test
@@ -219,6 +246,9 @@ public class Test9 extends Activity{
         btest9_folder4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Test9.this, Test9_text.class);
+                intent.putExtra("key", 4);
+                startActivity(intent);
                 // Au click sur le bouton, on débloque les boutons valider et refuser
                 btest9_validate4.setEnabled(true);
                 btest9_validate4.setClickable(true);
@@ -229,13 +259,14 @@ public class Test9 extends Activity{
                 btest9_folder5.setEnabled(true);
                 btest9_folder5.setClickable(true);
                 btest9_folder5.setImageResource(R.drawable.folder);
+                test9_layout4.setBackgroundColor(Color.TRANSPARENT);
+                test9_layout5.setBackgroundColor(Color.YELLOW);
             }
         });
         btest9_validate4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest9_validate4.setImageResource(R.drawable.validate);
-                btest9_refuse4.setImageResource(R.drawable.refuse_grey);
+                test9_layout4.setBackgroundColor(Color.GREEN);
                 quotation_text4 = true;
                 q4=1;
                 //Check if all pictures are cote to unlock the button to the next test
@@ -251,8 +282,7 @@ public class Test9 extends Activity{
         btest9_refuse4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest9_validate4.setImageResource(R.drawable.validate_grey);
-                btest9_refuse4.setImageResource(R.drawable.refuse);
+                test9_layout4.setBackgroundColor(Color.RED);
                 quotation_text4 = true;
                 q4=0;
                 //Check if all pictures are cote to unlock the button to the next test
@@ -270,6 +300,9 @@ public class Test9 extends Activity{
         btest9_folder5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Test9.this, Test9_text.class);
+                intent.putExtra("key", 5);
+                startActivity(intent);
                 // Au click sur le bouton, on débloque les boutons valider et refuser
                 btest9_validate5.setEnabled(true);
                 btest9_validate5.setClickable(true);
@@ -277,13 +310,13 @@ public class Test9 extends Activity{
                 btest9_refuse5.setEnabled(true);
                 btest9_refuse5.setClickable(true);
                 btest9_refuse5.setImageResource(R.drawable.refuse);
+                test9_layout5.setBackgroundColor(Color.TRANSPARENT);
             }
         });
         btest9_validate5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest9_validate5.setImageResource(R.drawable.validate);
-                btest9_refuse5.setImageResource(R.drawable.refuse_grey);
+                test9_layout5.setBackgroundColor(Color.GREEN);
                 quotation_text5 = true;
                 q5=1;
                 //Check if all pictures are cote to unlock the button to the next test
@@ -299,8 +332,7 @@ public class Test9 extends Activity{
         btest9_refuse5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btest9_validate5.setImageResource(R.drawable.validate_grey);
-                btest9_refuse5.setImageResource(R.drawable.refuse);
+                test9_layout5.setBackgroundColor(Color.RED);
                 quotation_text5 = true;
                 q5=0;
                 //Check if all pictures are cote to unlock the button to the next test

@@ -464,7 +464,7 @@ public class Test7 extends Activity{
         btest7_validate5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test7_layout2.setBackgroundColor(Color.GREEN);
+                test7_layout5.setBackgroundColor(Color.GREEN);
                 quotation_text5 = true;
                 q5=1;
                 //Check if all pictures are cote to unluck the button to the next test
@@ -479,7 +479,7 @@ public class Test7 extends Activity{
         btest7_refuse5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test7_layout2.setBackgroundColor(Color.RED);
+                test7_layout5.setBackgroundColor(Color.RED);
                 quotation_text5 = true;
                 q5=0;
                 //Check if all pictures are cote to unluck the button to the next test
