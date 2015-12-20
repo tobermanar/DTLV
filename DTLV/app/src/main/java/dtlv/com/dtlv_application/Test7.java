@@ -201,13 +201,7 @@ public class Test7 extends Activity{
                 test7_layout1.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text1 = true;
                 q1=1;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest7_refuse1.setOnClickListener(new View.OnClickListener() {
@@ -216,13 +210,7 @@ public class Test7 extends Activity{
                 test7_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text1 = true;
                 q1=0;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         // Word 2
@@ -267,13 +255,7 @@ public class Test7 extends Activity{
                 test7_layout2.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text2 = true;
                 q2=1;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest7_refuse2.setOnClickListener(new View.OnClickListener() {
@@ -282,13 +264,7 @@ public class Test7 extends Activity{
                 test7_layout2.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text2 = true;
                 q2=0;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
 
@@ -334,13 +310,7 @@ public class Test7 extends Activity{
                 test7_layout3.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text3 = true;
                 q3=1;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest7_refuse3.setOnClickListener(new View.OnClickListener() {
@@ -349,13 +319,7 @@ public class Test7 extends Activity{
                 test7_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text3 = true;
                 q3=0;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         // Word 4
@@ -400,13 +364,7 @@ public class Test7 extends Activity{
                 test7_layout4.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text4 = true;
                 q4=1;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest7_refuse4.setOnClickListener(new View.OnClickListener() {
@@ -415,13 +373,7 @@ public class Test7 extends Activity{
                 test7_layout4.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text4 = true;
                 q4=0;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
 
@@ -449,7 +401,7 @@ public class Test7 extends Activity{
                             test7_layout5.setBackgroundColor(Color.TRANSPARENT);
                             test7_layout6.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
-                        if (count1 == 1) {
+                        if (count5 == 1) {
                             btest7_play5.setEnabled(false);
                             btest7_play5.setClickable(false);
                             btest7_play5.setImageResource(R.drawable.play_grey);
@@ -467,13 +419,7 @@ public class Test7 extends Activity{
                 test7_layout5.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text5 = true;
                 q5=1;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest7_refuse5.setOnClickListener(new View.OnClickListener() {
@@ -482,13 +428,7 @@ public class Test7 extends Activity{
                 test7_layout5.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text5 = true;
                 q5=0;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         // Word 6
@@ -527,13 +467,7 @@ public class Test7 extends Activity{
                 test7_layout6.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text6 = true;
                 q6=1;
-                //Check if all pictures are cote to unluck the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest7_refuse6.setOnClickListener(new View.OnClickListener() {
@@ -542,19 +476,19 @@ public class Test7 extends Activity{
                 test7_layout6.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text6 = true;
                 q6=0;
-                //Check if all pictures are cote to unlock the button to the next test
-                if (quotation_text1 == true && quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true && quotation_text6 == true) {
-                    btest7_next.setEnabled(true);
-                    btest7_next.setClickable(true);
-                    btest7_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
 
         btest7_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp1.release();
+                mp2.release();
+                mp3.release();
+                mp4.release();
+                mp5.release();
+                mp6.release();
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
                 gestPts.setT7(q1+q2+q3+q4+q5+q6);
                 Intent itest7 = new Intent(Test7.this, Test8.class);
@@ -564,6 +498,16 @@ public class Test7 extends Activity{
 
 
     } // Fin d'instance
+
+    //Check if everything is quoted to unlock the button to the next test
+    public void activateNext() {
+        if (this.quotation_text1 == true && this.quotation_text2 == true && this.quotation_text3 == true &&
+                this.quotation_text4 == true && this.quotation_text5 == true && this.quotation_text6 == true) {
+            btest7_next.setEnabled(true);
+            btest7_next.setClickable(true);
+            btest7_next.setImageResource(R.drawable.next);
+        }
+    }
 
     /**
      * Obtain the point manager

@@ -40,6 +40,8 @@ public class Test4 extends Activity{
     private int count11=0;
 
     //Variables de quotation
+    private int q01 = 0;
+    private int q02 = 0;
     private int q1 = 0;
 
     private GestionPoint gestPts;
@@ -216,29 +218,41 @@ public class Test4 extends Activity{
             @Override
             public void onClick(View v) {
                 test4_layout1.setBackgroundColor(getResources().getColor(R.color.green));
-                test4_layout2.setBackgroundColor(Color.TRANSPARENT);
+                if (quotation_02 == false) test4_layout2.setBackgroundColor(Color.TRANSPARENT);
                 test4_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
-                btest4_play02.setImageResource(R.drawable.play_grey);
+
+                btest4_play02.setImageResource(R.drawable.play_blue);
+                btest4_play02.setEnabled(true);
+                btest4_play02.setClickable(true);
+
                 btest4_play11.setEnabled(true);
                 btest4_play11.setClickable(true);
                 btest4_play11.setImageResource(R.drawable.play_blue);
-                quotation_01 = false;
-                //Pas de quotation pour les exemples
+                quotation_01 = true;
+                q01 = 1;//only to handle colors, not for the result
             }
         });
         btest4_refuse01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quotation_01 = true;
+
                 test4_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 test4_layout3.setBackgroundColor(Color.TRANSPARENT);
                 test4_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
+
                 btest4_play02.setImageResource(R.drawable.play_blue);
+                btest4_play02.setEnabled(true);
+                btest4_play02.setClickable(true);
+
                 btest4_play11.setEnabled(false);
                 btest4_play11.setClickable(false);
                 btest4_play11.setImageResource(R.drawable.play_grey);
-                if(quotation_01 == true && quotation_02 == true)
-                {
+                quotation_01 = true;
+                q01 = 0;//only to handle colors, not for the result
+                //if the examples are both wrong
+                if(quotation_01 == true && quotation_02 == true && q01 == 0 && q02 == 0) {
+                    q1 = 0;
+                    test4_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                     btest4_next.setEnabled(true);
                     btest4_next.setClickable(true);
                     btest4_next.setImageResource(R.drawable.next);
@@ -250,23 +264,29 @@ public class Test4 extends Activity{
             public void onClick(View v) {
                 test4_layout2.setBackgroundColor(getResources().getColor(R.color.green));
                 test4_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
+
                 btest4_play11.setEnabled(true);
                 btest4_play11.setClickable(true);
                 btest4_play11.setImageResource(R.drawable.play_blue);
-                quotation_02 = false;
+                quotation_02 = true;
+                q02 = 1;//only to handle colors, not for the result
             }
         });
         btest4_refuse02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 test4_layout2.setBackgroundColor(getResources().getColor(R.color.red));
-                test4_layout3.setBackgroundColor(getResources().getColor(R.color.red));
+
                 btest4_play11.setEnabled(false);
                 btest4_play11.setClickable(false);
                 btest4_play11.setImageResource(R.drawable.play_grey);
+
                 quotation_02 = true;
-                if(quotation_01 == true && quotation_02 == true)
-                {
+                q02 = 0;
+                //if the examples are both wrong
+                if(quotation_01 == true && quotation_02 == true && q01 == 0 && q02 == 0) {
+                    q1 = 0;
+                    test4_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                     btest4_next.setEnabled(true);
                     btest4_next.setClickable(true);
                     btest4_next.setImageResource(R.drawable.next);
@@ -297,6 +317,9 @@ public class Test4 extends Activity{
         btest4_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp01.release();
+                mp02.release();
+                mp11.release();
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
                 gestPts.setT4(q1);
                 Intent itest4 = new Intent(Test4.this, Test5.class);

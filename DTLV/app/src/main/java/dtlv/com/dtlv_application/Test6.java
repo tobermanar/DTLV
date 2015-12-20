@@ -33,6 +33,7 @@ public class Test6 extends Activity{
     private LinearLayout test6_layout2 = null;
 
     private ImageButton btest6_play3 = null;
+    private boolean quotation_3 = false;
     private ImageButton btest6_validate3 = null;
     private ImageButton btest6_refuse3 = null;
     private LinearLayout test6_layout3 = null;
@@ -246,8 +247,9 @@ public class Test6 extends Activity{
             @Override
             public void onClick(View v) {
                 test6_layout1.setBackgroundColor(getResources().getColor(R.color.green));
-                quotation_1 = false;
+                quotation_1 = true;
                 q1=1;
+                activateNext();
             }
         });
         btest6_refuse1.setOnClickListener(new View.OnClickListener() {
@@ -256,19 +258,16 @@ public class Test6 extends Activity{
                 test6_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_1 = true;
                 q2=0;
-                if (quotation_1 == true && quotation_2 == true) {
-                    btest6_next.setEnabled(true);
-                    btest6_next.setClickable(true);
-                    btest6_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest6_validate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 test6_layout2.setBackgroundColor(getResources().getColor(R.color.green));
-                quotation_2 = false;
+                quotation_2 = true;
                 q2=1;
+                activateNext();
             }
         });
         btest6_refuse2.setOnClickListener(new View.OnClickListener() {
@@ -277,37 +276,34 @@ public class Test6 extends Activity{
                 test6_layout2.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_2 = true;
                 q2=0;
-                if (quotation_1 == true && quotation_2 == true) {
-                    btest6_next.setEnabled(true);
-                    btest6_next.setClickable(true);
-                    btest6_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest6_validate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 test6_layout3.setBackgroundColor(getResources().getColor(R.color.green));
+                quotation_3 = true;
                 q3=1;
-                btest6_next.setEnabled(true);
-                btest6_next.setClickable(true);
-                btest6_next.setImageResource(R.drawable.next);
+                activateNext();
             }
         });
         btest6_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 test6_layout3.setBackgroundColor(getResources().getColor(R.color.green));
+                quotation_3 = true;
                 q3=0;
-                btest6_next.setEnabled(true);
-                btest6_next.setClickable(true);
-                btest6_next.setImageResource(R.drawable.next);
+                activateNext();
             }
         });
 
         btest6_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp1.release();
+                mp2.release();
+                mp3.release();
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
                 gestPts.setT6(q1+q2+q3);
                 Intent itest6 = new Intent(Test6.this, Test7.class);
@@ -322,6 +318,15 @@ public class Test6 extends Activity{
      */
     public void giveGestPts(GestionPoint gestPtsF){
         this.gestPts = gestPtsF;
+    }
+
+    //Check if everything is quoted to unlock the button to the next test
+    public void activateNext() {
+        if (this.quotation_1 == true && this.quotation_2 == true) {
+            btest6_next.setEnabled(true);
+            btest6_next.setClickable(true);
+            btest6_next.setImageResource(R.drawable.next);
+        }
     }
 
     @Override

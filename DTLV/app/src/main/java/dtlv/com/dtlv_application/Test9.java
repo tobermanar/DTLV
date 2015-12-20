@@ -162,13 +162,7 @@ public class Test9 extends Activity{
                 test9_layout2.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text2 = true;
                 q2=1;
-                //Check if all pictures are cote to unlock the button to the next test
-                if (quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true) {
-                    btest9_next.setEnabled(true);
-                    btest9_next.setClickable(true);
-                    btest9_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest9_refuse2.setOnClickListener(new View.OnClickListener() {
@@ -177,14 +171,7 @@ public class Test9 extends Activity{
                 test9_layout2.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text2 = true;
                 q2=0;
-                //Check if all pictures are cote to unlock the button to the next test
-                if(quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true)
-                {
-                    btest9_next.setEnabled(true);
-                    btest9_next.setClickable(true);
-                    btest9_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
 
@@ -215,14 +202,7 @@ public class Test9 extends Activity{
                 test9_layout3.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text3 = true;
                 q3=1;
-                //Check if all pictures are cote to unlock the button to the next test
-                if(quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true)
-                {
-                    btest9_next.setEnabled(true);
-                    btest9_next.setClickable(true);
-                    btest9_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest9_refuse3.setOnClickListener(new View.OnClickListener() {
@@ -231,14 +211,7 @@ public class Test9 extends Activity{
                 test9_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text3 = true;
                 q3=0;
-                //Check if all pictures are cote to unlock the button to the next test
-                if(quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true)
-                {
-                    btest9_next.setEnabled(true);
-                    btest9_next.setClickable(true);
-                    btest9_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
 
@@ -269,14 +242,7 @@ public class Test9 extends Activity{
                 test9_layout4.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text4 = true;
                 q4=1;
-                //Check if all pictures are cote to unlock the button to the next test
-                if(quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true)
-                {
-                    btest9_next.setEnabled(true);
-                    btest9_next.setClickable(true);
-                    btest9_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest9_refuse4.setOnClickListener(new View.OnClickListener() {
@@ -285,14 +251,7 @@ public class Test9 extends Activity{
                 test9_layout4.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text4 = true;
                 q4=0;
-                //Check if all pictures are cote to unlock the button to the next test
-                if(quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true)
-                {
-                    btest9_next.setEnabled(true);
-                    btest9_next.setClickable(true);
-                    btest9_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
 
@@ -319,14 +278,7 @@ public class Test9 extends Activity{
                 test9_layout5.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_text5 = true;
                 q5=1;
-                //Check if all pictures are cote to unlock the button to the next test
-                if(quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true)
-                {
-                    btest9_next.setEnabled(true);
-                    btest9_next.setClickable(true);
-                    btest9_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
         btest9_refuse5.setOnClickListener(new View.OnClickListener() {
@@ -335,14 +287,7 @@ public class Test9 extends Activity{
                 test9_layout5.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_text5 = true;
                 q5=0;
-                //Check if all pictures are cote to unlock the button to the next test
-                if(quotation_text2 == true && quotation_text3 == true &&
-                        quotation_text4 == true && quotation_text5 == true)
-                {
-                    btest9_next.setEnabled(true);
-                    btest9_next.setClickable(true);
-                    btest9_next.setImageResource(R.drawable.next);
-                }
+                activateNext();
             }
         });
 
@@ -355,7 +300,18 @@ public class Test9 extends Activity{
                 startActivity(itest9);
             }
         });
+    }
 
+
+    //Check if everything is quoted to unlock the button to the next test
+    public void activateNext() {
+        if(quotation_text2 == true && quotation_text3 == true &&
+                quotation_text4 == true && quotation_text5 == true)
+        {
+            btest9_next.setEnabled(true);
+            btest9_next.setClickable(true);
+            btest9_next.setImageResource(R.drawable.next);
+        }
     }
 
     /**

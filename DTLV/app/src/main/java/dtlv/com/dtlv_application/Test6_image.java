@@ -24,6 +24,9 @@ public class Test6_image extends Activity {
         setContentView(R.layout.test6_image);
 
         final MediaPlayer mp1,mp2,mp3;
+        mp1 = MediaPlayer.create(this, R.raw.test6_sound1);
+        mp2 = MediaPlayer.create(this, R.raw.test6_sound2);
+        mp3 = MediaPlayer.create(this, R.raw.test6_sound3);
 
         btest6_play1 = (ImageButton) findViewById(R.id.test6_sound1_bplay);
         btest6_play2 = (ImageButton) findViewById(R.id.test6_sound2_bplay);
@@ -71,26 +74,7 @@ public class Test6_image extends Activity {
         }
 
 
-        //return button
-        btest6_image1_back = (ImageButton) findViewById(R.id.test6_image1_back);
-        btest6_image1_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                Bundle count = new Bundle();
-                count.putInt("c1", count1);
-                count.putInt("c2", count2);
-                count.putInt("c3", count3);
-                System.out.println("1");
-                intent.putExtras(count);
-                setResult(Activity.RESULT_OK, intent);
-                System.out.println("2");
-                finish();
-            }
-        });
-
         // Sentence 1
-        mp1 = MediaPlayer.create(this, R.raw.test6_sound1);
         btest6_play1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 mp1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -112,7 +96,6 @@ public class Test6_image extends Activity {
         });// Fin sentence 1
 
         // Sentence 2
-        mp2 = MediaPlayer.create(this, R.raw.test6_sound2);
         btest6_play2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 mp2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -134,7 +117,6 @@ public class Test6_image extends Activity {
         });// Fin Sentence 2
 
         // Sentence 3
-        mp3 = MediaPlayer.create(this, R.raw.test6_sound3);
         btest6_play3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 mp3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -153,7 +135,26 @@ public class Test6_image extends Activity {
                 });
                 mp3.start();
             }
-        });// Fin play11
+        });// end sentence3
+
+        //return button
+        btest6_image1_back = (ImageButton) findViewById(R.id.test6_image1_back);
+        btest6_image1_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                Bundle count = new Bundle();
+                count.putInt("c1", count1);
+                count.putInt("c2", count2);
+                count.putInt("c3", count3);
+                intent.putExtras(count);
+                setResult(Activity.RESULT_OK, intent);
+                mp1.release();
+                mp2.release();
+                mp3.release();
+                finish();
+            }
+        });
 
     }
 
