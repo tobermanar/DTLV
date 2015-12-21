@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -13,20 +14,20 @@ import android.widget.LinearLayout;
  */
 public class Test9 extends Activity{
 
-    private ImageButton btest9_folder1 = null;
-    private ImageButton btest9_folder2 = null;
+    private Button btest9_text1 = null;
+    private Button btest9_text2 = null;
     private boolean quotation_text2 = false;
     private ImageButton btest9_validate2 = null;
     private ImageButton btest9_refuse2 = null;
-    private ImageButton btest9_folder3 = null;
+    private Button btest9_text3 = null;
     private boolean quotation_text3 = false;
     private ImageButton btest9_validate3 = null;
     private ImageButton btest9_refuse3 = null;
-    private ImageButton btest9_folder4 = null;
+    private Button btest9_text4 = null;
     private boolean quotation_text4 = false;
     private ImageButton btest9_validate4 = null;
     private ImageButton btest9_refuse4 = null;
-    private ImageButton btest9_folder5 = null;
+    private Button btest9_text5 = null;
     private boolean quotation_text5 = false;
     private ImageButton btest9_validate5 = null;
     private ImageButton btest9_refuse5 = null;
@@ -57,11 +58,11 @@ public class Test9 extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test9);
-        btest9_folder1 = (ImageButton) findViewById(R.id.test9_text1_bfolder);
-        btest9_folder2 = (ImageButton) findViewById(R.id.test9_text2_bfolder);
-        btest9_folder2.setEnabled(false);
-        btest9_folder2.setClickable(false);
-        btest9_folder2.setImageResource(R.drawable.folder_grey);
+        btest9_text1 = (Button) findViewById(R.id.test9_text1);
+        btest9_text2 = (Button) findViewById(R.id.test9_text2);
+        btest9_text2.setEnabled(false);
+        btest9_text2.setClickable(false);
+        //btest9_text2.setImageResource(R.drawable.folder_grey);
         btest9_validate2 = (ImageButton) findViewById(R.id.test9_text2_bvalid);
         btest9_validate2.setEnabled(false);
         btest9_validate2.setClickable(false);
@@ -70,10 +71,10 @@ public class Test9 extends Activity{
         btest9_refuse2.setEnabled(false);
         btest9_refuse2.setClickable(false);
         btest9_refuse2.setImageResource(R.drawable.refuse_grey);
-        btest9_folder3 = (ImageButton) findViewById(R.id.test9_text3_bfolder);
-        btest9_folder3.setEnabled(false);
-        btest9_folder3.setClickable(false);
-        btest9_folder3.setImageResource(R.drawable.folder_grey);
+        btest9_text3 = (Button) findViewById(R.id.test9_text3);
+        btest9_text3.setEnabled(false);
+        btest9_text3.setClickable(false);
+        //btest9_text3.setImageResource(R.drawable.folder_grey);
         btest9_validate3 = (ImageButton) findViewById(R.id.test9_text3_bvalid);
         btest9_validate3.setEnabled(false);
         btest9_validate3.setClickable(false);
@@ -82,10 +83,10 @@ public class Test9 extends Activity{
         btest9_refuse3.setEnabled(false);
         btest9_refuse3.setClickable(false);
         btest9_refuse3.setImageResource(R.drawable.refuse_grey);
-        btest9_folder4 = (ImageButton) findViewById(R.id.test9_text4_bfolder);
-        btest9_folder4.setEnabled(false);
-        btest9_folder4.setClickable(false);
-        btest9_folder4.setImageResource(R.drawable.folder_grey);
+        btest9_text4 = (Button) findViewById(R.id.test9_text4);
+        btest9_text4.setEnabled(false);
+        btest9_text4.setClickable(false);
+        //btest9_text4.setImageResource(R.drawable.folder_grey);
         btest9_validate4 = (ImageButton) findViewById(R.id.test9_text4_bvalid);
         btest9_validate4.setEnabled(false);
         btest9_validate4.setClickable(false);
@@ -94,10 +95,10 @@ public class Test9 extends Activity{
         btest9_refuse4.setEnabled(false);
         btest9_refuse4.setClickable(false);
         btest9_refuse4.setImageResource(R.drawable.refuse_grey);
-        btest9_folder5 = (ImageButton) findViewById(R.id.test9_text5_bfolder);
-        btest9_folder5.setEnabled(false);
-        btest9_folder5.setClickable(false);
-        btest9_folder5.setImageResource(R.drawable.folder_grey);
+        btest9_text5 = (Button) findViewById(R.id.test9_text5);
+        btest9_text5.setEnabled(false);
+        btest9_text5.setClickable(false);
+        //btest9_text5.setImageResource(R.drawable.folder_grey);
         btest9_validate5 = (ImageButton) findViewById(R.id.test9_text5_bvalid);
         btest9_validate5.setEnabled(false);
         btest9_validate5.setClickable(false);
@@ -120,23 +121,23 @@ public class Test9 extends Activity{
 
 
         //Text 1
-        btest9_folder1.setOnClickListener(new View.OnClickListener() {
+        btest9_text1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Test9.this, Test9_text.class);
                 intent.putExtra("key", 1);
                 startActivity(intent);
                 // Au click sur le bouton, on débloque les le test suivant
-                btest9_folder2.setEnabled(true);
-                btest9_folder2.setClickable(true);
-                btest9_folder2.setImageResource(R.drawable.folder);
+                btest9_text2.setEnabled(true);
+                btest9_text2.setClickable(true);
+                //btest9_text2.setImageResource(R.drawable.folder);
                 test9_layout1.setBackgroundColor(Color.TRANSPARENT);
                 test9_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
 
         //Text 2
-        btest9_folder2.setOnClickListener(new View.OnClickListener() {
+        btest9_text2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Test9.this, Test9_text.class);
@@ -149,9 +150,9 @@ public class Test9 extends Activity{
                 btest9_refuse2.setEnabled(true);
                 btest9_refuse2.setClickable(true);
                 btest9_refuse2.setImageResource(R.drawable.refuse);
-                btest9_folder3.setEnabled(true);
-                btest9_folder3.setClickable(true);
-                btest9_folder3.setImageResource(R.drawable.folder);
+                btest9_text3.setEnabled(true);
+                btest9_text3.setClickable(true);
+                //btest9_text3.setImageResource(R.drawable.folder);
                 test9_layout2.setBackgroundColor(Color.TRANSPARENT);
                 test9_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
@@ -176,7 +177,7 @@ public class Test9 extends Activity{
         });
 
         //Text 3
-        btest9_folder3.setOnClickListener(new View.OnClickListener() {
+        btest9_text3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Test9.this, Test9_text.class);
@@ -189,9 +190,9 @@ public class Test9 extends Activity{
                 btest9_refuse3.setEnabled(true);
                 btest9_refuse3.setClickable(true);
                 btest9_refuse3.setImageResource(R.drawable.refuse);
-                btest9_folder4.setEnabled(true);
-                btest9_folder4.setClickable(true);
-                btest9_folder4.setImageResource(R.drawable.folder);
+                btest9_text4.setEnabled(true);
+                btest9_text4.setClickable(true);
+                //btest9_text4.setImageResource(R.drawable.folder);
                 test9_layout3.setBackgroundColor(Color.TRANSPARENT);
                 test9_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
@@ -216,7 +217,7 @@ public class Test9 extends Activity{
         });
 
         //Text 4
-        btest9_folder4.setOnClickListener(new View.OnClickListener() {
+        btest9_text4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Test9.this, Test9_text.class);
@@ -229,9 +230,9 @@ public class Test9 extends Activity{
                 btest9_refuse4.setEnabled(true);
                 btest9_refuse4.setClickable(true);
                 btest9_refuse4.setImageResource(R.drawable.refuse);
-                btest9_folder5.setEnabled(true);
-                btest9_folder5.setClickable(true);
-                btest9_folder5.setImageResource(R.drawable.folder);
+                btest9_text5.setEnabled(true);
+                btest9_text5.setClickable(true);
+                //btest9_text5.setImageResource(R.drawable.folder);
                 test9_layout4.setBackgroundColor(Color.TRANSPARENT);
                 test9_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
@@ -256,7 +257,7 @@ public class Test9 extends Activity{
         });
 
         //Text 5
-        btest9_folder5.setOnClickListener(new View.OnClickListener() {
+        btest9_text5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Test9.this, Test9_text.class);

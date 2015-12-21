@@ -147,7 +147,7 @@
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="0.95"
                                 android:weightSum="1"
-                                android:layout_marginTop="10dp">
+                                android:layout_marginTop="100dp">
 
                                 <FrameLayout
                                     android:layout_width="match_parent"
@@ -172,23 +172,16 @@
                                             android:layout_marginRight="30dp"
                                             android:textSize="25dp" />
 
-                                        <TextView
+                                        <Button
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceMedium"
                                             android:text="@string/test9_text1"
                                             android:id="@+id/test9_text1"
                                             android:layout_gravity="center_vertical"
-                                            android:textSize="25dp" />
+                                            android:textSize="25dp"
+                                            android:background="@color/bright_foreground_disabled_material_dark" />
 
-                                        <ImageButton
-                                            android:layout_width="60dp"
-                                            android:layout_height="60dp"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test9_text1_bfolder"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginLeft="5dp"
-                                            android:background="@drawable/folder" />
                                     </LinearLayout>
                                 </FrameLayout>
                                 <FrameLayout
@@ -209,23 +202,15 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="0.21"
                                         android:id="@+id/test9_layout2">
-                                        <TextView
+                                        <Button
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceMedium"
                                             android:text="@string/test9_text2"
                                             android:id="@+id/test9_text2"
                                             android:layout_gravity="center_vertical"
-                                            android:textSize="25dp" />
-
-                                        <ImageButton
-                                            android:layout_width="60dp"
-                                            android:layout_height="60dp"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test9_text2_bfolder"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginLeft="5dp"
-                                            android:background="@drawable/folder" />
+                                            android:textSize="25dp"
+                                            android:background="@color/bright_foreground_disabled_material_dark" />
 
                                         <ImageButton
                                             android:layout_width="60dp"
@@ -252,23 +237,15 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="0.21"
                                         android:id="@+id/test9_layout3">
-                                        <TextView
+                                        <Button
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceMedium"
                                             android:text="@string/test9_text3"
                                             android:id="@+id/test9_text3"
                                             android:layout_gravity="center_vertical"
-                                            android:textSize="25dp" />
-
-                                        <ImageButton
-                                            android:layout_width="60dp"
-                                            android:layout_height="60dp"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test9_text3_bfolder"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginLeft="5dp"
-                                            android:background="@drawable/folder" />
+                                            android:textSize="25dp"
+                                            android:background="@color/bright_foreground_disabled_material_dark" />
 
                                         <ImageButton
                                             android:layout_width="60dp"
@@ -294,7 +271,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:layout_weight="0.98"
+                                    android:layout_weight="0.1"
                                     android:id="@+id/frameLayout21" >
 
                                     <LinearLayout
@@ -308,23 +285,15 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="0.21"
                                         android:id="@+id/test9_layout4">
-                                        <TextView
+                                        <Button
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceMedium"
                                             android:text="@string/test9_text4"
                                             android:id="@+id/test9_text4"
                                             android:layout_gravity="center_vertical"
-                                            android:textSize="25dp" />
-
-                                        <ImageButton
-                                            android:layout_width="60dp"
-                                            android:layout_height="60dp"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test9_text4_bfolder"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginLeft="5dp"
-                                            android:background="@drawable/folder" />
+                                            android:textSize="25dp"
+                                            android:background="@color/bright_foreground_disabled_material_dark" />
 
                                         <ImageButton
                                             android:layout_width="60dp"
@@ -351,23 +320,15 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="0.21"
                                         android:id="@+id/test9_layout5">
-                                        <TextView
+                                        <Button
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:textAppearance="?android:attr/textAppearanceMedium"
                                             android:text="@string/test9_text5"
                                             android:id="@+id/test9_text5"
                                             android:layout_gravity="center_vertical"
-                                            android:textSize="25dp" />
-
-                                        <ImageButton
-                                            android:layout_width="60dp"
-                                            android:layout_height="60dp"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test9_text5_bfolder"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginLeft="5dp"
-                                            android:background="@drawable/folder" />
+                                            android:textSize="25dp"
+                                            android:background="@color/bright_foreground_disabled_material_dark" />
 
                                         <ImageButton
                                             android:layout_width="60dp"
@@ -390,6 +351,7 @@
                                     </LinearLayout>
                                 </FrameLayout>
                             </LinearLayout>
+
                         </FrameLayout>
 
                         <LinearLayout
@@ -402,7 +364,9 @@
                             <FrameLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.94" />
+                                android:layout_weight="0.94" >
+
+                            </FrameLayout>
 
                             <ImageButton
                                 android:layout_width="59dp"
