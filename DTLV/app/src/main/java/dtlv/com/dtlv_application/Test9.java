@@ -301,7 +301,7 @@ public class Test9 extends Activity{
                 startActivity(itest9);
             }
         });
-    }
+    }//end onCreate
 
 
     //Check if everything is quoted to unlock the button to the next test

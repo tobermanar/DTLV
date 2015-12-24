@@ -156,6 +156,6 @@ public class Test6_image extends Activity {
             }
         });
 
-    }
+    }//end onCreate
 
 }

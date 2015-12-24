@@ -37,7 +37,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Reg"
-                    android:id="@+id/tuto_bprereg"
+                    android:id="@+id/tuto_bset"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -45,7 +45,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:id="@+id/tuto_btache1"
+                    android:id="@+id/tuto_bt1"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -53,7 +53,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="2"
-                    android:id="@+id/button7"
+                    android:id="@+id/tuto_bt2"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -61,7 +61,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="3"
-                    android:id="@+id/button8"
+                    android:id="@+id/tuto_bt3"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -69,7 +69,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="4"
-                    android:id="@+id/button9"
+                    android:id="@+id/tuto_bt4"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -77,7 +77,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="5"
-                    android:id="@+id/button10"
+                    android:id="@+id/tuto_bt5"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -85,7 +85,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="6"
-                    android:id="@+id/button11"
+                    android:id="@+id/tuto_bt6"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -93,7 +93,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="7"
-                    android:id="@+id/button12"
+                    android:id="@+id/tuto_bt7"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -101,7 +101,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="8"
-                    android:id="@+id/button13"
+                    android:id="@+id/tuto_bt8"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -109,7 +109,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="9"
-                    android:id="@+id/button14"
+                    android:id="@+id/tuto_bt9"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -117,7 +117,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="10"
-                    android:id="@+id/button15"
+                    android:id="@+id/tuto_bt10"
                     android:layout_weight="0.08" />
 
                 <Button
@@ -125,7 +125,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Res"
-                    android:id="@+id/button16"
+                    android:id="@+id/tuto_bres"
                     android:layout_weight="0.08" />
             </LinearLayout>
         </LinearLayout>
@@ -184,7 +184,7 @@
                             android:text="Tutorial"
                             android:id="@+id/tuto_nom"
                             android:background="#ffffff"
-                            android:layout_weight="0.19" />
+                            android:layout_weight="0.19"/>
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -238,25 +238,28 @@
                             android:layout_weight="0.98"
                             android:id="@+id/frameLayout31" >
 
-                            <LinearLayout
+                            <ScrollView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:layout_gravity="left|center_vertical">
+                                android:id="@+id/scrollView"
+                                android:layout_gravity="center_horizontal"
+                                android:scrollbars="vertical"
+                                android:fillViewport="true">
 
-                                <ScrollView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/tuto_scroll"
-                                    android:layout_gravity="center_horizontal"
-                                    android:fillViewport="false" >
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/tuto_layout">
 
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/tuto_scroll_image" />
-                                </ScrollView>
-                            </LinearLayout>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:id="@+id/tuto_text"
+                                        android:layout_gravity="center_horizontal" />
+                                </LinearLayout>
+                            </ScrollView>
+
                         </FrameLayout>
 
                         <LinearLayout
@@ -274,7 +277,7 @@
                             <ImageButton
                                 android:layout_width="59dp"
                                 android:layout_height="80dp"
-                                android:id="@+id/imageButton5"
+                                android:id="@+id/tuto_back"
                                 android:background="@drawable/back_arrow"
                                 android:layout_weight="0.03" />
                         </LinearLayout>
