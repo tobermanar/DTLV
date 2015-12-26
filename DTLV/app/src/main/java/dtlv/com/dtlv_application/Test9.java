@@ -1,13 +1,24 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.TextUtils;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -47,6 +58,11 @@ public class Test9 extends Activity{
     private int q4 = 0;
     private int q5 = 0;
     private GestionPoint gestPts;
+
+    private ImageButton btest9_help = null;
+    private AlertDialog alertDialog = null;
+    private TextView tv_test9 = null;
+
 
     public Test9(){
         gestPts = Menu.gestPts;
@@ -118,6 +134,8 @@ public class Test9 extends Activity{
         test9_layout3 = (LinearLayout) findViewById(R.id.test9_layout3);
         test9_layout4 = (LinearLayout) findViewById(R.id.test9_layout4);
         test9_layout5 = (LinearLayout) findViewById(R.id.test9_layout5);
+
+        btest9_help = (ImageButton) findViewById(R.id.test9_bhelp);
 
 
         //Text 1
@@ -301,6 +319,35 @@ public class Test9 extends Activity{
                 startActivity(itest9);
             }
         });
+
+        btest9_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog = new AlertDialog.Builder(Test9.this).create();
+                alertDialog.setTitle(getResources().getString(R.string.help_test9_title));
+                String admin = getResources().getString(R.string.help_admin);
+                String quote = getResources().getString(R.string.help_quote);
+
+                tv_test9 = new TextView(Test9.this);
+
+                Spannable st9_1 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test9_text1));
+                Spannable st9_2 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test9_text2));
+
+                tv_test9.setText(TextUtils.concat(admin, st9_1, quote, st9_2));
+
+                alertDialog.setView(tv_test9);
+
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
+
+
     }//end onCreate
 
 
@@ -322,4 +369,51 @@ public class Test9 extends Activity{
     public void giveGestPts(GestionPoint gestPtsF){
         this.gestPts = gestPtsF;
     }
+
+    public Spannable getTextWithImages(Context context, CharSequence text)
+    {
+        Spannable spannable = Spannable.Factory.getInstance().newSpannable(text);
+        addImages(context, spannable);
+        return spannable;
+    }
+
+    public boolean addImages(Context context, Spannable spannable)
+    {
+        Pattern refImg = Pattern.compile("\\Q[img src=\\E([a-zA-Z0-9_]+?)\\Q/]\\E");
+        boolean hasChanges = false;
+
+        Matcher matcher = refImg.matcher(spannable);
+        while (matcher.find())
+        {
+            boolean set = true;
+            for (ImageSpan span : spannable.getSpans(matcher.start(), matcher.end(), ImageSpan.class))
+            {
+                if (spannable.getSpanStart(span) >= matcher.start()
+                        && spannable.getSpanEnd(span) <= matcher.end())
+                {
+                    spannable.removeSpan(span);
+                }
+                else
+                {
+                    set = false;
+                    break;
+                }
+            }
+            String resname = spannable.subSequence(matcher.start(1),matcher.end(1)).toString().trim();
+            int id = context.getResources().getIdentifier(resname, "drawable", context.getPackageName());
+            Drawable icon = context.getResources().getDrawable(id);//,this.getTheme());
+            icon.setBounds(0, 0, tv_test9.getLineHeight(), tv_test9.getLineHeight());
+            if (set)
+            {
+                hasChanges = true;
+                spannable.setSpan(new ImageSpan(icon,ImageSpan.ALIGN_BASELINE),
+                        matcher.start(),
+                        matcher.end(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+        return hasChanges;
+    }
+
+
 }

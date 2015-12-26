@@ -1,15 +1,26 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import android.text.Spannable;
+import android.text.TextUtils;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -45,6 +56,13 @@ public class Test4 extends Activity{
     private int q1 = 0;
 
     private GestionPoint gestPts;
+
+    private ImageButton btest4_help = null;
+    private AlertDialog alertDialog = null;
+    private TextView tv_test4 = null;
+
+    private AlertDialog.Builder replayAlert = null;
+
 
     public Test4(){
         gestPts = Menu.gestPts;
@@ -105,6 +123,20 @@ public class Test4 extends Activity{
         btest4_refuse11.setImageResource(R.drawable.refuse_grey);
         test4_layout3 = (LinearLayout) findViewById(R.id.test4_layout3);
 
+        btest4_help = (ImageButton) findViewById(R.id.test4_bhelp);
+
+        //create pop-up for replay alert
+        replayAlert = new AlertDialog.Builder(Test4.this);
+        replayAlert.setTitle(getResources().getString(R.string.replay_title));
+        replayAlert.setMessage(getResources().getString(R.string.replay_msg));
+
+        replayAlert.setNegativeButton(getResources().getString(R.string.replay_no),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
         // Exemple Word 1
         mp01 = MediaPlayer.create(this, R.raw.test4_sound1_ex1);
         btest4_play01.setOnClickListener(new OnClickListener() {
@@ -114,6 +146,8 @@ public class Test4 extends Activity{
                     public void onCompletion(MediaPlayer mp) {
                         if (count01 == 0) {
                             //si c'est la première fois remplacer par bouton replay
+                            btest4_play01.setImageResource(R.drawable.replay);
+
                             btest4_validate01.setEnabled(true);
                             btest4_validate01.setClickable(true);
                             btest4_validate01.setImageResource(R.drawable.validate);
@@ -137,7 +171,20 @@ public class Test4 extends Activity{
                         count01++;
                     }
                 });
-                mp01.start();
+                if(count01==1)
+                {
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp01.start();
+                                }
+                            });
+                    replayAlert.show();
+                }
+                else
+                {
+                    mp01.start();
+                }
             }
         });// Fin play01
 
@@ -150,6 +197,8 @@ public class Test4 extends Activity{
                         public void onCompletion(MediaPlayer mp) {
                             if (count02 == 0) {
                                 //si c'est la première fois remplacer par bouton replay
+                                btest4_play02.setImageResource(R.drawable.replay);
+
                                 btest4_validate02.setEnabled(true);
                                 btest4_validate02.setClickable(true);
                                 btest4_validate02.setImageResource(R.drawable.validate);
@@ -176,7 +225,20 @@ public class Test4 extends Activity{
 
                         }
                     });
+                if(count02==1)
+                {
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp02.start();
+                                }
+                            });
+                    replayAlert.show();
+                }
+                else
+                {
                     mp02.start();
+                }
             }
         });// Fin play02
 
@@ -189,6 +251,8 @@ public class Test4 extends Activity{
                     public void onCompletion(MediaPlayer mp) {
                         if (count11 == 0) {
                             //si c'est la première fois remplacer par bouton replay
+                            btest4_play11.setImageResource(R.drawable.replay);
+
                             btest4_validate11.setEnabled(true);
                             btest4_validate11.setClickable(true);
                             btest4_validate11.setImageResource(R.drawable.validate);
@@ -209,7 +273,20 @@ public class Test4 extends Activity{
 
                     }
                 });
-                mp11.start();
+                if(count11==1)
+                {
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp11.start();
+                                }
+                            });
+                    replayAlert.show();
+                }
+                else
+                {
+                    mp11.start();
+                }
             }
         });// Fin play11
 
@@ -326,7 +403,36 @@ public class Test4 extends Activity{
                 startActivity(itest4);
             }
         });
-    }
+
+        btest4_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog = new AlertDialog.Builder(Test4.this).create();
+                alertDialog.setTitle(getResources().getString(R.string.help_test4_title));
+                String admin = getResources().getString(R.string.help_admin);
+                String quote = getResources().getString(R.string.help_quote);
+
+                tv_test4 = new TextView(Test4.this);
+
+                Spannable st4_1 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test4_text1));
+                Spannable st4_2 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test4_text2));
+
+                tv_test4.setText(TextUtils.concat(admin, st4_1, quote, st4_2));
+
+                alertDialog.setView(tv_test4);
+
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
+
+
+    }//end OnCreate
 
     /**
      * Obtain the point manager
@@ -335,4 +441,50 @@ public class Test4 extends Activity{
     public void giveGestPts(GestionPoint gestPtsF){
         this.gestPts = gestPtsF;
     }
+
+    public Spannable getTextWithImages(Context context, CharSequence text)
+    {
+        Spannable spannable = Spannable.Factory.getInstance().newSpannable(text);
+        addImages(context, spannable);
+        return spannable;
+    }
+
+    public boolean addImages(Context context, Spannable spannable)
+    {
+        Pattern refImg = Pattern.compile("\\Q[img src=\\E([a-zA-Z0-9_]+?)\\Q/]\\E");
+        boolean hasChanges = false;
+
+        Matcher matcher = refImg.matcher(spannable);
+        while (matcher.find())
+        {
+            boolean set = true;
+            for (ImageSpan span : spannable.getSpans(matcher.start(), matcher.end(), ImageSpan.class))
+            {
+                if (spannable.getSpanStart(span) >= matcher.start()
+                        && spannable.getSpanEnd(span) <= matcher.end())
+                {
+                    spannable.removeSpan(span);
+                }
+                else
+                {
+                    set = false;
+                    break;
+                }
+            }
+            String resname = spannable.subSequence(matcher.start(1),matcher.end(1)).toString().trim();
+            int id = context.getResources().getIdentifier(resname, "drawable", context.getPackageName());
+            Drawable icon = context.getResources().getDrawable(id);//,this.getTheme());
+            icon.setBounds(0, 0, tv_test4.getLineHeight(), tv_test4.getLineHeight());
+            if (set)
+            {
+                hasChanges = true;
+                spannable.setSpan(new ImageSpan(icon,ImageSpan.ALIGN_BASELINE),
+                        matcher.start(),
+                        matcher.end(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+        return hasChanges;
+    }
+
 }

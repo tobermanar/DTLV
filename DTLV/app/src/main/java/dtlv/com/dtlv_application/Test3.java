@@ -1,12 +1,22 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.text.Spannable;
+import android.text.TextUtils;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -24,6 +34,11 @@ public class Test3 extends Activity{
 
     private int ptsT3 = 0;
     private GestionPoint gestPts;
+
+    private ImageButton btest3_help = null;
+    private AlertDialog alertDialog = null;
+    private TextView tv_test3 = null;
+
 
     public Test3(){
         gestPts = Menu.gestPts;
@@ -46,6 +61,8 @@ public class Test3 extends Activity{
         btest3_next.setEnabled(true);
         btest3_next.setClickable(true);
         btest3_next.setImageResource(R.drawable.next_grey);
+
+        btest3_help = (ImageButton) findViewById(R.id.test3_bhelp);
 
         //mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         //mTextView = (TextView) findViewById(R.id.text);
@@ -99,6 +116,34 @@ public class Test3 extends Activity{
             }
         });
 
+        btest3_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog = new AlertDialog.Builder(Test3.this).create();
+                alertDialog.setTitle(getResources().getString(R.string.help_test3_title));
+                String admin = getResources().getString(R.string.help_admin);
+                String quote = getResources().getString(R.string.help_quote);
+
+                tv_test3 = new TextView(Test3.this);
+
+                Spannable st3_1 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test3_text1));
+                Spannable st3_2 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test3_text2));
+
+                tv_test3.setText(TextUtils.concat(admin, st3_1, quote, st3_2));
+
+                alertDialog.setView(tv_test3);
+
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
+
+
     }
 
     /**
@@ -107,5 +152,50 @@ public class Test3 extends Activity{
      */
     public void giveGestPts(GestionPoint gestPtsF){
         this.gestPts = gestPtsF;
+    }
+
+    public Spannable getTextWithImages(Context context, CharSequence text)
+    {
+        Spannable spannable = Spannable.Factory.getInstance().newSpannable(text);
+        addImages(context, spannable);
+        return spannable;
+    }
+
+    public boolean addImages(Context context, Spannable spannable)
+    {
+        Pattern refImg = Pattern.compile("\\Q[img src=\\E([a-zA-Z0-9_]+?)\\Q/]\\E");
+        boolean hasChanges = false;
+
+        Matcher matcher = refImg.matcher(spannable);
+        while (matcher.find())
+        {
+            boolean set = true;
+            for (ImageSpan span : spannable.getSpans(matcher.start(), matcher.end(), ImageSpan.class))
+            {
+                if (spannable.getSpanStart(span) >= matcher.start()
+                        && spannable.getSpanEnd(span) <= matcher.end())
+                {
+                    spannable.removeSpan(span);
+                }
+                else
+                {
+                    set = false;
+                    break;
+                }
+            }
+            String resname = spannable.subSequence(matcher.start(1),matcher.end(1)).toString().trim();
+            int id = context.getResources().getIdentifier(resname, "drawable", context.getPackageName());
+            Drawable icon = context.getResources().getDrawable(id);//,this.getTheme());
+            icon.setBounds(0, 0, tv_test3.getLineHeight(), tv_test3.getLineHeight());
+            if (set)
+            {
+                hasChanges = true;
+                spannable.setSpan(new ImageSpan(icon,ImageSpan.ALIGN_BASELINE),
+                        matcher.start(),
+                        matcher.end(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+        return hasChanges;
     }
 }

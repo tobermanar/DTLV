@@ -1,13 +1,23 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.TextUtils;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -63,6 +73,12 @@ public class Test5 extends Activity{
     private int q4 = 0;
     private int q5 = 0;
     private int q6 = 0;
+
+    private ImageButton btest5_help = null;
+    private AlertDialog alertDialog = null;
+    private TextView tv_test5 = null;
+
+
 
     public Test5(){
         //Recuperation du systeme de gestion des points
@@ -150,6 +166,8 @@ public class Test5 extends Activity{
         btest5_next.setEnabled(true);
         btest5_next.setClickable(true);
         btest5_next.setImageResource(R.drawable.next_grey);
+
+        btest5_help = (ImageButton) findViewById(R.id.test5_bhelp);
 
         //Text 1
         btest5_text1.setOnClickListener(new View.OnClickListener() {
@@ -394,6 +412,35 @@ public class Test5 extends Activity{
             }
         });
 
+        btest5_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog = new AlertDialog.Builder(Test5.this).create();
+                alertDialog.setTitle(getResources().getString(R.string.help_test5_title));
+                String admin = getResources().getString(R.string.help_admin);
+                String quote = getResources().getString(R.string.help_quote);
+
+                tv_test5 = new TextView(Test5.this);
+
+                Spannable st5_1 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test5_text1));
+                Spannable st5_2 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test5_text2));
+
+                tv_test5.setText(TextUtils.concat(admin, st5_1, quote, st5_2));
+
+                alertDialog.setView(tv_test5);
+
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
+
+
+
 
     } // Fin d'instance
 
@@ -414,4 +461,51 @@ public class Test5 extends Activity{
     public void giveGestPts(GestionPoint gestPtsF){
         this.gestPts = gestPtsF;
     }
+
+    public Spannable getTextWithImages(Context context, CharSequence text)
+    {
+        Spannable spannable = Spannable.Factory.getInstance().newSpannable(text);
+        addImages(context, spannable);
+        return spannable;
+    }
+
+    public boolean addImages(Context context, Spannable spannable)
+    {
+        Pattern refImg = Pattern.compile("\\Q[img src=\\E([a-zA-Z0-9_]+?)\\Q/]\\E");
+        boolean hasChanges = false;
+
+        Matcher matcher = refImg.matcher(spannable);
+        while (matcher.find())
+        {
+            boolean set = true;
+            for (ImageSpan span : spannable.getSpans(matcher.start(), matcher.end(), ImageSpan.class))
+            {
+                if (spannable.getSpanStart(span) >= matcher.start()
+                        && spannable.getSpanEnd(span) <= matcher.end())
+                {
+                    spannable.removeSpan(span);
+                }
+                else
+                {
+                    set = false;
+                    break;
+                }
+            }
+            String resname = spannable.subSequence(matcher.start(1),matcher.end(1)).toString().trim();
+            int id = context.getResources().getIdentifier(resname, "drawable", context.getPackageName());
+            Drawable icon = context.getResources().getDrawable(id);//,this.getTheme());
+            icon.setBounds(0, 0, tv_test5.getLineHeight(), tv_test5.getLineHeight());
+            if (set)
+            {
+                hasChanges = true;
+                spannable.setSpan(new ImageSpan(icon,ImageSpan.ALIGN_BASELINE),
+                        matcher.start(),
+                        matcher.end(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+        return hasChanges;
+    }
+
+
 }

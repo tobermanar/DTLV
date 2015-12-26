@@ -1,12 +1,29 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.preference.DialogPreference;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.TextUtils;
+import android.text.style.ImageSpan;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.StyleSpan;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Utilisateur on 2015-12-06.
@@ -55,6 +72,11 @@ public class Test1 extends Activity{
     private LinearLayout test1_layout4 = null;
     private LinearLayout test1_layout5 = null;
     private LinearLayout test1_layout6 = null;
+
+    private ImageButton btest1_help = null;
+    private AlertDialog alertDialog = null;
+    private TextView tv_test1 = null;
+
 
     public Test1(){
         //Recuperation du systeme de gestion des points
@@ -145,7 +167,11 @@ public class Test1 extends Activity{
         test1_layout5 = (LinearLayout) findViewById(R.id.test1_layout5);
         test1_layout6 = (LinearLayout) findViewById(R.id.test1_layout6);
 
-    //Image 1
+        btest1_help = (ImageButton) findViewById(R.id.test1_bhelp);
+
+
+
+        //Image 1
         btest1_image1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -381,7 +407,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque vert sur l'image A MODIFIER
                 test1_layout6.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_image6 = true;
-                q6=1;
+                q6 = 1;
                 activateNext();
             }
         });
@@ -391,7 +417,7 @@ public class Test1 extends Activity{
                 // Au click sur le bouton, on affiche un calque rouge sur l'image A MODIFIER
                 test1_layout6.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_image6 = true;
-                q6=0;
+                q6 = 0;
                 activateNext();
             }
         });
@@ -406,6 +432,42 @@ public class Test1 extends Activity{
                 startActivity(itest2);
             }
         });
+
+
+        btest1_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog = new AlertDialog.Builder(Test1.this).create();
+                alertDialog.setTitle(getResources().getString(R.string.help_test1_title));
+                String admin = getResources().getString(R.string.help_admin);
+                String quote = getResources().getString(R.string.help_quote);
+
+                /*String t1 = getResources().getString(R.string.tuto_test1_text1);
+                String t2 = getResources().getString(R.string.tuto_test1_text2);
+                String t3 = getResources().getString(R.string.tuto_test1_text3);
+                String t4 = getResources().getString(R.string.tuto_test1_text4);
+
+                alertDialog.setMessage(ration + " : " + t1 + admin + " : " + t2 + instruct + " : " + t3 + quote + " : " + t4);*/
+
+                tv_test1 = new TextView(Test1.this);
+
+                Spannable st1_1 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test1_text1));
+                Spannable st1_2 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test1_text2));
+
+                tv_test1.setText(TextUtils.concat(admin, st1_1, quote, st1_2));
+
+                alertDialog.setView(tv_test1);
+
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
+
 
 
     } // Fin d'instance
@@ -430,4 +492,52 @@ public class Test1 extends Activity{
     public void giveGestPts(GestionPoint gestPtsF){
         this.gestPts = gestPtsF;
     }
+
+    public Spannable getTextWithImages(Context context, CharSequence text)
+    {
+        Spannable spannable = Spannable.Factory.getInstance().newSpannable(text);
+        addImages(context, spannable);
+        return spannable;
+    }
+
+    public boolean addImages(Context context, Spannable spannable)
+    {
+        Pattern refImg = Pattern.compile("\\Q[img src=\\E([a-zA-Z0-9_]+?)\\Q/]\\E");
+        boolean hasChanges = false;
+
+        Matcher matcher = refImg.matcher(spannable);
+        while (matcher.find())
+        {
+            boolean set = true;
+            for (ImageSpan span : spannable.getSpans(matcher.start(), matcher.end(), ImageSpan.class))
+            {
+                if (spannable.getSpanStart(span) >= matcher.start()
+                        && spannable.getSpanEnd(span) <= matcher.end())
+                {
+                    spannable.removeSpan(span);
+                }
+                else
+                {
+                    set = false;
+                    break;
+                }
+            }
+            String resname = spannable.subSequence(matcher.start(1),matcher.end(1)).toString().trim();
+            int id = context.getResources().getIdentifier(resname, "drawable", context.getPackageName());
+            Drawable icon = context.getResources().getDrawable(id);//,this.getTheme());
+            icon.setBounds(0, 0, tv_test1.getLineHeight(), tv_test1.getLineHeight());
+            if (set)
+            {
+                hasChanges = true;
+                spannable.setSpan(new ImageSpan(icon,ImageSpan.ALIGN_BASELINE),
+                        matcher.start(),
+                        matcher.end(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+        return hasChanges;
+    }
 }
+
+
+
