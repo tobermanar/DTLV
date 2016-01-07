@@ -116,7 +116,7 @@
                         <ImageButton
                             android:layout_width="110dp"
                             android:layout_height="100dp"
-                            android:id="@+id/imageButton3"
+                            android:id="@+id/test2_bhelp"
                             android:layout_gravity="center"
                             android:background="@drawable/help_3"
                             android:clickable="true" />

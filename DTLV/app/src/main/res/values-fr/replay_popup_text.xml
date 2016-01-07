@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="replay_title">Répétition de l\'enregistrement</string>
+    <string name="replay_msg">ETES-VOUS SÛR DE VOULOIR REPRODUIRE L\'ENREGISTREMENT? \n
+    Vous pourrez le faire une seule fois, et prenez en compte que cela pourrait fausser les résultats</string>
+    <string name="replay_yes">OUI</string>
+    <string name="replay_no">NON</string>
+
+</resources>

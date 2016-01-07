@@ -52,7 +52,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="wrap_content" >
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -125,6 +125,26 @@
                     </LinearLayout>
                 </LinearLayout>
             </FrameLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="1" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.94" />
+
+                <ImageButton
+                    android:layout_width="59dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/lang_back"
+                    android:background="@drawable/back_arrow"
+                    android:layout_weight="0.03" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

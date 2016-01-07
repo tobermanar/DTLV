@@ -316,6 +316,7 @@ public class Tutorial extends Activity{
             }
         });
 
+        //Scroll
         btuto_1 = (Button) findViewById(R.id.tuto_bt1);
         btuto_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -436,16 +437,6 @@ public class Tutorial extends Activity{
                 });
             }
         });
-        //onclick-entzat
-        /*
-        scrollView.post(new Runnable() {
-            @Override
-            public void run() {
-                scrollView.scrollTo(0,tv_test1.getTop());
-            }
-        });
-        */
-
 
 
     }//end onCreate
