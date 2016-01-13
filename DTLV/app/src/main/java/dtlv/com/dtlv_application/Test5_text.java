@@ -20,17 +20,17 @@ public class Test5_text extends Activity {
 
         int value = getIntent().getExtras().getInt("key");
         if (value == 1)
-        { text.setText("@string/test5_text1_part1");}
+        { text.setText(R.string.test5_text1_part1);}
         if (value == 2)
-        { text.setText("@string/test5_text1_part2");}
-        if (value == 3)
-        { text.setText("@string/test5_text1_part3");}
-        if (value == 4)
-        { text.setText("@string/test5_text2_part1");}
-        if (value == 5)
-        { text.setText("@string/test5_text2_part2");}
-        if (value == 6)
-        { text.setText("@string/test5_text2_part3");}
+        { text.setText(R.string.test5_text1_part2);}
+            if (value == 3)
+        { text.setText(R.string.test5_text1_part3);}
+            if (value == 4)
+        { text.setText(R.string.test5_text2_part1);}
+            if (value == 5)
+        { text.setText(R.string.test5_text2_part2);}
+            if (value == 6)
+        { text.setText(R.string.test5_text2_part3);}
 
         btest5_text1_back = (ImageButton) findViewById(R.id.test5_text_back);
         btest5_text1_back.setOnClickListener(new View.OnClickListener() {
