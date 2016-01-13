@@ -15,6 +15,8 @@
     <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
     <!-- noramalScreens = false a modif pour exclure aussi les smartphones -->
     <application
         android:allowBackup="true"
@@ -35,23 +37,23 @@
         <activity
             android:name=".Tutorial"
             android:label="Tutorial"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Credits"
             android:label="Credits"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Language"
             android:label="Language"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Config"
             android:label="Config"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test1"
             android:label="Test1"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test1_image"
             android:label="@string/title_activity_test1_image"
@@ -65,19 +67,19 @@
         <activity
             android:name=".Test2"
             android:label="Test2"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test3"
             android:label="Test3"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test4"
             android:label="Test4"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test5"
             android:label="Test5"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test5_text"
             android:label="@string/title_activity_test5_text"
@@ -91,7 +93,7 @@
         <activity
             android:name=".Test6"
             android:label="Test6"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test6_image"
             android:label="@string/title_activity_test6_image"
@@ -105,15 +107,15 @@
         <activity
             android:name=".Test7"
             android:label="Test7"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test8"
             android:label="Test8"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test9"
             android:label="Test9"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test9_text"
             android:label="@string/title_activity_test9_text"
@@ -127,11 +129,20 @@
         <activity
             android:name=".Test10"
             android:label="Test10"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Results"
             android:label="Results"
-            android:screenOrientation="sensorLandscape"></activity>
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".Config_image"
+            android:label="@string/title_activity_config_image"
+            android:parentActivityName=".Config"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dtlv.com.dtlv_application.Config" />
+        </activity>
     </application>
 
 </manifest>

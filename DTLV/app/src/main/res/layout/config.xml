@@ -126,7 +126,7 @@
                 <SeekBar
                     android:layout_width="525dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/brightness"
+                    android:id="@+id/brightness_seekBar"
                     android:layout_gravity="center"
                     android:progress="50"
                     android:max="100" />
@@ -174,7 +174,7 @@
                 <SeekBar
                     android:layout_width="525dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/sound"
+                    android:id="@+id/sound_seekBar"
                     android:indeterminate="false"
                     android:progress="50"
                     android:max="100"
