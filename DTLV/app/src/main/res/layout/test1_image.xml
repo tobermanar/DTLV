@@ -4,35 +4,58 @@
     android:layout_height="match_parent"
     style="@style/whiteBackground"
     android:weightSum="1">
-
-    <LinearLayout
+    <FrameLayout
         android:orientation="horizontal"
-        android:layout_width="1156dp"
+        android:layout_width="140dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.34">
-
-        <FrameLayout
-            android:layout_width="350dp"
-            android:layout_height="match_parent"></FrameLayout>
+        android:layout_weight="0.1"/>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8">
         <ImageView
-            android:layout_width="500dp"
-            android:layout_height="500dp"
+            android:layout_width="@dimen/big_picture_size"
+            android:layout_height="@dimen/big_picture_size"
             android:scaleType="fitXY"
             android:id="@+id/test1_image1_full"
-            android:layout_gravity="center"
+            android:layout_centerInParent="true"
             android:src="@drawable/test1_image1"
             android:foregroundGravity="center" />
 
-    </LinearLayout>
-    <ImageButton
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:scaleType="fitXY"
-        android:id="@+id/test1_image1_back"
-        android:src="@drawable/back_arrow"
-        android:layout_gravity="bottom|right"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="@null"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:gravity="bottom">
+            <ImageButton
+                android:id="@+id/test1_image1_bnext"
+                android:src="@drawable/next_arrow"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@null"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <ImageButton
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                android:id="@+id/test1_image1_back"
+                android:src="@drawable/back_arrow"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@null"/>
+        </LinearLayout>
 
 </LinearLayout>

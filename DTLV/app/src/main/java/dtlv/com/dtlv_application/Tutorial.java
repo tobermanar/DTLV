@@ -97,7 +97,6 @@ public class Tutorial extends Activity{
     private TextView tv_res_title = null;
     private TextView tv_res_text = null;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

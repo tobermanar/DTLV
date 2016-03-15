@@ -12,10 +12,10 @@
         android:smallScreens="false"
         android:xlargeScreens="true" />
 
-    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <!-- noramalScreens = false a modif pour exclure aussi les smartphones -->
     <application
@@ -26,7 +26,7 @@
         <activity
             android:name=".Menu"
             android:configChanges="orientation"
-            android:label="DTLV"
+            android:label="DTLA"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,7 +56,7 @@
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test1_image"
-            android:label="@string/title_activity_test1_image"
+            android:label="Test1_image"
             android:parentActivityName=".Test1"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/AppTheme.NoActionBar">
@@ -82,7 +82,7 @@
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test5_text"
-            android:label="@string/title_activity_test5_text"
+            android:label="Ttest5_text"
             android:parentActivityName=".Test5"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/AppTheme.NoActionBar">
@@ -96,7 +96,7 @@
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test6_image"
-            android:label="@string/title_activity_test6_image"
+            android:label="Test6_image"
             android:parentActivityName=".Test6"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/AppTheme.NoActionBar">
@@ -118,7 +118,7 @@
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Test9_text"
-            android:label="@string/title_activity_test9_text"
+            android:label="Test9_text"
             android:parentActivityName=".Test9"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/AppTheme.NoActionBar">
@@ -136,7 +136,7 @@
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Config_image"
-            android:label="@string/title_activity_config_image"
+            android:label="Config_image"
             android:parentActivityName=".Config"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

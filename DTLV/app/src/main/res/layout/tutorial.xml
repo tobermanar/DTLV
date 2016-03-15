@@ -181,7 +181,7 @@
                             android:layout_width="767dp"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="Tutorial"
+                            android:text="@string/tuto_name"
                             android:id="@+id/tuto_nom"
                             android:background="#ffffff"
                             android:layout_weight="0.19"/>
@@ -195,7 +195,7 @@
                         <TextView
                             android:layout_width="770dp"
                             android:layout_height="wrap_content"
-                            android:text="&lt;- Touchez un bouton pour selectionner un exercice"
+                            android:text="@string/tuto_instruction"
                             android:id="@+id/tuto_consigne"
                             android:background="#ffffff"
                             android:layout_weight="0.19" />
@@ -247,7 +247,7 @@
                             </ScrollView>
 
                         </FrameLayout>
-
+                        <!-- Bouton précédent -->
                         <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="match_parent"

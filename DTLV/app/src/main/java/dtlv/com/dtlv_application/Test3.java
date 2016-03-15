@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -12,6 +13,7 @@ import android.text.Spannable;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -25,7 +27,7 @@ import java.util.regex.Pattern;
 
 public class Test3 extends Activity{
 
-    private TextView btest3_launch = null;
+    private Button btest3_launch = null;
     private ImageButton btest3_plus = null;
     private ImageButton btest3_minus = null;
     private ImageButton btest3_next = null;
@@ -39,6 +41,9 @@ public class Test3 extends Activity{
     private AlertDialog alertDialog = null;
     private TextView tv_test3 = null;
 
+    private Button tuto_bt1 = null;
+    private Button tuto_bt2 = null;
+    private Button tuto_bt3 = null;
 
     public Test3(){
         gestPts = Menu.gestPts;
@@ -50,19 +55,24 @@ public class Test3 extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test3);
-        btest3_launch = (TextView) findViewById(R.id.test3_launch);
-        btest3_launch.setEnabled(true);
-        btest3_launch.setClickable(true);
+        btest3_launch = (Button) findViewById(R.id.test3_launch);
         test3_score = (TextView) findViewById(R.id.test3_score);
         btest3_plus = (ImageButton) findViewById(R.id.test3_plus);
         btest3_minus = (ImageButton) findViewById(R.id.test3_minus);
         btest3_next = (ImageButton) findViewById(R.id.test3_bnext);
         test3_countdown = (TextView) findViewById(R.id.test3_countdown);
-        btest3_next.setEnabled(true);
-        btest3_next.setClickable(true);
+        btest3_next.setEnabled(false);
+        btest3_next.setClickable(false);
         btest3_next.setImageResource(R.drawable.next_grey);
 
         btest3_help = (ImageButton) findViewById(R.id.test3_bhelp);
+
+        tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
+        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
+        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
+        tuto_bt3.setBackgroundColor(Color.YELLOW);
 
         //mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         //mTextView = (TextView) findViewById(R.id.text);
@@ -79,7 +89,7 @@ public class Test3 extends Activity{
                     }
 
                     public void onFinish() {
-                        test3_countdown.setText("Temps écoulé");
+                        test3_countdown.setText(R.string.test3_end);
                         btest3_next.setEnabled(true);
                         btest3_next.setClickable(true);
                         btest3_next.setImageResource(R.drawable.next);

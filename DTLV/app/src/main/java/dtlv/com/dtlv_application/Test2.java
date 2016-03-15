@@ -15,6 +15,7 @@ import android.text.TextUtils;
 import android.text.style.ImageSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -116,6 +117,8 @@ public class Test2 extends Activity {
 
     private AlertDialog.Builder replayAlert = null;
 
+    private Button tuto_bt1 = null;
+    private Button tuto_bt2 = null;
 
     public Test2() {
         gestPts = Menu.gestPts;
@@ -261,12 +264,17 @@ public class Test2 extends Activity {
 
 
         btest2_next = (ImageButton) findViewById(R.id.test2_bnext);
-        btest2_next.setEnabled(true);
-        btest2_next.setClickable(true);
+        btest2_next.setEnabled(false);
+        btest2_next.setClickable(false);
         btest2_next.setImageResource(R.drawable.next_grey);
         test2_layout11.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         btest2_help = (ImageButton) findViewById(R.id.test2_bhelp);
+
+        tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
+        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
+        tuto_bt2.setBackgroundColor(Color.YELLOW);
 
         //create pop-up for replay alert
         replayAlert = new AlertDialog.Builder(Test2.this);
@@ -289,6 +297,7 @@ public class Test2 extends Activity {
             @Override
             public void onClick(View v) {
                 if (count11 == 0) {
+                    test2_layout11.setBackgroundColor(Color.TRANSPARENT);
                     mp111.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         public void onCompletion(MediaPlayer mp) {
                             //si c'est la première fois remplacer par bouton replay
@@ -307,7 +316,7 @@ public class Test2 extends Activity {
                             btest2_play12.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count11++;
-                            test2_layout11.setBackgroundColor(Color.TRANSPARENT);
+
                             test2_layout12.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                     });
@@ -333,10 +342,6 @@ public class Test2 extends Activity {
                                 }
                             });
                     replayAlert.show();
-                    //mp112.start();
-
-
-
                 }
 
             }
@@ -346,7 +351,6 @@ public class Test2 extends Activity {
         btest2_validate11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO choisir une couleur precise et la mettre dans color.xml
                 test2_layout11.setBackgroundColor(getResources().getColor(R.color.green));//si on fixe une couleur :
                 quotation_11 = true;
                 q11 = 1;
@@ -357,7 +361,6 @@ public class Test2 extends Activity {
         btest2_refuse11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO choisir une couleur precise et la mettre dans color.xml
                 test2_layout11.setBackgroundColor(getResources().getColor(R.color.red));// si on fixe une couleur : getResources().getColor(R.color.red)
                 quotation_11 = true;
                 q11 = 0;
@@ -372,6 +375,7 @@ public class Test2 extends Activity {
         btest2_play12.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (count12 == 0) {
+                    test2_layout12.setBackgroundColor(Color.TRANSPARENT);
                     mp121.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -392,7 +396,7 @@ public class Test2 extends Activity {
                             btest2_play13.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count12++;
-                            test2_layout12.setBackgroundColor(Color.TRANSPARENT);
+
                             test2_layout13.setBackgroundColor(getResources().getColor(R.color.yellow));
 
                         }
@@ -448,6 +452,7 @@ public class Test2 extends Activity {
         btest2_play13.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (count13 == 0) {
+                    test2_layout13.setBackgroundColor(Color.TRANSPARENT);
                     mp131.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -472,7 +477,7 @@ public class Test2 extends Activity {
 
 
                             count13++;
-                            test2_layout13.setBackgroundColor(Color.TRANSPARENT);
+
                             test2_layout21.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                     });
@@ -526,6 +531,7 @@ public class Test2 extends Activity {
         btest2_play21.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (count21 == 0) {
+                    test2_layout21.setBackgroundColor(Color.TRANSPARENT);
                     mp211.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -546,7 +552,7 @@ public class Test2 extends Activity {
                             btest2_play22.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count21++;
-                            test2_layout21.setBackgroundColor(Color.TRANSPARENT);
+
                             test2_layout22.setBackgroundColor(getResources().getColor(R.color.yellow));
 
                         }
@@ -598,6 +604,7 @@ public class Test2 extends Activity {
         btest2_play22.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (count22 == 0) {
+                    test2_layout22.setBackgroundColor(Color.TRANSPARENT);
                     mp221.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -618,7 +625,7 @@ public class Test2 extends Activity {
                             btest2_play23.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count22++;
-                            test2_layout22.setBackgroundColor(Color.TRANSPARENT);
+
                             test2_layout23.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                     });
@@ -673,6 +680,7 @@ public class Test2 extends Activity {
         btest2_play23.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (count23 == 0) {
+                    test2_layout23.setBackgroundColor(Color.TRANSPARENT);
                     mp231.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -693,7 +701,7 @@ public class Test2 extends Activity {
                             btest2_play31.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count23++;
-                            test2_layout23.setBackgroundColor(Color.TRANSPARENT);
+
                             test2_layout31.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                     });
@@ -745,7 +753,9 @@ public class Test2 extends Activity {
         mp312 = MediaPlayer.create(this, R.raw.test2_sound3_part1);
         btest2_play31.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
+
                 if (count31 == 0) {
+                    test2_layout31.setBackgroundColor(Color.TRANSPARENT);
                     mp311.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -766,7 +776,7 @@ public class Test2 extends Activity {
                             btest2_play32.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count31++;
-                            test2_layout31.setBackgroundColor(Color.TRANSPARENT);
+
                             test2_layout32.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                     });
@@ -820,6 +830,7 @@ public class Test2 extends Activity {
         btest2_play32.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (count32 == 0) {
+                    test2_layout32.setBackgroundColor(Color.TRANSPARENT);
                     mp321.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -840,7 +851,7 @@ public class Test2 extends Activity {
                             btest2_play33.setImageResource(R.drawable.play_blue);
                             mp.release();
                             count32++;
-                            test2_layout32.setBackgroundColor(Color.TRANSPARENT);
+
                             test2_layout33.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                     });
@@ -893,6 +904,7 @@ public class Test2 extends Activity {
         btest2_play33.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (count33 == 0) {
+                    test2_layout33.setBackgroundColor(Color.TRANSPARENT);
                     mp331.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -908,7 +920,7 @@ public class Test2 extends Activity {
                             btest2_refuse33.setImageResource(R.drawable.refuse);
                             mp.release();
                             count33++;
-                            test2_layout33.setBackgroundColor(Color.TRANSPARENT);
+
                         }
                     });
                     mp331.start();

@@ -10,7 +10,7 @@ import android.widget.ImageButton;
  */
 public class Language extends Activity{
 
-    private ImageButton blang_back = null;
+    private ImageButton language_back = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,8 @@ public class Language extends Activity{
         setContentView(R.layout.language);
 
         //return button
-        blang_back = (ImageButton) findViewById(R.id.lang_back);
-        blang_back.setOnClickListener(new View.OnClickListener() {
+        language_back = (ImageButton) findViewById(R.id.language_back);
+        language_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

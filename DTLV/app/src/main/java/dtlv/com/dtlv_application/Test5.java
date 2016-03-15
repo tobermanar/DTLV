@@ -12,6 +12,7 @@ import android.text.Spannable;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,7 +34,6 @@ public class Test5 extends Activity{
     private LinearLayout test5_layout1 = null;
 
     private TextView btest5_text2 = null;
-    private ImageButton btest5_text1_back = null;
     private boolean quotation_text2 = false;
     private ImageButton btest5_validate2 = null;
     private ImageButton btest5_refuse2 = null;
@@ -78,7 +78,11 @@ public class Test5 extends Activity{
     private AlertDialog alertDialog = null;
     private TextView tv_test5 = null;
 
-
+    private Button tuto_bt1 = null;
+    private Button tuto_bt2 = null;
+    private Button tuto_bt3 = null;
+    private Button tuto_bt4 = null;
+    private Button tuto_bt5 = null;
 
     public Test5(){
         //Recuperation du systeme de gestion des points
@@ -163,11 +167,22 @@ public class Test5 extends Activity{
         btest5_refuse6.setImageResource(R.drawable.refuse_grey);
         test5_layout6 = (LinearLayout) findViewById(R.id.test5_layout6);
         btest5_next = (ImageButton) findViewById(R.id.test5_bnext);
-        btest5_next.setEnabled(true);
-        btest5_next.setClickable(true);
+        btest5_next.setEnabled(false);
+        btest5_next.setClickable(false);
         btest5_next.setImageResource(R.drawable.next_grey);
 
         btest5_help = (ImageButton) findViewById(R.id.test5_bhelp);
+
+        tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
+        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
+        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
+        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
+        tuto_bt4.setBackgroundColor(Color.GREEN);
+        tuto_bt5 = (Button) findViewById(R.id.tuto_bt5);
+        tuto_bt5.setBackgroundColor(Color.YELLOW);
 
         //Text 1
         btest5_text1.setOnClickListener(new View.OnClickListener() {
@@ -176,17 +191,8 @@ public class Test5 extends Activity{
                 Intent intent = new Intent(Test5.this, Test5_text.class);
                 intent.putExtra("key", 1);
                 startActivity(intent);
-                // Au click sur le bouton, on débloque les boutons valider et refuser
-                btest5_validate1.setEnabled(true);
-                btest5_validate1.setClickable(true);
-                btest5_validate1.setImageResource(R.drawable.validate);
-                btest5_refuse1.setEnabled(true);
-                btest5_refuse1.setClickable(true);
-                btest5_refuse1.setImageResource(R.drawable.refuse);
-                btest5_text2.setEnabled(true);
-                btest5_text2.setClickable(true);
+                Config.compt.setTest5_1(1);
                 test5_layout1.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
 
@@ -217,17 +223,8 @@ public class Test5 extends Activity{
                 Intent intent = new Intent(Test5.this, Test5_text.class);
                 intent.putExtra("key", 2);
                 startActivity(intent);
-                // Au click sur le bouton, on débloque les boutons valider et refuser
-                btest5_validate2.setEnabled(true);
-                btest5_validate2.setClickable(true);
-                btest5_validate2.setImageResource(R.drawable.validate);
-                btest5_refuse2.setEnabled(true);
-                btest5_refuse2.setClickable(true);
-                btest5_refuse2.setImageResource(R.drawable.refuse);
-                btest5_text3.setEnabled(true);
-                btest5_text3.setClickable(true);
+                Config.compt.setTest5_2(1);
                 test5_layout2.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest5_validate2.setOnClickListener(new View.OnClickListener() {
@@ -256,17 +253,8 @@ public class Test5 extends Activity{
                 Intent intent = new Intent(Test5.this, Test5_text.class);
                 intent.putExtra("key", 3);
                 startActivity(intent);
-                // Au click sur le bouton, on débloque les boutons valider et refuser
-                btest5_validate3.setEnabled(true);
-                btest5_validate3.setClickable(true);
-                btest5_validate3.setImageResource(R.drawable.validate);
-                btest5_refuse3.setEnabled(true);
-                btest5_refuse3.setClickable(true);
-                btest5_refuse3.setImageResource(R.drawable.refuse);
-                btest5_text4.setEnabled(true);
-                btest5_text4.setClickable(true);
+                Config.compt.setTest5_3(1);
                 test5_layout3.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest5_validate3.setOnClickListener(new View.OnClickListener() {
@@ -295,17 +283,8 @@ public class Test5 extends Activity{
                 Intent intent = new Intent(Test5.this, Test5_text.class);
                 intent.putExtra("key", 4);
                 startActivity(intent);
-                // Au click sur le bouton, on débloque les boutons valider et refuser
-                btest5_validate4.setEnabled(true);
-                btest5_validate4.setClickable(true);
-                btest5_validate4.setImageResource(R.drawable.validate);
-                btest5_refuse4.setEnabled(true);
-                btest5_refuse4.setClickable(true);
-                btest5_refuse4.setImageResource(R.drawable.refuse);
-                btest5_text5.setEnabled(true);
-                btest5_text5.setClickable(true);
+                Config.compt.setTest5_4(1);
                 test5_layout4.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest5_validate4.setOnClickListener(new View.OnClickListener() {
@@ -334,17 +313,8 @@ public class Test5 extends Activity{
                 Intent intent = new Intent(Test5.this, Test5_text.class);
                 intent.putExtra("key", 5);
                 startActivity(intent);
-                // Au click sur le bouton, on débloque les boutons valider et refuser
-                btest5_validate5.setEnabled(true);
-                btest5_validate5.setClickable(true);
-                btest5_validate5.setImageResource(R.drawable.validate);
-                btest5_refuse5.setEnabled(true);
-                btest5_refuse5.setClickable(true);
-                btest5_refuse5.setImageResource(R.drawable.refuse);
-                btest5_text6.setEnabled(true);
-                btest5_text6.setClickable(true);
+                Config.compt.setTest5_5(1);
                 test5_layout5.setBackgroundColor(Color.TRANSPARENT);
-                test5_layout6.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         });
         btest5_validate5.setOnClickListener(new View.OnClickListener() {
@@ -373,13 +343,7 @@ public class Test5 extends Activity{
                 Intent intent = new Intent(Test5.this, Test5_text.class);
                 intent.putExtra("key", 6);
                 startActivity(intent);
-                // Au click sur le bouton, on débloque les boutons valider et refuser
-                btest5_validate6.setEnabled(true);
-                btest5_validate6.setClickable(true);
-                btest5_validate6.setImageResource(R.drawable.validate);
-                btest5_refuse6.setEnabled(true);
-                btest5_refuse6.setClickable(true);
-                btest5_refuse6.setImageResource(R.drawable.refuse);
+                Config.compt.setTest5_6(1);
                 test5_layout6.setBackgroundColor(Color.TRANSPARENT);
             }
         });
@@ -443,6 +407,97 @@ public class Test5 extends Activity{
 
 
     } // Fin d'instance
+
+    @Override
+    public void onResume()
+    {
+        activatePictures();
+        super.onResume();
+    }
+
+    //Deal with the color and the unlocking of buttons and pictures
+    public void activatePictures() {
+        // Au click sur le bouton, on débloque les boutons valider et refuser et on affiche le suivant en Jaune
+        if(Config.compt.getTest5_1()== 1) {
+            btest5_validate1.setEnabled(true);
+            btest5_validate1.setClickable(true);
+            btest5_validate1.setImageResource(R.drawable.validate);
+            btest5_refuse1.setEnabled(true);
+            btest5_refuse1.setClickable(true);
+            btest5_refuse1.setImageResource(R.drawable.refuse);
+            btest5_text2.setEnabled(true);
+            btest5_text2.setClickable(true);
+            if (Config.compt.getTest5_2() == 0)
+            {
+                test5_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
+            }
+        }
+        if (Config.compt.getTest5_2() == 1) {
+            btest5_validate2.setEnabled(true);
+            btest5_validate2.setClickable(true);
+            btest5_validate2.setImageResource(R.drawable.validate);
+            btest5_refuse2.setEnabled(true);
+            btest5_refuse2.setClickable(true);
+            btest5_refuse2.setImageResource(R.drawable.refuse);
+            btest5_text3.setEnabled(true);
+            btest5_text3.setClickable(true);
+            if (Config.compt.getTest5_3() == 0)
+            {
+                test5_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
+            }
+        }
+        if (Config.compt.getTest5_3() == 1) {
+            btest5_validate3.setEnabled(true);
+            btest5_validate3.setClickable(true);
+            btest5_validate3.setImageResource(R.drawable.validate);
+            btest5_refuse3.setEnabled(true);
+            btest5_refuse3.setClickable(true);
+            btest5_refuse3.setImageResource(R.drawable.refuse);
+            btest5_text4.setEnabled(true);
+            btest5_text4.setClickable(true);
+            if (Config.compt.getTest5_4() == 0)
+            {
+                test5_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
+            }
+        }
+        if (Config.compt.getTest5_4() == 1) {
+            btest5_validate4.setEnabled(true);
+            btest5_validate4.setClickable(true);
+            btest5_validate4.setImageResource(R.drawable.validate);
+            btest5_refuse4.setEnabled(true);
+            btest5_refuse4.setClickable(true);
+            btest5_refuse4.setImageResource(R.drawable.refuse);
+            btest5_text5.setEnabled(true);
+            btest5_text5.setClickable(true);
+            if (Config.compt.getTest5_5() == 0)
+            {
+                test5_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
+            }
+        }
+        if (Config.compt.getTest5_5() == 1) {
+            btest5_validate5.setEnabled(true);
+            btest5_validate5.setClickable(true);
+            btest5_validate5.setImageResource(R.drawable.validate);
+            btest5_refuse5.setEnabled(true);
+            btest5_refuse5.setClickable(true);
+            btest5_refuse5.setImageResource(R.drawable.refuse);
+            btest5_text6.setEnabled(true);
+            btest5_text6.setClickable(true);
+            if (Config.compt.getTest5_6() == 0)
+            {
+                test5_layout6.setBackgroundColor(getResources().getColor(R.color.yellow));
+            }
+        }
+        if (Config.compt.getTest5_6() == 1) {
+            btest5_validate6.setEnabled(true);
+            btest5_validate6.setClickable(true);
+            btest5_validate6.setImageResource(R.drawable.validate);
+            btest5_refuse6.setEnabled(true);
+            btest5_refuse6.setClickable(true);
+            btest5_refuse6.setImageResource(R.drawable.refuse);
+        }
+    }
+
 
     //Check if everything is quoted to unlock the button to the next test
     public void activateNext() {

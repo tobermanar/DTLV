@@ -2,108 +2,229 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/blueBackground"
-    android:weightSum="1">
+    style="@style/blueBackground">
 
 
     <LinearLayout
+        style="@style/blueBackground"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
-        android:layout_width="57dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical">
-
-        <TextView
-            android:layout_width="44dp"
-            android:layout_height="280dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView3"
-            android:background="#ffffff"
-            android:layout_gravity="center" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:weightSum="1">
+        android:weightSum="1" >
 
-        <FrameLayout
-            android:layout_width="527dp"
-            android:layout_height="64dp"
-            android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:weightSum="1">
 
-            <TextView
-                android:layout_width="481dp"
-                android:layout_height="38dp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Choix de la langue"
-                android:id="@+id/textView2"
-                android:layout_gravity="center"
-                android:background="#ffffff" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical" />
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="274dp"
-                android:layout_height="183dp"
-                android:layout_gravity="left|center_vertical">
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:weightSum="1">
 
-                <Button
-                    android:layout_width="185dp"
-                    android:layout_height="wrap_content"
-                    android:text="Francais (France)"
-                    android:id="@+id/langueFrFra"
-                    android:layout_gravity="center_horizontal" />
 
-                <Button
-                    android:layout_width="185dp"
-                    android:layout_height="wrap_content"
-                    android:text="Francais (Canada)"
-                    android:id="@+id/langueFrCana"
-                    android:layout_gravity="center_horizontal" />
-
-                <Button
-                    android:layout_width="185dp"
-                    android:layout_height="wrap_content"
-                    android:text="Español"
-                    android:id="@+id/langueEsp"
-                    android:layout_gravity="center_horizontal" />
             </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/frameLayout26" >
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="483dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/linearLayout20"
+            android:weightSum="1"
+            android:layout_weight="0.87" >
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="267dp"
-                android:layout_height="182dp"
-                android:layout_gravity="right|center_vertical">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:id="@+id/linearLayout19" >
 
-                <Button
-                    android:layout_width="185dp"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="English (UK)"
-                    android:id="@+id/langueEngUk"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.05"
+                    android:id="@+id/linearLayout18"
+                    android:weightSum="1" >
 
-                <Button
-                    android:layout_width="185dp"
-                    android:layout_height="wrap_content"
-                    android:text="English (USA)"
-                    android:id="@+id/langueEngUs"
-                    android:layout_gravity="center_horizontal" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="128dp"
+                        android:layout_weight="0.98"
+                        android:id="@+id/linearLayout17"
+                        android:weightSum="1" >
 
-                <Button
-                    android:layout_width="185dp"
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.31"
+                            android:id="@+id/frameLayout29" />
+
+                        <TextView
+                            android:layout_width="767dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/language"
+                            android:id="@+id/config_nom"
+                            android:background="#ffffff"
+                            android:layout_weight="0.19"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="0.15" />
+
+                        <TextView
+                            android:layout_width="770dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/language_instruction"
+                            android:id="@+id/config_consigne"
+                            android:background="#ffffff"
+                            android:layout_weight="0.19" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="中文"
-                    android:id="@+id/langueChin"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.92"
+                    android:id="@+id/frameLayout32" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|top"
+                        android:weightSum="1" >
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="0.98"
+                            android:id="@+id/frameLayout31" >
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.50"
+                                android:weightSum="1">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.25"></LinearLayout>
+                                <Button
+                                    android:layout_width="238dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/language_french"
+                                    android:id="@+id/button"
+                                    android:layout_gravity="center_horizontal|left"
+                                    android:layout_weight="0.32" />
+
+                                <Button
+                                    android:layout_width="238dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/language_spanish"
+                                    android:id="@+id/button3"
+                                    android:textColor="@color/grey"
+                                    android:layout_gravity="center_horizontal|left"
+                                    android:layout_weight="0.32"
+                                    android:clickable="false"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.50"
+                                android:weightSum="1">
+
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.30"></LinearLayout>
+
+                                <Button
+                                    android:layout_width="238dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/language_english"
+                                    android:id="@+id/button5"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="@color/grey"
+                                    android:layout_weight="0.32"
+                                    android:clickable="false"/>
+
+                                <Button
+                                    android:layout_width="238dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/language_chinese"
+                                    android:id="@+id/button6"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="@color/grey"
+                                    android:layout_weight="0.32"
+                                    android:clickable="false"/>
+
+                            </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                        <!-- Bouton précédent -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:weightSum="1" >
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.94" />
+
+                            <ImageButton
+                                android:layout_width="59dp"
+                                android:layout_height="80dp"
+                                android:id="@+id/language_back"
+                                android:background="@drawable/back_arrow"
+                                android:layout_weight="0.03" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
             </LinearLayout>
-
-        </FrameLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

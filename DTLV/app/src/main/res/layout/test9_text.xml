@@ -4,76 +4,91 @@
     android:layout_height="match_parent"
     style="@style/whiteBackground"
     android:weightSum="1">
-
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"/>
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.21">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="1156dp"
-        android:layout_height="match_parent"
-        android:layout_weight="0.34">
-        <FrameLayout
-            android:layout_width="480dp"
-            android:layout_height="match_parent"></FrameLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.21">
+        android:layout_weight="0.8">
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_text_size"
+            android:background="#ffffff"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
             android:id="@+id/test9_text1_full"
-            android:layout_gravity="center_vertical"
-            android:text="@string/test9_text1"
-            android:foregroundGravity="center"
-            android:textSize="25dp"/>
-                </LinearLayout>
-            </LinearLayout>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.21">
-                    <FrameLayout
-                        android:layout_width="300dp"
-                        android:layout_height="match_parent"></FrameLayout>
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:scaleType="fitXY"
-                        android:id="@+id/test9_text2_full"
-                        android:layout_gravity="center_vertical"
-                        android:text="@string/test9_text1_part1"
-                        android:foregroundGravity="center"
-                        android:textSize="25dp"/>
-                    <FrameLayout
-                        android:layout_width="150dp"
-                        android:layout_height="match_parent"></FrameLayout>
-                        <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="200dp"
-                            android:scaleType="fitXY"
-                            android:id="@+id/test9_text3_full"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/test9_text1_part2"
-                            android:foregroundGravity="center"
-                            android:textSize="25dp"/>
-                    </LinearLayout>
+            android:text="@string/test9_text1"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_text_size"
+            android:background="#ffffff"
+            android:textColor="@color/black"
+            android:layout_gravity="bottom"
+            android:gravity="left"
+            android:id="@+id/test9_text2_full"
+            android:text="@string/test9_text1_part1"
+            android:layout_weight="0.5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_text_size"
+            android:background="#ffffff"
+            android:textColor="@color/black"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:id="@+id/test9_text3_full"
+            android:text="@string/test9_text1_part2"
+            android:layout_weight="0.5"/>
         </LinearLayout>
-    <ImageButton
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:scaleType="fitXY"
-        android:id="@+id/test9_text_back"
-        android:src="@drawable/back_arrow"
-        android:layout_gravity="bottom|right"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="@null"/>
+        <FrameLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:gravity="bottom">
+        <ImageButton
+            android:id="@+id/test9_image_bnext"
+            android:src="@drawable/next_arrow"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@null"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:id="@+id/test9_text_back"
+            android:src="@drawable/back_arrow"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@null"/>
+    </LinearLayout>
 
 </LinearLayout>

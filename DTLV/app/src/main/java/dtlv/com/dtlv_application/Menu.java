@@ -1,7 +1,8 @@
 package dtlv.com.dtlv_application;
 
 import android.content.Intent;
-import android.provider.Settings;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.os.Bundle;
@@ -21,7 +22,6 @@ public class Menu extends Activity{
     private Button start = null;
     private Button language = null;
     private Button exit = null;
-    private float brightnessSetting = 0;
 
     public static GestionPoint gestPts;
 
@@ -84,3 +84,4 @@ public class Menu extends Activity{
 
     }
 }
+

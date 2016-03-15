@@ -12,6 +12,7 @@ import android.text.Spannable;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -37,7 +38,14 @@ public class Test8 extends Activity{
     private AlertDialog alertDialog = null;
     private TextView tv_test8 = null;
 
-
+    private Button tuto_bt1 = null;
+    private Button tuto_bt2 = null;
+    private Button tuto_bt3 = null;
+    private Button tuto_bt4 = null;
+    private Button tuto_bt5 = null;
+    private Button tuto_bt6 = null;
+    private Button tuto_bt7 = null;
+    private Button tuto_bt8 = null;
 
     public Test8(){
         gestPts = Menu.gestPts;
@@ -52,7 +60,7 @@ public class Test8 extends Activity{
         btest8_validate1 = (ImageButton) findViewById(R.id.test8_validate1);
         btest8_refuse1 = (ImageButton) findViewById(R.id.test8_refuse1);
         test8_layout1 = (LinearLayout) findViewById(R.id.test8_layout1);
-        test8_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
+        //test8_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         btest8_next = (ImageButton) findViewById(R.id.test8_bnext);
         btest8_next.setEnabled(false);
@@ -60,6 +68,23 @@ public class Test8 extends Activity{
         btest8_next.setImageResource(R.drawable.next_grey);
 
         btest8_help = (ImageButton) findViewById(R.id.test8_bhelp);
+
+        tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
+        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
+        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
+        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
+        tuto_bt4.setBackgroundColor(Color.GREEN);
+        tuto_bt5 = (Button) findViewById(R.id.tuto_bt5);
+        tuto_bt5.setBackgroundColor(Color.GREEN);
+        tuto_bt6 = (Button) findViewById(R.id.tuto_bt6);
+        tuto_bt6.setBackgroundColor(Color.GREEN);
+        tuto_bt7 = (Button) findViewById(R.id.tuto_bt7);
+        tuto_bt7.setBackgroundColor(Color.GREEN);
+        tuto_bt8 = (Button) findViewById(R.id.tuto_bt8);
+        tuto_bt8.setBackgroundColor(Color.YELLOW);
 
         btest8_validate1.setOnClickListener(new View.OnClickListener() {
             @Override

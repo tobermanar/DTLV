@@ -3,18 +3,21 @@ package dtlv.com.dtlv_application;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 public class Test6_image extends Activity {
 
     private ImageButton btest6_play1 = null;
     private ImageButton btest6_play2 = null;
     private ImageButton btest6_play3 = null;
+    private LinearLayout test6_layout1 = null;
+    private LinearLayout test6_layout2 = null;
+    private LinearLayout test6_layout3 = null;
 
     private int count1 =0;
     private int count2 =0;
@@ -27,16 +30,22 @@ public class Test6_image extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test6_image);
-
-        final MediaPlayer mp1,mp2,mp3;
-        mp1 = MediaPlayer.create(this, R.raw.test6_sound1);
-        mp2 = MediaPlayer.create(this, R.raw.test6_sound2);
-        mp3 = MediaPlayer.create(this, R.raw.test6_sound3);
+        final MediaPlayer mp1,mp11,mp2,mp22,mp3,mp33;
 
         btest6_play1 = (ImageButton) findViewById(R.id.test6_sound1_bplay);
-        btest6_play2 = (ImageButton) findViewById(R.id.test6_sound2_bplay);
-        btest6_play3 = (ImageButton) findViewById(R.id.test6_sound3_bplay);
+        btest6_play1.setEnabled(true);
+        btest6_play1.setClickable(true);
 
+        test6_layout1 = (LinearLayout) findViewById(R.id.test6_layout1);
+        btest6_play2 = (ImageButton) findViewById(R.id.test6_sound2_bplay);
+        btest6_play2.setEnabled(true);
+        btest6_play2.setClickable(true);
+        test6_layout2 = (LinearLayout) findViewById(R.id.test6_layout2);
+        btest6_play3 = (ImageButton) findViewById(R.id.test6_sound3_bplay);
+        btest6_play3.setEnabled(true);
+        btest6_play3.setClickable(true);
+        test6_layout3 = (LinearLayout) findViewById(R.id.test6_layout3);
+        activatePictures();
         //create pop-up for replay alert
         replayAlert = new AlertDialog.Builder(Test6_image.this);
         replayAlert.setTitle(getResources().getString(R.string.replay_title));
@@ -50,169 +59,178 @@ public class Test6_image extends Activity {
                 });
 
 
-        //Check if they have been played in the previous layout
-        count1 = getIntent().getExtras().getInt("c1");
-        count2 = getIntent().getExtras().getInt("c2");
-        count3 = getIntent().getExtras().getInt("c3");
-        //if it hasn't been played, set true
-        if (count1 == 0) {
-            btest6_play1.setImageResource(R.drawable.play_blue);
-        }
-        //if it has been played once, set true/replay
-        if (count1 == 1) {
-            btest6_play1.setImageResource(R.drawable.replay);
-        }
-        //if it has been played twice, disable
-        if (count1 == 2){
-            btest6_play1.setClickable(false);
-            btest6_play1.setEnabled(false);
-            btest6_play1.setImageResource(R.drawable.play_grey);
-        }
-        if (count2 == 0) {
-            btest6_play2.setImageResource(R.drawable.play_blue);
-        }
-        if (count2 == 1) {
-            btest6_play2.setImageResource(R.drawable.replay);
-        }
-        if (count2 == 2){
-            btest6_play2.setClickable(false);
-            btest6_play2.setEnabled(false);
-            btest6_play2.setImageResource(R.drawable.play_grey);
-        }
-        if (count3 == 0) {
-            btest6_play3.setImageResource(R.drawable.play_blue);
-        }
-        if (count3 == 1) {
-            btest6_play3.setImageResource(R.drawable.replay);
-        }
-        if (count3 == 2){
-            btest6_play3.setClickable(false);
-            btest6_play3.setEnabled(false);
-            btest6_play3.setImageResource(R.drawable.play_grey);
-        }
-
-
-        // Sentence 1
+        mp1 = MediaPlayer.create(this, R.raw.test6_sound1);
+        mp11 = MediaPlayer.create(this, R.raw.test6_sound1);
         btest6_play1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                mp1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        if (count1 == 0) {
-                            btest6_play1.setImageResource(R.drawable.replay);
-                        }
-                        if (count1 == 1) {
-                            btest6_play1.setEnabled(false);
-                            btest6_play1.setClickable(false);
-                            btest6_play1.setImageResource(R.drawable.play_grey);
-                        }
-                        count1++;
-                    }
-                });
-                if(count1==1)
-                {
-                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    mp1.start();
-                                }
-                            });
-                    replayAlert.show();
-                }
-                else
-                {
-                    mp1.start();
-                }
-            }
-        });// Fin sentence 1
-
-        // Sentence 2
-        btest6_play2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                mp2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        if (count2 == 0) {
-                            btest6_play2.setImageResource(R.drawable.replay);
-                        }
-                        if (count2 == 1) {
-                            btest6_play2.setEnabled(false);
-                            btest6_play2.setClickable(false);
-                            btest6_play2.setImageResource(R.drawable.play_grey);
-                        }
-                        count2++;
-                    }
-                });
-                if(count2==1)
-                {
-                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    mp2.start();
-                                }
-                            });
-                    replayAlert.show();
-                }
-                else
-                {
-                    mp2.start();
-                }
-            }
-        });// Fin Sentence 2
-
-        // Sentence 3
-        btest6_play3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                mp3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        if (count3 == 0) {
-                            btest6_play3.setImageResource(R.drawable.replay);
-                        }
-                        if (count3 == 1) {
-                            btest6_play3.setEnabled(false);
-                            btest6_play3.setClickable(false);
-                            btest6_play3.setImageResource(R.drawable.play_grey);
-                        }
-                        count3++;
-                    }
-                });
-                if(count3==1)
-                {
-                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    mp3.start();
-                                }
-                            });
-                    replayAlert.show();
-                }
-                else
-                {
-                    mp3.start();
-                }
-            }
-        });// end sentence3
-
-        //return button
-        btest6_image1_back = (ImageButton) findViewById(R.id.test6_image1_back);
-        btest6_image1_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                Bundle count = new Bundle();
-                count.putInt("c1", count1);
-                count.putInt("c2", count2);
-                count.putInt("c3", count3);
-                intent.putExtras(count);
-                setResult(Activity.RESULT_OK, intent);
-                mp1.release();
-                mp2.release();
-                mp3.release();
-                finish();
+                if (Config.compt.getTest6_1() == 0) {
+                    test6_layout1.setBackgroundColor(Color.TRANSPARENT);
+                    mp1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            activatePictures();
+                        }
+                    });
+                    mp1.start();
+                    Config.compt.setTest6_1(1);
+                } else if (Config.compt.getTest6_1() == 1) {
+                    mp11.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            mp.release();
+                        }
+                    });
+
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp11.start();
+                                    Config.compt.setTest6_1(2);
+                                    activatePictures();
+                                }
+                            });
+                    replayAlert.show();
+                }
+
             }
         });
 
+        /*************  Word 2  **************/
+        mp2 = MediaPlayer.create(this, R.raw.test6_sound2);
+        mp22 = MediaPlayer.create(this, R.raw.test6_sound2);
+        btest6_play2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Config.compt.getTest6_2() == 0) {
+                    test6_layout2.setBackgroundColor(Color.TRANSPARENT);
+                    mp2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            activatePictures();
+                        }
+                    });
+                    mp2.start();
+                    Config.compt.setTest6_2(1);
+
+                } else if (Config.compt.getTest6_2() == 1) {
+                    mp22.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            mp.release();
+                        }
+                    });
+
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp22.start();
+                                    Config.compt.setTest6_2(2);
+                                    activatePictures();
+                                }
+                            });
+                    replayAlert.show();
+                }
+
+            }
+        });
+
+        /*************  Word 3  **************/
+        mp3 = MediaPlayer.create(this, R.raw.test6_sound3);
+        mp33 = MediaPlayer.create(this, R.raw.test6_sound3);
+        btest6_play3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Config.compt.getTest6_3() == 0) {
+                    test6_layout3.setBackgroundColor(Color.TRANSPARENT);
+                    mp3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            activatePictures();
+                        }
+                    });
+                    mp3.start();
+                    Config.compt.setTest6_3(1);
+                } else if (Config.compt.getTest6_3() == 1) {
+                    mp11.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            mp.release();
+                        }
+                    });
+
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp33.start();
+                                    Config.compt.setTest6_3(2);
+                                    activatePictures();
+                                }
+                            });
+                    replayAlert.show();
+                }
+
+            }
+        });
+
+                //return button
+                btest6_image1_back = (ImageButton) findViewById(R.id.test6_image1_back);
+                btest6_image1_back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mp1.release();
+                        mp2.release();
+                        mp3.release();
+                        finish();
+                    }
+                });
+
+
     }//end onCreate
+
+    //Deal with the color and the unlocking of buttons and pictures
+    public void activatePictures() {
+        // Au click sur le bouton, on débloque les boutons valider et refuser et on affiche le suivant en Jaune
+        if (Config.compt.getTest6_1() == 0)
+        {
+            test6_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
+            btest6_play2.setImageResource(R.drawable.play_blue);
+            btest6_play2.setEnabled(true);
+            btest6_play2.setClickable(true);
+        }
+        if(Config.compt.getTest6_1()== 1) {
+            btest6_play1.setImageResource(R.drawable.replay);
+            if (Config.compt.getTest6_2() == 0)
+            {
+                test6_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
+                btest6_play2.setImageResource(R.drawable.play_blue);
+                btest6_play2.setEnabled(true);
+                btest6_play2.setClickable(true);
+            }
+        }
+        if (Config.compt.getTest6_1() == 2) {
+            btest6_play1.setImageResource(R.drawable.play_grey);
+            btest6_play1.setEnabled(false);
+            btest6_play1.setClickable(false);
+        }
+        if (Config.compt.getTest6_2() == 1) {
+            btest6_play2.setImageResource(R.drawable.replay);
+            if (Config.compt.getTest6_3() == 0)
+            {
+                test6_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
+                btest6_play3.setImageResource(R.drawable.play_blue);
+                btest6_play3.setEnabled(true);
+                btest6_play3.setClickable(true);
+            }
+        }
+        if (Config.compt.getTest6_2() == 2) {
+            btest6_play2.setImageResource(R.drawable.play_grey);
+            btest6_play2.setEnabled(false);
+            btest6_play2.setClickable(false);
+        }
+        if (Config.compt.getTest6_3() == 1) {
+            btest6_play3.setImageResource(R.drawable.replay);
+        }
+        if (Config.compt.getTest6_3() == 2)
+        {
+            btest6_play3.setImageResource(R.drawable.play_grey);
+            btest6_play3.setEnabled(false);
+            btest6_play3.setClickable(false);
+        }
+    }
 
 }

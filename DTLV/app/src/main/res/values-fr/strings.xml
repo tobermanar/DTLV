@@ -1,23 +1,30 @@
 <resources>
-    <!-- GLOBAL -->
+<!-- GLOBAL -->
     <string name="app_name">DTLA_Application</string>
     <string name="Menu">DTLA</string>
 
-    <!-- Menu -->
+<!-- Menu -->
     <string name="tutorial">TUTORIEL</string>
     <string name="credits">CRÉDITS</string>
     <string name="start">DÉMARRER</string>
     <string name="language">LANGUE</string>
     <string name="exit">QUITTER</string>
 
-    <!-- REPLAY POP-UP-->
+    <!-- Language -->
+    <string name="language_choice">Choix de la langue</string>
+    <string name="language_french">FRANÇAIS</string>
+    <string name="language_spanish">ESPAGNOL</string>
+    <string name="language_english">ANGLAIS</string>
+    <string name="language_chinese">CHINOIS</string>
+
+<!-- REPLAY POP-UP-->
     <string name="replay_title">Répétition de l\'enregistrement</string>
     <string name="replay_msg">ETES-VOUS SÛR DE VOULOIR REPRODUIRE L\'ENREGISTREMENT? \n
     Vous pourrez le faire une seule fois, et prenez en compte que cela pourrait fausser les résultats</string>
     <string name="replay_yes">OUI</string>
     <string name="replay_no">NON</string>
 
-    <!-- HELP BUTTON-->
+<!-- HELP BUTTON-->
     <string name="help_test1_text1">L\'examinateur demande au sujet de produire oralement le nom de chaque image qu\'il fait apparaître en cliquant sur chacune d\'elle, en partant de la gauche vers la droite, en commençant par la série du haut. Aucune aide ni facilitation n\'est fournie. En cas d\'erreur ou de non-réponse, l\'item suivant est présenté. Pour chaque item, l\'administrateur cote la réponse en appuyant sur [img src=validate/] si le mot produit est correct ou sur [img src=refuse/] s\'il est erroné.
     \n\n</string>
     <string name="help_test1_text2">1 point est alloué pour la dénomination correcte de chacune des 6 images.\n</string>
@@ -70,7 +77,9 @@
     <string name="help_test9_title">Aide pour la tâche 9</string>
     <string name="help_test10_title">Aide pour la tâche 10</string>
 
-    <!--TEST INSTRUCTIONS-->
+<!--TEST INSTRUCTIONS-->
+    <string name="language_instruction">Langues supplémentaires en cours de développement.</string>
+    <string name="tuto_instruction">Touchez un numéro sur la gauche pour selectionner un exercice.</string>
     <string name="test1_instruction">Dans cette tâche, vous allez voir 6 images, présentées une à la fois sur l\'écran de la tablette. Je vous demande de me nommer chacune d\'elles en commençant par celle-ci.</string>
     <string name="test2_instruction">Dans cette tâche, vous allez entendre des mots, puis des mots inventés et finalement des phrases. Je vous demande de les répéter le mieux possible, immédiatement après avoir entendu chacun d\'eux.</string>
     <string name="test3_instruction">Dans cette tâche, je veux que me disiez le plus de mots possible qui débutent par une lettre de l\'alphabet que je vais vous dire. Vous pouvez dire n\'importe quelle sorte de mot, sauf les noms propres (prénom, nom de famille, nom de pays, nom de fleuve ou de ville), les chiffres, les conjugaisons (ex., mange, mangeons, mangerai) et les mots de la même famille (laver, lavage, lavement). Je vous dirai d\'arrêter après 1 minute. Êtes-vous prêt? Maintenant, dites le plus de mots possible qui commencent par la lettre D.</string>
@@ -104,6 +113,7 @@
     <string name="test3_name">3. FLUENCE VERBALE</string>
     <string name="test3_text0">D</string>
     <string name="test3_launch">Lancer le chronomètre</string>
+    <string name="test3_end">Fin</string>
     <string name="test3_text1">Compteur</string>
     <string name="test3_score">Score</string>
     <string name="test3_time">Temps</string>
@@ -196,6 +206,7 @@
     <string name="credit_title4">Crédit image V </string>
 
 <!-- TUTORIEL -->
+    <string name="tuto_name">Tutoriel</string>
     <string name="tuto_bset">REG</string>
     <string name="tuto_bres">RES : </string>
     <string name="tuto_title">TUTORIEL </string>
@@ -210,8 +221,6 @@
     <string name="tuto_tuto_text">L\'administration et la cotation des épreuves du D-TLV sont très simples. Le clinicien qui en fait la passation à l\'aide de l\'application iD-TLV pourra se référer aux diverses sections de ce tutoriel en cliquant sur [img src=help_3/] placé dans le coin supérieur droit de l\'écran de chaque épreuve. Le rationnel de chaque tâche, son mode d\'administration et sa cotation sont présentés ci-dessous.
     \n\n
     </string>
-    <string name="tuto_presettings"></string>
-    <string name="tuto_set_text"></string>
     <string name="tuto_test1">1. Dénomination</string>
     <string name="tuto_test1_text1">Cette épreuve vise à mesurer les capacités de production orale au départ d\'une entrée pictographique. Sur le plan cognitif, elle implique des étapes de reconnaissance visuelle des objets, d\'activation du sens des concepts en mémoire sémantique, d\'activation des mots correspondants en mémoire lexicale phonologique et de maintien de la forme sonore en mémoire à court terme phonologique.
         \n\n</string>

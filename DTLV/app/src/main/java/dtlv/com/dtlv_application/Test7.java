@@ -13,6 +13,7 @@ import android.text.Spannable;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -80,6 +81,13 @@ public class Test7 extends Activity{
 
     private AlertDialog.Builder replayAlert = null;
 
+    private Button tuto_bt1 = null;
+    private Button tuto_bt2 = null;
+    private Button tuto_bt3 = null;
+    private Button tuto_bt4 = null;
+    private Button tuto_bt5 = null;
+    private Button tuto_bt6 = null;
+    private Button tuto_bt7 = null;
 
     public Test7(){
         //Recuperation du systeme de gestion des points
@@ -172,12 +180,28 @@ public class Test7 extends Activity{
         btest7_refuse6.setClickable(false);
         btest7_refuse6.setImageResource(R.drawable.refuse_grey);
         test7_layout6 = (LinearLayout) findViewById(R.id.test7_layout6);
+
         btest7_next = (ImageButton) findViewById(R.id.test7_bnext);
-        btest7_next.setEnabled(true);
-        btest7_next.setClickable(true);
+        btest7_next.setEnabled(false);
+        btest7_next.setClickable(false);
         btest7_next.setImageResource(R.drawable.next_grey);
 
         btest7_help = (ImageButton) findViewById(R.id.test7_bhelp);
+
+        tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
+        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
+        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
+        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
+        tuto_bt4.setBackgroundColor(Color.GREEN);
+        tuto_bt5 = (Button) findViewById(R.id.tuto_bt5);
+        tuto_bt5.setBackgroundColor(Color.GREEN);
+        tuto_bt6 = (Button) findViewById(R.id.tuto_bt6);
+        tuto_bt6.setBackgroundColor(Color.GREEN);
+        tuto_bt7 = (Button) findViewById(R.id.tuto_bt7);
+        tuto_bt7.setBackgroundColor(Color.YELLOW);
 
         //create pop-up for replay alert
         replayAlert = new AlertDialog.Builder(Test7.this);
@@ -196,6 +220,7 @@ public class Test7 extends Activity{
         mp1 = MediaPlayer.create(this, R.raw.test7_sound1_part1);
         btest7_play1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                test7_layout1.setBackgroundColor(Color.TRANSPARENT);
                 mp1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
@@ -215,7 +240,6 @@ public class Test7 extends Activity{
                             btest7_play2.setEnabled(true);
                             btest7_play2.setClickable(true);
                             btest7_play2.setImageResource(R.drawable.play_blue);
-                            test7_layout1.setBackgroundColor(Color.TRANSPARENT);
                             test7_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                         if (count1 == 1) {
@@ -265,6 +289,7 @@ public class Test7 extends Activity{
         mp2 = MediaPlayer.create(this, R.raw.test7_sound1_part2);
         btest7_play2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                test7_layout2.setBackgroundColor(Color.TRANSPARENT);
                 mp2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
@@ -284,7 +309,6 @@ public class Test7 extends Activity{
                             btest7_play3.setEnabled(true);
                             btest7_play3.setClickable(true);
                             btest7_play3.setImageResource(R.drawable.play_blue);
-                            test7_layout2.setBackgroundColor(Color.TRANSPARENT);
                             test7_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                         if (count2 == 1) {
@@ -335,6 +359,7 @@ public class Test7 extends Activity{
         mp3 = MediaPlayer.create(this, R.raw.test7_sound1_part3);
         btest7_play3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                test7_layout3.setBackgroundColor(Color.TRANSPARENT);
                 mp3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
@@ -354,7 +379,6 @@ public class Test7 extends Activity{
                             btest7_play4.setEnabled(true);
                             btest7_play4.setClickable(true);
                             btest7_play4.setImageResource(R.drawable.play_blue);
-                            test7_layout3.setBackgroundColor(Color.TRANSPARENT);
                             test7_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                         if (count3 == 1) {
@@ -404,6 +428,7 @@ public class Test7 extends Activity{
         mp4 = MediaPlayer.create(this, R.raw.test7_sound2_part1);
         btest7_play4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                test7_layout4.setBackgroundColor(Color.TRANSPARENT);
                 mp4.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
@@ -423,7 +448,6 @@ public class Test7 extends Activity{
                             btest7_play5.setEnabled(true);
                             btest7_play5.setClickable(true);
                             btest7_play5.setImageResource(R.drawable.play_blue);
-                            test7_layout4.setBackgroundColor(Color.TRANSPARENT);
                             test7_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                         if (count4 == 1) {
@@ -434,7 +458,20 @@ public class Test7 extends Activity{
                         count4++;
                     }
                 });
-                mp4.start();
+                if(count4==1)
+                {
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp4.start();
+                                }
+                            });
+                    replayAlert.show();
+                }
+                else
+                {
+                    mp4.start();
+                }
             }
         });// Fin play4
 
@@ -461,6 +498,7 @@ public class Test7 extends Activity{
         mp5 = MediaPlayer.create(this, R.raw.test7_sound2_part2);
         btest7_play5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                test7_layout5.setBackgroundColor(Color.TRANSPARENT);
                 mp5.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
@@ -480,7 +518,6 @@ public class Test7 extends Activity{
                             btest7_play6.setEnabled(true);
                             btest7_play6.setClickable(true);
                             btest7_play6.setImageResource(R.drawable.play_blue);
-                            test7_layout5.setBackgroundColor(Color.TRANSPARENT);
                             test7_layout6.setBackgroundColor(getResources().getColor(R.color.yellow));
                         }
                         if (count5 == 1) {
@@ -491,7 +528,20 @@ public class Test7 extends Activity{
                         count5++;
                     }
                 });
-                mp5.start();
+                if(count5==1)
+                {
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp5.start();
+                                }
+                            });
+                    replayAlert.show();
+                }
+                else
+                {
+                    mp5.start();
+                }
             }
         });// Fin play5
 
@@ -517,6 +567,7 @@ public class Test7 extends Activity{
         mp6 = MediaPlayer.create(this, R.raw.test7_sound2_part3);
         btest7_play6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                test7_layout6.setBackgroundColor(Color.TRANSPARENT);
                 mp6.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
@@ -531,7 +582,6 @@ public class Test7 extends Activity{
                             btest7_refuse6.setEnabled(true);
                             btest7_refuse6.setClickable(true);
                             btest7_refuse6.setImageResource(R.drawable.refuse);
-                            test7_layout6.setBackgroundColor(Color.TRANSPARENT);
                         }
                         if (count6 == 1) {
                             btest7_play6.setEnabled(false);
@@ -541,7 +591,20 @@ public class Test7 extends Activity{
                         count6++;
                     }
                 });
-                mp6.start();
+                if(count6==1)
+                {
+                    replayAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    mp6.start();
+                                }
+                            });
+                    replayAlert.show();
+                }
+                else
+                {
+                    mp6.start();
+                }
             }
         });// Fin play6
 
