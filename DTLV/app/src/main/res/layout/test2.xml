@@ -11,16 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="1" >
+        <!-- Avancement lateral -->
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="115dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:weightSum="1">
+            android:layout_weight="0.9">
 
             <FrameLayout
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="left|center_vertical" />
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
 
             <LinearLayout
                 android:orientation="vertical"
@@ -28,8 +28,10 @@
                 android:layout_height="match_parent"
                 android:background="#ffffff"
                 android:layout_weight="0.33"
-                android:weightSum="1">
-
+                android:weightSum="0.8">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
                 <Button
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="fill_parent"
@@ -120,140 +122,131 @@
                     android:layout_weight="0.08"
                     android:clickable="false"/>
                 <FrameLayout
-                    android:layout_width="5dp"
-                    android:layout_height="5dp"
-                    android:layout_gravity="center_vertical" />
-
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
             </LinearLayout>
+            <FrameLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
         </LinearLayout>
-        <!--TEST-->
-        <!-- ATTENTION FRAMELAYOUT FERME-->
-        <!--ok-->
+        <!-- Fin avancement lateral -->
+        <!-- Corps central -->
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="483dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-
-            android:id="@+id/linearLayout8"
-            android:weightSum="1"
-            android:layout_weight="0.87" >
+            android:layout_weight="0.1" >
+            <!-- Titre et consignes -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.17">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <!--NOM DE LA TACHE-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/test2_name"
+                        android:id="@+id/task_name"
+                        android:background="#ffffff"
+                        android:layout_weight="0.6"/>
+                    <!--CONSIGNE-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/scrollView"
+                        android:layout_gravity="center_horizontal"
+                        android:scrollbars="vertical"
+                        android:fillViewport="true"
+                        android:layout_weight="0.4">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/test2_instruction"
+                            android:id="@+id/task_instruction"
+                            android:background="#ffffff"
+                            android:textSize="@dimen/title_text_size"/>
+                    </ScrollView>
+                </LinearLayout>
+                <!--BOUTON HELP-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.83">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:id="@+id/test2_bhelp"
+                            android:background="@drawable/help_3"
+                            android:clickable="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Fin titre et consignes -->
+            <!-- Corps du test -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:weightSum="1"
-
-                android:id="@+id/linearLayout7" >
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="0.05"
-                    android:id="@+id/linearLayout6"
-                    android:weightSum="1" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/title_size"
-                        android:layout_weight="0.98"
-                        android:id="@+id/linearLayout5"
-                        android:weightSum="1" >
-                        <!--NOM DE LA TACHE-->
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.31"
-                            android:id="@+id/frameLayout9" />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/test2_name"
-                            android:id="@+id/textView17"
-                            android:background="#ffffff"
-                            android:layout_weight="0.19" />
-                        <!--CONSIGNE-->
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="0.15" />
-
-                        <ScrollView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:id="@+id/scrollView"
-                            android:layout_gravity="center_horizontal"
-                            android:scrollbars="vertical"
-                            android:fillViewport="true">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/test2_instruction"
-                                android:id="@+id/textView20"
-                                android:background="#ffffff"
-                                android:layout_weight="0.19"
-                                android:textSize="@dimen/title_text_size"/>
-                        </ScrollView>
-                    </LinearLayout>
-                    <!--BOUTON HELP-->
-                    <!--BOUTON HELP-->
-                    <FrameLayout
-                        android:layout_width="20dp"
-                        android:layout_height="match_parent"/>
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.05"
-                        android:id="@+id/frameLayout10" >
-                        <ImageButton
-                            android:layout_width="@dimen/help_size"
-                            android:layout_height="@dimen/help_size"
-                            android:id="@+id/test2_bhelp"
-                            android:layout_gravity="center"
-                            android:background="@drawable/help_3"
-                            android:clickable="true" />
-                    </FrameLayout>
-                </LinearLayout>
-
+                android:layout_weight="0.3" >
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="0.92"
-                    android:id="@+id/frameLayout18" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
+                    android:layout_height="15dp"/>
+                <!--CONTENU DU TEST-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal|top"
-                        android:weightSum="1" >
-
-                        <FrameLayout
+                        android:id="@+id/scrollView2"
+                        android:layout_gravity="center_horizontal"
+                        android:scrollbars="vertical"
+                        android:fillViewport="true">
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="0.98"
-                            android:id="@+id/frameLayout17" >
+                            android:layout_height="match_parent"
+                            android:id="@+id/tuto_layout"
+                            android:weightSum="1">
+                            <!-- Contenu effectif du test -->
 
                             <LinearLayout
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:weightSum="1">
+                                android:layout_gravity="center">
 
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:weightSum="1">
+                                    android:layout_gravity="center_horizontal">
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -268,7 +261,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:weightSum="1"
-                                        android:layout_marginTop="10dp"
+                                        android:layout_marginTop="5dp"
                                         android:layout_gravity="top">
 
                                         <LinearLayout
@@ -424,7 +417,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:weightSum="1"
-                                        android:layout_marginTop="10dp">
+                                        android:layout_marginTop="5dp">
 
                                         <LinearLayout
                                             android:orientation="horizontal"
@@ -574,9 +567,9 @@
 
                                     <LinearLayout
                                         android:orientation="horizontal"
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_gravity="center_horizontal"
+                                        android:layout_gravity="left"
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
                                         android:layout_marginTop="10dp"
@@ -591,24 +584,20 @@
                                             android:id="@+id/test2_phrase1_txt"
                                             android:layout_gravity="center_vertical" />
 
-                                        <FrameLayout
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.33"></FrameLayout>
-
                                         <LinearLayout
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="0.33"
-                                            android:gravity="right"
+                                            android:layout_marginLeft="55dp"
+                                            android:gravity="left"
                                             android:weightSum="1">
 
                                             <LinearLayout
                                                 android:orientation="horizontal"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:layout_marginLeft="40dp"
+                                                android:layout_marginLeft="38dp"
                                                 android:layout_gravity="right"
                                                 android:layout_weight="0.1">
 
@@ -635,6 +624,7 @@
                                                     android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase1_brefuse"
                                                     android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
                                                     android:background="@drawable/refuse"
                                                     android:layout_weight="0.05" />
 
@@ -645,9 +635,9 @@
 
                                     <LinearLayout
                                         android:orientation="horizontal"
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_gravity="center_horizontal"
+                                        android:layout_gravity="left"
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
                                         android:layout_marginTop="10dp"
@@ -662,17 +652,13 @@
                                             android:id="@+id/test2_phrase2_txt"
                                             android:layout_gravity="center_vertical" />
 
-                                        <FrameLayout
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.33"></FrameLayout>
-
                                         <LinearLayout
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="0.33"
-                                            android:gravity="right"
+                                            android:layout_marginLeft="10dp"
+                                            android:gravity="left"
                                             android:weightSum="1">
 
                                             <LinearLayout
@@ -706,6 +692,7 @@
                                                     android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase2_brefuse"
                                                     android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
                                                     android:background="@drawable/refuse"
                                                     android:layout_weight="0.05" />
 
@@ -716,9 +703,9 @@
 
                                     <LinearLayout
                                         android:orientation="horizontal"
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_gravity="center_horizontal"
+                                        android:layout_gravity="left"
                                         android:weightSum="1"
                                         android:layout_weight="0.26"
                                         android:layout_marginTop="10dp"
@@ -733,17 +720,12 @@
                                             android:id="@+id/test2_phrase3_txt"
                                             android:layout_gravity="center_vertical" />
 
-                                        <FrameLayout
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.33"></FrameLayout>
-
                                         <LinearLayout
                                             android:orientation="horizontal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="0.33"
-                                            android:gravity="right"
+                                            android:gravity="left"
                                             android:weightSum="1">
 
                                             <LinearLayout
@@ -777,6 +759,7 @@
                                                     android:scaleType="fitXY"
                                                     android:id="@+id/test2_phrase3_brefuse"
                                                     android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
                                                     android:background="@drawable/refuse"
                                                     android:layout_weight="0.05" />
 
@@ -784,39 +767,40 @@
                                         </LinearLayout>
 
                                     </LinearLayout>
-
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="90dp"/>
                                 </LinearLayout>
 
                             </LinearLayout>
-                        </FrameLayout>
-                        <!--BOUTON SUIVANT-->
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/next_size"
-                            android:layout_gravity="center_horizontal"
-                            android:weightSum="1" >
 
-                            <FrameLayout
-                                android:layout_width="wrap_content"
+                            <!-- Fin contenu effectif du test -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.98" />
-
-                            <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:id="@+id/test2_bnext"
-                                android:src="@drawable/next"
-                                android:layout_gravity="bottom"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginBottom="5dp"
-                                android:background="@null" />
-
+                                android:layout_weight="0.4"/>
                         </LinearLayout>
-                    </LinearLayout>
-                </FrameLayout>
+                    </ScrollView>
+                    <ImageButton
+                        android:layout_width="@dimen/next_size_width"
+                        android:layout_height="@dimen/next_size_height"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/test2_bnext"
+                        android:background="@drawable/next"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <!-- Fin contenu du test -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"/>
             </LinearLayout>
+            <!-- Fin corps du test -->
         </LinearLayout>
+        <FrameLayout
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+        <!-- Fin corps central -->
     </LinearLayout>
 </LinearLayout>

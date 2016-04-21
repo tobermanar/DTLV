@@ -149,7 +149,8 @@
                                     android:text="@string/language_french"
                                     android:id="@+id/button"
                                     android:layout_gravity="center_horizontal|left"
-                                    android:layout_weight="0.32" />
+                                    android:layout_weight="0.32"
+                                    style="@style/button_type1"/>
 
                                 <Button
                                     android:layout_width="238dp"
@@ -159,7 +160,8 @@
                                     android:textColor="@color/grey"
                                     android:layout_gravity="center_horizontal|left"
                                     android:layout_weight="0.32"
-                                    android:clickable="false"/>
+                                    android:clickable="false"
+                                    style="@style/button_type1"/>
 
                             </LinearLayout>
 
@@ -186,7 +188,8 @@
                                     android:layout_gravity="center_horizontal"
                                     android:textColor="@color/grey"
                                     android:layout_weight="0.32"
-                                    android:clickable="false"/>
+                                    android:clickable="false"
+                                    style="@style/button_type1"/>
 
                                 <Button
                                     android:layout_width="238dp"
@@ -196,7 +199,8 @@
                                     android:layout_gravity="center_horizontal"
                                     android:textColor="@color/grey"
                                     android:layout_weight="0.32"
-                                    android:clickable="false"/>
+                                    android:clickable="false"
+                                    style="@style/button_type1"/>
 
                             </LinearLayout>
                             </LinearLayout>

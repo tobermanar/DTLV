@@ -1,14 +1,18 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="menu_button">230dp</dimen>
     <dimen name="activity_horizontal_margin">20dp</dimen>
     <dimen name="activity_vertical_margin">20dp</dimen>
     <dimen name="fab_margin">20dp</dimen>
     <dimen name="title_size">140dp</dimen>
     <dimen name="title_text_size">24dp</dimen>
+    <dimen name="next_size_width">130dp</dimen>
+    <dimen name="next_size_height">60dp</dimen>
     <dimen name="next_size">70dp</dimen>
     <dimen name="picture_size">160dp</dimen>
     <dimen name="test6_picture_size">280dp</dimen>
     <dimen name="big_picture_size">450dp</dimen>
+    <dimen name="big_picture_size_width">260dp</dimen>
     <dimen name="big_text_size">100dp</dimen>
     <dimen name="button_size">60dp</dimen>
     <dimen name="middle_space_size">80dp</dimen>

@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.TextUtils;
@@ -139,7 +140,13 @@ public class Test9 extends Activity{
         btest9_next.setImageResource(R.drawable.next_grey);
 
         test9_layout1 = (LinearLayout) findViewById(R.id.test9_layout1);
-        test9_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            btest9_text1.setBackground(getResources().getDrawable(R.drawable.button_type1));
+        }
+        else
+        {
+            test9_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
+        }
         test9_layout2 = (LinearLayout) findViewById(R.id.test9_layout2);
         test9_layout3 = (LinearLayout) findViewById(R.id.test9_layout3);
         test9_layout4 = (LinearLayout) findViewById(R.id.test9_layout4);
@@ -148,23 +155,23 @@ public class Test9 extends Activity{
         btest9_help = (ImageButton) findViewById(R.id.test9_bhelp);
 
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
-        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt2.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
-        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt3.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
-        tuto_bt4.setBackgroundColor(Color.GREEN);
+        tuto_bt4.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt5 = (Button) findViewById(R.id.tuto_bt5);
-        tuto_bt5.setBackgroundColor(Color.GREEN);
+        tuto_bt5.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt6 = (Button) findViewById(R.id.tuto_bt6);
-        tuto_bt6.setBackgroundColor(Color.GREEN);
+        tuto_bt6.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt7 = (Button) findViewById(R.id.tuto_bt7);
-        tuto_bt7.setBackgroundColor(Color.GREEN);
+        tuto_bt7.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt8 = (Button) findViewById(R.id.tuto_bt8);
-        tuto_bt8.setBackgroundColor(Color.GREEN);
+        tuto_bt8.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt9 = (Button) findViewById(R.id.tuto_bt9);
-        tuto_bt9.setBackgroundColor(Color.YELLOW);
+        tuto_bt9.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         //Text 1
         btest9_text1.setOnClickListener(new View.OnClickListener() {
@@ -173,8 +180,15 @@ public class Test9 extends Activity{
                 Intent intent = new Intent(Test9.this, Test9_text.class);
                 intent.putExtra("key", 1);
                 startActivity(intent);
-                test9_layout1.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text1.setBackground(null);
+                }
+                else
+                {
+                    test9_layout1.setBackgroundColor(Color.TRANSPARENT);
+                }
                 Config.compt.setTest9_1(1);
+                activateNext();
             }
         });
 
@@ -185,7 +199,13 @@ public class Test9 extends Activity{
                 Intent intent = new Intent(Test9.this, Test9_text.class);
                 intent.putExtra("key", 2);
                 startActivity(intent);
-                test9_layout2.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text2.setBackground(null);
+                }
+                else
+                {
+                    test9_layout2.setBackgroundColor(Color.TRANSPARENT);
+                }
                 Config.compt.setTest9_2(1);
             }
         });
@@ -215,7 +235,13 @@ public class Test9 extends Activity{
                 Intent intent = new Intent(Test9.this, Test9_text.class);
                 intent.putExtra("key", 3);
                 startActivity(intent);
-                test9_layout3.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text3.setBackground(null);
+                }
+                else
+                {
+                    test9_layout3.setBackgroundColor(Color.TRANSPARENT);
+                }
                 Config.compt.setTest9_3(1);
             }
         });
@@ -245,7 +271,13 @@ public class Test9 extends Activity{
                 Intent intent = new Intent(Test9.this, Test9_text.class);
                 intent.putExtra("key", 4);
                 startActivity(intent);
-                test9_layout4.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text4.setBackground(null);
+                }
+                else
+                {
+                    test9_layout4.setBackgroundColor(Color.TRANSPARENT);
+                }
                 Config.compt.setTest9_4(1);
             }
         });
@@ -275,7 +307,13 @@ public class Test9 extends Activity{
                 Intent intent = new Intent(Test9.this, Test9_text.class);
                 intent.putExtra("key", 5);
                 startActivity(intent);
-                test9_layout5.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text5.setBackground(null);
+                }
+                else
+                {
+                    test9_layout5.setBackgroundColor(Color.TRANSPARENT);
+                }
                 Config.compt.setTest9_5(1);
             }
         });
@@ -323,7 +361,7 @@ public class Test9 extends Activity{
 
                 tv_test9.setText(TextUtils.concat(admin, st9_1, quote, st9_2));
 
-                alertDialog.setView(tv_test9);
+                alertDialog.setView(tv_test9, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
@@ -352,7 +390,13 @@ public class Test9 extends Activity{
             btest9_text2.setClickable(true);
             if (Config.compt.getTest9_2() == 0)
             {
-                test9_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text2.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test9_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest9_2() == 1) {
@@ -366,7 +410,13 @@ public class Test9 extends Activity{
             btest9_text3.setClickable(true);
             if (Config.compt.getTest9_3() == 0)
             {
-                test9_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text3.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test9_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest9_3() == 1) {
@@ -380,7 +430,13 @@ public class Test9 extends Activity{
             btest9_text4.setClickable(true);
             if (Config.compt.getTest9_4() == 0)
             {
-                test9_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text4.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test9_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest9_4() == 1) {
@@ -394,7 +450,13 @@ public class Test9 extends Activity{
             btest9_text5.setClickable(true);
             if (Config.compt.getTest9_5() == 0)
             {
-                test9_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest9_text5.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test9_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest9_5() == 1) {

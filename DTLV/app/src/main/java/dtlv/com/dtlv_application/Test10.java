@@ -82,25 +82,25 @@ public class Test10 extends Activity{
         btest10_next.setImageResource(R.drawable.next_grey);
 
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
-        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt2.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
-        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt3.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
-        tuto_bt4.setBackgroundColor(Color.GREEN);
+        tuto_bt4.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt5 = (Button) findViewById(R.id.tuto_bt5);
-        tuto_bt5.setBackgroundColor(Color.GREEN);
+        tuto_bt5.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt6 = (Button) findViewById(R.id.tuto_bt6);
-        tuto_bt6.setBackgroundColor(Color.GREEN);
+        tuto_bt6.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt7 = (Button) findViewById(R.id.tuto_bt7);
-        tuto_bt7.setBackgroundColor(Color.GREEN);
+        tuto_bt7.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt8 = (Button) findViewById(R.id.tuto_bt8);
-        tuto_bt8.setBackgroundColor(Color.GREEN);
+        tuto_bt8.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt9 = (Button) findViewById(R.id.tuto_bt9);
-        tuto_bt9.setBackgroundColor(Color.GREEN);
+        tuto_bt9.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt10 = (Button) findViewById(R.id.tuto_bt10);
-        tuto_bt10.setBackgroundColor(Color.YELLOW);
+        tuto_bt10.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         btest10_validate1 = (ImageButton) findViewById(R.id.test10_text1_bvalid);
         btest10_refuse1 = (ImageButton) findViewById(R.id.test10_text1_brefuse);
@@ -118,7 +118,7 @@ public class Test10 extends Activity{
         btest10_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout1.setBackgroundColor(getResources().getColor(R.color.red));
+                test10_layout1.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_1 = true;
                 q1=0;
                 activateNext();
@@ -127,7 +127,7 @@ public class Test10 extends Activity{
         btest10_refuse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout1.setBackgroundColor(getResources().getColor(R.color.green));
+                test10_layout1.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_1 = true;
                 q1=1;
                 activateNext();
@@ -136,7 +136,7 @@ public class Test10 extends Activity{
         btest10_validate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout2.setBackgroundColor(getResources().getColor(R.color.red));
+                test10_layout2.setBackgroundColor(getResources().getColor(R.color.green));
                 quotation_2 = true;
                 q2=0;
                 activateNext();
@@ -145,7 +145,7 @@ public class Test10 extends Activity{
         btest10_refuse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout2.setBackgroundColor(getResources().getColor(R.color.green));
+                test10_layout2.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_2 = true;
                 q2=1;
                 activateNext();
@@ -154,7 +154,7 @@ public class Test10 extends Activity{
         btest10_validate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout3.setBackgroundColor(getResources().getColor(R.color.red));
+                test10_layout3.setBackgroundColor(getResources().getColor(R.color.green));
                 q3=0;
                 quotation_3 = true;
                 activateNext();
@@ -163,7 +163,7 @@ public class Test10 extends Activity{
         btest10_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test10_layout3.setBackgroundColor(getResources().getColor(R.color.green));
+                test10_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_3 = true;
                 q3=1;
                 activateNext();
@@ -195,7 +195,7 @@ public class Test10 extends Activity{
 
                 tv_test10.setText(TextUtils.concat(admin, st10_1, quote, st10_2));
 
-                alertDialog.setView(tv_test10);
+                alertDialog.setView(tv_test10, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {

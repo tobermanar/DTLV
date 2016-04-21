@@ -272,9 +272,9 @@ public class Test2 extends Activity {
         btest2_help = (ImageButton) findViewById(R.id.test2_bhelp);
 
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
-        tuto_bt2.setBackgroundColor(Color.YELLOW);
+        tuto_bt2.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         //create pop-up for replay alert
         replayAlert = new AlertDialog.Builder(Test2.this);
@@ -995,7 +995,7 @@ public class Test2 extends Activity {
 
                 tv_test2.setText(TextUtils.concat(admin, st2_1, quote, st2_2));
 
-                alertDialog.setView(tv_test2);
+                alertDialog.setView(tv_test2, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {

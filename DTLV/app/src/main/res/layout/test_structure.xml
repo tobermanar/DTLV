@@ -156,7 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/test3_name"
+                        android:text="@string/test2_name"
                         android:id="@+id/task_name"
                         android:background="#ffffff"
                         android:layout_weight="0.6"/>
@@ -175,7 +175,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/test3_instruction"
+                            android:text="@string/test2_instruction"
                             android:id="@+id/task_instruction"
                             android:background="#ffffff"
                             android:textSize="@dimen/title_text_size"/>
@@ -197,7 +197,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerInside"
-                            android:id="@+id/test3_bhelp"
+                            android:id="@+id/test2_bhelp"
                             android:background="@drawable/help_3"
                             android:clickable="true"
                             android:layout_marginLeft="15dp"
@@ -236,131 +236,7 @@
                             android:weightSum="1">
                             <!-- Contenu effectif du test -->
 
-                            <FrameLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="0.92"
-                                android:id="@+id/frameLayout12" >
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:layout_gravity="left|center_vertical">
-                                    <!--START TIMER-->
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="60dp"
-                                        android:text="@string/test3_launch"
-                                        android:id="@+id/test3_launch"
-                                        android:layout_gravity="center_horizontal"
-                                        android:textAlignment="center"
-                                        android:textSize="25dp"
-                                        android:foregroundGravity="center"
-                                        style="@style/button_type1"/>
-                                    <!--GUESS LETTER-->
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:text="@string/test3_text0"
-                                        android:id="@+id/test3_lettre"
-                                        android:layout_gravity="center"
-                                        android:layout_weight="0.31"
-                                        android:textSize="190dp"
-                                        android:textStyle="bold"
-                                        android:textAlignment="center" />
-                                </LinearLayout>
-                                <FrameLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="10dp"/>
-                                <!--BOUTON PLUS-->
-                                <!--BOUTON MINUS-->
 
-                                <!--SCORE-->
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:layout_gravity="bottom|center|center_vertical">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="60dp"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="@string/test3_score"
-                                        android:layout_gravity="center_horizontal|bottom"
-                                        android:textAlignment="center"
-                                        android:textSize="25dp"
-                                        android:background="#5bab9e9e"
-                                        android:foregroundGravity="center"/>
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:text="0"
-                                        android:id="@+id/test3_score"
-                                        android:layout_gravity="center_horizontal|bottom"
-                                        android:layout_weight="0.31"
-                                        android:textSize="60dp"
-                                        android:textStyle="bold"
-                                        android:textAlignment="center"/>
-                                </LinearLayout>
-
-                                <!--TIMER-->
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:layout_gravity="top|center|center_vertical">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="60dp"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="@string/test3_time"
-                                        android:layout_gravity="center_horizontal|bottom"
-                                        android:textAlignment="center"
-                                        android:textSize="25dp"
-                                        android:background="#5bab9e9e"
-                                        android:foregroundGravity="center"/>
-                                    <TextView android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:text="60"
-                                        android:id="@+id/test3_countdown"
-                                        android:layout_gravity="center"
-                                        android:layout_weight="0.31"
-                                        android:textSize="90dp"
-                                        android:textStyle="bold"
-                                        android:textAlignment="center"/>
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:layout_marginBottom="90dp"
-                                    android:layout_gravity="right|bottom">
-
-
-                                    <ImageButton
-                                        android:layout_width="150dp"
-                                        android:layout_height="150dp"
-                                        android:scaleType="fitXY"
-                                        android:id="@+id/test3_plus"
-                                        android:layout_gravity="center"
-                                        android:background="@drawable/plus" />
-
-
-                                    <ImageButton
-                                        android:layout_width="70dp"
-                                        android:layout_height="70dp"
-                                        android:id="@+id/test3_minus"
-                                        android:layout_gravity="center"
-                                        android:background="@drawable/minus"/>
-                                </LinearLayout>
-
-
-
-                            </FrameLayout>
 
                             <!-- Fin contenu effectif du test -->
 
@@ -371,7 +247,7 @@
                         android:layout_height="@dimen/next_size_height"
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="15dp"
-                        android:id="@+id/test3_bnext"
+                        android:id="@+id/test2_bnext"
                         android:background="@drawable/next"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"/>

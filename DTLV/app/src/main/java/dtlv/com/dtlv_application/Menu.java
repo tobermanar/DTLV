@@ -1,8 +1,8 @@
 package dtlv.com.dtlv_application;
 
 import android.content.Intent;
-import android.os.Parcel;
-import android.os.Parcelable;
+import android.database.CursorJoiner;
+import android.provider.Settings;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.os.Bundle;
@@ -34,6 +34,7 @@ public class Menu extends Activity{
                 Settings.System.SOUND_EFFECTS_ENABLED,
                 0);*/
 
+        //Settings.System.canWrite();
         //Creation de la gestion de point
         gestPts = new GestionPoint();
 

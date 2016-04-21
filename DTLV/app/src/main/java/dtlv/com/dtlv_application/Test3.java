@@ -36,10 +36,12 @@ public class Test3 extends Activity{
 
     private int ptsT3 = 0;
     private GestionPoint gestPts;
+    private boolean chrono = false;
 
     private ImageButton btest3_help = null;
     private AlertDialog alertDialog = null;
     private TextView tv_test3 = null;
+    private AlertDialog.Builder nextAlert = null;
 
     private Button tuto_bt1 = null;
     private Button tuto_bt2 = null;
@@ -61,18 +63,16 @@ public class Test3 extends Activity{
         btest3_minus = (ImageButton) findViewById(R.id.test3_minus);
         btest3_next = (ImageButton) findViewById(R.id.test3_bnext);
         test3_countdown = (TextView) findViewById(R.id.test3_countdown);
-        btest3_next.setEnabled(false);
-        btest3_next.setClickable(false);
         btest3_next.setImageResource(R.drawable.next_grey);
 
         btest3_help = (ImageButton) findViewById(R.id.test3_bhelp);
 
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
-        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt2.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
-        tuto_bt3.setBackgroundColor(Color.YELLOW);
+        tuto_bt3.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         //mSimpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         //mTextView = (TextView) findViewById(R.id.text);
@@ -93,6 +93,7 @@ public class Test3 extends Activity{
                         btest3_next.setEnabled(true);
                         btest3_next.setClickable(true);
                         btest3_next.setImageResource(R.drawable.next);
+                        chrono = true;
                     }
                 }.start();
             }
@@ -115,17 +116,6 @@ public class Test3 extends Activity{
             }
         });
 
-
-        btest3_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
-                gestPts.setT3(ptsT3);
-                Intent itest3 = new Intent(Test3.this, Test4.class);
-                startActivity(itest3);
-            }
-        });
-
         btest3_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,7 +131,7 @@ public class Test3 extends Activity{
 
                 tv_test3.setText(TextUtils.concat(admin, st3_1, quote, st3_2));
 
-                alertDialog.setView(tv_test3);
+                alertDialog.setView(tv_test3, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
@@ -152,8 +142,47 @@ public class Test3 extends Activity{
                 alertDialog.show();
             }
         });
+        //create pop-up for replay alert
+        nextAlert = new AlertDialog.Builder(Test3.this);
+        nextAlert.setTitle(getResources().getString(R.string.next_title));
+        nextAlert.setMessage(getResources().getString(R.string.next_msg));
 
+        nextAlert.setNegativeButton(getResources().getString(R.string.replay_no),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
 
+        btest3_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btest3_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (chrono == true) {
+                    // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
+                    gestPts.setT3(ptsT3);
+                    Intent itest3 = new Intent(Test3.this, Test4.class);
+                    startActivity(itest3);
+
+                } else if (chrono == false) {
+                    nextAlert.setPositiveButton(getResources().getString(R.string.replay_yes),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
+                                    gestPts.setT3(ptsT3);
+                                    Intent itest3 = new Intent(Test3.this, Test4.class);
+                                    startActivity(itest3);
+                                }
+                            });
+                    nextAlert.show();
+                }
+            }
+        });
     }
 
     /**

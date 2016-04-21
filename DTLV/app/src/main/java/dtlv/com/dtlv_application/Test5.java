@@ -6,7 +6,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.TextUtils;
@@ -105,7 +107,13 @@ public class Test5 extends Activity{
         btest5_refuse1.setClickable(false);
         btest5_refuse1.setImageResource(R.drawable.refuse_grey);
         test5_layout1 = (LinearLayout) findViewById(R.id.test5_layout1);
-        test5_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            btest5_text1.setBackground(getResources().getDrawable(R.drawable.button_type1));
+        }
+        else
+        {
+            test5_layout1.setBackgroundColor(getResources().getColor(R.color.yellow));
+        }
         btest5_text2 = (TextView) findViewById(R.id.test5_text2);
         btest5_text2.setEnabled(false);
         btest5_text2.setClickable(false);
@@ -174,15 +182,15 @@ public class Test5 extends Activity{
         btest5_help = (ImageButton) findViewById(R.id.test5_bhelp);
 
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
-        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt2.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
-        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt3.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
-        tuto_bt4.setBackgroundColor(Color.GREEN);
+        tuto_bt4.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt5 = (Button) findViewById(R.id.tuto_bt5);
-        tuto_bt5.setBackgroundColor(Color.YELLOW);
+        tuto_bt5.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         //Text 1
         btest5_text1.setOnClickListener(new View.OnClickListener() {
@@ -192,7 +200,13 @@ public class Test5 extends Activity{
                 intent.putExtra("key", 1);
                 startActivity(intent);
                 Config.compt.setTest5_1(1);
-                test5_layout1.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text1.setBackground(null);
+                }
+                else
+                {
+                    test5_layout1.setBackgroundColor(Color.TRANSPARENT);
+                }
             }
         });
 
@@ -224,7 +238,13 @@ public class Test5 extends Activity{
                 intent.putExtra("key", 2);
                 startActivity(intent);
                 Config.compt.setTest5_2(1);
-                test5_layout2.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text2.setBackground(null);
+                }
+                else
+                {
+                    test5_layout2.setBackgroundColor(Color.TRANSPARENT);
+                }
             }
         });
         btest5_validate2.setOnClickListener(new View.OnClickListener() {
@@ -254,7 +274,13 @@ public class Test5 extends Activity{
                 intent.putExtra("key", 3);
                 startActivity(intent);
                 Config.compt.setTest5_3(1);
-                test5_layout3.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text3.setBackground(null);
+                }
+                else
+                {
+                    test5_layout3.setBackgroundColor(Color.TRANSPARENT);
+                }
             }
         });
         btest5_validate3.setOnClickListener(new View.OnClickListener() {
@@ -284,7 +310,13 @@ public class Test5 extends Activity{
                 intent.putExtra("key", 4);
                 startActivity(intent);
                 Config.compt.setTest5_4(1);
-                test5_layout4.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text4.setBackground(null);
+                }
+                else
+                {
+                    test5_layout4.setBackgroundColor(Color.TRANSPARENT);
+                }
             }
         });
         btest5_validate4.setOnClickListener(new View.OnClickListener() {
@@ -314,7 +346,13 @@ public class Test5 extends Activity{
                 intent.putExtra("key", 5);
                 startActivity(intent);
                 Config.compt.setTest5_5(1);
-                test5_layout5.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text5.setBackground(null);
+                }
+                else
+                {
+                    test5_layout5.setBackgroundColor(Color.TRANSPARENT);
+                }
             }
         });
         btest5_validate5.setOnClickListener(new View.OnClickListener() {
@@ -344,7 +382,13 @@ public class Test5 extends Activity{
                 intent.putExtra("key", 6);
                 startActivity(intent);
                 Config.compt.setTest5_6(1);
-                test5_layout6.setBackgroundColor(Color.TRANSPARENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text6.setBackground(null);
+                }
+                else
+                {
+                    test5_layout6.setBackgroundColor(Color.TRANSPARENT);
+                }
             }
         });
         btest5_validate6.setOnClickListener(new View.OnClickListener() {
@@ -391,7 +435,7 @@ public class Test5 extends Activity{
 
                 tv_test5.setText(TextUtils.concat(admin, st5_1, quote, st5_2));
 
-                alertDialog.setView(tv_test5);
+                alertDialog.setView(tv_test5, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
@@ -429,7 +473,13 @@ public class Test5 extends Activity{
             btest5_text2.setClickable(true);
             if (Config.compt.getTest5_2() == 0)
             {
-                test5_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text2.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test5_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest5_2() == 1) {
@@ -443,7 +493,13 @@ public class Test5 extends Activity{
             btest5_text3.setClickable(true);
             if (Config.compt.getTest5_3() == 0)
             {
-                test5_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text3.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test5_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest5_3() == 1) {
@@ -457,7 +513,13 @@ public class Test5 extends Activity{
             btest5_text4.setClickable(true);
             if (Config.compt.getTest5_4() == 0)
             {
-                test5_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text4.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test5_layout4.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest5_4() == 1) {
@@ -471,7 +533,13 @@ public class Test5 extends Activity{
             btest5_text5.setClickable(true);
             if (Config.compt.getTest5_5() == 0)
             {
-                test5_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text5.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test5_layout5.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest5_5() == 1) {
@@ -485,7 +553,13 @@ public class Test5 extends Activity{
             btest5_text6.setClickable(true);
             if (Config.compt.getTest5_6() == 0)
             {
-                test5_layout6.setBackgroundColor(getResources().getColor(R.color.yellow));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    btest5_text6.setBackground(getResources().getDrawable(R.drawable.button_type1));
+                }
+                else
+                {
+                    test5_layout6.setBackgroundColor(getResources().getColor(R.color.yellow));
+                }
             }
         }
         if (Config.compt.getTest5_6() == 1) {

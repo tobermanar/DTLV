@@ -11,17 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="1" >
-
+        <!-- Avancement lateral -->
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="115dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:weightSum="1">
+            android:layout_weight="0.9">
 
             <FrameLayout
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="left|center_vertical" />
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
 
             <LinearLayout
                 android:orientation="vertical"
@@ -29,8 +28,10 @@
                 android:layout_height="match_parent"
                 android:background="#ffffff"
                 android:layout_weight="0.33"
-                android:weightSum="1">
-
+                android:weightSum="0.8">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
                 <Button
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="fill_parent"
@@ -121,526 +122,482 @@
                     android:layout_weight="0.08"
                     android:clickable="false"/>
                 <FrameLayout
-                    android:layout_width="5dp"
-                    android:layout_height="5dp"
-                    android:layout_gravity="center_vertical" />
-
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
             </LinearLayout>
+            <FrameLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
         </LinearLayout>
-        <!--TEST-->
-        <!--ok-->
+        <!-- Fin avancement lateral -->
+        <!-- Corps central -->
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="483dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:id="@+id/linearLayout9"
-            android:weightSum="1"
-            android:layout_weight="0.87" >
-
+            android:layout_weight="0.1" >
+            <!-- Titre et consignes -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.17">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <!--NOM DE LA TACHE-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/test1_name"
+                        android:id="@+id/task_name"
+                        android:background="#ffffff"
+                        android:layout_weight="0.6"/>
+                    <!--CONSIGNE-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/scrollView"
+                        android:layout_gravity="center_horizontal"
+                        android:scrollbars="vertical"
+                        android:fillViewport="true"
+                        android:layout_weight="0.4">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/test1_instruction"
+                            android:id="@+id/task_instruction"
+                            android:background="#ffffff"
+                            android:textSize="@dimen/title_text_size"/>
+                    </ScrollView>
+                </LinearLayout>
+                <!--BOUTON HELP-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.83">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:id="@+id/test1_bhelp"
+                            android:background="@drawable/help_3"
+                            android:clickable="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Fin titre et consignes -->
+            <!-- Corps du test -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:weightSum="1"
-                android:id="@+id/linearLayout7" >
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="0.05"
-                    android:id="@+id/linearLayout6"
-                    android:weightSum="1" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/title_size"
-                        android:layout_weight="0.98"
-                        android:id="@+id/linearLayout5"
-                        android:weightSum="1" >
-                        <!--NOM DE LA TACHE-->
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.31"
-                            android:id="@+id/frameLayout9" />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/test1_name"
-                            android:id="@+id/textView17"
-                            android:background="#ffffff"
-                            android:layout_weight="0.19" />
-                        <!--CONSIGNE-->
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="0.15" />
-                        <ScrollView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:id="@+id/scrollView"
-                            android:layout_gravity="center_horizontal"
-                            android:scrollbars="vertical"
-                            android:fillViewport="true">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/test1_instruction"
-                                android:id="@+id/textView20"
-                                android:background="#ffffff"
-                                android:layout_weight="0.19"
-                                android:textSize="@dimen/title_text_size"/>
-                        </ScrollView>
-                    </LinearLayout>
-                    <!--BOUTON HELP-->
-                    <FrameLayout
-                        android:layout_width="20dp"
-                        android:layout_height="match_parent"/>
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.05"
-                        android:id="@+id/frameLayout10" >
-                        <ImageButton
-                            android:layout_width="@dimen/help_size"
-                            android:layout_height="@dimen/help_size"
-                            android:id="@+id/test1_bhelp"
-                            android:layout_gravity="center"
-                            android:background="@drawable/help_3"
-                            android:clickable="true" />
-                    </FrameLayout>
-                    <!--ok-->
-                </LinearLayout>
-                <!--OK-->
+                android:layout_weight="0.3" >
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="0.92"
-                    android:id="@+id/frameLayout12" >
+                    android:layout_height="15dp"/>
+                <!--CONTENU DU TEST-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/scrollViewFull"
+                        android:id="@+id/scrollView2"
                         android:layout_gravity="center_horizontal"
-                        android:scrollbars="horizontal"
+                        android:scrollbars="vertical"
                         android:fillViewport="true">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal|top"
-                        android:weightSum="1" >
-
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="0.44"
-                            android:id="@+id/frameLayout11" />
-
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="0.25">
+                            android:layout_height="match_parent"
+                            android:id="@+id/tuto_layout"
+                            android:weightSum="1">
+                            <!-- Contenu effectif du test -->
 
                             <LinearLayout
                                 android:orientation="horizontal"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:weightSum="1" >
-
-                                <FrameLayout
-                                    android:layout_width="@dimen/middle_space_size"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical" />
-
+                                android:layout_weight="0.3"
+                                android:weightSum="0.99">
                                 <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical"
-                                    android:id="@+id/test1_layout1">
-
-                                    <ImageButton
-                                        android:layout_width="@dimen/picture_size"
-                                        android:layout_height="@dimen/picture_size"
-                                        android:scaleType="fitXY"
-                                        android:layout_gravity="bottom"
-                                        android:id="@+id/test1_image1"
-                                        android:src="@drawable/test1_image1"/>
-
+                                    android:layout_weight="0.33">
+                                    <!-- Image 1 et boutons valider 1 et refuser 1 -->
                                     <LinearLayout
-                                        android:orientation="vertical"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical"
-                                        android:weightSum="1" >
-
-                                        <FrameLayout
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/test1_layout1">
+                                        <RelativeLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.28" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_validate1"
-                                            android:src="@drawable/validate"
-                                            android:background="@null" />
-
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.26" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_refuse1"
-                                            android:src="@drawable/refuse"
-                                            android:background="@null" />
-
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginBottom="15dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginRight="15dp">
+                                            <ImageButton
+                                                android:layout_width="@dimen/picture_size"
+                                                android:layout_height="@dimen/picture_size"
+                                                android:scaleType="fitXY"
+                                                android:background="@color/white"
+                                                android:layout_gravity="bottom"
+                                                android:id="@+id/test1_image1"
+                                                android:src="@drawable/test1_image1"
+                                                android:layout_centerVertical="true"/>
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_toRightOf="@id/test1_image1">
+                                                <ImageButton
+                                                    android:layout_width="@dimen/button_size"
+                                                    android:layout_height="@dimen/button_size"
+                                                    android:scaleType="fitXY"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:id="@+id/test1_validate1"
+                                                    android:src="@drawable/validate"
+                                                    android:background="@null"/>
+                                                <ImageButton
+                                                    android:layout_width="@dimen/button_size"
+                                                    android:layout_height="@dimen/button_size"
+                                                    android:scaleType="fitXY"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:layout_marginTop="15dp"
+                                                    android:id="@+id/test1_refuse1"
+                                                    android:src="@drawable/refuse"
+                                                    android:background="@null"
+                                                    android:layout_below="@id/test1_validate1" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
                                     </LinearLayout>
+                                    <!-- Fin Image 1 et boutons valider 1 et refuser 1 -->
                                 </LinearLayout>
-                                <FrameLayout
-                                    android:layout_width="@dimen/middle_space_size"
-                                    android:layout_height="match_parent" />
                                 <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical"
-                                    android:id="@+id/test1_layout2">
-
-
-
-                                    <ImageButton
-                                        android:layout_width="@dimen/picture_size"
-                                        android:layout_height="@dimen/picture_size"
-                                        android:scaleType="fitXY"
-                                        android:layout_gravity="bottom"
-                                        android:id="@+id/test1_image2"
-                                        android:src="@drawable/test1_image2"/>
-
+                                    android:layout_weight="0.33">
+                                    <!-- Image 2 et boutons valider 2 et refuser 2 -->
                                     <LinearLayout
-                                        android:orientation="vertical"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical"
-                                        android:weightSum="1" >
-
-                                        <FrameLayout
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/test1_layout2">
+                                        <RelativeLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.28" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_validate2"
-                                            android:src="@drawable/validate"
-                                            android:background="@null" />
-
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.26" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_refuse2"
-                                            android:src="@drawable/refuse"
-                                            android:background="@null" />
-
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginBottom="15dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginRight="15dp">
+                                            <ImageButton
+                                                android:layout_width="@dimen/picture_size"
+                                                android:layout_height="@dimen/picture_size"
+                                                android:scaleType="fitXY"
+                                                android:layout_gravity="bottom"
+                                                android:background="@color/white"
+                                                android:id="@+id/test1_image2"
+                                                android:src="@drawable/test1_image2"
+                                                android:layout_centerVertical="true"/>
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_toRightOf="@id/test1_image2">
+                                                <ImageButton
+                                                    android:layout_width="@dimen/button_size"
+                                                    android:layout_height="@dimen/button_size"
+                                                    android:scaleType="fitXY"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:id="@+id/test1_validate2"
+                                                    android:src="@drawable/validate"
+                                                    android:background="@null"/>
+                                                <ImageButton
+                                                    android:layout_width="@dimen/button_size"
+                                                    android:layout_height="@dimen/button_size"
+                                                    android:scaleType="fitXY"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:layout_marginTop="15dp"
+                                                    android:id="@+id/test1_refuse2"
+                                                    android:src="@drawable/refuse"
+                                                    android:background="@null"
+                                                    android:layout_below="@id/test1_validate2" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
                                     </LinearLayout>
+                                    <!-- Fin Image 2 et boutons valider 2 et refuser 2 -->
                                 </LinearLayout>
-                                <FrameLayout
-                                    android:layout_width="@dimen/middle_space_size"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical" />
                                 <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical"
-                                    android:id="@+id/test1_layout3">
-
-                                    <ImageButton
-                                        android:layout_width="@dimen/picture_size"
-                                        android:layout_height="@dimen/picture_size"
-                                        android:scaleType="fitXY"
-                                        android:layout_gravity="bottom"
-                                        android:id="@+id/test1_image3"
-                                        android:src="@drawable/test1_image3"/>
-
+                                    android:layout_weight="0.33">
+                                    <!-- Image 3 et boutons valider 3 et refuser 3 -->
                                     <LinearLayout
-                                        android:orientation="vertical"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical"
-                                        android:weightSum="1" >
-
-                                        <FrameLayout
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/test1_layout3">
+                                        <RelativeLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.28" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_validate3"
-                                            android:src="@drawable/validate"
-                                            android:background="@null" />
-
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.26" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_refuse3"
-                                            android:src="@drawable/refuse"
-                                            android:background="@null" />
-
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginBottom="15dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginRight="15dp">
+                                            <ImageButton
+                                                android:layout_width="@dimen/picture_size"
+                                                android:layout_height="@dimen/picture_size"
+                                                android:scaleType="fitXY"
+                                                android:layout_gravity="bottom"
+                                                android:background="@color/white"
+                                                android:id="@+id/test1_image3"
+                                                android:src="@drawable/test1_image3"
+                                                android:layout_centerVertical="true"/>
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_toRightOf="@id/test1_image3">
+                                                <ImageButton
+                                                    android:layout_width="@dimen/button_size"
+                                                    android:layout_height="@dimen/button_size"
+                                                    android:scaleType="fitXY"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:id="@+id/test1_validate3"
+                                                    android:src="@drawable/validate"
+                                                    android:background="@null"/>
+                                                <ImageButton
+                                                    android:layout_width="@dimen/button_size"
+                                                    android:layout_height="@dimen/button_size"
+                                                    android:scaleType="fitXY"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:layout_marginTop="15dp"
+                                                    android:id="@+id/test1_refuse3"
+                                                    android:src="@drawable/refuse"
+                                                    android:background="@null"
+                                                    android:layout_below="@id/test1_validate3" />
+                                                </RelativeLayout>
+                                        </RelativeLayout>
                                     </LinearLayout>
+                                    <!-- Fin Image 3 et boutons valider 3 et refuser 3 -->
                                 </LinearLayout>
+
                             </LinearLayout>
-                        </LinearLayout>
-
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.15"></FrameLayout>
-
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="0.25">
-
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"/>
                             <LinearLayout
                                 android:orientation="horizontal"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:weightSum="1" >
-
-                                <FrameLayout
-                                    android:layout_width="@dimen/middle_space_size"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical" />
-
+                                android:layout_weight="0.3"
+                                android:weightSum="0.99">
                                 <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical"
-                                    android:id="@+id/test1_layout4">
-
-                                    <ImageButton
-                                        android:layout_width="@dimen/picture_size"
-                                        android:layout_height="@dimen/picture_size"
-                                        android:scaleType="fitXY"
-                                        android:layout_gravity="bottom"
-                                        android:id="@+id/test1_image4"
-                                        android:src="@drawable/test1_image4"/>
-
+                                    android:layout_weight="0.33">
+                                    <!-- Image 4 et boutons valider 4 et refuser 4 -->
                                     <LinearLayout
-                                        android:orientation="vertical"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical"
-                                        android:weightSum="1" >
-
-                                        <FrameLayout
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/test1_layout4">
+                                        <RelativeLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.28" />
-
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginBottom="15dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginRight="15dp">
                                         <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
+                                            android:layout_width="@dimen/picture_size"
+                                            android:layout_height="@dimen/picture_size"
                                             android:scaleType="fitXY"
-                                            android:id="@+id/test1_validate4"
-                                            android:src="@drawable/validate"
-                                            android:background="@null" />
-
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
+                                            android:background="@color/white"
+                                            android:layout_gravity="bottom"
+                                            android:id="@+id/test1_image4"
+                                            android:src="@drawable/test1_image4"
+                                            android:layout_centerVertical="true"/>
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_weight="0.26" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_refuse4"
-                                            android:src="@drawable/refuse"
-                                            android:background="@null" />
-
+                                            android:layout_centerVertical="true"
+                                            android:layout_toRightOf="@id/test1_image4">
+                                            <ImageButton
+                                                android:layout_width="@dimen/button_size"
+                                                android:layout_height="@dimen/button_size"
+                                                android:scaleType="fitXY"
+                                                android:layout_marginLeft="15dp"
+                                                android:id="@+id/test1_validate4"
+                                                android:src="@drawable/validate"
+                                                android:background="@null"/>
+                                            <ImageButton
+                                                android:layout_width="@dimen/button_size"
+                                                android:layout_height="@dimen/button_size"
+                                                android:scaleType="fitXY"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginTop="15dp"
+                                                android:id="@+id/test1_refuse4"
+                                                android:src="@drawable/refuse"
+                                                android:background="@null"
+                                                android:layout_below="@id/test1_validate4" />
+                                        </RelativeLayout>
+                                    </RelativeLayout>
                                     </LinearLayout>
+                                    <!-- Fin Image 4 et boutons valider 4 et refuser 4 -->
                                 </LinearLayout>
-                                <FrameLayout
-                                    android:layout_width="@dimen/middle_space_size"
-                                    android:layout_height="match_parent" />
                                 <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical"
-                                    android:id="@+id/test1_layout5">
-
-                                    <ImageButton
-                                        android:layout_width="@dimen/picture_size"
-                                        android:layout_height="@dimen/picture_size"
-                                        android:scaleType="fitXY"
-                                        android:layout_gravity="bottom"
-                                        android:id="@+id/test1_image5"
-                                        android:src="@drawable/test1_image5"/>
-
+                                    android:layout_weight="0.33">
+                                    <!-- Image 5 et boutons valider 5 et refuser 5 -->
                                     <LinearLayout
-                                        android:orientation="vertical"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical"
-                                        android:weightSum="1" >
-
-                                        <FrameLayout
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/test1_layout5">
+                                        <RelativeLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.28" />
-
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginBottom="15dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginRight="15dp">
                                         <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
+                                            android:layout_width="@dimen/picture_size"
+                                            android:layout_height="@dimen/picture_size"
                                             android:scaleType="fitXY"
-                                            android:id="@+id/test1_validate5"
-                                            android:src="@drawable/validate"
-                                            android:background="@null" />
-
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
+                                            android:background="@color/white"
+                                            android:layout_gravity="bottom"
+                                            android:id="@+id/test1_image5"
+                                            android:src="@drawable/test1_image5"
+                                            android:layout_centerVertical="true"/>
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_weight="0.26" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_refuse5"
-                                            android:src="@drawable/refuse"
-                                            android:background="@null" />
-
+                                            android:layout_centerVertical="true"
+                                            android:layout_toRightOf="@id/test1_image5">
+                                            <ImageButton
+                                                android:layout_width="@dimen/button_size"
+                                                android:layout_height="@dimen/button_size"
+                                                android:scaleType="fitXY"
+                                                android:layout_marginLeft="15dp"
+                                                android:id="@+id/test1_validate5"
+                                                android:src="@drawable/validate"
+                                                android:background="@null"/>
+                                            <ImageButton
+                                                android:layout_width="@dimen/button_size"
+                                                android:layout_height="@dimen/button_size"
+                                                android:scaleType="fitXY"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginTop="15dp"
+                                                android:id="@+id/test1_refuse5"
+                                                android:src="@drawable/refuse"
+                                                android:background="@null"
+                                                android:layout_below="@id/test1_validate5" />
+                                        </RelativeLayout>
+                                    </RelativeLayout>
                                     </LinearLayout>
+                                    <!-- Fin Image 5 et boutons valider 5 et refuser 5 -->
                                 </LinearLayout>
-                                <FrameLayout
-                                    android:layout_width="@dimen/middle_space_size"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical" />
                                 <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_gravity="center_vertical"
-                                    android:id="@+id/test1_layout6">
-
-                                    <ImageButton
-                                        android:layout_width="@dimen/picture_size"
-                                        android:layout_height="@dimen/picture_size"
-                                        android:scaleType="fitXY"
-                                        android:layout_gravity="bottom"
-                                        android:id="@+id/test1_image6"
-                                        android:src="@drawable/test1_image6"/>
-
+                                    android:layout_weight="0.33">
+                                    <!-- Image 6 et boutons valider 6 et refuser 6 -->
                                     <LinearLayout
-                                        android:orientation="vertical"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center_vertical"
-                                        android:weightSum="1" >
-
-                                        <FrameLayout
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/test1_layout6">
+                                        <RelativeLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="0.28" />
-
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginBottom="15dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginRight="15dp">
                                         <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
+                                            android:layout_width="@dimen/picture_size"
+                                            android:layout_height="@dimen/picture_size"
                                             android:scaleType="fitXY"
-                                            android:id="@+id/test1_validate6"
-                                            android:src="@drawable/validate"
-                                            android:background="@null" />
-
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
+                                            android:background="@color/white"
+                                            android:layout_gravity="bottom"
+                                            android:id="@+id/test1_image6"
+                                            android:src="@drawable/test1_image6"
+                                            android:layout_centerVertical="true"/>
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_weight="0.26" />
-
-                                        <ImageButton
-                                            android:layout_width="@dimen/button_size"
-                                            android:layout_height="@dimen/button_size"
-                                            android:scaleType="fitXY"
-                                            android:id="@+id/test1_refuse6"
-                                            android:src="@drawable/refuse"
-                                            android:background="@null" />
-
+                                            android:layout_centerVertical="true"
+                                            android:layout_toRightOf="@id/test1_image6">
+                                            <ImageButton
+                                                android:layout_width="@dimen/button_size"
+                                                android:layout_height="@dimen/button_size"
+                                                android:scaleType="fitXY"
+                                                android:layout_marginLeft="15dp"
+                                                android:id="@+id/test1_validate6"
+                                                android:src="@drawable/validate"
+                                                android:background="@null"/>
+                                            <ImageButton
+                                                android:layout_width="@dimen/button_size"
+                                                android:layout_height="@dimen/button_size"
+                                                android:scaleType="fitXY"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginTop="15dp"
+                                                android:id="@+id/test1_refuse6"
+                                                android:src="@drawable/refuse"
+                                                android:background="@null"
+                                                android:layout_below="@id/test1_validate6" />
+                                        </RelativeLayout>
+                                    </RelativeLayout>
                                     </LinearLayout>
+                                    <!-- Fin Image 6 et boutons valider 6 et refuser 6 -->
                                 </LinearLayout>
+
                             </LinearLayout>
+
+                            <!-- Fin contenu effectif du test -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4"/>
                         </LinearLayout>
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp" />
-                    </LinearLayout>
                     </ScrollView>
-                </FrameLayout>
-                <!--BOUTON SUIVANT-->
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/next_size"
-                    android:layout_gravity="center_horizontal"
-                    android:weightSum="1" >
-
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.98" />
-
                     <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="@dimen/next_size_width"
+                        android:layout_height="@dimen/next_size_height"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="15dp"
                         android:id="@+id/test1_bnext"
-                        android:src="@drawable/next"
-                        android:layout_gravity="bottom"
+                        android:background="@drawable/next"
                         android:layout_alignParentRight="true"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@null" />
-
-                </LinearLayout>
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <!-- Fin contenu du test -->
             </LinearLayout>
+            <!-- Fin corps du test -->
         </LinearLayout>
+        <FrameLayout
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+        <!-- Fin corps central -->
     </LinearLayout>
 </LinearLayout>

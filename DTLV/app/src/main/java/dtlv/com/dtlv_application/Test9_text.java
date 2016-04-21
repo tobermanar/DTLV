@@ -56,6 +56,7 @@ public class Test9_text extends Activity {
             text1.setText(R.string.test9_text5);
             text2.setText(R.string.test9_text5_part1);
             text3.setText(R.string.test9_text5_part2);
+            test9_image_next.setVisibility(View.INVISIBLE);
         }
         test9_image_next.setOnClickListener(new View.OnClickListener() {
             @Override

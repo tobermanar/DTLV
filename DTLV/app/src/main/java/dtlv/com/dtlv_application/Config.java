@@ -1,12 +1,18 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.Spannable;
+import android.text.TextUtils;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -17,6 +23,10 @@ import android.provider.Settings.SettingNotFoundException;
 import android.provider.Settings.System;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
+import android.widget.TextView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -33,6 +43,10 @@ public class Config extends Activity {
     private Button sound_button = null;
     private Window window;
 
+    private ImageButton config_help = null;
+    private AlertDialog alertDialog = null;
+    private TextView tv_config = null;
+
     //Déclaration d'une variable pour les tests 1, 5, 6 et 9
     public static Test_compt compt = new Test_compt();
     //Content resolver used as a handle to the system's settings
@@ -46,9 +60,10 @@ public class Config extends Activity {
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         //Get the content resolver
-        cResolver =  getContentResolver();
+        cResolver = getContentResolver();
 
-        bconfig_next = (ImageButton) findViewById(R.id.config_next);
+        config_help = (ImageButton) findViewById(R.id.config_bhelp);
+        bconfig_next = (ImageButton) findViewById(R.id.config_bnext);
         sbrightness = (SeekBar) findViewById(R.id.brightness_seekBar);
         //sets the range between 0 and 255
         sbrightness.setMax(255);
@@ -64,13 +79,10 @@ public class Config extends Activity {
         final MediaPlayer mp;
 
         //Get current Screen_Brightness Value
-        try
-        {
+        try {
             //Get the current system brightness
             brightness = System.getInt(cResolver, System.SCREEN_BRIGHTNESS);
-        }
-        catch (SettingNotFoundException e)
-        {
+        } catch (SettingNotFoundException e) {
             //Throw an error case it couldn't be retrieved
             e.printStackTrace();
         }
@@ -100,7 +112,7 @@ public class Config extends Activity {
             }
         });
         Settings.System.putInt(getContentResolver(),
-        Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+                Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
         Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, brightness);
         //Show the image example
         brightness_button.setOnClickListener(new View.OnClickListener() {
@@ -121,7 +133,7 @@ public class Config extends Activity {
         svolume.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,progress,0);
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0);
             }
 
             @Override
@@ -132,6 +144,26 @@ public class Config extends Activity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
+            }
+        });
+
+        //Help
+        config_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog = new AlertDialog.Builder(Config.this).create();
+                alertDialog.setTitle(getResources().getString(R.string.help_config_title));
+                tv_config = new TextView(Config.this);
+                tv_config.setText(getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_config_text)));
+               // alertDialog.setView(tv_config);
+                alertDialog.setView(tv_config, 20, 20, 20, 20);
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
             }
         });
 
@@ -148,10 +180,47 @@ public class Config extends Activity {
             @Override
             public void onClick(View v) {
                 mp.release();
-                Intent itest1 = new Intent(Config.this, Test1.class);
-                startActivity(itest1);
+                Intent iconfig = new Intent(Config.this, Test1.class);
+                startActivity(iconfig);
             }
         });
 
+    }
+
+    public Spannable getTextWithImages(Context context, CharSequence text) {
+        Spannable spannable = Spannable.Factory.getInstance().newSpannable(text);
+        addImages(context, spannable);
+        return spannable;
+    }
+
+    public boolean addImages(Context context, Spannable spannable) {
+        Pattern refImg = Pattern.compile("\\Q[img src=\\E([a-zA-Z0-9_]+?)\\Q/]\\E");
+        boolean hasChanges = false;
+
+        Matcher matcher = refImg.matcher(spannable);
+        while (matcher.find()) {
+            boolean set = true;
+            for (ImageSpan span : spannable.getSpans(matcher.start(), matcher.end(), ImageSpan.class)) {
+                if (spannable.getSpanStart(span) >= matcher.start()
+                        && spannable.getSpanEnd(span) <= matcher.end()) {
+                    spannable.removeSpan(span);
+                } else {
+                    set = false;
+                    break;
+                }
+            }
+            String resname = spannable.subSequence(matcher.start(1), matcher.end(1)).toString().trim();
+            int id = context.getResources().getIdentifier(resname, "drawable", context.getPackageName());
+            Drawable icon = context.getResources().getDrawable(id);//,this.getTheme());
+            icon.setBounds(0, 0, tv_config.getLineHeight(), tv_config.getLineHeight());
+            if (set) {
+                hasChanges = true;
+                spannable.setSpan(new ImageSpan(icon, ImageSpan.ALIGN_BASELINE),
+                        matcher.start(),
+                        matcher.end(),
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+        return hasChanges;
     }
 }

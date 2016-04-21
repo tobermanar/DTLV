@@ -141,8 +141,9 @@ public class Test1 extends Activity{
 
         btest1_help = (ImageButton) findViewById(R.id.test1_bhelp);
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.YELLOW);
-
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.yellow));
+        
+                
         //Image 1
         btest1_image1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -367,7 +368,7 @@ public class Test1 extends Activity{
 
                 tv_test1.setText(TextUtils.concat(admin, st1_1, quote, st1_2));
 
-                alertDialog.setView(tv_test1);
+                alertDialog.setView(tv_test1, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
@@ -401,7 +402,7 @@ public class Test1 extends Activity{
             btest1_image2.setClickable(true);
             if (Config.compt.getTest1_2() == 0)
             {
-                test1_layout2.setBackgroundColor(Color.YELLOW);
+                test1_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
             }
         }
         if (Config.compt.getTest1_2() == 1) {
@@ -479,6 +480,7 @@ public class Test1 extends Activity{
             btest1_next.setImageResource(R.drawable.next);
         }
     }
+
     /**
      * Obtain the point manager
      * @param gestPtsF

@@ -33,20 +33,22 @@
             android:layout_weight="0.25"></LinearLayout>
 
         <Button
-            android:layout_width="243dp"
+            android:layout_width="@dimen/menu_button"
             android:layout_height="wrap_content"
             android:text="@string/tutorial"
             android:id="@+id/b_tutorial"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.05" />
+            android:layout_weight="0.05"
+            style="@style/button_type1"/>
 
         <Button
-            android:layout_width="238dp"
+            android:layout_width="@dimen/menu_button"
             android:layout_height="wrap_content"
             android:text="@string/credits"
             android:id="@+id/b_credits"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.05" />
+            android:layout_weight="0.05"
+            style="@style/button_type1"/>
     </LinearLayout>
 
     <LinearLayout
@@ -65,28 +67,31 @@
             android:layout_weight="0.30"></LinearLayout>
 
         <Button
-            android:layout_width="190dp"
+            android:layout_width="@dimen/menu_button"
             android:layout_height="wrap_content"
             android:text="@string/start"
             android:id="@+id/b_start"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.22" />
+            android:layout_weight="0.22"
+            style="@style/button_type1"/>
 
         <Button
-            android:layout_width="206dp"
+            android:layout_width="@dimen/menu_button"
             android:layout_height="wrap_content"
             android:text="@string/language"
             android:id="@+id/b_language"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.03" />
+            android:layout_weight="0.03"
+            style="@style/button_type1"/>
 
         <Button
-            android:layout_width="205dp"
+            android:layout_width="@dimen/menu_button"
             android:layout_height="wrap_content"
             android:text="@string/exit"
             android:id="@+id/b_exit"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.02" />
+            android:layout_weight="0.02"
+            style="@style/button_type1"/>
 
     </LinearLayout>
 

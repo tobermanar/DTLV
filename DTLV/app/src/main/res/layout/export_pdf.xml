@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Consigne."/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test1_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 1 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test2_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 2 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test3_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 3 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test4_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 4 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test5_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 5 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test6_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 6 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test7_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 7 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test8_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 8 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test9_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 9 :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test10_score"
+        android:layout_gravity="center_horizontal"
+        android:text="Test 10 :"/>
+
+    <Button
+        android:id="@+id/createPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="@string/result_export_to_pdf"
+        style="@style/button_type1"/>
+
+    <Button
+        android:id="@+id/sendPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="@string/result_send_pdf"
+        android:visibility="invisible"
+        style="@style/button_type1"/>
+</LinearLayout>

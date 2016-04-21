@@ -16,7 +16,9 @@ import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -301,7 +303,6 @@ public class Tutorial extends Activity{
         tv_test10.setText(TextUtils.concat(st10_0, span_ration, st10_1, span_admin, st10_2, span_quote, st10_4));
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test10);
-
 
         /******** results *******/
 

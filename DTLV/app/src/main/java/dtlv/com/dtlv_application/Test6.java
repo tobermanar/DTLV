@@ -48,6 +48,8 @@ public class Test6 extends Activity{
     private ImageButton btest6_refuse3 = null;
     private LinearLayout test6_layout3 = null;
 
+    private LinearLayout test6_layout_image = null;
+
     private ImageButton btest6_next = null;
 
     //Variables de quotation
@@ -134,17 +136,20 @@ public class Test6 extends Activity{
         btest6_help = (ImageButton) findViewById(R.id.test6_bhelp);
 
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
-        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt2.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
-        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt3.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
-        tuto_bt4.setBackgroundColor(Color.GREEN);
+        tuto_bt4.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt5 = (Button) findViewById(R.id.tuto_bt5);
-        tuto_bt5.setBackgroundColor(Color.GREEN);
+        tuto_bt5.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt6 = (Button) findViewById(R.id.tuto_bt6);
-        tuto_bt6.setBackgroundColor(Color.YELLOW);
+        tuto_bt6.setBackgroundColor(getResources().getColor(R.color.yellow));
+
+        test6_layout_image = (LinearLayout) findViewById(R.id.test6_layout_image);
+        test6_layout_image.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         //create pop-up for replay alert
         replayAlert = new AlertDialog.Builder(Test6.this);
@@ -372,7 +377,7 @@ public class Test6 extends Activity{
 
                 tv_test6.setText(TextUtils.concat(admin, st6_1, quote, st6_2));
 
-                alertDialog.setView(tv_test6);
+                alertDialog.setView(tv_test6, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {

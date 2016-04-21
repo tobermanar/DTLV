@@ -85,13 +85,13 @@ public class Test4 extends Activity{
         btest4_next.setImageResource(R.drawable.next_grey);
 
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
-        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt2.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
-        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt3.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
-        tuto_bt4.setBackgroundColor(Color.YELLOW);
+        tuto_bt4.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         final MediaPlayer mp01,mp02,mp11;
 
@@ -313,7 +313,7 @@ public class Test4 extends Activity{
                 if (quotation_02 == false && (count02 == 0 || count11 == 0))
                 {
                     test4_layout2.setBackgroundColor(Color.TRANSPARENT);
-                    test4_layout3.setBackgroundColor(Color.YELLOW);
+                    test4_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
                     btest4_play02.setImageResource(R.drawable.play_blue);
                     btest4_play02.setEnabled(true);
                     btest4_play02.setClickable(true);
@@ -332,7 +332,7 @@ public class Test4 extends Activity{
                 if (count11 == 0)
                 {
                     test4_layout3.setBackgroundColor(Color.TRANSPARENT);
-                    test4_layout2.setBackgroundColor(Color.YELLOW);
+                    test4_layout2.setBackgroundColor(getResources().getColor(R.color.yellow));
                     btest4_play02.setImageResource(R.drawable.play_blue);
                     btest4_play02.setEnabled(true);
                     btest4_play02.setClickable(true);
@@ -361,7 +361,7 @@ public class Test4 extends Activity{
                 btest4_play11.setClickable(true);
                 btest4_play11.setImageResource(R.drawable.play_blue);
                 if(count11 == 0) {
-                    test4_layout3.setBackgroundColor(Color.YELLOW);
+                    test4_layout3.setBackgroundColor(getResources().getColor(R.color.yellow));
                 }
                 quotation_02 = true;
                 q02 = 1;//only to handle colors, not for the result
@@ -437,7 +437,7 @@ public class Test4 extends Activity{
 
                 tv_test4.setText(TextUtils.concat(admin, st4_1, quote, st4_2));
 
-                alertDialog.setView(tv_test4);
+                alertDialog.setView(tv_test4, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {

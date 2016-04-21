@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     style="@style/blueBackground">
 
-
     <LinearLayout
         style="@style/blueBackground"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -12,17 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="1" >
-
+        <!-- Avancement lateral -->
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="115dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:weightSum="1">
+            android:layout_weight="0.9">
 
             <FrameLayout
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="left|center_vertical" />
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
 
             <LinearLayout
                 android:orientation="vertical"
@@ -122,243 +120,246 @@
                     android:layout_weight="0.08"
                     android:clickable="false"/>
                 <FrameLayout
-                    android:layout_width="0.5dp"
-                    android:layout_height="0.5dp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical" />
 
             </LinearLayout>
+            <FrameLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
         </LinearLayout>
-
-        <FrameLayout
-            android:layout_width="16dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:id="@+id/frameLayout26" >
-
-        </FrameLayout>
-
+        <!-- Fin avancement lateral -->
+        <!-- Corps central -->
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="483dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:id="@+id/linearLayout20"
-            android:weightSum="1"
-            android:layout_weight="0.87" >
-
+            android:layout_weight="0.1" >
+            <!-- Titre et consignes -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.17">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <!--NOM DE LA TACHE-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/config_name"
+                        android:id="@+id/task_name"
+                        android:background="#ffffff"
+                        android:layout_weight="0.6"/>
+                    <!--CONSIGNE-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/scrollView"
+                        android:layout_gravity="center_horizontal"
+                        android:scrollbars="vertical"
+                        android:fillViewport="true"
+                        android:layout_weight="0.4">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/config_instruction"
+                            android:id="@+id/task_instruction"
+                            android:background="#ffffff"
+                            android:textSize="@dimen/title_text_size"/>
+                    </ScrollView>
+                </LinearLayout>
+                <!--BOUTON HELP-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.83">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:id="@+id/config_bhelp"
+                            android:background="@drawable/help_3"
+                            android:clickable="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Fin titre et consignes -->
+            <!-- Corps du test -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:weightSum="1"
-                android:id="@+id/linearLayout7" >
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="0.05"
-                    android:id="@+id/linearLayout6"
-                    android:weightSum="1" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="135dp"
-                        android:layout_weight="0.98"
-                        android:id="@+id/linearLayout5"
-                        android:weightSum="1" >
-                        <!--NOM DE LA TACHE-->
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.31"
-                            android:id="@+id/frameLayout9" />
-                        <TextView
-                            android:layout_width="767dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/config_name"
-                            android:id="@+id/textView17"
-                            android:background="#ffffff"
-                            android:layout_weight="0.19" />
-                    </LinearLayout>
-                    <!--BOUTON HELP-->
-                    <FrameLayout
-                        android:layout_width="20dp"
-                        android:layout_height="match_parent"/>
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.05"
-                        android:id="@+id/frameLayout10" >
-                        <ImageButton
-                            android:layout_width="@dimen/help_size"
-                            android:layout_height="@dimen/help_size"
-                            android:id="@+id/test1_bhelp"
-                            android:layout_gravity="center"
-                            android:background="@drawable/help_3"
-                            android:clickable="true" />
-                    </FrameLayout>
-                    <!--ok-->
-                </LinearLayout>
-
+                android:layout_weight="0.3" >
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="0.92"
-                    android:id="@+id/frameLayout32" >
-
-                    <LinearLayout
-                        android:orientation="vertical"
+                    android:layout_height="15dp"/>
+                <!--CONTENU DU TEST-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal|top"
-                        android:weightSum="1" >
-
-                        <FrameLayout
+                        android:id="@+id/scrollView2"
+                        android:layout_gravity="center_horizontal"
+                        android:scrollbars="vertical"
+                        android:fillViewport="true">
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="0.98"
-                            android:id="@+id/frameLayout31" >
+                            android:layout_height="match_parent"
+                            android:id="@+id/tuto_layout"
+                            android:weightSum="1">
+                            <!-- Contenu effectif du test -->
 
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/config_layout">
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/sonore"
+                                    android:layout_marginLeft="50dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_marginRight="50dp"
+                                    android:background="#ffffff"
+                                    android:weightSum="1"
+                                    android:layout_weight="0.01">
 
                                     <LinearLayout
-                                        android:orientation="vertical"
+                                        android:orientation="horizontal"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:background="#ffffff"
-                                        android:weightSum="1"
-                                        android:layout_weight="0.20">
+                                        android:layout_weight="0.37"
+                                        android:weightSum="1" >
 
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:layout_width="match_parent"
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.10" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_weight="0.37"
-                                            android:weightSum="1" >
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/config_brightness_title"
+                                            android:id="@+id/config_brightness_title"
+                                            android:layout_weight="0.05" />
 
-                                            <FrameLayout
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent"
-                                                android:layout_weight="0.10" />
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:textAppearance="?android:attr/textAppearanceMedium"
-                                                android:text="@string/config_brightness_title"
-                                                android:id="@+id/config_brightness_title"
-                                                android:layout_weight="0.05" />
-
-                                            <Button
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/config_brightness"
-                                                android:id="@+id/config_brightness"/>
-                                        </LinearLayout>
-
-                                        <SeekBar
-                                            android:layout_width="525dp"
-                                            android:layout_height="40dp"
-                                            android:id="@+id/brightness_seekBar"
-                                            android:layout_gravity="center"
-                                            android:progress="50"
-                                            android:max="100" />
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/config_brightness"
+                                            android:id="@+id/config_brightness"
+                                            style="@style/button_type1"/>
                                     </LinearLayout>
-                                    <FrameLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="40dp" />
+
+                                    <SeekBar
+                                        android:layout_width="525dp"
+                                        android:layout_height="40dp"
+                                        android:id="@+id/brightness_seekBar"
+                                        android:layout_gravity="center"
+                                        android:progress="50"
+                                        android:max="100" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="50dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_marginRight="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="#ffffff"
+                                    android:weightSum="1"
+                                    android:layout_weight="0.01">
+
                                     <LinearLayout
-                                        android:orientation="vertical"
+                                        android:orientation="horizontal"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:background="#ffffff"
-                                        android:weightSum="1"
-                                        android:layout_weight="0.20">
+                                        android:layout_weight="0.37"
+                                        android:weightSum="1" >
 
-                                        <LinearLayout
-                                            android:orientation="horizontal"
-                                            android:layout_width="match_parent"
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.10" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_weight="0.37"
-                                            android:weightSum="1" >
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="@string/config_sound_title"
+                                            android:id="@+id/config_sound_title"
+                                            android:layout_weight="0.05" />
 
-                                            <FrameLayout
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent"
-                                                android:layout_weight="0.10" />
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:textAppearance="?android:attr/textAppearanceMedium"
-                                                android:text="@string/config_sound_title"
-                                                android:id="@+id/config_sound_title"
-                                                android:layout_weight="0.05" />
-
-                                            <Button
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/config_sound"
-                                                android:id="@+id/config_sound"/>
-                                        </LinearLayout>
-
-                                        <SeekBar
-                                            android:layout_width="525dp"
-                                            android:layout_height="40dp"
-                                            android:id="@+id/sound_seekBar"
-                                            android:layout_gravity="center"
-                                            android:progress="50"
-                                            android:max="100" />
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/config_sound"
+                                            android:id="@+id/config_sound"
+                                            style="@style/button_type1"/>
                                     </LinearLayout>
-                                    <FrameLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="10dp" />
+
+                                    <SeekBar
+                                        android:layout_width="525dp"
+                                        android:layout_height="40dp"
+                                        android:id="@+id/sound_seekBar"
+                                        android:layout_gravity="center"
+                                        android:progress="50"
+                                        android:max="100" />
                                 </LinearLayout>
 
-                        </FrameLayout>
 
-                        <!--BOUTON SUIVANT-->
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/next_size"
-                            android:layout_gravity="center_horizontal"
-                            android:weightSum="1" >
-
-                            <FrameLayout
-                                android:layout_width="wrap_content"
+                            <!-- Fin contenu effectif du test -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.98" />
-
-                            <ImageButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:id="@+id/config_next"
-                                android:src="@drawable/next"
-                                android:layout_gravity="bottom"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginBottom="5dp"
-                                android:background="@null" />
-
+                                android:layout_weight="0.98"/>
                         </LinearLayout>
-                    </LinearLayout>
-                </FrameLayout>
+                    </ScrollView>
+                    <ImageButton
+                        android:layout_width="@dimen/next_size_width"
+                        android:layout_height="@dimen/next_size_height"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/config_bnext"
+                        android:background="@drawable/next"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <!-- Fin contenu du test -->
             </LinearLayout>
+            <!-- Fin corps du test -->
         </LinearLayout>
+        <FrameLayout
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+        <!-- Fin corps central -->
     </LinearLayout>
-
 </LinearLayout>

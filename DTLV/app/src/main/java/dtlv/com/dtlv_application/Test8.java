@@ -70,21 +70,21 @@ public class Test8 extends Activity{
         btest8_help = (ImageButton) findViewById(R.id.test8_bhelp);
 
         tuto_bt1 = (Button) findViewById(R.id.tuto_bt1);
-        tuto_bt1.setBackgroundColor(Color.GREEN);
+        tuto_bt1.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt2 = (Button) findViewById(R.id.tuto_bt2);
-        tuto_bt2.setBackgroundColor(Color.GREEN);
+        tuto_bt2.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt3 = (Button) findViewById(R.id.tuto_bt3);
-        tuto_bt3.setBackgroundColor(Color.GREEN);
+        tuto_bt3.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt4 = (Button) findViewById(R.id.tuto_bt4);
-        tuto_bt4.setBackgroundColor(Color.GREEN);
+        tuto_bt4.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt5 = (Button) findViewById(R.id.tuto_bt5);
-        tuto_bt5.setBackgroundColor(Color.GREEN);
+        tuto_bt5.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt6 = (Button) findViewById(R.id.tuto_bt6);
-        tuto_bt6.setBackgroundColor(Color.GREEN);
+        tuto_bt6.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt7 = (Button) findViewById(R.id.tuto_bt7);
-        tuto_bt7.setBackgroundColor(Color.GREEN);
+        tuto_bt7.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt8 = (Button) findViewById(R.id.tuto_bt8);
-        tuto_bt8.setBackgroundColor(Color.YELLOW);
+        tuto_bt8.setBackgroundColor(getResources().getColor(R.color.yellow));
 
         btest8_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,7 +133,7 @@ public class Test8 extends Activity{
 
                 tv_test8.setText(TextUtils.concat(admin, st8_1, quote, st8_2));
 
-                alertDialog.setView(tv_test8);
+                alertDialog.setView(tv_test8, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
