@@ -262,9 +262,9 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:text="@string/test3_text0"
                                         android:id="@+id/test3_lettre"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:layout_gravity="center"
                                         android:layout_weight="0.31"
                                         android:textSize="190dp"
@@ -284,15 +284,14 @@
                                     android:orientation="vertical"
                                     android:layout_gravity="bottom|center|center_vertical">
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="120dp"
                                         android:layout_height="60dp"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:gravity="center"
                                         android:text="@string/test3_score"
                                         android:layout_gravity="center_horizontal|bottom"
                                         android:textAlignment="center"
                                         android:textSize="25dp"
-                                        android:background="#5bab9e9e"
-                                        android:foregroundGravity="center"/>
+                                        android:background="#5bab9e9e" />
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -313,15 +312,14 @@
                                     android:orientation="vertical"
                                     android:layout_gravity="top|center|center_vertical">
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="120dp"
                                         android:layout_height="60dp"
-                                        android:textAppearance="?android:attr/textAppearanceSmall"
                                         android:text="@string/test3_time"
                                         android:layout_gravity="center_horizontal|bottom"
                                         android:textAlignment="center"
+                                        android:gravity="center"
                                         android:textSize="25dp"
-                                        android:background="#5bab9e9e"
-                                        android:foregroundGravity="center"/>
+                                        android:background="#5bab9e9e"/>
                                     <TextView android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceLarge"

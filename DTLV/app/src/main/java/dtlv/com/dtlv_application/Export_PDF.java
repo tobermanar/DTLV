@@ -175,7 +175,9 @@ public class Export_PDF extends Fragment {
         mSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mSaveButton.setText(R.string.result_processing);
                 mSaveButton.setActivated(false);
+                mRootView.refreshDrawableState();
                 /*if (mSubjectEditText.getText().toString().isEmpty()){
                     mSubjectEditText.setError("Subject is empty");
                     mSubjectEditText.requestFocus();

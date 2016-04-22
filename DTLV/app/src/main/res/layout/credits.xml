@@ -94,7 +94,12 @@
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
                                 android:background="#ffffff"
-                                android:text="@string/credit_ihm_title"/>
+                                android:text="@string/credit_team_title"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/credit_research_text"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

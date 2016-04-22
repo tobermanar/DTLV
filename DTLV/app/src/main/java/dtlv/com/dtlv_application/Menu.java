@@ -46,7 +46,7 @@ public class Menu extends Activity{
         tutorial.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-                // Au click sur le bouton, une nouvelle activité est lancé.
+                // Au click sur le bouton, une nouvelle activit é est lancé.
                 Intent itutorial = new Intent(Menu.this, Tutorial.class);
                 startActivity(itutorial);
             }
@@ -79,7 +79,11 @@ public class Menu extends Activity{
 
             public void onClick(View v) {
                 // Au click sur le bouton, l'application se ferme.
-                System.exit(0);
+                //System.exit(0);
+                Intent startLauncher = new Intent(Intent.ACTION_MAIN);
+                startLauncher.addCategory(Intent.CATEGORY_HOME);
+                startLauncher.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(startLauncher);
             }
         });
 

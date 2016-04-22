@@ -1,12 +1,15 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 /**
@@ -30,7 +33,9 @@ public class Results extends Activity{
     private Button tuto_bt9 = null;
     private Button tuto_bt10 = null;
 
-
+    private ImageButton results_help = null;
+    private AlertDialog alertDialog = null;
+    private TextView tv_results = null;
 
 
     public Results(){
@@ -66,6 +71,7 @@ public class Results extends Activity{
         tuto_bt10 = (Button) findViewById(R.id.tuto_bt10);
         tuto_bt10.setBackgroundColor(getResources().getColor(R.color.green));
 
+        results_help = (ImageButton) findViewById(R.id.result_bhelp);
 
         Export_PDF noteFragment = Export_PDF.newInstance();
 
@@ -83,6 +89,27 @@ public class Results extends Activity{
             }
         });
     getResults();
+
+
+        //Help
+        results_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog = new AlertDialog.Builder(Results.this).create();
+                alertDialog.setTitle(getResources().getString(R.string.help_results_title));
+                tv_results = new TextView(Results.this);
+                tv_results.setText(getResources().getString(R.string.help_results_text));
+                // alertDialog.setView(tv_results);
+                alertDialog.setView(tv_results, 20, 20, 20, 20);
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
     }
 
     /**
