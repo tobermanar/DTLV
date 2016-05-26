@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="title_size">100dp</dimen>
-    <dimen name="title_text_size">15dp</dimen>
+    <dimen name="title_text_size">25dp</dimen>
     <dimen name="next_size">50dp</dimen>
     <dimen name="picture_size">130dp</dimen>
     <dimen name="test6_picture_size">240dp</dimen>
@@ -19,5 +19,6 @@
     <dimen name="text_box_test_medium_size">190dp</dimen>
     <dimen name="text_box_text_medium_size">22dp</dimen>
     <dimen name="text_box_test9_size">350dp</dimen>
+    <dimen name="credit_size">25dp</dimen>
 
 </resources>

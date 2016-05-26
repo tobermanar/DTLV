@@ -31,7 +31,7 @@ public class Results extends Activity{
     private Button tuto_bt7 = null;
     private Button tuto_bt8 = null;
     private Button tuto_bt9 = null;
-    private Button tuto_bt10 = null;
+    //private Button tuto_bt10 = null;
 
     private ImageButton results_help = null;
     private AlertDialog alertDialog = null;
@@ -68,8 +68,8 @@ public class Results extends Activity{
         tuto_bt8.setBackgroundColor(getResources().getColor(R.color.green));
         tuto_bt9 = (Button) findViewById(R.id.tuto_bt9);
         tuto_bt9.setBackgroundColor(getResources().getColor(R.color.green));
-        tuto_bt10 = (Button) findViewById(R.id.tuto_bt10);
-        tuto_bt10.setBackgroundColor(getResources().getColor(R.color.green));
+       // tuto_bt10 = (Button) findViewById(R.id.tuto_bt10);
+      //  tuto_bt10.setBackgroundColor(getResources().getColor(R.color.green));
 
         results_help = (ImageButton) findViewById(R.id.result_bhelp);
 

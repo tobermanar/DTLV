@@ -341,7 +341,7 @@ public class Test9 extends Activity{
             public void onClick(View v) {
                 // Au click sur le bouton, on passe au test suivant et on envoit le score a la gestion des points
                 gestPts.setT9(q2+q3+q4+q5);
-                Intent itest9 = new Intent(Test9.this, Test10.class);
+                Intent itest9 = new Intent(Test9.this, Results.class);
                 startActivity(itest9);
             }
         });

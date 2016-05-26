@@ -1,8 +1,15 @@
 package dtlv.com.dtlv_application;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.CursorJoiner;
+import android.net.Uri;
+import android.os.Build;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.os.Bundle;
@@ -22,6 +29,7 @@ public class Menu extends Activity{
     private Button start = null;
     private Button language = null;
     private Button exit = null;
+    private static final String TAG = Menu.class.getSimpleName();
 
     public static GestionPoint gestPts;
 
@@ -33,7 +41,6 @@ public class Menu extends Activity{
         /*Settings.System.putInt(getContentResolver(),
                 Settings.System.SOUND_EFFECTS_ENABLED,
                 0);*/
-
         //Settings.System.canWrite();
         //Creation de la gestion de point
         gestPts = new GestionPoint();
@@ -56,15 +63,34 @@ public class Menu extends Activity{
             public void onClick(View v) {
                 // Au click sur le bouton, une nouvelle activité est lancé.
                 Intent icredits = new Intent(Menu.this, Credits.class);
+                //dezgzgz
                 startActivity(icredits);
             }
         });
         start.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-                // Au click sur le bouton, une nouvelle activité est lancé.
-                Intent istart = new Intent(Menu.this, Config.class);
-                startActivity(istart);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (Settings.System.canWrite(getApplicationContext())) {
+                        if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                            askForPermission();
+                        } else if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                            // Au click sur le bouton, une nouvelle activité est lancé.
+                            Intent istart = new Intent(Menu.this, Config.class);
+                            startActivity(istart);
+                        }
+                    }else {
+                        Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                        intent.setData(Uri.parse("package:" + getPackageName()));
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                    }
+                }else
+                {
+                    // Au click sur le bouton, une nouvelle activité est lancé.
+                    Intent istart = new Intent(Menu.this, Config.class);
+                    startActivity(istart);
+                }
             }
         });
         language.setOnClickListener(new OnClickListener() {
@@ -87,6 +113,33 @@ public class Menu extends Activity{
             }
         });
 
+    }
+    private void askForPermission()
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[] { Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);;
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults)
+    {
+        if(requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Au click sur le bouton, une nouvelle activité est lancé.
+                Intent istart = new Intent(Menu.this, Config.class);
+                startActivity(istart);
+            }
+            else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if(shouldShowRequestPermissionRationale(permissions[0]) == false)
+                {
+                    final Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    final Uri uri = Uri.fromParts("package", getPackageName(), null);
+                    intent.setData(uri);
+                    startActivity(intent);
+                }
+            }
+        }
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }
 

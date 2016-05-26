@@ -1,72 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/blueBackground"
     android:weightSum="1">
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.50"
+        android:layout_weight="0.4"
         android:weightSum="1">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"></LinearLayout>
-
         <ImageView
-            android:layout_width="230dp"
-            android:layout_height="230dp"
-            android:scaleType="fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:layout_gravity="center"
             android:id="@+id/Logo"
             android:src="@drawable/logo_dtla"
             android:background="@null"/>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"></LinearLayout>
-
-        <Button
-            android:layout_width="@dimen/menu_button"
-            android:layout_height="wrap_content"
-            android:text="@string/tutorial"
-            android:id="@+id/b_tutorial"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.05"
-            style="@style/button_type1"/>
-
-        <Button
-            android:layout_width="@dimen/menu_button"
-            android:layout_height="wrap_content"
-            android:text="@string/credits"
-            android:id="@+id/b_credits"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.05"
-            style="@style/button_type1"/>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_weight="0.50"
-        android:weightSum="1">
+        android:layout_weight="0.6"
+        android:weightSum="0.99">
 
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.30"></LinearLayout>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="0.33">
 
-        <Button
+            <Button
+                android:layout_width="@dimen/menu_button"
+                android:layout_height="wrap_content"
+                android:text="@string/tutorial"
+                android:id="@+id/b_tutorial"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.05"
+                style="@style/button_type1"/>
+
+            <Button
+                android:layout_width="@dimen/menu_button"
+                android:layout_height="wrap_content"
+                android:text="@string/credits"
+                android:id="@+id/b_credits"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.05"
+                style="@style/button_type1"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:layout_weight="0.33">
+
+            <Button
             android:layout_width="@dimen/menu_button"
             android:layout_height="wrap_content"
             android:text="@string/start"
@@ -75,24 +78,34 @@
             android:layout_weight="0.22"
             style="@style/button_type1"/>
 
-        <Button
-            android:layout_width="@dimen/menu_button"
-            android:layout_height="wrap_content"
-            android:text="@string/language"
-            android:id="@+id/b_language"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.03"
-            style="@style/button_type1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="0.33">
 
-        <Button
-            android:layout_width="@dimen/menu_button"
-            android:layout_height="wrap_content"
-            android:text="@string/exit"
-            android:id="@+id/b_exit"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.02"
-            style="@style/button_type1"/>
+            <Button
+                android:layout_width="@dimen/menu_button"
+                android:layout_height="wrap_content"
+                android:text="@string/language"
+                android:id="@+id/b_language"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.03"
+                style="@style/button_type1"/>
 
+            <Button
+                android:layout_width="@dimen/menu_button"
+                android:layout_height="wrap_content"
+                android:text="@string/exit"
+                android:id="@+id/b_exit"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.02"
+                style="@style/button_type1"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

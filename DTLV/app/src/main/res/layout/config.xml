@@ -28,8 +28,10 @@
                 android:layout_height="match_parent"
                 android:background="#ffffff"
                 android:layout_weight="0.33"
-                android:weightSum="1">
-
+                android:weightSum="0.8">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
                 <Button
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="fill_parent"
@@ -111,19 +113,9 @@
                     android:layout_weight="0.08"
                     android:clickable="false"/>
 
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="10"
-                    android:id="@+id/tuto_bt10"
-                    android:layout_weight="0.08"
-                    android:clickable="false"/>
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:layout_gravity="center_vertical" />
-
+                    android:layout_height="5dp"/>
             </LinearLayout>
             <FrameLayout
                 android:layout_width="15dp"

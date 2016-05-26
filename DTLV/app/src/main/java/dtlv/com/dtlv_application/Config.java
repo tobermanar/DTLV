@@ -1,18 +1,24 @@
 package dtlv.com.dtlv_application;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.text.Spannable;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -24,6 +30,7 @@ import android.provider.Settings.System;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -52,13 +59,11 @@ public class Config extends Activity {
     //Content resolver used as a handle to the system's settings
     private ContentResolver cResolver;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.config);
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
-
         //Get the content resolver
         cResolver = getContentResolver();
 
@@ -105,15 +110,15 @@ public class Config extends Activity {
                 //Get the current window attributes
                 LayoutParams layoutpars = window.getAttributes();
                 //Set the brightness of this window
-                layoutpars.screenBrightness = brightness / (float) 255;
+                layoutpars.screenBrightness = (float) brightness / (float) 255;
                 //Apply attribute changes to this window
                 window.setAttributes(layoutpars);
                 // Set systemwide brightness setting.
             }
         });
-        Settings.System.putInt(getContentResolver(),
-                Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
-        Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, brightness);
+        System.putInt(getContentResolver(),
+                System.SCREEN_BRIGHTNESS_MODE, System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+        System.putInt(getContentResolver(), System.SCREEN_BRIGHTNESS, brightness);
         //Show the image example
         brightness_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,7 +184,7 @@ public class Config extends Activity {
         bconfig_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp.release();
+
                 Intent iconfig = new Intent(Config.this, Test1.class);
                 startActivity(iconfig);
             }

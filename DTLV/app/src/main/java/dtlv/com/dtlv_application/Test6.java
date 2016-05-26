@@ -345,7 +345,7 @@ public class Test6 extends Activity{
         btest6_refuse3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test6_layout3.setBackgroundColor(getResources().getColor(R.color.green));
+                test6_layout3.setBackgroundColor(getResources().getColor(R.color.red));
                 quotation_3 = true;
                 q3=0;
                 activateNext();

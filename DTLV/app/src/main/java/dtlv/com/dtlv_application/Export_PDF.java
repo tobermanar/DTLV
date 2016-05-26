@@ -1,6 +1,7 @@
 package dtlv.com.dtlv_application;
 
 import android.app.Fragment;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -37,7 +39,9 @@ import java.util.Date;
 public class Export_PDF extends Fragment {
     private View mRootView;
     private Button mSaveButton;
-    private File myFile;
+    private Button mOpenButton;
+    private Button mSendButton;
+    static private File myFile;
 
     private GestionPoint gestPts;
     private TextView test_score = null;
@@ -50,7 +54,8 @@ public class Export_PDF extends Fragment {
     private TextView test7_score = null;
     private TextView test8_score = null;
     private TextView test9_score = null;
-    private TextView test10_score = null;
+  // private TextView test10_score = null;
+    private TextView score = null;
 
     public Export_PDF() {
         // Required empty public constructor
@@ -64,6 +69,8 @@ public class Export_PDF extends Fragment {
         }
         if (success) {
             mSaveButton.setText(R.string.result_success);
+            mOpenButton.setVisibility(View.VISIBLE);
+            mSaveButton.setClickable(false);
         } else {
             mSaveButton.setText(R.string.result_failure);
         }
@@ -122,7 +129,8 @@ public class Export_PDF extends Fragment {
         document.add(new Paragraph(test7_score.getText().toString(), font));
         document.add(new Paragraph(test8_score.getText().toString(), font));
         document.add(new Paragraph(test9_score.getText().toString(), font));
-        document.add(new Paragraph(test10_score.getText().toString(), font));
+       // document.add(new Paragraph(test10_score.getText().toString(), font));
+        document.add(new Paragraph(score.getText().toString(), font));
 
         //Step 5: Close the document
         document.close();
@@ -147,6 +155,8 @@ public class Export_PDF extends Fragment {
         // Inflate the layout for this fragment
         mRootView = inflater.inflate(R.layout.export_pdf, container, false);
         mSaveButton = (Button) mRootView.findViewById(R.id.createPdf);
+        mOpenButton = (Button) mRootView.findViewById(R.id.openPdf);
+        mSendButton = (Button) mRootView.findViewById(R.id.sendPdf);
         test_score = (TextView) mRootView.findViewById(R.id.test_score);
         test_score.setText("Affichage provisoire des résultats aux tests.");
         test1_score = (TextView) mRootView.findViewById(R.id.test1_score);
@@ -167,9 +177,11 @@ public class Export_PDF extends Fragment {
         test8_score.setText("Test 8 (Écriture spontanée) : " + gestPts.getT8());
         test9_score = (TextView) mRootView.findViewById(R.id.test9_score);
         test9_score.setText("Test 9 (Compréhension sémantique) : " + gestPts.getT9());
-        test10_score = (TextView) mRootView.findViewById(R.id.test10_score);
-        test10_score.setText("Test 10 (Language spontané) : " + gestPts.getT10());
-
+     //   test10_score = (TextView) mRootView.findViewById(R.id.test10_score);
+     //   test10_score.setText("Test 10 (Language spontané) : " + gestPts.getT10());
+        score = (TextView) mRootView.findViewById(R.id.score);
+        int scoretotal = gestPts.getT1() + gestPts.getT2() + gestPts.getT3() + gestPts.getT4() + gestPts.getT5() + gestPts.getT6() + gestPts.getT7() + gestPts.getT8() + gestPts.getT9();
+        score.setText("Score global : " + scoretotal + "/100");
 
 
         mSaveButton.setOnClickListener(new View.OnClickListener() {
@@ -178,17 +190,6 @@ public class Export_PDF extends Fragment {
                 mSaveButton.setText(R.string.result_processing);
                 mSaveButton.setActivated(false);
                 mRootView.refreshDrawableState();
-                /*if (mSubjectEditText.getText().toString().isEmpty()){
-                    mSubjectEditText.setError("Subject is empty");
-                    mSubjectEditText.requestFocus();
-                    return;
-                }
-
-                if (mBodyEditText.getText().toString().isEmpty()){
-                    mBodyEditText.setError("Body is empty");
-                    mBodyEditText.requestFocus();
-                    return;
-                }*/
                 try {
                     createPdf();
                 } catch (FileNotFoundException e) {
@@ -198,7 +199,22 @@ public class Export_PDF extends Fragment {
                 }
             }
         });
-
+        mOpenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setDataAndType(Uri.fromFile(myFile), "application/pdf");
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                try {
+                    startActivity(intent);
+                }
+                catch (ActivityNotFoundException e) {
+                    e.printStackTrace();
+                    mOpenButton.setText(R.string.result_failure);
+                    mOpenButton.setClickable(false);
+                }
+            }
+        });
 
         return mRootView;
     }

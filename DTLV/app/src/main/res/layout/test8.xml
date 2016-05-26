@@ -113,14 +113,6 @@
                     android:layout_weight="0.08"
                     android:clickable="false"/>
 
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="10"
-                    android:id="@+id/tuto_bt10"
-                    android:layout_weight="0.08"
-                    android:clickable="false"/>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="5dp"/>
@@ -255,7 +247,7 @@
                                 <ImageButton
                                     android:layout_width="@dimen/button_size"
                                     android:layout_height="@dimen/button_size"
-                                    android:scaleType="fitXY"
+                                    android:scaleType="centerInside"
                                     android:id="@+id/test8_validate1"
                                     android:layout_marginLeft="50dp"
                                     android:layout_gravity="center_vertical"
@@ -264,7 +256,7 @@
                                 <ImageButton
                                     android:layout_width="@dimen/button_size"
                                     android:layout_height="@dimen/button_size"
-                                    android:scaleType="fitXY"
+                                    android:scaleType="centerInside"
                                     android:id="@+id/test8_refuse1"
                                     android:layout_marginLeft="10dp"
                                     android:layout_gravity="center_vertical"

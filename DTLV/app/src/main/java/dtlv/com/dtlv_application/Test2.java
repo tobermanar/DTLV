@@ -288,8 +288,6 @@ public class Test2 extends Activity {
                     }
                 });
 
-
-
         /*************  Word 1  **************/
         mp111 = MediaPlayer.create(this, R.raw.test2_sound1_part1);
         mp112 = MediaPlayer.create(this, R.raw.test2_sound1_part1);

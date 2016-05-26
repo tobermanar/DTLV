@@ -113,14 +113,6 @@
                     android:layout_weight="0.08"
                     android:clickable="false"/>
 
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="10"
-                    android:id="@+id/tuto_bt10"
-                    android:layout_weight="0.08"
-                    android:clickable="false"/>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="5dp"/>
@@ -283,7 +275,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word1_bplay"
                                                 android:layout_gravity="center_vertical"
                                                 android:layout_marginLeft="5dp"
@@ -292,7 +284,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word1_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
@@ -301,7 +293,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word1_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_gravity="center_vertical"
@@ -328,7 +320,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word2_bplay"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
@@ -336,7 +328,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word2_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
@@ -344,7 +336,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word2_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -371,7 +363,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word3_bplay"
                                                 android:layout_marginLeft="5dp"
                                                 android:background="@drawable/play_blue" />
@@ -379,7 +371,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word3_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
@@ -387,7 +379,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_word3_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -438,7 +430,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword1_bplay"
                                                 android:layout_marginLeft="@dimen/button_size"
                                                 android:background="@drawable/play_blue" />
@@ -446,7 +438,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword1_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
@@ -454,7 +446,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword1_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -481,7 +473,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword2_bplay"
                                                 android:layout_marginLeft="25dp"
                                                 android:background="@drawable/play_blue" />
@@ -489,7 +481,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword2_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
@@ -497,7 +489,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword2_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -524,7 +516,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword3_bplay"
                                                 android:layout_marginLeft="35dp"
                                                 android:background="@drawable/play_blue" />
@@ -532,7 +524,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword3_bvalid"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/validate" />
@@ -540,7 +532,7 @@
                                             <ImageButton
                                                 android:layout_width="@dimen/button_size"
                                                 android:layout_height="@dimen/button_size"
-                                                android:scaleType="fitXY"
+                                                android:scaleType="centerInside"
                                                 android:id="@+id/test2_nonword3_brefuse"
                                                 android:layout_marginLeft="10dp"
                                                 android:background="@drawable/refuse" />
@@ -604,7 +596,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase1_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
@@ -613,7 +605,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase1_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />
@@ -621,7 +613,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase1_brefuse"
                                                     android:layout_marginLeft="10dp"
                                                     android:layout_marginRight="10dp"
@@ -672,7 +664,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase2_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
@@ -681,7 +673,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase2_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />
@@ -689,7 +681,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase2_brefuse"
                                                     android:layout_marginLeft="10dp"
                                                     android:layout_marginRight="10dp"
@@ -739,7 +731,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase3_bplay"
                                                     android:layout_marginLeft="3dp"
                                                     android:background="@drawable/play_blue"
@@ -748,7 +740,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase3_bvalid"
                                                     android:layout_marginLeft="10dp"
                                                     android:background="@drawable/validate" />
@@ -756,7 +748,7 @@
                                                 <ImageButton
                                                     android:layout_width="@dimen/button_size"
                                                     android:layout_height="@dimen/button_size"
-                                                    android:scaleType="fitXY"
+                                                    android:scaleType="centerInside"
                                                     android:id="@+id/test2_phrase3_brefuse"
                                                     android:layout_marginLeft="10dp"
                                                     android:layout_marginRight="10dp"

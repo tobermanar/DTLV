@@ -9,67 +9,78 @@
         android:layout_height="wrap_content"
         android:id="@+id/test_score"
         android:layout_gravity="center_horizontal"
-        android:text="Consigne."/>
+        android:text="Consigne."
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test1_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 1 :"/>
+        android:text="Test 1 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test2_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 2 :"/>
+        android:text="Test 2 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test3_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 3 :"/>
+        android:text="Test 3 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test4_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 4 :"/>
+        android:text="Test 4 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test5_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 5 :"/>
+        android:text="Test 5 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test6_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 6 :"/>
+        android:text="Test 6 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test7_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 7 :"/>
+        android:text="Test 7 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test8_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 8 :"/>
+        android:text="Test 8 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/test9_score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 9 :"/>
+        android:text="Test 9 :"
+        android:textSize="@dimen/title_text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/test10_score"
+        android:id="@+id/score"
         android:layout_gravity="center_horizontal"
-        android:text="Test 10 :"/>
+        android:text="Score :"
+        android:textSize="@dimen/title_text_size"/>
 
     <Button
         android:id="@+id/createPdf"
@@ -79,6 +90,17 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:text="@string/result_export_to_pdf"
+        style="@style/button_type1"/>
+
+    <Button
+        android:id="@+id/openPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="@string/result_open_pdf"
+        android:visibility="invisible"
         style="@style/button_type1"/>
 
     <Button

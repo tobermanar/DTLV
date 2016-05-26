@@ -367,7 +367,6 @@ public class Test1 extends Activity{
                 Spannable st1_2 = getTextWithImages(alertDialog.getContext(), getResources().getString(R.string.help_test1_text2));
 
                 tv_test1.setText(TextUtils.concat(admin, st1_1, quote, st1_2));
-
                 alertDialog.setView(tv_test1, 20, 20, 20, 20);
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",

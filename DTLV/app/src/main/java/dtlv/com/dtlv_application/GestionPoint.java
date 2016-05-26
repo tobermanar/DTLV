@@ -27,7 +27,7 @@ public class GestionPoint {
 
 
     public int getT1() {
-        return t1;
+        return 2*t1;
     }
 
     public void setT1(int t1) {
@@ -35,14 +35,23 @@ public class GestionPoint {
     }
 
     public int getT2() {
-        return t2;
+        return 2*t2;
     }
 
     public void setT2(int t2) {
         this.t2 = t2;
     }
 
-    public int getT3() {
+    public int getT3()
+    {
+        if(t3>=10)
+        {
+            t3 = 15;
+        }
+        else
+        {
+            t3 = 0;
+        }
         return t3;
     }
 
@@ -51,7 +60,7 @@ public class GestionPoint {
     }
 
     public int getT4() {
-        return t4;
+        return 5*t4;
     }
 
     public void setT4(int t4) {
@@ -71,11 +80,11 @@ public class GestionPoint {
     }
 
     public void setT6(int t6) {
-        this.t6 = t6;
+        this.t6 = 4*t6;
     }
 
     public int getT7() {
-        return t7;
+        return 2*t7;
     }
 
     public void setT7(int t7) {
@@ -83,7 +92,7 @@ public class GestionPoint {
     }
 
     public int getT8() {
-        return t8;
+        return 4*t8;
     }
 
     public void setT8(int t8) {
@@ -91,7 +100,7 @@ public class GestionPoint {
     }
 
     public int getT9() {
-        return t9;
+        return 4*t9;
     }
 
     public void setT9(int t9) {

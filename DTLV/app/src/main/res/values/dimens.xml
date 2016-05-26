@@ -5,7 +5,7 @@
     <dimen name="activity_vertical_margin">20dp</dimen>
     <dimen name="fab_margin">20dp</dimen>
     <dimen name="title_size">140dp</dimen>
-    <dimen name="title_text_size">24dp</dimen>
+    <dimen name="title_text_size">25dp</dimen>
     <dimen name="next_size_width">130dp</dimen>
     <dimen name="next_size_height">60dp</dimen>
     <dimen name="next_size">70dp</dimen>
@@ -22,5 +22,6 @@
     <dimen name="text_box_test_medium_size">230dp</dimen>
     <dimen name="text_box_text_medium_size">26dp</dimen>
     <dimen name="text_box_test9_size">400dp</dimen>
+    <dimen name="credit_size">25dp</dimen>
 
 </resources>

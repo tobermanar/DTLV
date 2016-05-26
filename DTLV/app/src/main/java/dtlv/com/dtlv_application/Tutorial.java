@@ -57,7 +57,7 @@ public class Tutorial extends Activity{
     private TextView tv_test7 = null;
     private TextView tv_test8 = null;
     private TextView tv_test9 = null;
-    private TextView tv_test10 = null;
+   // private TextView tv_test10 = null;
 
     private Button btuto_set = null;
     private Button btuto_1 = null;
@@ -69,7 +69,7 @@ public class Tutorial extends Activity{
     private Button btuto_7 = null;
     private Button btuto_8 = null;
     private Button btuto_9 = null;
-    private Button btuto_10 = null;
+  //  private Button btuto_10 = null;
     private Button btuto_res = null;
 
     private TextView tv_intro_title = null;
@@ -94,8 +94,8 @@ public class Tutorial extends Activity{
     private TextView tv_test8_text = null;
     private TextView tv_test9_title = null;
     private TextView tv_test9_text = null;
-    private TextView tv_test10_title = null;
-    private TextView tv_test10_text = null;
+   // private TextView tv_test10_title = null;
+   // private TextView tv_test10_text = null;
     private TextView tv_res_title = null;
     private TextView tv_res_text = null;
 
@@ -138,6 +138,7 @@ public class Tutorial extends Activity{
         /******** INTRODUCTION TEXT *******/
         tv_intro = new TextView(Tutorial.this);
         tv_intro.setText(Html.fromHtml(getResources().getString(R.string.tuto_introduction)));
+        tv_intro.setTextSize(getResources().getDimension(R.dimen.credit_size));
         tv_intro.append(getResources().getString(R.string.tuto_intro_text));
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_intro);
@@ -150,10 +151,11 @@ public class Tutorial extends Activity{
         String title = getResources().getString(R.string.tuto_tutorial_title) + "\n\n";
         SpannableString stuto_1 = new SpannableString(title);
         stuto_1.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        stuto_1.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        stuto_1.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
 
         Spannable stuto_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_tuto_text));
         tv_tuto.setText(TextUtils.concat(stuto_1, stuto_2));
+        tv_tuto.setTextSize(getResources().getDimension(R.dimen.credit_size));
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_tuto);
 
@@ -164,7 +166,7 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test1) + "\n\n";
         SpannableString st1_0 = new SpannableString(title);
         st1_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st1_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st1_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
 
         Spannable st1_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test1_text1));
         Spannable st1_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test1_text2));
@@ -172,7 +174,7 @@ public class Tutorial extends Activity{
         Spannable st1_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test1_text4));
 
         tv_test1.setText(TextUtils.concat(st1_0, span_ration, st1_1, span_admin, st1_2, span_instruct, st1_3, span_quote, st1_4));
-
+        tv_test1.setTextSize(getResources().getDimension(R.dimen.credit_size));
         /*
         s = getTextWithImages(tv_intro_title.getContext(),getResources().getString(R.string.tuto_test1_text1), tv_test1_text);
         tv_test1_text.setText(s, TextView.BufferType.SPANNABLE);
@@ -186,7 +188,7 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test2) + "\n\n";
         SpannableString st2_0 = new SpannableString(title);
         st2_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st2_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st2_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
 
         Spannable st2_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test2_text1));
         Spannable st2_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test2_text2));
@@ -194,6 +196,7 @@ public class Tutorial extends Activity{
         Spannable st2_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test2_text4));
 
         tv_test2.setText(TextUtils.concat(st2_0, span_ration, st2_1, span_admin, st2_2, span_instruct, st2_3, span_quote, st2_4));
+        tv_test2.setTextSize(getResources().getDimension(R.dimen.credit_size));
 
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test2);
@@ -204,12 +207,14 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test3) + "\n\n";
         SpannableString st3_0 = new SpannableString(title);
         st3_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st3_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st3_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
         Spannable st3_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test3_text1));
         Spannable st3_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test3_text2));
         Spannable st3_3 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test3_text3));
         Spannable st3_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test3_text4));
         tv_test3.setText(TextUtils.concat(st3_0, span_ration, st3_1, span_admin, st3_2, span_instruct, st3_3, span_quote, st3_4));
+        tv_test3.setTextSize(getResources().getDimension(R.dimen.credit_size));
+
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test3);
 /******** test4 *******/
@@ -217,12 +222,14 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test4) + "\n\n";
         SpannableString st4_0 = new SpannableString(title);
         st4_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st4_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st4_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
         Spannable st4_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test4_text1));
         Spannable st4_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test4_text2));
         Spannable st4_3 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test4_text3));
         Spannable st4_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test4_text4));
         tv_test4.setText(TextUtils.concat(st4_0, span_ration, st4_1, span_admin, st4_2, span_instruct, st4_3, span_quote, st4_4));
+        tv_test4.setTextSize(getResources().getDimension(R.dimen.credit_size));
+
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test4);
 
@@ -231,12 +238,14 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test5) + "\n\n";
         SpannableString st5_0 = new SpannableString(title);
         st5_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st5_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st5_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
         Spannable st5_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test5_text1));
         Spannable st5_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test5_text2));
         Spannable st5_3 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test5_text3));
         Spannable st5_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test5_text4));
         tv_test5.setText(TextUtils.concat(st5_0, span_ration, st5_1, span_admin, st5_2, span_instruct, st5_3, span_quote, st5_4));
+        tv_test5.setTextSize(getResources().getDimension(R.dimen.credit_size));
+
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test5);
 /******** test6 *******/
@@ -244,12 +253,14 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test6) + "\n\n";
         SpannableString st6_0 = new SpannableString(title);
         st6_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st6_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st6_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
         Spannable st6_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test6_text1));
         Spannable st6_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test6_text2));
         Spannable st6_3 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test6_text3));
         Spannable st6_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test6_text4));
         tv_test6.setText(TextUtils.concat(st6_0, span_ration, st6_1, span_admin, st6_2, span_instruct, st6_3, span_quote, st6_4));
+        tv_test6.setTextSize(getResources().getDimension(R.dimen.credit_size));
+
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test6);
 /******** test7 *******/
@@ -257,12 +268,14 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test7) + "\n\n";
         SpannableString st7_0 = new SpannableString(title);
         st7_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st7_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st7_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
         Spannable st7_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test7_text1));
         Spannable st7_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test7_text2));
         Spannable st7_3 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test7_text3));
         Spannable st7_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test7_text4));
         tv_test7.setText(TextUtils.concat(st7_0, span_ration, st7_1, span_admin, st7_2, span_instruct, st7_3, span_quote, st7_4));
+        tv_test7.setTextSize(getResources().getDimension(R.dimen.credit_size));
+
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test7);
 /******** test8 *******/
@@ -270,12 +283,14 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test8) + "\n\n";
         SpannableString st8_0 = new SpannableString(title);
         st8_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st8_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st8_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
         Spannable st8_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test8_text1));
         Spannable st8_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test8_text2));
         Spannable st8_3 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test8_text3));
         Spannable st8_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test8_text4));
         tv_test8.setText(TextUtils.concat(st8_0, span_ration, st8_1, span_admin, st8_2, span_instruct, st8_3, span_quote, st8_4));
+        tv_test8.setTextSize(getResources().getDimension(R.dimen.credit_size));
+
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test8);
 /******** test9 *******/
@@ -283,26 +298,30 @@ public class Tutorial extends Activity{
         title = getResources().getString(R.string.tuto_test9) + "\n\n";
         SpannableString st9_0 = new SpannableString(title);
         st9_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st9_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st9_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
         Spannable st9_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test9_text1));
         Spannable st9_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test9_text2));
         Spannable st9_3 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test9_text3));
         Spannable st9_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test9_text4));
         tv_test9.setText(TextUtils.concat(st9_0, span_ration, st9_1, span_admin, st9_2, span_instruct, st9_3, span_quote, st9_4));
+        tv_test9.setTextSize(getResources().getDimension(R.dimen.credit_size));
+
         layout.setBackgroundColor(Color.TRANSPARENT);
         layout.addView(tv_test9);
 /******** test10 *******/
-        tv_test10 = new TextView(Tutorial.this);
+      /*  tv_test10 = new TextView(Tutorial.this);
         title = getResources().getString(R.string.tuto_test10) + "\n\n";
         SpannableString st10_0 = new SpannableString(title);
         st10_0.setSpan(new StyleSpan(Typeface.BOLD), 0, title.length(), 0);
-        st10_0.setSpan(new RelativeSizeSpan(1.2f), 0, title.length(), 0);
+        st10_0.setSpan(new RelativeSizeSpan(1), 0, title.length(), 0);
         Spannable st10_1 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test10_text1));
         Spannable st10_2 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test10_text2));
         Spannable st10_4 = getTextWithImages(tv_tuto.getContext(),getResources().getString(R.string.tuto_test10_text4));
         tv_test10.setText(TextUtils.concat(st10_0, span_ration, st10_1, span_admin, st10_2, span_quote, st10_4));
+        tv_test10.setTextSize(getResources().getDimension(R.dimen.credit_size));
+
         layout.setBackgroundColor(Color.TRANSPARENT);
-        layout.addView(tv_test10);
+        layout.addView(tv_test10);*/
 
         /******** results *******/
 
@@ -425,7 +444,7 @@ public class Tutorial extends Activity{
                 });
             }
         });
-        btuto_10 = (Button) findViewById(R.id.tuto_bt10);
+       /* btuto_10 = (Button) findViewById(R.id.tuto_bt10);
         btuto_10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -436,7 +455,7 @@ public class Tutorial extends Activity{
                     }
                 });
             }
-        });
+        });*/
 
 
     }//end onCreate

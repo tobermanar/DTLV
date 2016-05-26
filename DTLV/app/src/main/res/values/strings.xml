@@ -161,6 +161,7 @@
     <string name="result_export_to_pdf">EXPORT PDF</string>
     <string name="result_success">EXPORT RÉUSSI</string>
     <string name="result_failure">ÉCHEC</string>
+    <string name="result_open_pdf">OUVRIR PDF</string>
     <string name="result_send_pdf">ENVOI PAR MAIL</string>
     <string name="result_pdf_title">Résultat du test de dépistage des troubles du language</string>
     <string name="result_processing">Export en cours</string>
@@ -185,13 +186,13 @@
     <string name="credit_project_title">\nCrédit Test DTLA \n</string>
     <string name="credit_research_text">\nLes deux projets précédents ont été portés par Joël Macoir pour informatiser l\'actuel test papier de dépistage des troubles du language (DTLA).\n
         \nCe test à été réalisé par l\'équipe suivante :</string>
-    <string name="credit_research_team">\nJoël Macoir, professeur à l\’Université Laval (Canada)\n
-        \nMarion Fossard, professeur à l\'Université de Neuchâtel (Suisse)\n
-        \nLaurent lefebvre, professeur à l\'Université de Mons (Belgique)\
-        \nLaura Monetta, professeur à l\'Université Laval (Canada)\n
-        \nMaximiliano Wilson, professeur à l\'Université Laval (Canada)\n
-        \nAntoine Renard, Amiens (France)\n
-        \nThi Mai Tran, professeur à l\'Université de Lille (France)\n</string>
+    <string name="credit_research_team">\nJoël Macoir, Université Laval (Canada)\n
+        \nMarion Fossard, Université de Neuchâtel (Suisse)\n
+        \nLaurent lefebvre, Université de Mons (Belgique)\n
+        \nLaura Monetta, Université Laval (Canada)\n
+        \nMaximiliano Wilson, Université Laval (Canada)\n
+        \nAntoine Renard, Université de Picardie Jules Verne (France)\n
+        \nThi Mai Tran, Université de Lille (France)\n</string>
     <string name="copyrights">"\nCopyright © 2016, Joël Macoir\n"</string>
 <!-- TUTORIEL -->
     <string name="tuto_name">Tutoriel</string>

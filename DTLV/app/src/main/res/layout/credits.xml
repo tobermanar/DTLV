@@ -38,47 +38,53 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/credit_size"
                                 android:gravity="center"
                                 android:background="#ffffff"
                                 android:text="@string/credit_general_title"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/credit_size"
                                 android:gravity="center"
                                 android:text="@string/credit_general"/>
                             <ImageView
                                 android:layout_width="400dp"
                                 android:layout_height="280dp"
-                                android:scaleType="fitXY"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/ensc_logo"
                                 android:layout_marginBottom="15dp"
                                 android:layout_gravity="center"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/credit_size"
                             android:gravity="center"
                             android:background="#ffffff"
                             android:text="@string/num_version"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/credit_size"
                             android:gravity="center"
                             android:text="@string/credit_greetings"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/credit_size"
                                 android:gravity="center"
                                 android:background="#ffffff"
                                 android:text="@string/credit_ihm_title"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/credit_size"
                                 android:gravity="center"
                                 android:text="@string/credit_ihm"/>
                             <ImageView
                                 android:layout_width="400dp"
                                 android:layout_height="200dp"
-                                android:scaleType="fitXY"
+                                android:scaleType="centerInside"
                                 android:background="#ffffff"
                                 android:src="@drawable/ulaval_fsg"
                                 android:layout_marginBottom="15dp"
@@ -86,11 +92,13 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/credit_size"
                                 android:gravity="center"
                                 android:text="@string/credit_ihm_team"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/credit_size"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
                                 android:background="#ffffff"
@@ -98,16 +106,19 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/credit_size"
                                 android:gravity="center"
                                 android:text="@string/credit_research_text"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/credit_size"
                                 android:gravity="center"
                                 android:text="@string/credit_research_team"/>
                          <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                             android:textSize="@dimen/credit_size"
                                 android:gravity="center"
                                 android:background="#ffffff"
                                 android:text="@string/copyrights"/>
